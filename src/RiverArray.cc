@@ -70,11 +70,16 @@ vector<string> RiverArray::GetCities() const
     return names;
 }
 
+bool RiverArray::HasCity(string id) const
+{
+    __assert_river_array_is_initialized();
+    return __cities.find(id) != __cities.end();
+}
+
 City& RiverArray::GetCity(string id)
 {
     __assert_river_array_is_initialized();
-    auto it = __cities.find(id);
-    if(it == __cities.end())
+    if(!HasCity(id))
     {
 #ifdef DEBUG
         Error("The city " + id + " does not exist");
@@ -83,5 +88,5 @@ City& RiverArray::GetCity(string id)
 #endif
         return __invalid_city;
     }
-    return it->second;
+    return __cities[id];
 }

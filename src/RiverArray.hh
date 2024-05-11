@@ -32,6 +32,7 @@ class RiverArray
         Ship& GetShip();
         vector<string> GetCities() const;
         City& GetCity(string id);
+        bool HasCity(string id) const;
 };
 
 

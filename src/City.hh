@@ -2,6 +2,7 @@
 #define CITY_HH
 
 #include <map>
+#include <iostream>
 #include "Product.hh"
 
 using namespace std;
@@ -16,6 +17,7 @@ class City
         City();
         City(string id);
         string GetId() const;
+        void ReadFromStream(istream& stream);
 };
 
 #endif
