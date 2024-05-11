@@ -9,11 +9,11 @@ using namespace std;
 class City
 {
     private:
-        City();
         string __id;
         map<int, Product> __inventory;
 
     public:
+        City();
         City(string id);
         string GetId() const;
 };

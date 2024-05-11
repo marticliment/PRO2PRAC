@@ -39,6 +39,11 @@ const string HACER_VIAJE_L = "hacer_viaje";
 const string FIN = "fin";
 
 
+#ifdef DEBUG
+const string green("\033[1;32m");
+const string reset("\033[0m");
+#endif
+
 void PrintCommand(string c)
 {
 #ifdef DEBUG
@@ -71,7 +76,9 @@ int main()
         }
         else if(c == LEER_INVENTARIOS || c == LEER_INVENTARIOS_L)
         {
-            Log("Operation LEER_INVENTARIOS not implemented yet");
+            
+            
+
         }
         else if(c == MODIFICAR_BARCO || c == MODIFICAR_BARCO_L)
         {

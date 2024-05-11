@@ -1,7 +1,7 @@
 OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11 -fno-extended-identifiers -DDEBUG
 
 
-program.exe: program.o City.o NavigationDecisions.o Product.o ProductData.o RiverArray.o Ship.o
+program.exe: program.o City.o NavigationDecisions.o Product.o ProductData.o RiverArray.o Ship.o debug.o
 	#⌛ Assembling executable...
 	g++ obj/*.o -o program.exe
 	#✅ Build completed!
