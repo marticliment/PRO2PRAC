@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.spec": "python",
+        "*.embeddedhtml": "html",
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp"
+    }
+}
