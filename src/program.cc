@@ -1,6 +1,7 @@
 #include <iostream>
 #include "RiverArray.hh"
 #include "debug.hh"
+#include "ProductReference.hh"
 
 using namespace std;
 
@@ -42,7 +43,6 @@ const string FIN = "fin";
 const string ERR_NE_CITY = "error: no existe la ciudad";
 const string ERR_NE_PROD = "error: no existe el producto";
 const string ERR_AE_CITY = "error: la ciudad ya tiene el producto";
-const string ERR_SAME_PROD = "error: no se puede comprar y vender el mismo producto";
 
 #ifdef DEBUG
 const string green("\033[1;32m");
@@ -118,6 +118,7 @@ int main()
         // serán no negativas y al menos una de ellas será estrictamente positiva.
         else if(c == MODIFICAR_BARCO || c == MODIFICAR_BARCO_L)
         {
+            PrintCommand(c);
             RiverSystem.GetShip().ReadFromStream(cin);
         }
         
@@ -137,7 +138,7 @@ int main()
         else if(c == CONSULTAR_NUM || c == CONSULTAR_NUM_L)
         {
             PrintCommand(c);
-            Log("Operation CONSULTAR_NUM not implemented yet");
+            cout << ProductReference::Count() << endl;
         }
         
         // Se lee el número de productos nuevos, mayor que 0. Sus
@@ -145,8 +146,10 @@ int main()
         // sus pesos y volúmenes respectivos
         else if(c == AGREGAR_PRODUCTOS || c == AGREGAR_PRODUCTOS_L)
         {
-            PrintCommand(c);
-            Log("Operation AGREGAR_PRODUCTOS not implemented yet");
+            int count;
+            cin >> count;
+            PrintCommand(c + " " + to_string(count));
+            ProductReference::AddFromStream(cin, count);
         }
         
         // Se lee el identificador de un producto. Si no existe el producto se escribe un mensaje 
@@ -155,7 +158,7 @@ int main()
         else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
         {
             PrintCommand(c);
-            Log("Operation ESCRIBIR_CIUDAD not implemented yet");
+            Log("Operation CONSULTAR_PROD not implemented yet");
         }
         
         // se escribirá un mensaje de error. Si la ciudad existe, se escribirá su inventario, y el
@@ -163,8 +166,43 @@ int main()
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
         else if(c == ESCRIBIR_CIUDAD || c == ESCRIBIR_CIUDAD_L)
         {
-            PrintCommand(c);
-            Log("Operation ESCRIBIR_CIUDAD not implemented yet");
+            string city_id;
+            cin >> city_id;
+            PrintCommand(c + " " + city_id);
+
+            if(RiverSystem.HasCity(city_id))
+            {
+                auto& city = RiverSystem.GetCity(city_id);
+                int total_weight = 0, total_volume = 0;
+                for(int i: city.GetProductIds())
+                {
+                    auto& product = city.GetProduct(i);
+                    auto& data = ProductReference::Get(product.GetId());
+                    cout << product.GetId() << ' ' << product.GetCurrentAmount() << ' ' << product.GetWantedAmount() << endl;
+                    total_weight += data.GetWeight(product.GetCurrentAmount());
+                    total_volume += data.GetVolume(product.GetCurrentAmount());
+                }
+                cout << total_weight << ' ' << total_volume << endl;
+            }
+            else
+                cout << ERR_NE_CITY << endl;
+        }
+
+        // Se lee el identificador de un producto. Si no existe el producto se escribe 
+        // un mensaje de error. En caso contrario se escribe el peso y volumen
+        // del producto.
+        else if(c == ESCRIBIR_PRODUCTO || c == ESCRIBIR_PRODUCTO_L)
+        {
+            int product_id;
+            cin >> product_id;
+            PrintCommand(c + " " + to_string(product_id));
+            if(ProductReference::Contains(product_id))
+            {
+                auto product = ProductReference::Get(product_id);
+                cout << product_id << ' ' << product.GetWeight() << ' ' << product.GetVolume() << endl;
+            }
+            else
+                cout << ERR_NE_PROD << endl;
         }
         
         // Se leerá el identificador de una ciudad, de un producto y las

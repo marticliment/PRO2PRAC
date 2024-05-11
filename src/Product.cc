@@ -9,7 +9,7 @@ Product::Product(int id, int current, int required)
 {
     __id = id;
     __current_amount = current;
-    __required_amount = required;
+    __wanted_amount = required;
 }
 
 int Product::GetId() const
@@ -22,20 +22,25 @@ int Product::GetCurrentAmount() const
     return __current_amount;
 }
 
+int Product::GetWantedAmount() const
+{
+    return __wanted_amount;
+}
+
 int Product::GetExceedingAmount() const
 {
-    if(__current_amount - __required_amount < 0)
+    if(__current_amount - __wanted_amount < 0)
         return 0;
     
-    return __current_amount - __required_amount;
+    return __current_amount - __wanted_amount;
 }
 
 int Product::GetMissingAmount() const
 {
-    if(__required_amount - __current_amount < 0) 
+    if(__wanted_amount - __current_amount < 0) 
         return 0;
     
-    return __required_amount - __current_amount;
+    return __wanted_amount - __current_amount;
 }
 
 void Product::WithdrawAmount(int amount)

@@ -2,6 +2,7 @@
 #define PRODUCTREFERENCE_HH
 
 #include <vector>
+#include <iostream>
 #include "Product.hh"
 #include "ProductData.hh"
 
@@ -15,8 +16,10 @@ class ProductReference
 
     public:
         static void Add(ProductData data);
-        static ProductData& Get(int id);
+        static void AddFromStream(istream& reader, int count);
+        static const ProductData& Get(int id);
         static bool Contains(int id);
+        static int Count();
 };
 
 #endif

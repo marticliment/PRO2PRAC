@@ -1,3 +1,4 @@
+#include <vector>
 #include "City.hh"
 
 City::City()
@@ -25,4 +26,21 @@ void City::ReadFromStream(istream& stream)
         stream >> id >> current >> required;
         __inventory[id] = Product(id, current, required);
     }
+}
+
+vector<int> City::GetProductIds() const
+{
+    vector<int> result;
+    auto it = __inventory.begin();
+    while(it != __inventory.end())
+    {
+        result.push_back(it->first);
+        it++;
+    }
+    return result;
+}
+
+const Product& City::GetProduct(int id) const
+{
+    return __inventory.at(id);
 }

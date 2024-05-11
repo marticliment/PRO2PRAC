@@ -18,6 +18,8 @@ class City
         City(string id);
         string GetId() const;
         void ReadFromStream(istream& stream);
+        vector<int> GetProductIds() const;
+        const Product& GetProduct(int id) const;
 };
 
 #endif

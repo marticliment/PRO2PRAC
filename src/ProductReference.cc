@@ -7,7 +7,7 @@ void ProductReference::Add(ProductData data)
     __data.push_back(data);
 }
 
-ProductData& ProductReference::Get(int id)
+const ProductData& ProductReference::Get(int id)
 {
     if(Contains(id))
         return __data[id-1];
@@ -17,5 +17,23 @@ ProductData& ProductReference::Get(int id)
 
 bool ProductReference::Contains(int id)
 {
+    if(id <= 0)
+        return false;
+
     return id <= __data.size();
+}
+
+void ProductReference::AddFromStream(istream& stream, int count)
+{
+    for(int i = 0; i < count; i++)
+    {
+        int weight, volume;
+        stream >> weight >> volume;
+        ProductReference::Add(ProductData(weight, volume));
+    }
+}
+
+int ProductReference::Count()
+{
+    return __data.size();
 }

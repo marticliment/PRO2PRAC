@@ -7,15 +7,17 @@ class Product
 {
     private:
         int __id;
-        int __required_amount;
+        int __wanted_amount;
         int __current_amount;
 
     public:
         Product();
-        Product(int id, int current, int required);
+        Product(int id, int current, int wanted);
         int GetId() const;
 
         int GetCurrentAmount() const;
+        int GetWantedAmount() const;
+
         int GetExceedingAmount() const;
         int GetMissingAmount() const;
 

@@ -12,11 +12,11 @@ void RiverArray::__assert_river_array_is_initialized() const
     assert(__initialized && "The current RiverArray object is not initialized, but a method that requires it to be is being called.");
 }
 
-BinTree<string> RiverArray::__read_cities_from_stream(istream& reader)
+BinTree<string> RiverArray::__read_cities_from_stream(istream& stream)
 {
     // Read city name and check if city is valid
     string city_name;
-    reader >> city_name;
+    stream >> city_name;
     if(city_name == "#") 
         return BinTree<string>();
      
@@ -25,30 +25,25 @@ BinTree<string> RiverArray::__read_cities_from_stream(istream& reader)
 
     __cities[city_name] = City(city_name);
 
-    left = __read_cities_from_stream(reader);
-    right = __read_cities_from_stream(reader);
+    left = __read_cities_from_stream(stream);
+    right = __read_cities_from_stream(stream);
     
     return BinTree<string>(city_name, left, right);
 }
 
-void RiverArray::InitializeFromStream(istream& reader)
+void RiverArray::InitializeFromStream(istream& stream)
 {
     // Read the products
-    int product_amount;
-    reader >> product_amount;
-    for(int i = 0; i < product_amount; i++)
-    {
-        int weight, volume;
-        cin >> weight >> volume;
-        ProductReference::Add(ProductData(weight, volume));
-    }
+    int count;
+    stream >> count;
+    ProductReference::AddFromStream(stream, count);
 
     // Read the cities
-    __river_structure = __read_cities_from_stream(reader);
+    __river_structure = __read_cities_from_stream(stream);
 
     // Read the ship
     int buy_id, buy_amount, sell_id, sell_amount;
-    reader >> buy_id >> buy_amount >> sell_id >> sell_amount;
+    stream >> buy_id >> buy_amount >> sell_id >> sell_amount;
     __ship = Ship(Product(buy_id, 0, buy_amount), Product(sell_id, sell_amount, 0));
 
     __initialized = true;
@@ -66,7 +61,10 @@ vector<string> RiverArray::GetCities() const
     vector<string> names;
     auto it = __cities.begin();
     while(it != __cities.end())
+    {
         names.push_back(it->first);
+        it++;
+    }
     return names;
 }
 
