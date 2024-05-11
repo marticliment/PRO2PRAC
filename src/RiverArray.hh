@@ -20,7 +20,6 @@ class RiverArray
         
         BinTree<string> __river_structure;
         map<string, City> __cities;
-        vector<ProductData> __product_data;
         Ship __ship;
 
         void __assert_river_array_is_initialized() const;

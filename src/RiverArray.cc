@@ -1,3 +1,4 @@
+#include "ProductReference.hh"
 #include "RiverArray.hh"
 #include "debug.hh"
 
@@ -35,12 +36,11 @@ void RiverArray::InitializeFromStream(istream& reader)
     // Read the products
     int product_amount;
     reader >> product_amount;
-    __product_data.resize(product_amount);
     for(int i = 0; i < product_amount; i++)
     {
         int weight, volume;
         cin >> weight >> volume;
-        __product_data[i] = ProductData(weight, volume);
+        ProductReference::Add(ProductData(weight, volume));
     }
 
     // Read the cities
@@ -80,13 +80,7 @@ City& RiverArray::GetCity(string id)
 {
     __assert_river_array_is_initialized();
     if(!HasCity(id))
-    {
-#ifdef DEBUG
-        Error("The city " + id + " does not exist");
-#else
-        cout << "error: no existe la ciudad" << endl;
-#endif
         return __invalid_city;
-    }
-    return __cities[id];
+
+    return __cities.at(id);
 }

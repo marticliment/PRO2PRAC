@@ -39,6 +39,11 @@ const string HACER_VIAJE_L = "hacer_viaje";
 const string FIN = "fin";
 
 
+const string ERR_NE_CITY = "error: no existe la ciudad";
+const string ERR_NE_PROD = "error: no existe el producto";
+const string ERR_AE_CITY = "error: la ciudad ya tiene el producto";
+const string ERR_SAME_PROD = "error: no se puede comprar y vender el mismo producto";
+
 #ifdef DEBUG
 const string green("\033[1;32m");
 const string reset("\033[0m");
@@ -63,16 +68,14 @@ int main()
     Log("Finished initializing RiverArray, reaching main loop");
     string c;
     while(cin >> c && c != FIN)
-    {
-        if(c != "//") PrintCommand(c);
-        
-
+    {   
         //  Se leerán los identificadores de las ciudades indicando la estructura
         // de la cuenca. No se escribe nada. Los inventarios de las ciudades quedan vacíos. El
         // barco conserva sus atributos de productos pero no ha realizado viajes en la nueva
         // cuenca.
         if(c == LEER_RIO || c == LEER_RIO_L)
         {
+            PrintCommand(c);
             Log("Operation LEER_RIO not implemented yet");
         }
 
@@ -85,7 +88,16 @@ int main()
         // no se usen, para pasar a la siguiente operación.
         else if(c == LEER_INVENTARIO || c == LEER_INVENTARIO_L)
         {
-            Log("Operation LEER_INVENTARIO not implemented yet");
+            string city_id;
+            cin >> city_id;
+            PrintCommand(c + " " + city_id);
+
+            if(!RiverSystem.HasCity(city_id))
+                cout << ERR_NE_CITY << endl;
+
+            // Even if the city is invalid we need to read the provided values through cin
+            // Therefore we will read to the default invalid city
+            RiverSystem.GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerán los inventarios de ciudades del río. Todas las ciudades existirán. Los datos del inventario 
@@ -93,12 +105,10 @@ int main()
         // No necesariamente todas las ciudades del río tendrán inventario.
         else if(c == LEER_INVENTARIOS || c == LEER_INVENTARIOS_L)
         {
+            PrintCommand(c);
             string city_id;
             while(cin >> city_id && city_id != "#")
-                if(!RiverSystem.HasCity(city_id))
-                    Error("The city " + city_id + " was not found!");
-                else
-                    RiverSystem.GetCity(city_id).ReadFromStream(cin);
+                RiverSystem.GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerá el identificador del producto que se quiere comprar
@@ -108,7 +118,7 @@ int main()
         // serán no negativas y al menos una de ellas será estrictamente positiva.
         else if(c == MODIFICAR_BARCO || c == MODIFICAR_BARCO_L)
         {
-            Log("Operation MODIFICAR_BARCO not implemented yet");
+            RiverSystem.GetShip().ReadFromStream(cin);
         }
         
         // Se escriben los cuatro valores mencionados en la anterior operación y los viajes realizados en la cuenca 
@@ -116,6 +126,7 @@ int main()
         // viaje solo se ha de escribir la última ciudad visitada de la ruta escogida.
         else if(c == ESCRIBIR_BARCO || c == ESCRIBIR_BARCO_L)
         {
+            PrintCommand(c);
             Product& buying = RiverSystem.GetShip().BuyingProduct();
             Product& selling = RiverSystem.GetShip().SellingProduct();
             cout << buying.GetId() << ' ' << buying.GetMissingAmount() << ' ';
@@ -125,6 +136,7 @@ int main()
         // Escribe cuantos productos diferentes hay.
         else if(c == CONSULTAR_NUM || c == CONSULTAR_NUM_L)
         {
+            PrintCommand(c);
             Log("Operation CONSULTAR_NUM not implemented yet");
         }
         
@@ -133,6 +145,7 @@ int main()
         // sus pesos y volúmenes respectivos
         else if(c == AGREGAR_PRODUCTOS || c == AGREGAR_PRODUCTOS_L)
         {
+            PrintCommand(c);
             Log("Operation AGREGAR_PRODUCTOS not implemented yet");
         }
         
@@ -141,6 +154,7 @@ int main()
         // del producto.
         else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
         {
+            PrintCommand(c);
             Log("Operation ESCRIBIR_CIUDAD not implemented yet");
         }
         
@@ -149,6 +163,7 @@ int main()
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
         else if(c == ESCRIBIR_CIUDAD || c == ESCRIBIR_CIUDAD_L)
         {
+            PrintCommand(c);
             Log("Operation ESCRIBIR_CIUDAD not implemented yet");
         }
         
@@ -161,6 +176,7 @@ int main()
         // siempre ha de ser mayor que 0.
         else if(c == PONER_PROD || c == PONER_PROD_L)
         {
+            PrintCommand(c);
             Log("Operation PONER_PROD not implemented yet");
         }
         
@@ -173,6 +189,7 @@ int main()
         // unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.
         else if(c == MODIFICAR_PROD || c == MODIFICAR_PROD_L)
         {
+            PrintCommand(c);
             Log("Operation MODIFICAR_PROD not implemented yet");
         }
 
@@ -184,6 +201,7 @@ int main()
         // el volumen total.
         else if(c == QUITAR_PROD || c == QUITAR_PROD_L)
         {
+            PrintCommand(c);
             Log("Operation QUITAR_PROD not implemented yet");
         }
         
@@ -194,6 +212,7 @@ int main()
         // tiene y quiere la ciudad.
         else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
         {
+            PrintCommand(c);
             Log("Operation CONSULTAR_PROD not implemented yet");
         }
         
@@ -203,6 +222,7 @@ int main()
         // comercian entre ellas.
         else if(c == COMERCIAR || c == COMERCIAR_L)
         {
+            PrintCommand(c);
             Log("Operation COMERCIAR not implemented yet");
         }
         
@@ -211,6 +231,7 @@ int main()
         // y así sucesivamente.
         else if(c == REDISTRIBUIR || c == REDISTRIBUIR_L)
         {
+            PrintCommand(c);
             Log("Operation REDISTRIBUIR not implemented yet");
         }
         
@@ -222,6 +243,7 @@ int main()
         // escribe el total de unidades de productos compradas y vendidas por el barco.
         else if(c == HACER_VIAJE || c == HACER_VIAJE_L)
         {
+            PrintCommand(c);
             Log("Operation HACER_VIAJE not implemented yet");
         }
         

@@ -1,6 +1,5 @@
 #include "Ship.hh"
 
-
 Ship::Ship()
 {
     Ship(Product(), Product());
@@ -20,4 +19,12 @@ Product& Ship::BuyingProduct()
 Product& Ship::SellingProduct()
 {
     return __selling_product;
+}
+
+void Ship::ReadFromStream(istream& stream)
+{
+    int buy_id, buy_amount, sell_id, sell_amount;
+    stream >> buy_id >> buy_amount >> sell_id >> sell_amount;
+    __buying_product = Product(buy_id, 0, buy_amount);
+    __selling_product = Product(sell_id, sell_amount, 0);
 }

@@ -3,6 +3,7 @@
 
 
 #include <vector>
+#include <iostream>
 #include "Product.hh"
 
 using namespace std;
@@ -18,6 +19,7 @@ class Ship
         Ship(Product buying, Product selling);
         Product& BuyingProduct();
         Product& SellingProduct();
+        void ReadFromStream(istream& stream);
 
 };
 
