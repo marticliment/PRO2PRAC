@@ -1,4 +1,6 @@
 #include "Product.hh"
+#include "ProductReference.hh"
+#include "ProductData.hh"
 
 Product::Product()
 {
@@ -51,4 +53,9 @@ void Product::WithdrawAmount(int amount)
 void Product::RestockAmount(int amount)
 {
     __current_amount += amount;
+}
+
+const ProductData& Product::GetData() const
+{
+    return ProductReference::Get(__id);
 }

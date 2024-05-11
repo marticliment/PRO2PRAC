@@ -12,6 +12,8 @@ class City
     private:
         string __id;
         map<int, Product> __inventory;
+        int __weight;
+        int __volume;
 
     public:
         City();
@@ -20,6 +22,10 @@ class City
         void ReadFromStream(istream& stream);
         vector<int> GetProductIds() const;
         const Product& GetProduct(int id) const;
+        bool HasProduct(int id) const;
+        void AddProduct(Product p);
+        int GetWeight() const;
+        int GetVolume() const;
 };
 
 #endif

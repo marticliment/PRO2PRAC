@@ -42,7 +42,7 @@ const string FIN = "fin";
 
 const string ERR_NE_CITY = "error: no existe la ciudad";
 const string ERR_NE_PROD = "error: no existe el producto";
-const string ERR_AE_CITY = "error: la ciudad ya tiene el producto";
+const string ERR_AE_PROD = "error: la ciudad ya tiene el producto";
 
 #ifdef DEBUG
 const string green("\033[1;32m");
@@ -173,16 +173,12 @@ int main()
             if(RiverSystem.HasCity(city_id))
             {
                 auto& city = RiverSystem.GetCity(city_id);
-                int total_weight = 0, total_volume = 0;
                 for(int i: city.GetProductIds())
                 {
                     auto& product = city.GetProduct(i);
-                    auto& data = ProductReference::Get(product.GetId());
                     cout << product.GetId() << ' ' << product.GetCurrentAmount() << ' ' << product.GetWantedAmount() << endl;
-                    total_weight += data.GetWeight(product.GetCurrentAmount());
-                    total_volume += data.GetVolume(product.GetCurrentAmount());
                 }
-                cout << total_weight << ' ' << total_volume << endl;
+                cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
             }
             else
                 cout << ERR_NE_CITY << endl;
@@ -214,8 +210,23 @@ int main()
         // siempre ha de ser mayor que 0.
         else if(c == PONER_PROD || c == PONER_PROD_L)
         {
-            PrintCommand(c);
-            Log("Operation PONER_PROD not implemented yet");
+            string city_id;
+            int product_id, current, wanted;
+            cin >> city_id >> product_id >> current >> wanted;
+            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+
+            if (!ProductReference::Contains(product_id))
+                cout << ERR_NE_PROD << endl;
+            else if(!RiverSystem.HasCity(city_id))
+                cout << ERR_NE_CITY << endl;
+            else if (RiverSystem.GetCity(city_id).HasProduct(product_id))
+                cout << ERR_AE_PROD << endl;
+            else
+            {
+                auto& city = RiverSystem.GetCity(city_id);
+                city.AddProduct(Product(product_id, current, wanted));
+                cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+            }
         }
         
         //  Se leerá el identificador de una ciudad, de un producto y las

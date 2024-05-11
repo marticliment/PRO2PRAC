@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#include "ProductData.hh"
+
 class Product
 {
     private:
@@ -23,6 +25,8 @@ class Product
 
         void WithdrawAmount(int amount);
         void RestockAmount(int amount);
+
+        const ProductData& GetData() const;
 
 };
 

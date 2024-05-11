@@ -1,5 +1,6 @@
 #include <vector>
 #include "City.hh"
+#include "ProductData.hh"
 
 City::City()
 {
@@ -9,6 +10,8 @@ City::City()
 City::City(string id)
 {
     __id = id;
+    __weight = 0;
+    __volume = 0;
 }
 
 string City::GetId() const
@@ -24,7 +27,7 @@ void City::ReadFromStream(istream& stream)
     {
         int id, current, required;
         stream >> id >> current >> required;
-        __inventory[id] = Product(id, current, required);
+        AddProduct(Product(id, current, required));
     }
 }
 
@@ -43,4 +46,26 @@ vector<int> City::GetProductIds() const
 const Product& City::GetProduct(int id) const
 {
     return __inventory.at(id);
+}
+
+bool City::HasProduct(int id) const
+{
+    return __inventory.find(id) != __inventory.end();
+}
+
+void City::AddProduct(Product p)
+{
+    __inventory[p.GetId()] = p;
+    __weight += p.GetData().GetWeight(p.GetCurrentAmount());
+    __volume += p.GetData().GetVolume(p.GetCurrentAmount());
+}
+
+int City::GetVolume() const
+{
+    return __volume;
+}
+
+int City::GetWeight() const
+{
+    return __weight;
 }
