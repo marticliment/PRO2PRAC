@@ -29,7 +29,7 @@ int Product::GetWantedAmount() const
     return __wanted_amount;
 }
 
-int Product::GetExceedingAmount() const
+int Product::ExceedingAmount() const
 {
     if(__current_amount - __wanted_amount < 0)
         return 0;
@@ -37,7 +37,7 @@ int Product::GetExceedingAmount() const
     return __current_amount - __wanted_amount;
 }
 
-int Product::GetMissingAmount() const
+int Product::MissingAmount() const
 {
     if(__wanted_amount - __current_amount < 0) 
         return 0;
@@ -58,4 +58,14 @@ void Product::RestockAmount(int amount)
 const ProductData& Product::GetData() const
 {
     return ProductReference::Get(__id);
+}
+
+int Product::GetWeight() const
+{
+    return ProductReference::Get(__id).GetWeight(__current_amount);
+}
+
+int Product::GetVolume() const
+{
+    return ProductReference::Get(__id).GetVolume(__current_amount);
 }

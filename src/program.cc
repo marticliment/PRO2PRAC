@@ -41,6 +41,7 @@ const string FIN = "fin";
 
 
 const string ERR_NE_CITY = "error: no existe la ciudad";
+const string ERR_RE_CITY = "error: ciudad repetida";
 const string ERR_NE_PROD = "error: no existe el producto";
 const string ERR_NE_PROD_CITY = "error: la ciudad no tiene el producto";
 const string ERR_AE_PROD = "error: la ciudad ya tiene el producto";
@@ -63,10 +64,8 @@ void PrintCommand(string c)
 /// @brief Entry point of the program
 int main()
 {
-    Log("Begin initializing river");
     RiverArray RiverSystem;
     RiverSystem.InitializeFromStream(cin);
-    Log("Finished initializing RiverArray, reaching main loop");
     string c;
     while(cin >> c && c != FIN)
     {   
@@ -77,7 +76,7 @@ int main()
         if(c == LEER_RIO || c == LEER_RIO_L)
         {
             PrintCommand(c);
-            Log("Operation LEER_RIO not implemented yet");
+            RiverSystem.ReadCitiesFromStream(cin);
         }
 
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
@@ -131,7 +130,7 @@ int main()
             PrintCommand(c);
             Product& buying = RiverSystem.GetShip().BuyingProduct();
             Product& selling = RiverSystem.GetShip().SellingProduct();
-            cout << buying.GetId() << ' ' << buying.GetMissingAmount() << ' ';
+            cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
         }
         
@@ -151,15 +150,6 @@ int main()
             cin >> count;
             PrintCommand(c + " " + to_string(count));
             ProductReference::AddFromStream(cin, count);
-        }
-        
-        // Se lee el identificador de un producto. Si no existe el producto se escribe un mensaje 
-        // de error. En caso contrario se escribe el peso y volumen
-        // del producto.
-        else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
-        {
-            PrintCommand(c);
-            Log("Operation CONSULTAR_PROD not implemented yet");
         }
         
         // se escribirá un mensaje de error. Si la ciudad existe, se escribirá su inventario, y el
@@ -301,8 +291,26 @@ int main()
         // tiene y quiere la ciudad.
         else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
         {
-            PrintCommand(c);
-            Log("Operation CONSULTAR_PROD not implemented yet");
+            string city_id;
+            int product_id;
+            cin >> city_id >> product_id;
+            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+
+            if (!ProductReference::Contains(product_id))
+                cout << ERR_NE_PROD << endl;
+            else if(!RiverSystem.HasCity(city_id))
+                cout << ERR_NE_CITY << endl;
+            else 
+            {
+                auto& city = RiverSystem.GetCity(city_id);
+                if(!city.HasProduct(product_id))
+                    cout << ERR_NE_PROD_CITY << endl;
+                else
+                {
+                    auto& product = city.GetProduct(product_id);
+                    cout << product.GetCurrentAmount() << ' ' << product.GetWantedAmount() << endl;                    
+                }
+            }        
         }
         
         //  Se leerán los identificadores de dos ciudades. Si no existe alguna
@@ -312,7 +320,57 @@ int main()
         else if(c == COMERCIAR || c == COMERCIAR_L)
         {
             PrintCommand(c);
-            Log("Operation COMERCIAR not implemented yet");
+            string city1_id, city2_id;
+            cin >> city1_id >> city2_id;
+
+            if(!RiverSystem.HasCity(city1_id) || !RiverSystem.HasCity(city2_id))
+                cout << ERR_NE_CITY << endl;
+            else if (city1_id == city2_id)
+                cout << ERR_RE_CITY << endl;
+            else
+            {
+                auto& city1 = RiverSystem.GetCity(city1_id);
+                auto& city2 = RiverSystem.GetCity(city2_id);
+                for(int product_id: city1.GetProductIds())
+                {
+                    // City1 -> SELLER
+                    // City2 -> BUYER
+                    if(!city2.HasProduct(product_id))
+                        continue;
+                    else
+                    {
+                        auto& seller_product = city1.GetProduct(product_id);
+                        auto& buyer_product = city2.GetProduct(product_id);
+                        if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+                            continue;
+
+                        int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
+                        Log("Trading " + to_string(trade_amount) + " amount of product " + to_string(product_id) + " from " + city1_id + " to " + city2_id);
+                        seller_product.WithdrawAmount(trade_amount);
+                        buyer_product.RestockAmount(trade_amount);
+                    }
+                }
+
+                for(int product_id: city2.GetProductIds())
+                {
+                    // City2 -> SELLER
+                    // City1 -> BUYER
+                    if(!city1.HasProduct(product_id))
+                        continue;
+                    else
+                    {
+                        auto& seller_product = city2.GetProduct(product_id);
+                        auto& buyer_product = city1.GetProduct(product_id);
+                        if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+                            continue;
+
+                        int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
+                        Log("Trading " + to_string(trade_amount) + " amount of product " + to_string(product_id) + " from " + city2_id + " to " + city1_id);
+                        seller_product.WithdrawAmount(trade_amount);
+                        buyer_product.RestockAmount(trade_amount);
+                    }
+                }
+            }            
         }
         
         // No se leen datos. La ciudad de la desembocadura comercia con su
@@ -339,7 +397,7 @@ int main()
         // Comment line
         else if (c == "//")
         {
-            cin >> c; // Skip next input
+            getline(cin, c); // Skip current line            
 #ifdef DEBUG
             PrintCommand(c);
 #endif

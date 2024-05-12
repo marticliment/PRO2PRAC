@@ -20,13 +20,15 @@ class Product
         int GetCurrentAmount() const;
         int GetWantedAmount() const;
 
-        int GetExceedingAmount() const;
-        int GetMissingAmount() const;
+        int ExceedingAmount() const;
+        int MissingAmount() const;
 
         void WithdrawAmount(int amount);
         void RestockAmount(int amount);
 
         const ProductData& GetData() const;
+        int GetWeight() const;
+        int GetVolume() const;
 
 };
 

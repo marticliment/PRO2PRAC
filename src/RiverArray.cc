@@ -12,7 +12,7 @@ void RiverArray::__assert_river_array_is_initialized() const
     assert(__initialized && "The current RiverArray object is not initialized, but a method that requires it to be is being called.");
 }
 
-BinTree<string> RiverArray::__read_cities_from_stream(istream& stream)
+BinTree<string> RiverArray::__city_reader_helper(istream& stream)
 {
     // Read city name and check if city is valid
     string city_name;
@@ -25,27 +25,26 @@ BinTree<string> RiverArray::__read_cities_from_stream(istream& stream)
 
     __cities[city_name] = City(city_name);
 
-    left = __read_cities_from_stream(stream);
-    right = __read_cities_from_stream(stream);
+    left = __city_reader_helper(stream);
+    right = __city_reader_helper(stream);
     
     return BinTree<string>(city_name, left, right);
 }
 
+void RiverArray::ReadCitiesFromStream(istream& stream)
+{
+    __cities.clear();
+    __river_structure = __city_reader_helper(stream);
+    //TODO: Reset ship voyages
+}
+
 void RiverArray::InitializeFromStream(istream& stream)
 {
-    // Read the products
     int count;
     stream >> count;
     ProductReference::AddFromStream(stream, count);
-
-    // Read the cities
-    __river_structure = __read_cities_from_stream(stream);
-
-    // Read the ship
-    int buy_id, buy_amount, sell_id, sell_amount;
-    stream >> buy_id >> buy_amount >> sell_id >> sell_amount;
-    __ship = Ship(Product(buy_id, 0, buy_amount), Product(sell_id, sell_amount, 0));
-
+    ReadCitiesFromStream(stream);
+    __ship.ReadFromStream(stream);
     __initialized = true;
 }
 

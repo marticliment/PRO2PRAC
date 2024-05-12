@@ -10,8 +10,6 @@ City::City()
 City::City(string id)
 {
     __id = id;
-    __weight = 0;
-    __volume = 0;
 }
 
 string City::GetId() const
@@ -43,7 +41,7 @@ vector<int> City::GetProductIds() const
     return result;
 }
 
-const Product& City::GetProduct(int id) const
+Product& City::GetProduct(int id)
 {
     return __inventory.at(id);
 }
@@ -56,18 +54,11 @@ bool City::HasProduct(int id) const
 void City::AddProduct(Product p)
 {
     __inventory[p.GetId()] = p;
-    const ProductData& data = p.GetData();
-    __weight += data.GetWeight(p.GetCurrentAmount());
-    __volume += data.GetVolume(p.GetCurrentAmount());
 }
 
 void City::RemoveProduct(int id)
 {
-    Product& old_product = __inventory.at(id);
     __inventory.erase(id);
-    const ProductData& data = old_product.GetData();
-    __weight -= data.GetWeight(old_product.GetCurrentAmount());
-    __volume -= data.GetVolume(old_product.GetCurrentAmount());
 }
 
 void City::UpdateProduct(Product p)
@@ -78,10 +69,18 @@ void City::UpdateProduct(Product p)
 
 int City::GetVolume() const
 {
-    return __volume;
+    int volume = 0;
+    auto it = __inventory.begin();
+    while(it != __inventory.end())
+        volume += (it++)->second.GetVolume();
+    return volume;
 }
 
 int City::GetWeight() const
 {
-    return __weight;
+    int weight = 0;
+    auto it = __inventory.begin();
+    while(it != __inventory.end())
+        weight += (it++)->second.GetWeight();
+    return weight;
 }

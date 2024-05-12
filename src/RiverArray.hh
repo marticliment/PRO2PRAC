@@ -23,11 +23,12 @@ class RiverArray
         Ship __ship;
 
         void __assert_river_array_is_initialized() const;
-        BinTree<string> __read_cities_from_stream(istream& reader);
+        BinTree<string> __city_reader_helper(istream& stream);
 
     public:
         RiverArray();
-        void InitializeFromStream(istream& reader);
+        void InitializeFromStream(istream& stream);
+        void ReadCitiesFromStream(istream& stream);
         Ship& GetShip();
         vector<string> GetCities() const;
         City& GetCity(string id);
