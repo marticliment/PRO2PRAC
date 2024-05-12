@@ -128,10 +128,13 @@ int main()
         else if(command == ESCRIBIR_BARCO || command == ESCRIBIR_BARCO_L)
         {
             PrintCommand(command);
-            Product& buying = Valley::GetShip().BuyingProduct();
-            Product& selling = Valley::GetShip().SellingProduct();
+            auto& ship = Valley::GetShip();
+            Product& buying = ship.BuyingProduct();
+            Product& selling = ship.SellingProduct();
             cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
+            if(ship.GetLastVisitedCity() != "")
+                cout << ship.GetLastVisitedCity() << endl;
         }
         
         // Escribe cuantos productos diferentes hay.
@@ -353,7 +356,12 @@ int main()
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
             PrintCommand(command);
-            cout << Valley::NavigateRoute(Valley::GetBestRoute()) << endl;
+            Log("Begin loading best route");
+            auto route = Valley::GetBestRoute();
+            Log("Best route loaded: ");
+            for(auto item: route)
+                cout << NavigationDecisionAsString(item) << ",";
+            cout << endl << Valley::NavigateRoute(route) << endl;
         }
         
         // Comment line

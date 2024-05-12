@@ -10,6 +10,7 @@ Ship::Ship(Product buying, Product selling)
 {
     buying_product = buying;
     selling_product = selling;
+    last_visted_city = "";
 }
 
 Product& Ship::BuyingProduct()
@@ -40,4 +41,23 @@ void Ship::ReadFromStream(istream& stream)
 
     buying_product = Product(buy_id, 0, buy_amount);
     selling_product = Product(sell_id, sell_amount, 0);
+}
+
+string Ship::GetLastVisitedCity() const
+{
+    return last_visted_city;
+}
+
+void Ship::SetLastVisitedCity(string city)
+{
+    last_visted_city = city;
+}
+
+Ship Ship::Copy() const
+{
+    Product sold_product = Product(selling_product.GetId(), selling_product.GetCurrentAmount(), selling_product.GetWantedAmount());
+    Product bougth_product = Product(buying_product.GetId(), buying_product.GetCurrentAmount(), buying_product.GetWantedAmount());
+    Ship copy = Ship(bougth_product, sold_product);
+    copy.SetLastVisitedCity(this->GetLastVisitedCity());
+    return copy;
 }

@@ -27,7 +27,9 @@ class Valley
         static void DoTrades(BinTree<string> current_position);
         
         static void DisambiguateRoute(vector<NavigationDecision> current_route, BinTree<string> city, vector<vector<NavigationDecision>> &routes);
-        static int TestRoute(vector<NavigationDecision> route);
+        static int NavigateRoute(vector<NavigationDecision> &route, Ship &ship, bool dryrun);
+        static int TestRoute(vector<NavigationDecision> &route);
+        static vector<vector<NavigationDecision>> GetRoutes();
 
     public:
         static void InitializeFromStream(istream& stream);
@@ -40,7 +42,6 @@ class Valley
         
         static void DoTrades();
         
-        static vector<vector<NavigationDecision>> GetRoutes();
         static vector<NavigationDecision> GetBestRoute();
         static int NavigateRoute(vector<NavigationDecision> route);
 };

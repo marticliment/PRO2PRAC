@@ -39,7 +39,7 @@ void Valley::ReadCitiesFromStream(istream& stream)
 {
     cities.clear();
     river_structure = GetRiverStructureFromStream(stream);
-    //TODO: Reset ship voyages??
+    ship.SetLastVisitedCity("");
 }
 
 void Valley::InitializeFromStream(istream& stream)
@@ -134,6 +134,13 @@ void Valley::DisambiguateRoute(vector<NavigationDecision> current_route, BinTree
     }
 }
 
+void print_route(const vector<NavigationDecision> &route)
+{
+    for(auto item: route)
+            cout << NavigationDecisionAsString(item) << ',';
+        cout << endl;
+}
+
 vector<vector<NavigationDecision>> Valley::GetRoutes()
 {
     vector<vector<NavigationDecision>> routes;
@@ -141,20 +148,89 @@ vector<vector<NavigationDecision>> Valley::GetRoutes()
     return routes;
 }
 
-int Valley::TestRoute(vector<NavigationDecision> route)
-{
-    route.clear();
-    return 0;
-}
-
 vector<NavigationDecision> Valley::GetBestRoute()
 {
     auto routes = GetRoutes();
-    return routes[0];
+    int best_route_index = 0;
+    int best_route_value = TestRoute(routes[0]);
+    for(int i = 1; i < routes.size(); i++)
+    {
+        int route_value = TestRoute(routes[i]);
+        Log("Route found " + to_string(route_value) + " results. Route is:");
+        print_route(routes[i]);
+        if(route_value > best_route_value || (route_value == best_route_value && routes[i].size() < routes[best_route_index].size()))
+        {                                                             // TODO: perhaps add a <= here, but in theory not
+            best_route_value = route_value;
+            best_route_index = i;
+        }
+    }
+
+    return routes[best_route_index];
+}
+
+int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship, bool dryrun)
+{
+    int route_position = 0;
+    int total_traded = 0;
+    BinTree<string> location = river_structure;
+    while(route_position < route.size() && !location.empty())
+    {
+        auto& city = GetCity(location.value());
+        cout << location.value() << ',';
+
+        // Calculate how much product is going to be bought from the city
+        int buying_id = current_ship.BuyingProduct().GetId();
+        if(city.HasProduct(buying_id) && city.GetProduct(buying_id).ExceedingAmount() > 0)
+        {
+            int amount_to_buy = min(current_ship.BuyingProduct().MissingAmount(), city.GetProduct(buying_id).ExceedingAmount());
+            current_ship.BuyingProduct().RestockAmount(amount_to_buy);
+            if(!dryrun) // Only modify the city if we are not running on test mode
+                city.GetProduct(buying_id).WithdrawAmount(amount_to_buy);
+            total_traded += amount_to_buy;
+        }
+
+        // Calculate how much product is going to be sold to the city
+        int selling_id = current_ship.SellingProduct().GetId();
+        if(city.HasProduct(selling_id) && city.GetProduct(selling_id).ExceedingAmount() > 0)
+        {
+            int amount_to_sell = min(current_ship.SellingProduct().ExceedingAmount(), city.GetProduct(selling_id).MissingAmount());
+            current_ship.SellingProduct().WithdrawAmount(amount_to_sell);
+            if(!dryrun) // Only modify the city if we are not running on test mode
+                city.GetProduct(selling_id).RestockAmount(amount_to_sell);
+            total_traded += amount_to_sell;
+        }
+
+        current_ship.SetLastVisitedCity(location.value());
+
+        if(current_ship.SellingProduct().ExceedingAmount() == 0 && current_ship.BuyingProduct().MissingAmount())
+        {
+            // At this point there is nothing more to trade,
+            // so the route will be corrected to end here
+            while(route_position <= route.size())
+                route.pop_back();
+        }
+        else
+        {
+            // Navigate to the next city
+            if(route_position == route.size())
+                route_position++;
+            else if(route[route_position++] == NavigationDecision::Left)
+                location = location.left();
+            else
+                location = location.right();
+        }
+    }
+    cout << endl;
+    return total_traded;
+}
+
+int Valley::TestRoute(vector<NavigationDecision> &route)
+{
+    Ship test_ship = GetShip().Copy();
+    return NavigateRoute(route, test_ship, true);
 }
 
 int Valley::NavigateRoute(vector<NavigationDecision> route)
 {
-    route.clear();
-    return -1;
+    return NavigateRoute(route, GetShip(), false);
 }
