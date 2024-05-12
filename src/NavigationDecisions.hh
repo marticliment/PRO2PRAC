@@ -6,7 +6,7 @@
 
 using namespace std;
 
-/// @brief Represents the decision a ship can take when navigating a RiverArray
+/// @brief Represents the decision a ship can take when navigating a Valley
 enum class NavigationDecision
 {
     Left,

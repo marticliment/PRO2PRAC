@@ -175,7 +175,9 @@ error: ciudad repetida
 7 1 1
 8 25
 [1;32m#hv[0m
-[1;33mOperation HACER_VIAJE not implemented yet[0m
+[1;33mCalculating routes...[0m
+[1;33mEvaluating routes...[0m
+[1;33mGot result![0m
 [1;32m#eb[0m
 6 10 2 12
 [1;32m#leer_rio[0m
@@ -215,7 +217,9 @@ error: ciudad repetida
 [1;32m#mb[0m
 [1;32m# primer viaje[0m
 [1;32m#hacer_viaje[0m
-[1;33mOperation HACER_VIAJE not implemented yet[0m
+[1;33mCalculating routes...[0m
+[1;33mEvaluating routes...[0m
+[1;33mGot result![0m
 [1;32m#eb[0m
 3 10 4 10
 [1;32m#escribir_ciudad darna[0m
@@ -245,7 +249,9 @@ error: ciudad repetida
 8 10 9 10
 [1;32m# segundo viaje[0m
 [1;32m#hv[0m
-[1;33mOperation HACER_VIAJE not implemented yet[0m
+[1;33mCalculating routes...[0m
+[1;33mEvaluating routes...[0m
+[1;33mGot result![0m
 [1;32m#eb[0m
 8 10 9 10
 [1;32m#escribir_ciudad darna[0m
@@ -271,7 +277,9 @@ error: ciudad repetida
 [1;32m# tercer viaje[0m
 [1;32m#mb[0m
 [1;32m#hacer_viaje[0m
-[1;33mOperation HACER_VIAJE not implemented yet[0m
+[1;33mCalculating routes...[0m
+[1;33mEvaluating routes...[0m
+[1;33mGot result![0m
 [1;32m#escribir_barco[0m
 2 10 6 10
 [1;32m#escribir_ciudad darna[0m

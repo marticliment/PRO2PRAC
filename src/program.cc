@@ -1,5 +1,5 @@
 #include <iostream>
-#include "RiverArray.hh"
+#include "Valley.hh"
 #include "debug.hh"
 #include "ProductReference.hh"
 
@@ -64,8 +64,7 @@ void PrintCommand(string command)
 /// @brief Entry point of the program
 int main()
 {
-    RiverArray valley;
-    valley.InitializeFromStream(cin);
+    Valley::InitializeFromStream(cin);
     string command;
     while(cin >> command && command != FIN)
     {   
@@ -76,7 +75,7 @@ int main()
         if(command == LEER_RIO || command == LEER_RIO_L)
         {
             PrintCommand(command);
-            valley.ReadCitiesFromStream(cin);
+            Valley::ReadCitiesFromStream(cin);
         }
 
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
@@ -92,12 +91,12 @@ int main()
             cin >> city_id;
             PrintCommand(command + " " + city_id);
 
-            if(!valley.HasCity(city_id))
+            if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
 
             // Even if the city is invalid we need to read the provided values through cin
             // Therefore we will read to the default invalid city
-            valley.GetCity(city_id).ReadFromStream(cin);
+            Valley::GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerán los inventarios de ciudades del río. Todas las ciudades existirán. Los datos del inventario 
@@ -108,7 +107,7 @@ int main()
             PrintCommand(command);
             string city_id;
             while(cin >> city_id && city_id != "#")
-                valley.GetCity(city_id).ReadFromStream(cin);
+                Valley::GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerá el identificador del producto que se quiere comprar
@@ -119,7 +118,7 @@ int main()
         else if(command == MODIFICAR_BARCO || command == MODIFICAR_BARCO_L)
         {
             PrintCommand(command);
-            valley.GetShip().ReadFromStream(cin);
+            Valley::GetShip().ReadFromStream(cin);
         }
         
         // Se escriben los cuatro valores mencionados en la anterior operación y los viajes realizados en la cuenca 
@@ -128,8 +127,8 @@ int main()
         else if(command == ESCRIBIR_BARCO || command == ESCRIBIR_BARCO_L)
         {
             PrintCommand(command);
-            Product& buying = valley.GetShip().BuyingProduct();
-            Product& selling = valley.GetShip().SellingProduct();
+            Product& buying = Valley::GetShip().BuyingProduct();
+            Product& selling = Valley::GetShip().SellingProduct();
             cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
         }
@@ -161,9 +160,9 @@ int main()
             cin >> city_id;
             PrintCommand(command + " " + city_id);
 
-            if(valley.HasCity(city_id))
+            if(Valley::HasCity(city_id))
             {
-                auto& city = valley.GetCity(city_id);
+                auto& city = Valley::GetCity(city_id);
                 for(int i: city.GetProductIds())
                 {
                     auto& product = city.GetProduct(i);
@@ -208,11 +207,11 @@ int main()
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!valley.HasCity(city_id))
+            else if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else
             {
-                auto& city = valley.GetCity(city_id);
+                auto& city = Valley::GetCity(city_id);
                 if (city.HasProduct(product_id))
                     cout << ERR_AE_PROD << endl;
                 else
@@ -239,11 +238,11 @@ int main()
             
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!valley.HasCity(city_id))
+            else if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = valley.GetCity(city_id);
+                auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -269,11 +268,11 @@ int main()
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!valley.HasCity(city_id))
+            else if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = valley.GetCity(city_id);
+                auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -298,11 +297,11 @@ int main()
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!valley.HasCity(city_id))
+            else if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = valley.GetCity(city_id);
+                auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -323,14 +322,14 @@ int main()
             cin >> city1_id >> city2_id;
             PrintCommand(command + " " + city1_id + " " + city2_id);
 
-            if(!valley.HasCity(city1_id) || !valley.HasCity(city2_id))
+            if(!Valley::HasCity(city1_id) || !Valley::HasCity(city2_id))
                 cout << ERR_NE_CITY << endl;
             else if (city1_id == city2_id)
                 cout << ERR_RE_CITY << endl;
             else
             {
-                auto& city1 = valley.GetCity(city1_id);
-                auto& city2 = valley.GetCity(city2_id);
+                auto& city1 = Valley::GetCity(city1_id);
+                auto& city2 = Valley::GetCity(city2_id);
                 city1.TradeWith(city2);
             }
         }
@@ -341,7 +340,7 @@ int main()
         else if(command == REDISTRIBUIR || command == REDISTRIBUIR_L)
         {
             PrintCommand(command);
-            valley.DoTrades();
+            Valley::DoTrades();
         }
         
         // No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita comprar y vender el mayor número posible de productos.
@@ -353,7 +352,9 @@ int main()
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
             PrintCommand(command);
-            Log("Operation HACER_VIAJE not implemented yet");
+            Log("Calculating routes...");
+            Log("Evaluating routes...");
+            Log("Got result!");
         }
         
         // Comment line

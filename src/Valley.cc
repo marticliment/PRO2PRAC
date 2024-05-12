@@ -1,18 +1,20 @@
 #include "ProductReference.hh"
-#include "RiverArray.hh"
+#include "Valley.hh"
 #include "debug.hh"
 
-RiverArray::RiverArray()
+
+bool Valley::initialized = false;
+City Valley::invalid_city = City("invalid");
+BinTree<string> Valley::river_structure = BinTree<string>();
+map<string, City> Valley::cities = map<string, City>();
+Ship Valley::ship = Ship();
+
+void Valley::AssertRiverArrayIsInitialized()
 {
-    initialized = false;
+    assert(initialized && "The current Valley object is not initialized, but a method that requires it to be is being called.");
 }
 
-void RiverArray::AssertRiverArrayIsInitialized() const
-{
-    assert(initialized && "The current RiverArray object is not initialized, but a method that requires it to be is being called.");
-}
-
-BinTree<string> RiverArray::GetRiverStructureFromStream(istream& stream)
+BinTree<string> Valley::GetRiverStructureFromStream(istream& stream)
 {
     // Read city name and check if city is valid
     string city_name;
@@ -31,14 +33,14 @@ BinTree<string> RiverArray::GetRiverStructureFromStream(istream& stream)
     return BinTree<string>(city_name, left, right);
 }
 
-void RiverArray::ReadCitiesFromStream(istream& stream)
+void Valley::ReadCitiesFromStream(istream& stream)
 {
     cities.clear();
     river_structure = GetRiverStructureFromStream(stream);
     //TODO: Reset ship voyages??
 }
 
-void RiverArray::InitializeFromStream(istream& stream)
+void Valley::InitializeFromStream(istream& stream)
 {
     int count;
     stream >> count;
@@ -48,13 +50,13 @@ void RiverArray::InitializeFromStream(istream& stream)
     initialized = true;
 }
 
-Ship& RiverArray::GetShip()
+Ship& Valley::GetShip()
 {
     AssertRiverArrayIsInitialized();
     return ship;
 }
 
-vector<string> RiverArray::GetCities() const
+vector<string> Valley::GetCities()
 {
     AssertRiverArrayIsInitialized();
     vector<string> names;
@@ -67,13 +69,13 @@ vector<string> RiverArray::GetCities() const
     return names;
 }
 
-bool RiverArray::HasCity(string id) const
+bool Valley::HasCity(string id)
 {
     AssertRiverArrayIsInitialized();
     return cities.find(id) != cities.end();
 }
 
-City& RiverArray::GetCity(string id)
+City& Valley::GetCity(string id)
 {
     AssertRiverArrayIsInitialized();
     if(!HasCity(id))
@@ -82,7 +84,7 @@ City& RiverArray::GetCity(string id)
     return cities.at(id);
 }
 
-void RiverArray::DoTrades(BinTree<string> current_position)
+void Valley::DoTrades(BinTree<string> current_position)
 {
     AssertRiverArrayIsInitialized();
 
@@ -104,7 +106,7 @@ void RiverArray::DoTrades(BinTree<string> current_position)
     }
 }
 
-void RiverArray::DoTrades()
+void Valley::DoTrades()
 {
     AssertRiverArrayIsInitialized();
 

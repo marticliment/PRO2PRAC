@@ -9,7 +9,8 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "ostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "map": "cpp"
     },
     "cSpell.enableFiletypes": [
         "!cpp"
