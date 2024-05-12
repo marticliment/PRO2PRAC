@@ -26,6 +26,7 @@ class City
         void RemoveProduct(int product_id);
         int GetWeight() const;
         int GetVolume() const;
+        void Trade(City& other);
 };
 
 #endif

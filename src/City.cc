@@ -84,3 +84,44 @@ int City::GetWeight() const
         weight += (it++)->second.GetWeight();
     return weight;
 }
+
+void City::Trade(City& other)
+{
+    for(int product_id: this->GetProductIds())
+    {
+        // this -> SELLER
+        // other -> BUYER
+        if(!other.HasProduct(product_id))
+            continue;
+        else
+        {
+            auto& seller_product = this->GetProduct(product_id);
+            auto& buyer_product = other.GetProduct(product_id);
+            if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+                continue;
+
+            int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
+            seller_product.WithdrawAmount(trade_amount);
+            buyer_product.RestockAmount(trade_amount);
+        }
+    }
+
+    for(int product_id: other.GetProductIds())
+    {
+        // other -> SELLER
+        // this -> BUYER
+        if(!this->HasProduct(product_id))
+            continue;
+        else
+        {
+            auto& seller_product = other.GetProduct(product_id);
+            auto& buyer_product = this->GetProduct(product_id);
+            if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+                continue;
+
+            int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
+            seller_product.WithdrawAmount(trade_amount);
+            buyer_product.RestockAmount(trade_amount);
+        }
+    }
+}

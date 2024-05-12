@@ -51,12 +51,12 @@ const string green("\033[1;32m");
 const string reset("\033[0m");
 #endif
 
-void PrintCommand(string c)
+void PrintCommand(string command)
 {
 #ifdef DEBUG
-    cout << green << "#" + c << reset << endl;
+    cout << green << "#" + command << reset << endl;
 #else
-    cout << "#" + c << endl;
+    cout << "#" + command << endl;
 #endif
 }
 
@@ -64,19 +64,19 @@ void PrintCommand(string c)
 /// @brief Entry point of the program
 int main()
 {
-    RiverArray RiverSystem;
-    RiverSystem.InitializeFromStream(cin);
-    string c;
-    while(cin >> c && c != FIN)
+    RiverArray valley;
+    valley.InitializeFromStream(cin);
+    string command;
+    while(cin >> command && command != FIN)
     {   
         //  Se leerán los identificadores de las ciudades indicando la estructura
         // de la cuenca. No se escribe nada. Los inventarios de las ciudades quedan vacíos. El
         // barco conserva sus atributos de productos pero no ha realizado viajes en la nueva
         // cuenca.
-        if(c == LEER_RIO || c == LEER_RIO_L)
+        if(command == LEER_RIO || command == LEER_RIO_L)
         {
-            PrintCommand(c);
-            RiverSystem.ReadCitiesFromStream(cin);
+            PrintCommand(command);
+            valley.ReadCitiesFromStream(cin);
         }
 
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
@@ -86,29 +86,29 @@ int main()
         // número de unidades necesitadas siempre ha de ser mayor que 0. Aunque la ciudad no exista, habrá datos de su
         // inventario que igualmente se han de leer aunque
         // no se usen, para pasar a la siguiente operación.
-        else if(c == LEER_INVENTARIO || c == LEER_INVENTARIO_L)
+        else if(command == LEER_INVENTARIO || command == LEER_INVENTARIO_L)
         {
             string city_id;
             cin >> city_id;
-            PrintCommand(c + " " + city_id);
+            PrintCommand(command + " " + city_id);
 
-            if(!RiverSystem.HasCity(city_id))
+            if(!valley.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
 
             // Even if the city is invalid we need to read the provided values through cin
             // Therefore we will read to the default invalid city
-            RiverSystem.GetCity(city_id).ReadFromStream(cin);
+            valley.GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerán los inventarios de ciudades del río. Todas las ciudades existirán. Los datos del inventario 
         // son como en la funcionalidad anterior.
         // No necesariamente todas las ciudades del río tendrán inventario.
-        else if(c == LEER_INVENTARIOS || c == LEER_INVENTARIOS_L)
+        else if(command == LEER_INVENTARIOS || command == LEER_INVENTARIOS_L)
         {
-            PrintCommand(c);
+            PrintCommand(command);
             string city_id;
             while(cin >> city_id && city_id != "#")
-                RiverSystem.GetCity(city_id).ReadFromStream(cin);
+                valley.GetCity(city_id).ReadFromStream(cin);
         }
         
         // Se leerá el identificador del producto que se quiere comprar
@@ -116,54 +116,54 @@ int main()
         // Si algún producto no existe, se escribirá un mensaje de error. Si los dos productos
         // son el mismo, se escribirá un mensaje de error. Se garantiza que ambas cantidades
         // serán no negativas y al menos una de ellas será estrictamente positiva.
-        else if(c == MODIFICAR_BARCO || c == MODIFICAR_BARCO_L)
+        else if(command == MODIFICAR_BARCO || command == MODIFICAR_BARCO_L)
         {
-            PrintCommand(c);
-            RiverSystem.GetShip().ReadFromStream(cin);
+            PrintCommand(command);
+            valley.GetShip().ReadFromStream(cin);
         }
         
         // Se escriben los cuatro valores mencionados en la anterior operación y los viajes realizados en la cuenca 
         // actual, en orden cronológico. Para cada
         // viaje solo se ha de escribir la última ciudad visitada de la ruta escogida.
-        else if(c == ESCRIBIR_BARCO || c == ESCRIBIR_BARCO_L)
+        else if(command == ESCRIBIR_BARCO || command == ESCRIBIR_BARCO_L)
         {
-            PrintCommand(c);
-            Product& buying = RiverSystem.GetShip().BuyingProduct();
-            Product& selling = RiverSystem.GetShip().SellingProduct();
+            PrintCommand(command);
+            Product& buying = valley.GetShip().BuyingProduct();
+            Product& selling = valley.GetShip().SellingProduct();
             cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
         }
         
         // Escribe cuantos productos diferentes hay.
-        else if(c == CONSULTAR_NUM || c == CONSULTAR_NUM_L)
+        else if(command == CONSULTAR_NUM || command == CONSULTAR_NUM_L)
         {
-            PrintCommand(c);
+            PrintCommand(command);
             cout << ProductReference::Count() << endl;
         }
         
         // Se lee el número de productos nuevos, mayor que 0. Sus
         // identificadores serán correlativos a partir del último producto existente. Se leerán
         // sus pesos y volúmenes respectivos
-        else if(c == AGREGAR_PRODUCTOS || c == AGREGAR_PRODUCTOS_L)
+        else if(command == AGREGAR_PRODUCTOS || command == AGREGAR_PRODUCTOS_L)
         {
             int count;
             cin >> count;
-            PrintCommand(c + " " + to_string(count));
+            PrintCommand(command + " " + to_string(count));
             ProductReference::AddFromStream(cin, count);
         }
         
         // se escribirá un mensaje de error. Si la ciudad existe, se escribirá su inventario, y el
         // peso y el volumen total de los productos almacenados.
         // Se leerá el identificador de una ciudad. Si la ciudad no existe
-        else if(c == ESCRIBIR_CIUDAD || c == ESCRIBIR_CIUDAD_L)
+        else if(command == ESCRIBIR_CIUDAD || command == ESCRIBIR_CIUDAD_L)
         {
             string city_id;
             cin >> city_id;
-            PrintCommand(c + " " + city_id);
+            PrintCommand(command + " " + city_id);
 
-            if(RiverSystem.HasCity(city_id))
+            if(valley.HasCity(city_id))
             {
-                auto& city = RiverSystem.GetCity(city_id);
+                auto& city = valley.GetCity(city_id);
                 for(int i: city.GetProductIds())
                 {
                     auto& product = city.GetProduct(i);
@@ -178,11 +178,11 @@ int main()
         // Se lee el identificador de un producto. Si no existe el producto se escribe 
         // un mensaje de error. En caso contrario se escribe el peso y volumen
         // del producto.
-        else if(c == ESCRIBIR_PRODUCTO || c == ESCRIBIR_PRODUCTO_L)
+        else if(command == ESCRIBIR_PRODUCTO || command == ESCRIBIR_PRODUCTO_L)
         {
             int product_id;
             cin >> product_id;
-            PrintCommand(c + " " + to_string(product_id));
+            PrintCommand(command + " " + to_string(product_id));
             if(ProductReference::Contains(product_id))
             {
                 auto product = ProductReference::Get(product_id);
@@ -199,20 +199,20 @@ int main()
         // de ese producto se añaden a la ciudad, modificándose el peso y el volumen total si
         // hace falta. Se escribe el peso y el volumen total. El número de unidades necesitadas
         // siempre ha de ser mayor que 0.
-        else if(c == PONER_PROD || c == PONER_PROD_L)
+        else if(command == PONER_PROD || command == PONER_PROD_L)
         {
             string city_id;
             int product_id, current, wanted;
             cin >> city_id >> product_id >> current >> wanted;
-            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+            PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!RiverSystem.HasCity(city_id))
+            else if(!valley.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else
             {
-                auto& city = RiverSystem.GetCity(city_id);
+                auto& city = valley.GetCity(city_id);
                 if (city.HasProduct(product_id))
                     cout << ERR_AE_PROD << endl;
                 else
@@ -230,20 +230,20 @@ int main()
         // de ese producto sustituyen a los que había en la ciudad, modificándose el peso y
         // el volumen total si hace falta. Se escribe el peso y el volumen total. El número de
         // unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.
-        else if(c == MODIFICAR_PROD || c == MODIFICAR_PROD_L)
+        else if(command == MODIFICAR_PROD || command == MODIFICAR_PROD_L)
         {
             string city_id;
             int product_id, current, wanted;
             cin >> city_id >> product_id >> current >> wanted;
-            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+            PrintCommand(command + " " + city_id + " " + to_string(product_id));
             
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!RiverSystem.HasCity(city_id))
+            else if(!valley.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = RiverSystem.GetCity(city_id);
+                auto& city = valley.GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -260,20 +260,20 @@ int main()
         // un mensaje de error. Si no hay errores, se quitan los datos de este producto en la
         // ciudad, modificándose el peso y el volumen total si hace falta. Se escribe el peso y
         // el volumen total.
-        else if(c == QUITAR_PROD || c == QUITAR_PROD_L)
+        else if(command == QUITAR_PROD || command == QUITAR_PROD_L)
         {
             string city_id;
             int product_id;
             cin >> city_id >> product_id;
-            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+            PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!RiverSystem.HasCity(city_id))
+            else if(!valley.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = RiverSystem.GetCity(city_id);
+                auto& city = valley.GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -289,20 +289,20 @@ int main()
         // mensaje de error. Si el producto no está en el inventario de la ciudad, escribe un
         // mensaje de error. Si no hay errores, se escribe cuantas unidades de ese producto
         // tiene y quiere la ciudad.
-        else if(c == CONSULTAR_PROD || c == CONSULTAR_PROD_L)
+        else if(command == CONSULTAR_PROD || command == CONSULTAR_PROD_L)
         {
             string city_id;
             int product_id;
             cin >> city_id >> product_id;
-            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+            PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << endl;
-            else if(!RiverSystem.HasCity(city_id))
+            else if(!valley.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
             else 
             {
-                auto& city = RiverSystem.GetCity(city_id);
+                auto& city = valley.GetCity(city_id);
                 if(!city.HasProduct(product_id))
                     cout << ERR_NE_PROD_CITY << endl;
                 else
@@ -317,68 +317,30 @@ int main()
         // de las dos (o las dos), se escribe un mensaje de error. Si las ciudades existen y son
         // la misma, se escribe un mensaje de error. Si las ciudades existen y son diferentes,
         // comercian entre ellas.
-        else if(c == COMERCIAR || c == COMERCIAR_L)
+        else if(command == COMERCIAR || command == COMERCIAR_L)
         {
-            PrintCommand(c);
             string city1_id, city2_id;
             cin >> city1_id >> city2_id;
+            PrintCommand(command + " " + city1_id + " " + city2_id);
 
-            if(!RiverSystem.HasCity(city1_id) || !RiverSystem.HasCity(city2_id))
+            if(!valley.HasCity(city1_id) || !valley.HasCity(city2_id))
                 cout << ERR_NE_CITY << endl;
             else if (city1_id == city2_id)
                 cout << ERR_RE_CITY << endl;
             else
             {
-                auto& city1 = RiverSystem.GetCity(city1_id);
-                auto& city2 = RiverSystem.GetCity(city2_id);
-                for(int product_id: city1.GetProductIds())
-                {
-                    // City1 -> SELLER
-                    // City2 -> BUYER
-                    if(!city2.HasProduct(product_id))
-                        continue;
-                    else
-                    {
-                        auto& seller_product = city1.GetProduct(product_id);
-                        auto& buyer_product = city2.GetProduct(product_id);
-                        if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
-                            continue;
-
-                        int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
-                        Log("Trading " + to_string(trade_amount) + " amount of product " + to_string(product_id) + " from " + city1_id + " to " + city2_id);
-                        seller_product.WithdrawAmount(trade_amount);
-                        buyer_product.RestockAmount(trade_amount);
-                    }
-                }
-
-                for(int product_id: city2.GetProductIds())
-                {
-                    // City2 -> SELLER
-                    // City1 -> BUYER
-                    if(!city1.HasProduct(product_id))
-                        continue;
-                    else
-                    {
-                        auto& seller_product = city2.GetProduct(product_id);
-                        auto& buyer_product = city1.GetProduct(product_id);
-                        if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
-                            continue;
-
-                        int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
-                        Log("Trading " + to_string(trade_amount) + " amount of product " + to_string(product_id) + " from " + city2_id + " to " + city1_id);
-                        seller_product.WithdrawAmount(trade_amount);
-                        buyer_product.RestockAmount(trade_amount);
-                    }
-                }
-            }            
+                auto& city1 = valley.GetCity(city1_id);
+                auto& city2 = valley.GetCity(city2_id);
+                city1.Trade(city2);
+            }
         }
         
         // No se leen datos. La ciudad de la desembocadura comercia con su
         // ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda,
         // y así sucesivamente.
-        else if(c == REDISTRIBUIR || c == REDISTRIBUIR_L)
+        else if(command == REDISTRIBUIR || command == REDISTRIBUIR_L)
         {
-            PrintCommand(c);
+            PrintCommand(command);
             Log("Operation REDISTRIBUIR not implemented yet");
         }
         
@@ -388,23 +350,23 @@ int main()
         // derecha. Una vez encontrada la ruta, se hace el viaje y se compran y venden los
         // productos a lo largo de la ruta, modificándose los inventarios de las ciudades. Se
         // escribe el total de unidades de productos compradas y vendidas por el barco.
-        else if(c == HACER_VIAJE || c == HACER_VIAJE_L)
+        else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
-            PrintCommand(c);
+            PrintCommand(command);
             Log("Operation HACER_VIAJE not implemented yet");
         }
         
         // Comment line
-        else if (c == "//")
+        else if (command == "//")
         {
-            getline(cin, c); // Skip current line            
+            getline(cin, command); // Skip current line            
 #ifdef DEBUG
-            PrintCommand(c);
+            PrintCommand(command);
 #endif
         }
         else
         {
-            Error("Invalid input "  + c);
+            Error("Invalid input "  + command);
         }
     }
 }
