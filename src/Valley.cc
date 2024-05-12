@@ -1,7 +1,9 @@
+#include <set>
 #include "ProductReference.hh"
 #include "Valley.hh"
 #include "debug.hh"
 
+using namespace std;
 
 bool Valley::initialized = false;
 City Valley::invalid_city = City("invalid");
@@ -111,4 +113,48 @@ void Valley::DoTrades()
     AssertRiverArrayIsInitialized();
 
     DoTrades(river_structure);
+}
+
+void Valley::DisambiguateRoute(vector<NavigationDecision> current_route, BinTree<string> city, vector<vector<NavigationDecision>> &routes)
+{
+    if(city.empty())
+    {
+        routes.push_back(current_route);
+    }
+    else
+    {
+        auto& left_route = current_route;
+        auto right_route = current_route;
+        
+        left_route.push_back(NavigationDecision::Left);
+        right_route.push_back(NavigationDecision::Right);
+
+        DisambiguateRoute(left_route, city.left(), routes);
+        DisambiguateRoute(right_route, city.right(), routes);
+    }
+}
+
+vector<vector<NavigationDecision>> Valley::GetRoutes()
+{
+    vector<vector<NavigationDecision>> routes;
+    DisambiguateRoute(vector<NavigationDecision>(), river_structure, routes);
+    return routes;
+}
+
+int Valley::TestRoute(vector<NavigationDecision> route)
+{
+    route.clear();
+    return 0;
+}
+
+vector<NavigationDecision> Valley::GetBestRoute()
+{
+    auto routes = GetRoutes();
+    return routes[0];
+}
+
+int Valley::NavigateRoute(vector<NavigationDecision> route)
+{
+    route.clear();
+    return -1;
 }

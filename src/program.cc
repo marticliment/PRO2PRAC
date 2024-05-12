@@ -2,6 +2,7 @@
 #include "Valley.hh"
 #include "debug.hh"
 #include "ProductReference.hh"
+#include "NavigationDecisions.hh"
 
 using namespace std;
 
@@ -352,9 +353,7 @@ int main()
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
             PrintCommand(command);
-            Log("Calculating routes...");
-            Log("Evaluating routes...");
-            Log("Got result!");
+            cout << Valley::NavigateRoute(Valley::GetBestRoute()) << endl;
         }
         
         // Comment line

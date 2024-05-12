@@ -11,7 +11,6 @@ enum class NavigationDecision
 {
     Left,
     Right,
-    Top
 };
 
 /// @brief Converts a NavigationDecision value to a human-readable string

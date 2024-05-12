@@ -14,10 +14,6 @@ string NavigationDecisionAsString(NavigationDecision decision)
             return "right";
             break;
 
-        case NavigationDecision::Top:
-            return "top";
-            break;
-
         default:
             return "Invalid NavigationDecision value";
             break;
