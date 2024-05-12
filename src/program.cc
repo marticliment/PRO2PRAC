@@ -185,7 +185,7 @@ int main()
             PrintCommand(command + " " + to_string(product_id));
             if(ProductReference::Contains(product_id))
             {
-                auto product = ProductReference::Get(product_id);
+                auto& product = ProductReference::Get(product_id);
                 cout << product_id << ' ' << product.GetWeight() << ' ' << product.GetVolume() << endl;
             }
             else
