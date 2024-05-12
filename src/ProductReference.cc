@@ -1,16 +1,16 @@
 #include "ProductReference.hh"
 
-vector<ProductData> ProductReference::__data = vector<ProductData>(0);
+vector<ProductData> ProductReference::data = vector<ProductData>(0);
 
-void ProductReference::Add(ProductData data)
+void ProductReference::Add(ProductData new_data)
 {
-    __data.push_back(data);
+    data.push_back(new_data);
 }
 
 const ProductData& ProductReference::Get(int id)
 {
     if(Contains(id))
-        return __data[id-1];
+        return data[id-1];
     else
         throw exception();
 }
@@ -20,7 +20,7 @@ bool ProductReference::Contains(int id)
     if(id <= 0)
         return false;
 
-    return id <= __data.size();
+    return id <= data.size();
 }
 
 void ProductReference::AddFromStream(istream& stream, int count)
@@ -35,5 +35,5 @@ void ProductReference::AddFromStream(istream& stream, int count)
 
 int ProductReference::Count()
 {
-    return __data.size();
+    return data.size();
 }

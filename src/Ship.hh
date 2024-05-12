@@ -11,8 +11,8 @@ using namespace std;
 class Ship
 {
     private:
-        Product __buying_product;
-        Product __selling_product;
+        Product buying_product;
+        Product selling_product;
 
     public:
         Ship();

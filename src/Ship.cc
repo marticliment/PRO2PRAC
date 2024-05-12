@@ -8,18 +8,18 @@ Ship::Ship()
 
 Ship::Ship(Product buying, Product selling)
 {
-    __buying_product = buying;
-    __selling_product = selling;
+    buying_product = buying;
+    selling_product = selling;
 }
 
 Product& Ship::BuyingProduct()
 {
-    return __buying_product;
+    return buying_product;
 }
 
 Product& Ship::SellingProduct()
 {
-    return __selling_product;
+    return selling_product;
 }
 
 void Ship::ReadFromStream(istream& stream)
@@ -38,6 +38,6 @@ void Ship::ReadFromStream(istream& stream)
         return;
     }
 
-    __buying_product = Product(buy_id, 0, buy_amount);
-    __selling_product = Product(sell_id, sell_amount, 0);
+    buying_product = Product(buy_id, 0, buy_amount);
+    selling_product = Product(sell_id, sell_amount, 0);
 }

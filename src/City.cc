@@ -85,7 +85,7 @@ int City::GetWeight() const
     return weight;
 }
 
-void City::Trade(City& other)
+void City::TradeWith(City& other)
 {
     for(int product_id: this->GetProductIds())
     {

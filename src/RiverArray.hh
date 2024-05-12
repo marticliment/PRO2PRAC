@@ -13,17 +13,18 @@
 class RiverArray
 {
     private:
-        bool __initialized = false;
+        bool initialized = false;
         // There are methods where a city must be returned, but the 
         // wanted city does not exist. This city will be returned instead.
-        City __invalid_city = City("invalid");
+        City invalid_city = City("invalid");
         
-        BinTree<string> __river_structure;
-        map<string, City> __cities;
-        Ship __ship;
+        BinTree<string> river_structure;
+        map<string, City> cities;
+        Ship ship;
 
-        void __assert_river_array_is_initialized() const;
-        BinTree<string> __city_reader_helper(istream& stream);
+        void AssertRiverArrayIsInitialized() const;
+        BinTree<string> GetRiverStructureFromStream(istream& stream);
+        void DoTrades(BinTree<string> current_position);
 
     public:
         RiverArray();
@@ -33,6 +34,7 @@ class RiverArray
         vector<string> GetCities() const;
         City& GetCity(string id);
         bool HasCity(string id) const;
+        void DoTrades();
 };
 
 

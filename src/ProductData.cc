@@ -7,27 +7,27 @@ ProductData::ProductData()
 
 ProductData::ProductData(int weight, int volume)
 {
-    __weight = weight;
-    __volume = volume;
+    this->weight = weight;
+    this->volume = volume;
 }
 
 int ProductData::GetWeight() const
 {
-    return __weight;
+    return weight;
 }
 
 int ProductData::GetWeight(int amount) const
 {
-    return __weight * amount;
+    return weight * amount;
 }
 
 int ProductData::GetVolume() const
 {
-    return __volume;
+    return volume;
 }
 
 int ProductData::GetVolume(int amount) const
 {
-    return __volume * amount;
+    return volume * amount;
 }
 

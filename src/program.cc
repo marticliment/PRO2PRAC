@@ -331,7 +331,7 @@ int main()
             {
                 auto& city1 = valley.GetCity(city1_id);
                 auto& city2 = valley.GetCity(city2_id);
-                city1.Trade(city2);
+                city1.TradeWith(city2);
             }
         }
         
@@ -341,7 +341,7 @@ int main()
         else if(command == REDISTRIBUIR || command == REDISTRIBUIR_L)
         {
             PrintCommand(command);
-            Log("Operation REDISTRIBUIR not implemented yet");
+            valley.DoTrades();
         }
         
         // No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita comprar y vender el mayor número posible de productos.

@@ -4,15 +4,15 @@
 
 RiverArray::RiverArray()
 {
-    __initialized = false;
+    initialized = false;
 }
 
-void RiverArray::__assert_river_array_is_initialized() const
+void RiverArray::AssertRiverArrayIsInitialized() const
 {
-    assert(__initialized && "The current RiverArray object is not initialized, but a method that requires it to be is being called.");
+    assert(initialized && "The current RiverArray object is not initialized, but a method that requires it to be is being called.");
 }
 
-BinTree<string> RiverArray::__city_reader_helper(istream& stream)
+BinTree<string> RiverArray::GetRiverStructureFromStream(istream& stream)
 {
     // Read city name and check if city is valid
     string city_name;
@@ -23,19 +23,19 @@ BinTree<string> RiverArray::__city_reader_helper(istream& stream)
     // Read city children
     BinTree<string> left, right;
 
-    __cities[city_name] = City(city_name);
+    cities[city_name] = City(city_name);
 
-    left = __city_reader_helper(stream);
-    right = __city_reader_helper(stream);
+    left = GetRiverStructureFromStream(stream);
+    right = GetRiverStructureFromStream(stream);
     
     return BinTree<string>(city_name, left, right);
 }
 
 void RiverArray::ReadCitiesFromStream(istream& stream)
 {
-    __cities.clear();
-    __river_structure = __city_reader_helper(stream);
-    //TODO: Reset ship voyages
+    cities.clear();
+    river_structure = GetRiverStructureFromStream(stream);
+    //TODO: Reset ship voyages??
 }
 
 void RiverArray::InitializeFromStream(istream& stream)
@@ -44,22 +44,22 @@ void RiverArray::InitializeFromStream(istream& stream)
     stream >> count;
     ProductReference::AddFromStream(stream, count);
     ReadCitiesFromStream(stream);
-    __ship.ReadFromStream(stream);
-    __initialized = true;
+    ship.ReadFromStream(stream);
+    initialized = true;
 }
 
 Ship& RiverArray::GetShip()
 {
-    __assert_river_array_is_initialized();
-    return __ship;
+    AssertRiverArrayIsInitialized();
+    return ship;
 }
 
 vector<string> RiverArray::GetCities() const
 {
-    __assert_river_array_is_initialized();
+    AssertRiverArrayIsInitialized();
     vector<string> names;
-    auto it = __cities.begin();
-    while(it != __cities.end())
+    auto it = cities.begin();
+    while(it != cities.end())
     {
         names.push_back(it->first);
         it++;
@@ -69,15 +69,44 @@ vector<string> RiverArray::GetCities() const
 
 bool RiverArray::HasCity(string id) const
 {
-    __assert_river_array_is_initialized();
-    return __cities.find(id) != __cities.end();
+    AssertRiverArrayIsInitialized();
+    return cities.find(id) != cities.end();
 }
 
 City& RiverArray::GetCity(string id)
 {
-    __assert_river_array_is_initialized();
+    AssertRiverArrayIsInitialized();
     if(!HasCity(id))
-        return __invalid_city;
+        return invalid_city;
 
-    return __cities.at(id);
+    return cities.at(id);
+}
+
+void RiverArray::DoTrades(BinTree<string> current_position)
+{
+    AssertRiverArrayIsInitialized();
+
+    if(current_position.empty())
+        return;
+
+    auto& current_city = GetCity(current_position.value());
+    
+    if(!current_position.left().empty())
+    {
+        current_city.TradeWith(GetCity(current_position.left().value()));
+        DoTrades(current_position.left());
+    }
+
+    if(!current_position.right().empty())
+    {
+        current_city.TradeWith(GetCity(current_position.right().value()));
+        DoTrades(current_position.right());
+    }
+}
+
+void RiverArray::DoTrades()
+{
+    AssertRiverArrayIsInitialized();
+
+    DoTrades(river_structure);
 }

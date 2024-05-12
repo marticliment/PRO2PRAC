@@ -8,9 +8,9 @@ using namespace std;
 class Product
 {
     private:
-        int __id;
-        int __wanted_amount;
-        int __current_amount;
+        int id;
+        int wanted_amount;
+        int current_amount;
 
     public:
         Product();

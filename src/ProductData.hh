@@ -4,8 +4,8 @@
 class ProductData
 {
     private:
-        int __weight;
-        int __volume;
+        int weight;
+        int volume;
 
 
     public:

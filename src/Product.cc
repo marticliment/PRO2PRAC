@@ -9,63 +9,63 @@ Product::Product()
 
 Product::Product(int id, int current, int required)
 {
-    __id = id;
-    __current_amount = current;
-    __wanted_amount = required;
+    this->id = id;
+    current_amount = current;
+    wanted_amount = required;
 }
 
 int Product::GetId() const
 {
-    return __id;
+    return id;
 }
 
 int Product::GetCurrentAmount() const
 {
-    return __current_amount;
+    return current_amount;
 }
 
 int Product::GetWantedAmount() const
 {
-    return __wanted_amount;
+    return wanted_amount;
 }
 
 int Product::ExceedingAmount() const
 {
-    if(__current_amount - __wanted_amount < 0)
+    if(current_amount - wanted_amount < 0)
         return 0;
     
-    return __current_amount - __wanted_amount;
+    return current_amount - wanted_amount;
 }
 
 int Product::MissingAmount() const
 {
-    if(__wanted_amount - __current_amount < 0) 
+    if(wanted_amount - current_amount < 0) 
         return 0;
     
-    return __wanted_amount - __current_amount;
+    return wanted_amount - current_amount;
 }
 
 void Product::WithdrawAmount(int amount)
 {
-    __current_amount -= amount;
+    current_amount -= amount;
 }
 
 void Product::RestockAmount(int amount)
 {
-    __current_amount += amount;
+    current_amount += amount;
 }
 
 const ProductData& Product::GetData() const
 {
-    return ProductReference::Get(__id);
+    return ProductReference::Get(id);
 }
 
 int Product::GetWeight() const
 {
-    return ProductReference::Get(__id).GetWeight(__current_amount);
+    return ProductReference::Get(id).GetWeight(current_amount);
 }
 
 int Product::GetVolume() const
 {
-    return ProductReference::Get(__id).GetVolume(__current_amount);
+    return ProductReference::Get(id).GetVolume(current_amount);
 }

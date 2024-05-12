@@ -156,7 +156,6 @@ error: ciudad repetida
 7 1 1
 8 25
 [1;32m#redistribuir[0m
-[1;33mOperation REDISTRIBUIR not implemented yet[0m
 [1;32m#escribir_ciudad borna[0m
 2 4 5
 4 5 9
@@ -193,19 +192,18 @@ error: ciudad repetida
 0 0
 [1;32m#ls[0m
 [1;32m#re[0m
-[1;33mOperation REDISTRIBUIR not implemented yet[0m
 [1;32m#escribir_ciudad darna[0m
 1 15 8
-2 3 10
-198 114
+2 10 10
+240 205
 [1;32m#escribir_ciudad derna[0m
-2 20 3
-3 4 20
-136 264
+2 13 3
+3 13 20
+130 182
 [1;32m#escribir_ciudad dirna[0m
-3 14 5
+3 5 5
 4 2 10
-142 42
+106 33
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
@@ -222,16 +220,16 @@ error: ciudad repetida
 3 10 4 10
 [1;32m#escribir_ciudad darna[0m
 1 15 8
-2 3 10
-198 114
+2 10 10
+240 205
 [1;32m#escribir_ciudad derna[0m
-2 20 3
-3 4 20
-136 264
+2 13 3
+3 13 20
+130 182
 [1;32m#escribir_ciudad dirna[0m
-3 14 5
+3 5 5
 4 2 10
-142 42
+106 33
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
@@ -252,16 +250,16 @@ error: ciudad repetida
 8 10 9 10
 [1;32m#escribir_ciudad darna[0m
 1 15 8
-2 3 10
-198 114
+2 10 10
+240 205
 [1;32m#escribir_ciudad derna[0m
-2 20 3
-3 4 20
-136 264
+2 13 3
+3 13 20
+130 182
 [1;32m#escribir_ciudad dirna[0m
-3 14 5
+3 5 5
 4 2 10
-142 42
+106 33
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
@@ -278,16 +276,16 @@ error: ciudad repetida
 2 10 6 10
 [1;32m#escribir_ciudad darna[0m
 1 15 8
-2 3 10
-198 114
+2 10 10
+240 205
 [1;32m#escribir_ciudad derna[0m
-2 20 3
-3 4 20
-136 264
+2 13 3
+3 13 20
+130 182
 [1;32m#escribir_ciudad dirna[0m
-3 14 5
+3 5 5
 4 2 10
-142 42
+106 33
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
