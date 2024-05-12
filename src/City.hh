@@ -24,6 +24,8 @@ class City
         const Product& GetProduct(int id) const;
         bool HasProduct(int id) const;
         void AddProduct(Product p);
+        void UpdateProduct(Product p);
+        void RemoveProduct(int product_id);
         int GetWeight() const;
         int GetVolume() const;
 };

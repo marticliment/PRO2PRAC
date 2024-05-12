@@ -42,6 +42,7 @@ const string FIN = "fin";
 
 const string ERR_NE_CITY = "error: no existe la ciudad";
 const string ERR_NE_PROD = "error: no existe el producto";
+const string ERR_NE_PROD_CITY = "error: la ciudad no tiene el producto";
 const string ERR_AE_PROD = "error: la ciudad ya tiene el producto";
 
 #ifdef DEBUG
@@ -219,13 +220,16 @@ int main()
                 cout << ERR_NE_PROD << endl;
             else if(!RiverSystem.HasCity(city_id))
                 cout << ERR_NE_CITY << endl;
-            else if (RiverSystem.GetCity(city_id).HasProduct(product_id))
-                cout << ERR_AE_PROD << endl;
             else
             {
                 auto& city = RiverSystem.GetCity(city_id);
-                city.AddProduct(Product(product_id, current, wanted));
-                cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                if (city.HasProduct(product_id))
+                    cout << ERR_AE_PROD << endl;
+                else
+                {
+                    city.AddProduct(Product(product_id, current, wanted));
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                }
             }
         }
         
@@ -238,8 +242,26 @@ int main()
         // unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.
         else if(c == MODIFICAR_PROD || c == MODIFICAR_PROD_L)
         {
-            PrintCommand(c);
-            Log("Operation MODIFICAR_PROD not implemented yet");
+            string city_id;
+            int product_id, current, wanted;
+            cin >> city_id >> product_id >> current >> wanted;
+            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+            
+            if (!ProductReference::Contains(product_id))
+                cout << ERR_NE_PROD << endl;
+            else if(!RiverSystem.HasCity(city_id))
+                cout << ERR_NE_CITY << endl;
+            else 
+            {
+                auto& city = RiverSystem.GetCity(city_id);
+                if(!city.HasProduct(product_id))
+                    cout << ERR_NE_PROD_CITY << endl;
+                else
+                {
+                    city.UpdateProduct(Product(product_id, current, wanted));
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                }
+            }
         }
 
         // Se leerá el identificador de una ciudad y de un producto. Si
@@ -250,8 +272,26 @@ int main()
         // el volumen total.
         else if(c == QUITAR_PROD || c == QUITAR_PROD_L)
         {
-            PrintCommand(c);
-            Log("Operation QUITAR_PROD not implemented yet");
+            string city_id;
+            int product_id;
+            cin >> city_id >> product_id;
+            PrintCommand(c + " " + city_id + " " + to_string(product_id));
+
+            if (!ProductReference::Contains(product_id))
+                cout << ERR_NE_PROD << endl;
+            else if(!RiverSystem.HasCity(city_id))
+                cout << ERR_NE_CITY << endl;
+            else 
+            {
+                auto& city = RiverSystem.GetCity(city_id);
+                if(!city.HasProduct(product_id))
+                    cout << ERR_NE_PROD_CITY << endl;
+                else
+                {
+                    city.RemoveProduct(product_id);
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                }
+            }
         }
         
         // Se leerá el identificador de una ciudad y de un producto. Si

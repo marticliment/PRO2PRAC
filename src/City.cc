@@ -56,8 +56,24 @@ bool City::HasProduct(int id) const
 void City::AddProduct(Product p)
 {
     __inventory[p.GetId()] = p;
-    __weight += p.GetData().GetWeight(p.GetCurrentAmount());
-    __volume += p.GetData().GetVolume(p.GetCurrentAmount());
+    const ProductData& data = p.GetData();
+    __weight += data.GetWeight(p.GetCurrentAmount());
+    __volume += data.GetVolume(p.GetCurrentAmount());
+}
+
+void City::RemoveProduct(int id)
+{
+    Product& old_product = __inventory.at(id);
+    __inventory.erase(id);
+    const ProductData& data = old_product.GetData();
+    __weight -= data.GetWeight(old_product.GetCurrentAmount());
+    __volume -= data.GetVolume(old_product.GetCurrentAmount());
+}
+
+void City::UpdateProduct(Product p)
+{
+    RemoveProduct(p.GetId());
+    AddProduct(p);
 }
 
 int City::GetVolume() const
