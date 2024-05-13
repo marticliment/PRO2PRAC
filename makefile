@@ -17,6 +17,9 @@ clear:
 
 tar:
 	mkdir -p dist/
+	mkdir -p temp/
+	rm -rf temp/*
+	
 	tar -cvf dist/practica.tar src/*.cc makefile
 
 run: program.exe

@@ -165,7 +165,7 @@ vector<NavigationDecision> Valley::GetBestRoute()
     return routes[best_route_index];
 }
 
-int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship, bool dryrun)
+int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current_ship, bool dryrun)
 {
     int route_position = 0;
     int total_traded = 0;
@@ -175,9 +175,10 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
     Product current_buying_product = current_ship.BuyingProduct();
     Product current_selling_product = current_ship.SellingProduct();
 
-    while(route_position < route.size() && !location.empty())
+    while(route_position < route.size())
     {
         auto& city = GetCity(location.value());
+        int city_traded = 0;
 
         // Calculate how much product is going to be bought from the city
         int buying_id = current_buying_product.GetId();
@@ -187,7 +188,7 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
             current_buying_product.RestockAmount(amount_to_buy);
             if(!dryrun) // Only modify the city if we are not running on test mode
                 city.GetProduct(buying_id).WithdrawAmount(amount_to_buy);
-            total_traded += amount_to_buy;
+            city_traded += amount_to_buy;
         }
 
         // Calculate how much product is going to be sold to the city
@@ -198,28 +199,23 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
             current_selling_product.WithdrawAmount(amount_to_sell);
             if(!dryrun) // Only modify the city if we are not running on test mode
                 city.GetProduct(selling_id).RestockAmount(amount_to_sell);
-            total_traded += amount_to_sell;
+            city_traded += amount_to_sell;
         }
 
-        last_visited_city = location.value();
+        total_traded += city_traded;
+        // Only count a city as traded with when it has actually traded things
+        if(city_traded > 0)
+            last_visited_city = location.value();
 
-        if(current_selling_product.ExceedingAmount() == 0 && current_buying_product.MissingAmount())
-        {
-            // At this point there is nothing more to trade,
-            // so the route will be corrected to end here
-            while(route_position <= route.size())
-                route.pop_back();
-        }
+        
+        // If this is the last city, do not try to unpack the next position from route
+        if(route_position == route.size())
+            route_position++;
+        // Otherwhise, navigate to the next position
+        else if(route[route_position++] == NavigationDecision::Left)
+            location = location.left();
         else
-        {
-            // Navigate to the next city
-            if(route_position == route.size())
-                route_position++;
-            else if(route[route_position++] == NavigationDecision::Left)
-                location = location.left();
-            else
-                location = location.right();
-        }
+            location = location.right();
     }
 
     if(total_traded != 0 && !dryrun)
@@ -228,13 +224,13 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
     return total_traded;
 }
 
-int Valley::TestRoute(vector<NavigationDecision> &route)
+int Valley::TestRoute(const vector<NavigationDecision> &route)
 {
     Ship test_ship = GetShip().Copy();
     return NavigateRoute(route, test_ship, true);
 }
 
-int Valley::NavigateRoute(vector<NavigationDecision> route)
+int Valley::NavigateRoute(const vector<NavigationDecision> route)
 {
     return NavigateRoute(route, GetShip(), false);
 }

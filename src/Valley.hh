@@ -4,7 +4,11 @@
 
 #include <vector>
 #include "NavigationDecisions.hh"
+#ifdef JUTGE
+#include "BinTree.hh"
+#else
 #include "lib/BinTree.hh"
+#endif
 #include "City.hh"
 #include "Ship.hh"
 #include "ProductData.hh"
@@ -27,8 +31,8 @@ class Valley
         static void DoTrades(BinTree<string> current_position);
         
         static void DisambiguateRoute(vector<NavigationDecision> current_route, BinTree<string> city, vector<vector<NavigationDecision>> &routes);
-        static int NavigateRoute(vector<NavigationDecision> &route, Ship &ship, bool dryrun);
-        static int TestRoute(vector<NavigationDecision> &route);
+        static int NavigateRoute(const vector<NavigationDecision> &route, Ship &ship, bool dryrun);
+        static int TestRoute(const vector<NavigationDecision> &route);
         static vector<vector<NavigationDecision>> GetRoutes();
 
     public:
@@ -43,7 +47,7 @@ class Valley
         static void DoTrades();
         
         static vector<NavigationDecision> GetBestRoute();
-        static int NavigateRoute(vector<NavigationDecision> route);
+        static int NavigateRoute(const vector<NavigationDecision> route);
 };
 
 
