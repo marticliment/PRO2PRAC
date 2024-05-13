@@ -4,10 +4,7 @@
 
 #include <vector>
 #include "NavigationDecisions.hh"
-#ifdef JUTGE
 #include "BinTree.hh"
-#else
-#include "lib/BinTree.hh"
 #endif
 #include "City.hh"
 #include "Ship.hh"
@@ -49,6 +46,3 @@ class Valley
         static vector<NavigationDecision> GetBestRoute();
         static int NavigateRoute(const vector<NavigationDecision> route);
 };
-
-
-#endif

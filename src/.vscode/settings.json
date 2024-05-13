@@ -10,7 +10,8 @@
         "utility": "cpp",
         "ostream": "cpp",
         "xstring": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "format": "cpp"
     },
     "cSpell.enableFiletypes": [
         "!cpp"
