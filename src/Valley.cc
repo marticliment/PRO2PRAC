@@ -39,7 +39,7 @@ void Valley::ReadCitiesFromStream(istream& stream)
 {
     cities.clear();
     river_structure = GetRiverStructureFromStream(stream);
-    ship.SetLastVisitedCity("");
+    ship.ResetVisitedCities();
 }
 
 void Valley::InitializeFromStream(istream& stream)
@@ -170,35 +170,40 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
     int route_position = 0;
     int total_traded = 0;
     BinTree<string> location = river_structure;
+    string last_visited_city = "";
+
+    Product current_buying_product = current_ship.BuyingProduct();
+    Product current_selling_product = current_ship.SellingProduct();
+
     while(route_position < route.size() && !location.empty())
     {
         auto& city = GetCity(location.value());
 
         // Calculate how much product is going to be bought from the city
-        int buying_id = current_ship.BuyingProduct().GetId();
+        int buying_id = current_buying_product.GetId();
         if(city.HasProduct(buying_id) && city.GetProduct(buying_id).ExceedingAmount() > 0)
         {
-            int amount_to_buy = min(current_ship.BuyingProduct().MissingAmount(), city.GetProduct(buying_id).ExceedingAmount());
-            current_ship.BuyingProduct().RestockAmount(amount_to_buy);
+            int amount_to_buy = min(current_buying_product.MissingAmount(), city.GetProduct(buying_id).ExceedingAmount());
+            current_buying_product.RestockAmount(amount_to_buy);
             if(!dryrun) // Only modify the city if we are not running on test mode
                 city.GetProduct(buying_id).WithdrawAmount(amount_to_buy);
             total_traded += amount_to_buy;
         }
 
         // Calculate how much product is going to be sold to the city
-        int selling_id = current_ship.SellingProduct().GetId();
+        int selling_id = current_selling_product.GetId();
         if(city.HasProduct(selling_id) && city.GetProduct(selling_id).MissingAmount() > 0)
         {
-            int amount_to_sell = min(current_ship.SellingProduct().ExceedingAmount(), city.GetProduct(selling_id).MissingAmount());
-            current_ship.SellingProduct().WithdrawAmount(amount_to_sell);
+            int amount_to_sell = min(current_selling_product.ExceedingAmount(), city.GetProduct(selling_id).MissingAmount());
+            current_selling_product.WithdrawAmount(amount_to_sell);
             if(!dryrun) // Only modify the city if we are not running on test mode
                 city.GetProduct(selling_id).RestockAmount(amount_to_sell);
             total_traded += amount_to_sell;
         }
 
-        current_ship.SetLastVisitedCity(location.value());
+        last_visited_city = location.value();
 
-        if(current_ship.SellingProduct().ExceedingAmount() == 0 && current_ship.BuyingProduct().MissingAmount())
+        if(current_selling_product.ExceedingAmount() == 0 && current_buying_product.MissingAmount())
         {
             // At this point there is nothing more to trade,
             // so the route will be corrected to end here
@@ -216,6 +221,10 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
                 location = location.right();
         }
     }
+
+    if(total_traded != 0 && !dryrun)
+        current_ship.AddVisitedCity(last_visited_city);
+
     return total_traded;
 }
 

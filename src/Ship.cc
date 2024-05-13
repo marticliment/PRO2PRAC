@@ -1,5 +1,6 @@
 #include "Ship.hh"
 #include "ProductReference.hh"
+#include "debug.hh"
 
 Ship::Ship()
 {
@@ -10,7 +11,7 @@ Ship::Ship(Product buying, Product selling)
 {
     buying_product = buying;
     selling_product = selling;
-    last_visted_city = "";
+    visited_cities = vector<string>();
 }
 
 Product& Ship::BuyingProduct()
@@ -43,14 +44,20 @@ void Ship::ReadFromStream(istream& stream)
     selling_product = Product(sell_id, sell_amount, 0);
 }
 
-string Ship::GetLastVisitedCity() const
+
+void Ship::AddVisitedCity(string city)
 {
-    return last_visted_city;
+    visited_cities.push_back(city);
 }
 
-void Ship::SetLastVisitedCity(string city)
+const vector<string>& Ship::GetVisitedCities() const
 {
-    last_visted_city = city;
+    return visited_cities;
+}
+
+void Ship::ResetVisitedCities()
+{
+    visited_cities.clear();
 }
 
 Ship Ship::Copy() const
@@ -58,6 +65,6 @@ Ship Ship::Copy() const
     Product sold_product = Product(selling_product.GetId(), selling_product.GetCurrentAmount(), selling_product.GetWantedAmount());
     Product bougth_product = Product(buying_product.GetId(), buying_product.GetCurrentAmount(), buying_product.GetWantedAmount());
     Ship copy = Ship(bougth_product, sold_product);
-    copy.SetLastVisitedCity(this->GetLastVisitedCity());
+    copy.visited_cities = this->visited_cities;
     return copy;
 }

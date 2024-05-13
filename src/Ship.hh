@@ -13,15 +13,16 @@ class Ship
     private:
         Product buying_product;
         Product selling_product;
-        string last_visted_city = "";
+        vector<string> visited_cities;
 
     public:
         Ship();
         Ship(Product buying, Product selling);
         Product& BuyingProduct();
         Product& SellingProduct();
-        string GetLastVisitedCity() const;
-        void SetLastVisitedCity(string city);
+        const vector<string>& GetVisitedCities() const;
+        void AddVisitedCity(string city);
+        void ResetVisitedCities();
         void ReadFromStream(istream& stream);
         Ship Copy() const;
 

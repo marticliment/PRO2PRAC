@@ -133,8 +133,8 @@ int main()
             Product& selling = ship.SellingProduct();
             cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
-            if(ship.GetLastVisitedCity() != "")
-                cout << ship.GetLastVisitedCity() << endl;
+            for(string city: ship.GetVisitedCities())
+                cout << city << endl;
         }
         
         // Escribe cuantos productos diferentes hay.

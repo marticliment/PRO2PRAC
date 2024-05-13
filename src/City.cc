@@ -19,6 +19,7 @@ string City::GetId() const
 
 void City::ReadFromStream(istream& stream)
 {
+    __inventory.clear();
     int count;
     stream >> count;
     for(int i = 0; i < count; i++)
