@@ -1,4 +1,3 @@
-[1;32m# bucle[0m
 [1;32m#escribir_barco[0m
 2 50 7 23
 [1;32m#ls[0m
@@ -175,30 +174,10 @@ error: ciudad repetida
 7 1 1
 8 25
 [1;32m#hv[0m
-[1;33mBegin loading best route[0m
-barna,berna,birna,
-barna,berna,birna,
-[1;33mRoute found 0 results. Route is:[0m
-left,left,right,
-barna,berna,borna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,left,
-barna,berna,borna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,right,
-barna,burna,
-[1;33mRoute found 0 results. Route is:[0m
-right,left,
-barna,burna,
-[1;33mRoute found 0 results. Route is:[0m
-right,right,
-[1;33mBest route loaded: [0m
-right,left,
-barna,burna,
-0
+1
 [1;32m#eb[0m
-6 10 2 12
-burna
+6 10 2 11
+borna
 [1;32m#leer_rio[0m
 [1;32m#escribir_ciudad barna[0m
 0 0
@@ -207,7 +186,7 @@ burna
 [1;32m#escribir_ciudad birna[0m
 0 0
 [1;32m#escribir_barco[0m
-6 10 2 12
+6 10 2 11
 [1;32m#lr[0m
 [1;32m#ec darna[0m
 0 0
@@ -234,32 +213,11 @@ burna
 7 19 3
 288 491
 [1;32m#mb[0m
-[1;32m# primer viaje[0m
 [1;32m#hacer_viaje[0m
-[1;33mBegin loading best route[0m
-darna,derna,dirna,
-darna,derna,dirna,
-[1;33mRoute found 0 results. Route is:[0m
-left,left,right,
-darna,derna,dorna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,left,
-darna,derna,dorna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,right,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,left,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,right,
-[1;33mBest route loaded: [0m
-right,left,
-darna,durna,
-0
+8
 [1;32m#eb[0m
-3 10 4 10
-durna
+3 10 4 2
+dirna
 [1;32m#escribir_ciudad darna[0m
 1 15 8
 2 10 10
@@ -270,8 +228,8 @@ durna
 130 182
 [1;32m#escribir_ciudad dirna[0m
 3 5 5
-4 2 10
-106 33
+4 10 10
+450 145
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
@@ -281,34 +239,13 @@ durna
 7 19 3
 288 491
 [1;32m#escribir_barco[0m
-3 10 4 10
-durna
+3 10 4 2
+dirna
 [1;32m#mb[0m
 [1;32m#eb[0m
 8 10 9 10
-durna
-[1;32m# segundo viaje[0m
+dirna
 [1;32m#hv[0m
-[1;33mBegin loading best route[0m
-darna,derna,dirna,
-darna,derna,dirna,
-[1;33mRoute found 0 results. Route is:[0m
-left,left,right,
-darna,derna,dorna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,left,
-darna,derna,dorna,
-[1;33mRoute found 0 results. Route is:[0m
-left,right,right,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,left,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,right,
-[1;33mBest route loaded: [0m
-right,left,
-darna,durna,
 0
 [1;32m#eb[0m
 8 10 9 10
@@ -323,8 +260,8 @@ durna
 130 182
 [1;32m#escribir_ciudad dirna[0m
 3 5 5
-4 2 10
-106 33
+4 10 10
+450 145
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20
@@ -333,29 +270,8 @@ durna
 6 8 9
 7 19 3
 288 491
-[1;32m# tercer viaje[0m
 [1;32m#mb[0m
 [1;32m#hacer_viaje[0m
-[1;33mBegin loading best route[0m
-darna,derna,dirna,
-darna,derna,dirna,
-[1;33mRoute found 10 results. Route is:[0m
-left,left,right,
-darna,derna,dorna,
-[1;33mRoute found 10 results. Route is:[0m
-left,right,left,
-darna,derna,dorna,
-[1;33mRoute found 10 results. Route is:[0m
-left,right,right,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,left,
-darna,durna,
-[1;33mRoute found 0 results. Route is:[0m
-right,right,
-[1;33mBest route loaded: [0m
-left,left,left,
-darna,derna,dirna,
 10
 [1;32m#escribir_barco[0m
 2 0 6 10
@@ -370,8 +286,8 @@ dirna
 70 52
 [1;32m#escribir_ciudad dirna[0m
 3 5 5
-4 2 10
-106 33
+4 10 10
+450 145
 [1;32m#escribir_ciudad dorna[0m
 4 10 10
 5 20 20

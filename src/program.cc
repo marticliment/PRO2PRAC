@@ -83,8 +83,8 @@ int main()
         // se escribirá un mensaje de error. Si la ciudad existe, se leerá un número que indica la cantidad 
         // de elementos del inventario y para cada uno de ellos se leerá el
         // identificador del producto, cuantas unidades tiene la ciudad y cuantas necesita. El
-        // número de unidades necesitadas siempre ha de ser mayor que 0. Aunque la ciudad no exista, habrá datos de su
-        // inventario que igualmente se han de leer aunque
+        // número de unidades necesitadas siempre ha de ser mayor que 0. Aunque la ciudad no exista, 
+        // habrá datos de su inventario que igualmente se han de leer aunque
         // no se usen, para pasar a la siguiente operación.
         else if(command == LEER_INVENTARIO || command == LEER_INVENTARIO_L)
         {
@@ -347,7 +347,8 @@ int main()
             Valley::DoTrades();
         }
         
-        // No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita comprar y vender el mayor número posible de productos.
+        // No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita
+        // comprar y vender el mayor número posible de productos.
         // En caso que haya más de una ruta que lo cumpla, se queda con la más corta, y en
         // caso de que tengan la misma longitud, se queda con la que viene río arriba a mano
         // derecha. Una vez encontrada la ruta, se hace el viaje y se compran y venden los
@@ -356,21 +357,14 @@ int main()
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
             PrintCommand(command);
-            Log("Begin loading best route");
             auto route = Valley::GetBestRoute();
-            Log("Best route loaded: ");
-            for(auto item: route)
-                cout << NavigationDecisionAsString(item) << ",";
-            cout << endl << Valley::NavigateRoute(route) << endl;
+            cout << Valley::NavigateRoute(route) << endl;
         }
         
         // Comment line
         else if (command == "//")
         {
             getline(cin, command); // Skip current line            
-#ifdef DEBUG
-            PrintCommand(command);
-#endif
         }
         else
         {

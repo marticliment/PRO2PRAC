@@ -111,7 +111,6 @@ void Valley::DoTrades(BinTree<string> current_position)
 void Valley::DoTrades()
 {
     AssertRiverArrayIsInitialized();
-
     DoTrades(river_structure);
 }
 
@@ -156,10 +155,8 @@ vector<NavigationDecision> Valley::GetBestRoute()
     for(int i = 1; i < routes.size(); i++)
     {
         int route_value = TestRoute(routes[i]);
-        Log("Route found " + to_string(route_value) + " results. Route is:");
-        print_route(routes[i]);
         if(route_value > best_route_value || (route_value == best_route_value && routes[i].size() < routes[best_route_index].size()))
-        {                                                             // TODO: perhaps add a <= here, but in theory not
+        {                                                                 // TODO: perhaps add a <= here, but in theory not
             best_route_value = route_value;
             best_route_index = i;
         }
@@ -176,7 +173,6 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
     while(route_position < route.size() && !location.empty())
     {
         auto& city = GetCity(location.value());
-        cout << location.value() << ',';
 
         // Calculate how much product is going to be bought from the city
         int buying_id = current_ship.BuyingProduct().GetId();
@@ -191,7 +187,7 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
 
         // Calculate how much product is going to be sold to the city
         int selling_id = current_ship.SellingProduct().GetId();
-        if(city.HasProduct(selling_id) && city.GetProduct(selling_id).ExceedingAmount() > 0)
+        if(city.HasProduct(selling_id) && city.GetProduct(selling_id).MissingAmount() > 0)
         {
             int amount_to_sell = min(current_ship.SellingProduct().ExceedingAmount(), city.GetProduct(selling_id).MissingAmount());
             current_ship.SellingProduct().WithdrawAmount(amount_to_sell);
@@ -220,7 +216,6 @@ int Valley::NavigateRoute(vector<NavigationDecision> &route, Ship &current_ship,
                 location = location.right();
         }
     }
-    cout << endl;
     return total_traded;
 }
 
