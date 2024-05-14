@@ -211,7 +211,7 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
         // If this is the last city, do not try to unpack the next position from route
         if(route_position == route.size())
             route_position++;
-        // Otherwhise, navigate to the next position
+        // Otherwise, navigate to the next position
         else if(route[route_position++] == NavigationDecision::Left)
             location = location.left();
         else

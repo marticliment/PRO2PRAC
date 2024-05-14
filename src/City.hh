@@ -12,6 +12,8 @@ class City
     private:
         string __id;
         map<int, Product> inventory;
+        int weight = 0;
+        int volume = 0;
 
     public:
         City();
@@ -26,9 +28,7 @@ class City
         int GetProductMissingAmount(int product_id) const;
         void WithdrawProductAmount(int product_id, int amount);
         void RestockProductAmount(int product_id, int amount);
-        
-        //Product& GetProduct(int id);
-        
+                
         bool HasProduct(int id) const;
         void AddProduct(Product p);
         void UpdateProduct(Product p);

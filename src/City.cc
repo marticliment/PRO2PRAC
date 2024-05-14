@@ -1,6 +1,7 @@
 #include <vector>
 #include "City.hh"
 #include "ProductData.hh"
+#include "ProductReference.hh"
 
 City::City()
 {
@@ -42,11 +43,6 @@ vector<int> City::GetProductIds() const
     return result;
 }
 
-/*Product& City::GetProduct(int id)
-{
-    return inventory.at(id);
-}*/
-
 bool City::HasProduct(int id) const
 {
     return inventory.find(id) != inventory.end();
@@ -55,10 +51,15 @@ bool City::HasProduct(int id) const
 void City::AddProduct(Product p)
 {
     inventory[p.GetId()] = p;
+    weight += p.GetWeight();
+    volume += p.GetVolume();
 }
 
 void City::RemoveProduct(int id)
 {
+    auto& product = inventory.at(id);
+    weight -= product.GetWeight();
+    volume -= product.GetVolume();
     inventory.erase(id);
 }
 
@@ -70,19 +71,11 @@ void City::UpdateProduct(Product p)
 
 int City::GetVolume() const
 {
-    int volume = 0;
-    auto it = inventory.begin();
-    while(it != inventory.end())
-        volume += (it++)->second.GetVolume();
     return volume;
 }
 
 int City::GetWeight() const
 {
-    int weight = 0;
-    auto it = inventory.begin();
-    while(it != inventory.end())
-        weight += (it++)->second.GetWeight();
     return weight;
 }
 
@@ -146,10 +139,16 @@ int City::GetProductMissingAmount(int product_id) const
 
 void City::WithdrawProductAmount(int product_id, int amount)
 {
+    auto& product_data = ProductReference::Get(product_id);
+    weight -= product_data.GetWeight(amount);
+    volume -= product_data.GetVolume(amount);
     inventory.at(product_id).WithdrawAmount(amount);
 }
 
 void City::RestockProductAmount(int product_id, int amount)
 {
+    auto& product_data = ProductReference::Get(product_id);
+    weight += product_data.GetWeight(amount);
+    volume += product_data.GetVolume(amount);
     inventory.at(product_id).RestockAmount(amount);
 }
