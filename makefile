@@ -45,3 +45,7 @@ diff: program.exe
 	#
 	#                                                  <<COR   |   OUT>>
 	# _________________________________________________________________________
+
+time: clean program.exe
+	chmod +x program.exe
+	time --verbose ./program.exe <in >out
