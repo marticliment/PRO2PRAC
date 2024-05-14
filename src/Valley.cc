@@ -156,7 +156,7 @@ vector<NavigationDecision> Valley::GetBestRoute()
     {
         int route_value = TestRoute(routes[i]);
         if(route_value > best_route_value || (route_value == best_route_value && routes[i].size() < routes[best_route_index].size()))
-        {                                                                 // TODO: perhaps add a <= here, but in theory not
+        {                                                                  // TODO: perhaps add a <= here, but in theory not
             best_route_value = route_value;
             best_route_index = i;
         }

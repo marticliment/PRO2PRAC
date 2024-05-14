@@ -12,7 +12,7 @@ clean:
 	rm -rf obj/
 	rm -rf *.exe
 
-tar:
+tar: clean
 	rm -rf practica.tar
 	cd src; tar -cvf practica.tar *.cc *.hh makefile; mv practica.tar ..
 

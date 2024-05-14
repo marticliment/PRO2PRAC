@@ -11,6 +11,6 @@ clean:
 	rm -rf *.exe
 	rm -rf *.o
 
-tar:
+tar: clean
 	rm -rf practica.tar
 	tar -cvf practica.tar *.cc *.hh makefile
