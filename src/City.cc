@@ -19,7 +19,7 @@ string City::GetId() const
 
 void City::ReadFromStream(istream& stream)
 {
-    __inventory.clear();
+    inventory.clear();
     int count;
     stream >> count;
     for(int i = 0; i < count; i++)
@@ -33,8 +33,8 @@ void City::ReadFromStream(istream& stream)
 vector<int> City::GetProductIds() const
 {
     vector<int> result;
-    auto it = __inventory.begin();
-    while(it != __inventory.end())
+    auto it = inventory.begin();
+    while(it != inventory.end())
     {
         result.push_back(it->first);
         it++;
@@ -42,24 +42,24 @@ vector<int> City::GetProductIds() const
     return result;
 }
 
-Product& City::GetProduct(int id)
+/*Product& City::GetProduct(int id)
 {
-    return __inventory.at(id);
-}
+    return inventory.at(id);
+}*/
 
 bool City::HasProduct(int id) const
 {
-    return __inventory.find(id) != __inventory.end();
+    return inventory.find(id) != inventory.end();
 }
 
 void City::AddProduct(Product p)
 {
-    __inventory[p.GetId()] = p;
+    inventory[p.GetId()] = p;
 }
 
 void City::RemoveProduct(int id)
 {
-    __inventory.erase(id);
+    inventory.erase(id);
 }
 
 void City::UpdateProduct(Product p)
@@ -71,8 +71,8 @@ void City::UpdateProduct(Product p)
 int City::GetVolume() const
 {
     int volume = 0;
-    auto it = __inventory.begin();
-    while(it != __inventory.end())
+    auto it = inventory.begin();
+    while(it != inventory.end())
         volume += (it++)->second.GetVolume();
     return volume;
 }
@@ -80,8 +80,8 @@ int City::GetVolume() const
 int City::GetWeight() const
 {
     int weight = 0;
-    auto it = __inventory.begin();
-    while(it != __inventory.end())
+    auto it = inventory.begin();
+    while(it != inventory.end())
         weight += (it++)->second.GetWeight();
     return weight;
 }
@@ -96,14 +96,12 @@ void City::TradeWith(City& other)
             continue;
         else
         {
-            auto& seller_product = this->GetProduct(product_id);
-            auto& buyer_product = other.GetProduct(product_id);
-            if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+            if(this->GetProductExceedingAmount(product_id) == 0 || other.GetProductMissingAmount(product_id) == 0)
                 continue;
 
-            int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
-            seller_product.WithdrawAmount(trade_amount);
-            buyer_product.RestockAmount(trade_amount);
+            int trade_amount = min(this->GetProductExceedingAmount(product_id), other.GetProductMissingAmount(product_id));
+            this->WithdrawProductAmount(product_id, trade_amount);
+            other.RestockProductAmount(product_id, trade_amount);
         }
     }
 
@@ -115,14 +113,43 @@ void City::TradeWith(City& other)
             continue;
         else
         {
-            auto& seller_product = other.GetProduct(product_id);
-            auto& buyer_product = this->GetProduct(product_id);
-            if(seller_product.ExceedingAmount() == 0 || buyer_product.MissingAmount() == 0)
+            if(other.GetProductExceedingAmount(product_id) == 0 || this->GetProductMissingAmount(product_id) == 0)
                 continue;
 
-            int trade_amount = min(seller_product.ExceedingAmount(), buyer_product.MissingAmount());
-            seller_product.WithdrawAmount(trade_amount);
-            buyer_product.RestockAmount(trade_amount);
+            int trade_amount = min(other.GetProductExceedingAmount(product_id), this->GetProductMissingAmount(product_id));
+            other.WithdrawProductAmount(product_id, trade_amount);
+            this->RestockProductAmount(product_id, trade_amount);
         }
     }
+}
+
+
+int City::GetProductCurrentAmount(int product_id) const
+{
+    return inventory.at(product_id).GetCurrentAmount();
+}
+
+int City::GetProductWantedAmount(int product_id) const
+{
+    return inventory.at(product_id).GetWantedAmount();
+}
+
+int City::GetProductExceedingAmount(int product_id) const
+{
+    return inventory.at(product_id).GetExceedingAmount();
+}
+
+int City::GetProductMissingAmount(int product_id) const
+{
+    return inventory.at(product_id).GetMissingAmount();
+}
+
+void City::WithdrawProductAmount(int product_id, int amount)
+{
+    inventory.at(product_id).WithdrawAmount(amount);
+}
+
+void City::RestockProductAmount(int product_id, int amount)
+{
+    inventory.at(product_id).RestockAmount(amount);
 }

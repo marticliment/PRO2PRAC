@@ -131,7 +131,7 @@ int main()
             auto& ship = Valley::GetShip();
             Product& buying = ship.BuyingProduct();
             Product& selling = ship.SellingProduct();
-            cout << buying.GetId() << ' ' << buying.MissingAmount() << ' ';
+            cout << buying.GetId() << ' ' << buying.GetMissingAmount() << ' ';
             cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
             for(string city: ship.GetVisitedCities())
                 cout << city << endl;
@@ -167,10 +167,9 @@ int main()
             if(Valley::HasCity(city_id))
             {
                 auto& city = Valley::GetCity(city_id);
-                for(int i: city.GetProductIds())
+                for(int id: city.GetProductIds())
                 {
-                    auto& product = city.GetProduct(i);
-                    cout << product.GetId() << ' ' << product.GetCurrentAmount() << ' ' << product.GetWantedAmount() << endl;
+                    cout << id << ' ' << city.GetProductCurrentAmount(id) << ' ' << city.GetProductWantedAmount(id) << endl;
                 }
                 cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
             }
@@ -310,8 +309,7 @@ int main()
                     cout << ERR_NE_PROD_CITY << endl;
                 else
                 {
-                    auto& product = city.GetProduct(product_id);
-                    cout << product.GetCurrentAmount() << ' ' << product.GetWantedAmount() << endl;                    
+                    cout << city.GetProductCurrentAmount(product_id) << ' ' << city.GetProductWantedAmount(product_id) << endl;                    
                 }
             }        
         }

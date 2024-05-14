@@ -11,7 +11,7 @@ class City
 {
     private:
         string __id;
-        map<int, Product> __inventory;
+        map<int, Product> inventory;
 
     public:
         City();
@@ -19,7 +19,16 @@ class City
         string GetId() const;
         void ReadFromStream(istream& stream);
         vector<int> GetProductIds() const;
-        Product& GetProduct(int id);
+        
+        int GetProductCurrentAmount(int product_id) const;
+        int GetProductWantedAmount(int product_id) const;
+        int GetProductExceedingAmount(int product_id) const;
+        int GetProductMissingAmount(int product_id) const;
+        void WithdrawProductAmount(int product_id, int amount);
+        void RestockProductAmount(int product_id, int amount);
+        
+        //Product& GetProduct(int id);
+        
         bool HasProduct(int id) const;
         void AddProduct(Product p);
         void UpdateProduct(Product p);

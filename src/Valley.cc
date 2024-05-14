@@ -182,23 +182,23 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
 
         // Calculate how much product is going to be bought from the city
         int buying_id = current_buying_product.GetId();
-        if(city.HasProduct(buying_id) && city.GetProduct(buying_id).ExceedingAmount() > 0)
+        if(city.HasProduct(buying_id) && city.GetProductExceedingAmount(buying_id) > 0)
         {
-            int amount_to_buy = min(current_buying_product.MissingAmount(), city.GetProduct(buying_id).ExceedingAmount());
+            int amount_to_buy = min(current_buying_product.GetMissingAmount(), city.GetProductExceedingAmount(buying_id));
             current_buying_product.RestockAmount(amount_to_buy);
             if(!dryrun) // Only modify the city if we are not running on test mode
-                city.GetProduct(buying_id).WithdrawAmount(amount_to_buy);
+                city.WithdrawProductAmount(buying_id, amount_to_buy);
             city_traded += amount_to_buy;
         }
 
         // Calculate how much product is going to be sold to the city
         int selling_id = current_selling_product.GetId();
-        if(city.HasProduct(selling_id) && city.GetProduct(selling_id).MissingAmount() > 0)
+        if(city.HasProduct(selling_id) && city.GetProductMissingAmount(selling_id) > 0)
         {
-            int amount_to_sell = min(current_selling_product.ExceedingAmount(), city.GetProduct(selling_id).MissingAmount());
+            int amount_to_sell = min(current_selling_product.GetExceedingAmount(), city.GetProductMissingAmount(selling_id));
             current_selling_product.WithdrawAmount(amount_to_sell);
             if(!dryrun) // Only modify the city if we are not running on test mode
-                city.GetProduct(selling_id).RestockAmount(amount_to_sell);
+                city.RestockProductAmount(selling_id, amount_to_sell);
             city_traded += amount_to_sell;
         }
 

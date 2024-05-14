@@ -20,8 +20,8 @@ class Product
         int GetCurrentAmount() const;
         int GetWantedAmount() const;
 
-        int ExceedingAmount() const;
-        int MissingAmount() const;
+        int GetExceedingAmount() const;
+        int GetMissingAmount() const;
 
         void WithdrawAmount(int amount);
         void RestockAmount(int amount);

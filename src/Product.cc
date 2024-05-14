@@ -29,7 +29,7 @@ int Product::GetWantedAmount() const
     return wanted_amount;
 }
 
-int Product::ExceedingAmount() const
+int Product::GetExceedingAmount() const
 {
     if(current_amount - wanted_amount < 0)
         return 0;
@@ -37,7 +37,7 @@ int Product::ExceedingAmount() const
     return current_amount - wanted_amount;
 }
 
-int Product::MissingAmount() const
+int Product::GetMissingAmount() const
 {
     if(wanted_amount - current_amount < 0) 
         return 0;
