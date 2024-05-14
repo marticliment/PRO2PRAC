@@ -21,6 +21,8 @@ string City::GetId() const
 void City::ReadFromStream(istream& stream)
 {
     inventory.clear();
+    weight = 0;
+    volume = 0;
     int count;
     stream >> count;
     for(int i = 0; i < count; i++)

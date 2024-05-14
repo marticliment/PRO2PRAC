@@ -170,7 +170,7 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
     int route_position = 0;
     int total_traded = 0;
     BinTree<string> location = river_structure;
-    string last_visited_city = "";
+    string last_traded_city = "";
 
     Product current_buying_product = current_ship.BuyingProduct();
     Product current_selling_product = current_ship.SellingProduct();
@@ -205,7 +205,7 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
         total_traded += city_traded;
         // Only count a city as traded with when it has actually traded things
         if(city_traded > 0)
-            last_visited_city = location.value();
+            last_traded_city = location.value();
 
         
         // If this is the last city, do not try to unpack the next position from route
@@ -218,8 +218,8 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
             location = location.right();
     }
 
-    if(total_traded != 0 && !dryrun)
-        current_ship.AddVisitedCity(last_visited_city);
+    if(!dryrun && last_traded_city != "")
+        current_ship.AddVisitedCity(last_traded_city);
 
     return total_traded;
 }
