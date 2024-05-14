@@ -45,7 +45,7 @@ void Ship::ReadFromStream(istream& stream)
 }
 
 
-void Ship::AddVisitedCity(string city)
+void Ship::AddVisitedCity(const string& city)
 {
     visited_cities.push_back(city);
 }

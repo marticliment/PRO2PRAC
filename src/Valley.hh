@@ -3,7 +3,6 @@
 
 
 #include <vector>
-#include "NavigationDecisions.hh"
 #include "BinTree.hh"
 #endif
 #include "City.hh"
@@ -13,7 +12,22 @@
 
 class Valley
 {
+    public:
+        enum class NavStep
+        {
+            Left,
+            Right,
+        };
+
     private:
+
+        struct RouteResult
+        {
+            vector<Valley::NavStep> route;
+            int EffectiveLength = 0;
+            int TotalTrades = 0;
+        };
+
         static bool initialized;
         // There are methods where a city must be returned, but the 
         // wanted city does not exist. This city will be returned instead.
@@ -25,24 +39,21 @@ class Valley
         static void AssertRiverArrayIsInitialized();
         static BinTree<string> GetRiverStructureFromStream(istream& stream);
         
-        static void DoTrades(BinTree<string> current_position);
-        
-        static void DisambiguateRoute(vector<NavigationDecision> current_route, BinTree<string> city, vector<vector<NavigationDecision>> &routes);
-        static int NavigateRoute(const vector<NavigationDecision> &route, Ship &ship, bool dryrun);
-        static int TestRoute(const vector<NavigationDecision> &route);
-        static vector<vector<NavigationDecision>> GetRoutes();
-
+        static void DoTrades(const BinTree<string> &current_position);        
+        static void TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, int buyable_amount, int sellable_amount, vector<RouteResult> &results);
+    
     public:
         static void InitializeFromStream(istream& stream);
         static void ReadCitiesFromStream(istream& stream);
         static Ship& GetShip();
         
         static vector<string> GetCities();
-        static City& GetCity(string id);
-        static bool HasCity(string id);
+        static City& GetCity(const string& id);
+        static bool HasCity(const string& id);
         
         static void DoTrades();
         
-        static vector<NavigationDecision> GetBestRoute();
-        static int NavigateRoute(const vector<NavigationDecision> route);
+        static vector<NavStep> GetBestRoute();
+        static int NavigateRoute(const vector<NavStep>& route);
 };
+

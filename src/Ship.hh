@@ -21,7 +21,7 @@ class Ship
         Product& BuyingProduct();
         Product& SellingProduct();
         const vector<string>& GetVisitedCities() const;
-        void AddVisitedCity(string city);
+        void AddVisitedCity(const string& city);
         void ResetVisitedCities();
         void ReadFromStream(istream& stream);
         Ship Copy() const;

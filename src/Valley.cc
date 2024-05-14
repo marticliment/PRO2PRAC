@@ -71,13 +71,13 @@ vector<string> Valley::GetCities()
     return names;
 }
 
-bool Valley::HasCity(string id)
+bool Valley::HasCity(const string& id)
 {
     AssertRiverArrayIsInitialized();
     return cities.find(id) != cities.end();
 }
 
-City& Valley::GetCity(string id)
+City& Valley::GetCity(const string& id)
 {
     AssertRiverArrayIsInitialized();
     if(!HasCity(id))
@@ -86,7 +86,7 @@ City& Valley::GetCity(string id)
     return cities.at(id);
 }
 
-void Valley::DoTrades(BinTree<string> current_position)
+void Valley::DoTrades(const BinTree<string> &current_position)
 {
     AssertRiverArrayIsInitialized();
 
@@ -114,66 +114,69 @@ void Valley::DoTrades()
     DoTrades(river_structure);
 }
 
-void Valley::DisambiguateRoute(vector<NavigationDecision> current_route, BinTree<string> city, vector<vector<NavigationDecision>> &routes)
+void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, 
+                            int buyable_amount, int sellable_amount, 
+                            vector<Valley::RouteResult> &results)
 {
-    if(city.empty())
+    int buying_id = ship.BuyingProduct().GetId();
+    int selling_id = ship.SellingProduct().GetId();
+
+    // If we have reached the end of the river 
+    // or if we have reached the limits of the ship's trading capacity
+    if(current_location.empty() || (ship.BuyingProduct().GetMissingAmount() <= buyable_amount && ship.SellingProduct().GetExceedingAmount() <= sellable_amount))
     {
-        routes.push_back(current_route);
+        Valley::RouteResult result;
+        result.route = current_route;
+        result.EffectiveLength = current_route.size();
+        result.TotalTrades = min(buyable_amount, ship.BuyingProduct().GetMissingAmount()) + 
+            min(sellable_amount, ship.SellingProduct().GetExceedingAmount());
+        results.push_back(result);
+        return;
     }
-    else
-    {
-        auto& left_route = current_route;
-        auto right_route = current_route;
-        
-        left_route.push_back(NavigationDecision::Left);
-        right_route.push_back(NavigationDecision::Right);
+    
+    // Calculate how much product is going to be bought from the city
+    auto& city = GetCity(current_location.value());
+    if(city.HasProduct(buying_id))
+        buyable_amount += city.GetProductExceedingAmount(buying_id);
 
-        DisambiguateRoute(left_route, city.left(), routes);
-        DisambiguateRoute(right_route, city.right(), routes);
-    }
+    // Calculate how much product is going to be sold to the city
+    if(city.HasProduct(selling_id))
+        sellable_amount += city.GetProductMissingAmount(selling_id);
+
+    // Continue testing through the left
+    current_route.push_back(NavStep::Left);
+    TestRoutePiece(current_route, current_location.left(), buyable_amount, sellable_amount, results);
+    
+    // Continue testing through the right
+    current_route[current_route.size() - 1] = NavStep::Right;
+    TestRoutePiece(current_route, current_location.right(), buyable_amount, sellable_amount, results);
 }
 
-void print_route(const vector<NavigationDecision> &route)
+vector<Valley::NavStep> Valley::GetBestRoute()
 {
-    for(auto item: route)
-            cout << NavigationDecisionAsString(item) << ',';
-        cout << endl;
-}
+    vector<Valley::RouteResult> routes;
+    TestRoutePiece(vector<Valley::NavStep>(), river_structure, 0, 0, routes);
 
-vector<vector<NavigationDecision>> Valley::GetRoutes()
-{
-    vector<vector<NavigationDecision>> routes;
-    DisambiguateRoute(vector<NavigationDecision>(), river_structure, routes);
-    return routes;
-}
-
-vector<NavigationDecision> Valley::GetBestRoute()
-{
-    auto routes = GetRoutes();
-    int best_route_index = 0;
-    int best_route_value = TestRoute(routes[0]);
+    int best_index = 0;
     for(int i = 1; i < routes.size(); i++)
     {
-        int route_value = TestRoute(routes[i]);
-        if(route_value > best_route_value || (route_value == best_route_value && routes[i].size() < routes[best_route_index].size()))
-        {                                                                  // TODO: perhaps add a <= here, but in theory not
-            best_route_value = route_value;
-            best_route_index = i;
-        }
+        if(routes[i].TotalTrades > routes[best_index].TotalTrades || (routes[i].TotalTrades == routes[best_index].TotalTrades && routes[i].EffectiveLength <= routes[best_index].EffectiveLength))
+            best_index = i;                                                                                                        // TODO: perhaps add a <= here, but in theory not
     }
 
-    return routes[best_route_index];
+    return routes[best_index].route;
 }
 
-int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current_ship, bool dryrun)
+
+int Valley::NavigateRoute(const vector<Valley::NavStep>& route)
 {
     int route_position = 0;
     int total_traded = 0;
     BinTree<string> location = river_structure;
     string last_traded_city = "";
 
-    Product current_buying_product = current_ship.BuyingProduct();
-    Product current_selling_product = current_ship.SellingProduct();
+    Product current_buying_product = ship.BuyingProduct();
+    Product current_selling_product = ship.SellingProduct();
 
     while(route_position < route.size())
     {
@@ -186,8 +189,7 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
         {
             int amount_to_buy = min(current_buying_product.GetMissingAmount(), city.GetProductExceedingAmount(buying_id));
             current_buying_product.RestockAmount(amount_to_buy);
-            if(!dryrun) // Only modify the city if we are not running on test mode
-                city.WithdrawProductAmount(buying_id, amount_to_buy);
+            city.WithdrawProductAmount(buying_id, amount_to_buy);
             city_traded += amount_to_buy;
         }
 
@@ -197,8 +199,7 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
         {
             int amount_to_sell = min(current_selling_product.GetExceedingAmount(), city.GetProductMissingAmount(selling_id));
             current_selling_product.WithdrawAmount(amount_to_sell);
-            if(!dryrun) // Only modify the city if we are not running on test mode
-                city.RestockProductAmount(selling_id, amount_to_sell);
+            city.RestockProductAmount(selling_id, amount_to_sell);
             city_traded += amount_to_sell;
         }
 
@@ -212,25 +213,14 @@ int Valley::NavigateRoute(const vector<NavigationDecision> &route, Ship &current
         if(route_position == route.size())
             route_position++;
         // Otherwise, navigate to the next position
-        else if(route[route_position++] == NavigationDecision::Left)
+        else if(route[route_position++] == Valley::NavStep::Left)
             location = location.left();
         else
             location = location.right();
     }
 
-    if(!dryrun && last_traded_city != "")
-        current_ship.AddVisitedCity(last_traded_city);
+    if(last_traded_city != "")
+        ship.AddVisitedCity(last_traded_city);
 
     return total_traded;
-}
-
-int Valley::TestRoute(const vector<NavigationDecision> &route)
-{
-    Ship test_ship = GetShip().Copy();
-    return NavigateRoute(route, test_ship, true);
-}
-
-int Valley::NavigateRoute(const vector<NavigationDecision> route)
-{
-    return NavigateRoute(route, GetShip(), false);
 }

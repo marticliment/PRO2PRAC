@@ -2,7 +2,6 @@
 #include "Valley.hh"
 #include "debug.hh"
 #include "ProductReference.hh"
-#include "NavigationDecisions.hh"
 
 using namespace std;
 
@@ -311,7 +310,7 @@ int main()
                 {
                     cout << city.GetProductCurrentAmount(product_id) << ' ' << city.GetProductWantedAmount(product_id) << endl;                    
                 }
-            }        
+            }
         }
         
         //  Se leerán los identificadores de dos ciudades. Si no existe alguna
