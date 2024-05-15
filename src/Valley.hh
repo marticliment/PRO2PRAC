@@ -40,7 +40,7 @@ class Valley
         static BinTree<string> GetRiverStructureFromStream(istream& stream);
         
         static void DoTrades(const BinTree<string> &current_position);        
-        static void TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, int buyable_amount, int sellable_amount, vector<RouteResult> &results);
+        static void TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, int buyable_amount, int sellable_amount, int skipped_cities, vector<RouteResult> &results);
     
     public:
         static void InitializeFromStream(istream& stream);
