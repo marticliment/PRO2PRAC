@@ -19,6 +19,7 @@ clean:
 	rm -rf *.exe
 
 tar: clean
+	cp makefile src/makefile -f
 	rm -rf practica.tar
 	cd src; tar -cvf practica.tar *.cc *.hh makefile; mv practica.tar ..
 

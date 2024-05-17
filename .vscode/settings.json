@@ -12,6 +12,7 @@
         "format": "cpp",
         "map": "cpp",
         "unordered_map": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "xstring": "cpp"
     }
 }
