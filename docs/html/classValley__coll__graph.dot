@@ -12,5 +12,5 @@ digraph "Valley"
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ship",fontcolor="grey" ];
   Node4 [id="Node000004",label="Ship",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classShip.html",tooltip=" "];
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" buying_product\nselling_product",fontcolor="grey" ];
-  Node5 [id="Node000005",label="Product",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classProduct.html",tooltip=" "];
+  Node5 [id="Node000005",label="Product",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classProduct.html",tooltip="Represents a Product. A product object has an available amount and a wanted amount of units...."];
 }

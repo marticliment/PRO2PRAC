@@ -7,9 +7,9 @@ digraph "ProductReference::Get"
   rankdir="RL";
   Node1 [id="Node000001",label="ProductReference::Get",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="Product::GetData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a68f0c88184e12f91987afe67d389187c",tooltip=" "];
+  Node2 [id="Node000002",label="Product::GetData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a68f0c88184e12f91987afe67d389187c",tooltip="Get the data of the product from the ProductRefence Database."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="Product::GetVolume",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602",tooltip=" "];
+  Node3 [id="Node000003",label="Product::GetVolume",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602",tooltip="Get the volume of the product according to the current available amount of product."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="City::AddProduct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a23a27df1c37c22f2873e23346362a714",tooltip="Add a product to the city's inventory."];
   Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -17,7 +17,7 @@ digraph "ProductReference::Get"
   Node4 -> Node6 [id="edge5_Node000004_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="City::UpdateProduct",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3",tooltip="Update a product in the city's inventory."];
   Node1 -> Node7 [id="edge6_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="Product::GetWeight",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8",tooltip=" "];
+  Node7 [id="Node000007",label="Product::GetWeight",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8",tooltip="Get the weight of the product according to the current available amount of product."];
   Node7 -> Node4 [id="edge7_Node000007_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node8 [id="edge8_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node8 [id="Node000008",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip="Entry point of the program."];

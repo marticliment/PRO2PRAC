@@ -57,6 +57,7 @@ time: clean program.exe
 	time --verbose ./program.exe <in >out
 
 docs:
+	rm -rf docs
 	doxygen doxyfile
 
 doxy: docs
