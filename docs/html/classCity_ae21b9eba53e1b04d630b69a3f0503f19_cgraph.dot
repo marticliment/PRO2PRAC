@@ -13,9 +13,9 @@ digraph "City::TradeWith"
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="City::RestockProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390",tooltip="Restock a certain amount of a product in the city."];
   Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip=" "];
+  Node5 [id="Node000005",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip="Retrieves the product data with the specified ID from the reference."];
   Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip=" "];
+  Node6 [id="Node000006",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip="Checks if the reference contains product data with the specified ID."];
   Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
   Node7 [id="Node000007",label="City::WithdrawProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9",tooltip="Withdraw a certain amount of a product from the city."];
   Node7 -> Node5 [id="edge7_Node000007_Node000005",color="steelblue1",style="solid",tooltip=" "];

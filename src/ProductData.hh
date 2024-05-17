@@ -3,7 +3,7 @@
 
 /**
  * @class ProductData
- * @brief Class representing the data (weight and volume) for a specific product.
+ * @brief Represents the data (weight and volume) for a specific product.
  *
  * This class stores information about the weight and volume of a product.
  */
@@ -31,6 +31,7 @@ class ProductData
          *
          * @param weight The weight of the product per unit of product.
          * @param volume The volume of the product per unit of product.
+         * 
          * @pre None
          * @post The weight and volume are set to the given values.
          */
@@ -39,9 +40,10 @@ class ProductData
         /**
          * @brief Get the weight of one unit the product.
          *
-         * @return The weight of one unit of the product.
          * @pre None
          * @post None
+         * 
+         * @return The weight of one unit of the product.
          */
         int GetWeight() const;
 
@@ -51,18 +53,21 @@ class ProductData
          * Calculates the total weight of the product based on the given amount.
          *
          * @param amount The amount of the product.
-         * @return The total weight of the product.
+         * 
          * @pre None
          * @post None
+         * 
+         * @return The total weight of the product.
          */
         int GetWeight(int amount) const;
         
         /**
          * @brief Get the volume of one unit of the product.
          *
-         * @return The volume of one unit of the product.
          * @pre None
          * @post None
+         * 
+         * @return The volume of one unit of the product.
          */
         int GetVolume() const;
 
@@ -72,9 +77,11 @@ class ProductData
          * Calculates the total volume of the product based on the given amount.
          *
          * @param amount The amount of the product.
-         * @return The total volume of the product.
+         * 
          * @pre None
          * @post None
+         * 
+         * @return The total volume of the product.
          */
         int GetVolume(int amount) const;
 

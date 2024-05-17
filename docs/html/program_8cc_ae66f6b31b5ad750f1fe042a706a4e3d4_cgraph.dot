@@ -7,13 +7,13 @@ digraph "main"
   rankdir="LR";
   Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Entry point of the program."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="ProductReference::AddFrom\lStream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947",tooltip=" "];
+  Node2 [id="Node000002",label="ProductReference::AddFrom\lStream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947",tooltip="Adds multiple product data from an input stream to the reference."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="ProductReference::Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a",tooltip=" "];
+  Node3 [id="Node000003",label="ProductReference::Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a",tooltip="Adds a new product data to the reference."];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip=" "];
+  Node4 [id="Node000004",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip="Checks if the reference contains product data with the specified ID."];
   Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="ProductReference::Count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60",tooltip=" "];
+  Node5 [id="Node000005",label="ProductReference::Count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60",tooltip="Retrieves the number of product data in the reference."];
   Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="Valley::DoTrades",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classValley.html#aa5308f01b1b609a63508404fa8b7a46f",tooltip=" "];
   Node6 -> Node7 [id="edge6_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
@@ -22,7 +22,7 @@ digraph "main"
   Node1 -> Node8 [id="edge8_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node8 [id="Node000008",label="Error",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$debug_8cc.html#a811946f700e43ccd37d8f7141f837270",tooltip=" "];
   Node1 -> Node9 [id="edge9_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
-  Node9 [id="Node000009",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip=" "];
+  Node9 [id="Node000009",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip="Retrieves the product data with the specified ID from the reference."];
   Node9 -> Node4 [id="edge10_Node000009_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node10 [id="edge11_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="Valley::GetBestRoute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classValley.html#aa61921a453bfcab8a76822fb16553560",tooltip=" "];

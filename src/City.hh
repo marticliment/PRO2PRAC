@@ -11,7 +11,7 @@ using namespace std;
 
 /**
  * @class City
- * @brief Represents a city with its inventory of products.
+ * @brief Represents a city with an inventory of Product items.
  * 
  * The City class stores information about a city, including its unique identifier,
  * inventory of products, weight, and volume. It provides methods to manage the inventory,
@@ -69,10 +69,10 @@ class City
         /**
          * @brief Get the IDs of all the products in the city.
          * 
-         * @return A vector containing the IDs of all the products in the city.
-         * 
          * @pre None
          * @post None
+         * 
+         * @return A vector containing the IDs of all the products in the city.
          */
         vector<int> GetProductIds() const;
         
@@ -80,10 +80,11 @@ class City
          * @brief Get the current amount of a product in the city.
          * 
          * @param product_id The ID of the product.
-         * @return The current amount of the product in the city.
          * 
          * @pre The product with the given ID exists in the city.
          * @post None
+         * 
+         * @return The current amount of the product in the city.
          */
         int GetProductCurrentAmount(int product_id) const;
 
@@ -93,10 +94,11 @@ class City
          * product counter, `GetProductMissingAmount()` should be used instead
          * 
          * @param product_id The ID of the product.
-         * @return The wanted amount of the product in the city.
          * 
          * @pre The product with the given ID exists in the city.
          * @post None
+         * 
+         * @return The wanted amount of the product in the city.
          */
         int GetProductWantedAmount(int product_id) const;
 
@@ -104,10 +106,11 @@ class City
          * @brief Get the exceeding amount of a product in the city.
          * 
          * @param product_id The ID of the product.
-         * @return The exceeding amount of the product in the city.
          * 
          * @pre The product with the given ID exists in the city.
          * @post None
+         * 
+         * @return The exceeding amount of the product in the city.
          */
         int GetProductExceedingAmount(int product_id) const;
 
@@ -115,10 +118,11 @@ class City
          * @brief Get the missing amount of a product in the city.
          * 
          * @param product_id The ID of the product.
-         * @return The missing amount of the product in the city.
          * 
          * @pre The product with the given ID exists in the city.
          * @post None
+         * 
+         * @return The missing amount of the product in the city.
          */
         int GetProductMissingAmount(int product_id) const;
 
@@ -193,20 +197,20 @@ class City
         /**
          * @brief Get the total weight of the products in the city.
          * 
-         * @return The total weight of the products in the city.
-         * 
          * @pre None
          * @post None
+         * 
+         * @return The total weight of the products in the city.
          */
         int GetWeight() const;
 
         /**
          * @brief Get the total volume of the products in the city.
          * 
-         * @return The total volume of the products in the city.
-         * 
          * @pre None
          * @post None
+         * 
+         * @return The total volume of the products in the city.
          */
         int GetVolume() const;
 
@@ -225,10 +229,10 @@ class City
          * is designed to be able to access the iterators on the set<int> containing
          * the products. Under normal circumstances **GetProductIds()** should be used instead
          * 
-         * @return The set of raw product IDs in the city.
-         * 
          * @pre None
          * @post None
+         * 
+         * @return The set of raw product IDs in the city.
          */
         const set<int>& GetRawProductIds() const;
 };

@@ -6,11 +6,11 @@ digraph "Valley"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="Valley",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" invalid_city",fontcolor="grey" ];
-  Node2 [id="Node000002",label="City",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCity.html",tooltip="Represents a city with its inventory of products."];
+  Node2 [id="Node000002",label="City",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCity.html",tooltip="Represents a city with an inventory of Product items."];
   Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" river_structure",fontcolor="grey" ];
   Node3 [id="Node000003",label="BinTree\< string \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classBinTree.html",tooltip=" "];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ship",fontcolor="grey" ];
-  Node4 [id="Node000004",label="Ship",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classShip.html",tooltip=" "];
+  Node4 [id="Node000004",label="Ship",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classShip.html",tooltip="Represents a ship that navigates through a Valley buying and selling products."];
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" buying_product\nselling_product",fontcolor="grey" ];
-  Node5 [id="Node000005",label="Product",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classProduct.html",tooltip="Represents a Product. A product object has an available amount and a wanted amount of units...."];
+  Node5 [id="Node000005",label="Product",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classProduct.html",tooltip="Represents a product. A product object has an available amount and a wanted amount of units,..."];
 }
