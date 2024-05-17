@@ -1,5 +1,5 @@
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "My Project"
+PROJECT_NAME           = "Pràctica de PRO2 - Martí Climent"
 PROJECT_NUMBER         =
 PROJECT_BRIEF          =
 PROJECT_LOGO           =
@@ -107,13 +107,13 @@ WARN_AS_ERROR          = NO
 WARN_FORMAT            = "$file:$line: $text"
 WARN_LINE_FORMAT       = "at line $line of file $file"
 WARN_LOGFILE           =
-INPUT                  = "."
+INPUT                  = "src"
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.hh \
-		         *.cc
+		                 *.cc
                         
 RECURSIVE              = NO
-EXCLUDE                =  *~ \
+EXCLUDE                =  
 		       	  readbool.hh \
 			  BinTree.hh \
 			  PRO2Excepcio.hh
@@ -156,7 +156,7 @@ HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = NO
 HTML_INDEX_NUM_ENTRIES = 100
 GENERATE_DOCSET        = NO
-DOCSET_FEEDNAME        = "Doxygen generated docs"
+DOCSET_FEEDNAME        = "Documentació generada amb Doxygen"
 DOCSET_FEEDURL         =
 DOCSET_BUNDLE_ID       = org.doxygen.Project
 DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
@@ -202,7 +202,7 @@ SEARCHENGINE_URL       =
 SEARCHDATA_FILE        = searchdata.xml
 EXTERNAL_SEARCH_ID     =
 EXTRA_SEARCH_MAPPINGS  =
-GENERATE_LATEX         = YES
+GENERATE_LATEX         = NO
 LATEX_OUTPUT           = latex
 LATEX_CMD_NAME         =
 MAKEINDEX_CMD_NAME     = makeindex

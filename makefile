@@ -55,3 +55,8 @@ diff: program.exe
 time: clean program.exe
 	chmod +x program.exe
 	time --verbose ./program.exe <in >out
+
+docs:
+	doxygen doxyfile
+
+doxy: docs

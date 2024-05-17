@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pràctica de PRO2 - Martí Climent: Archivo de código fuente src/Valley.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Pràctica de PRO2 - Martí Climent
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Valley.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Valley_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RIVER_ARRAY_HH</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RIVER_ARRAY_HH</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="BinTree_8hh.html">BinTree.hh</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="City_8hh.html">City.hh</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Ship_8hh.html">Ship.hh</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="ProductData_8hh.html">ProductData.hh</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classValley.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classValley.html">Valley</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classValley.html#a3771d0f650af806c24a71e9060093635">   18</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Left</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Right</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        };</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structValley_1_1RouteResult.html">   26</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structValley_1_1RouteResult.html">RouteResult</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structValley_1_1RouteResult.html#a54aaa61829fddc105f0823834de90f48">   28</a></span>            <a class="code hl_class" href="classBinTree.html">vector&lt;Valley::NavStep&gt;</a> <a class="code hl_variable" href="structValley_1_1RouteResult.html#a54aaa61829fddc105f0823834de90f48">route</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structValley_1_1RouteResult.html#ac16630438595fb160e705ffb0c1a438b">   29</a></span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="structValley_1_1RouteResult.html#ac16630438595fb160e705ffb0c1a438b">EffectiveLength</a> = 0;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structValley_1_1RouteResult.html#a1a8f7a04ac56b7c0acb71b1a6949a03d">   30</a></span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="structValley_1_1RouteResult.html#a1a8f7a04ac56b7c0acb71b1a6949a03d">TotalTrades</a> = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        };</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">   33</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">// There are methods where a city must be returned, but the </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// wanted city does not exist. This city will be returned instead.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classValley.html#afebc5484b9933c6d53d54e8a43632970">   36</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classCity.html">City</a> <a class="code hl_variable" href="classValley.html#afebc5484b9933c6d53d54e8a43632970">invalid_city</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">   37</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">   38</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classBinTree.html">unordered_map&lt;string, City&gt;</a> <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">   39</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classShip.html">Ship</a> <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> <a class="code hl_function" href="classValley.html#aa6c899cd791dea40579e15f0958222a0">GetRiverStructureFromStream</a>(<a class="code hl_class" href="classBinTree.html">istream</a>&amp; <a class="code hl_class" href="classBinTree.html">stream</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(<span class="keyword">const</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> &amp;<a class="code hl_class" href="classBinTree.html">current_position</a>);        </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">TestRoutePiece</a>(<a class="code hl_class" href="classBinTree.html">vector&lt;NavStep&gt;</a>&amp; <a class="code hl_class" href="classBinTree.html">current_route</a>, </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keyword">const</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a>&amp; <a class="code hl_class" href="classBinTree.html">current_location</a>, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">buyable_amount</a>, </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">sellable_amount</a>, </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_struct" href="structValley_1_1RouteResult.html">RouteResult</a> &amp;<a class="code hl_class" href="classBinTree.html">best_route</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        );</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">InitializeFromStream</a>(<a class="code hl_class" href="classBinTree.html">istream</a>&amp; <a class="code hl_class" href="classBinTree.html">stream</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">ReadCitiesFromStream</a>(<a class="code hl_class" href="classBinTree.html">istream</a>&amp; <a class="code hl_class" href="classBinTree.html">stream</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">static</span> <a class="code hl_class" href="classShip.html">Ship</a>&amp; <a class="code hl_function" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">GetShip</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> <a class="code hl_class" href="classBinTree.html">vector&lt;string&gt;</a> <a class="code hl_function" href="classValley.html#ae649240ef0637addb04763c92d41799e">GetCities</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">static</span> <a class="code hl_class" href="classCity.html">City</a>&amp; <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">HasCity</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">static</span> <a class="code hl_class" href="classBinTree.html">vector&lt;NavStep&gt;</a> <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">GetBestRoute</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">NavigateRoute</a>(<span class="keyword">const</span> <a class="code hl_class" href="classBinTree.html">vector&lt;NavStep&gt;</a>&amp; route);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="ttc" id="aBinTree_8hh_html"><div class="ttname"><a href="BinTree_8hh.html">BinTree.hh</a></div></div>
+<div class="ttc" id="aCity_8hh_html"><div class="ttname"><a href="City_8hh.html">City.hh</a></div></div>
+<div class="ttc" id="aProductData_8hh_html"><div class="ttname"><a href="ProductData_8hh.html">ProductData.hh</a></div></div>
+<div class="ttc" id="aShip_8hh_html"><div class="ttname"><a href="Ship_8hh.html">Ship.hh</a></div></div>
+<div class="ttc" id="aclassBinTree_html"><div class="ttname"><a href="classBinTree.html">BinTree</a></div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00022">BinTree.hh:22</a></div></div>
+<div class="ttc" id="aclassCity_html"><div class="ttname"><a href="classCity.html">City</a></div><div class="ttdoc">Represents a city with its inventory of products.</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00021">City.hh:22</a></div></div>
+<div class="ttc" id="aclassShip_html"><div class="ttname"><a href="classShip.html">Ship</a></div><div class="ttdef"><b>Definition</b> <a href="Ship_8hh_source.html#l00011">Ship.hh:12</a></div></div>
+<div class="ttc" id="aclassValley_html"><div class="ttname"><a href="classValley.html">Valley</a></div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00015">Valley.hh:16</a></div></div>
+<div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00053">Valley.cc:53</a></div></div>
+<div class="ttc" id="aclassValley_html_a15b78bc9bf20a95c9f733d28a5a50371"><div class="ttname"><a href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">Valley::TestRoutePiece</a></div><div class="ttdeci">static void TestRoutePiece(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, RouteResult &amp;best_route)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00115">Valley.cc:115</a></div></div>
+<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00184">Valley.cc:184</a></div></div>
+<div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635">Valley::NavStep</a></div><div class="ttdeci">NavStep</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00018">Valley.hh:19</a></div></div>
+<div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a></div><div class="ttdeci">@ Right</div></div>
+<div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a></div><div class="ttdeci">@ Left</div></div>
+<div class="ttc" id="aclassValley_html_a6c77616859a5ac6a822be4a2b6cd537e"><div class="ttname"><a href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">Valley::river_structure</a></div><div class="ttdeci">static BinTree&lt; string &gt; river_structure</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00037">Valley.hh:37</a></div></div>
+<div class="ttc" id="aclassValley_html_a72b588ac6bb53e4777778a4ca8f89725"><div class="ttname"><a href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">Valley::cities</a></div><div class="ttdeci">static unordered_map&lt; string, City &gt; cities</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00038">Valley.hh:38</a></div></div>
+<div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00078">Valley.cc:78</a></div></div>
+<div class="ttc" id="aclassValley_html_a79fb1ecacc49127f34e147ac01d76941"><div class="ttname"><a href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">Valley::ship</a></div><div class="ttdeci">static Ship ship</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00039">Valley.hh:39</a></div></div>
+<div class="ttc" id="aclassValley_html_a837c0bfa444e667bb8d93e73d44ed3d4"><div class="ttname"><a href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">Valley::initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00033">Valley.hh:33</a></div></div>
+<div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00036">Valley.cc:36</a></div></div>
+<div class="ttc" id="aclassValley_html_a9ce0d2c2139f10629fcb12ec2e261f35"><div class="ttname"><a href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">Valley::AssertRiverArrayIsInitialized</a></div><div class="ttdeci">static void AssertRiverArrayIsInitialized()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00015">Valley.cc:15</a></div></div>
+<div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
+<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00174">Valley.cc:174</a></div></div>
+<div class="ttc" id="aclassValley_html_aa6c899cd791dea40579e15f0958222a0"><div class="ttname"><a href="classValley.html#aa6c899cd791dea40579e15f0958222a0">Valley::GetRiverStructureFromStream</a></div><div class="ttdeci">static BinTree&lt; string &gt; GetRiverStructureFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00020">Valley.cc:20</a></div></div>
+<div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00043">Valley.cc:43</a></div></div>
+<div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
+<div class="ttc" id="aclassValley_html_ae649240ef0637addb04763c92d41799e"><div class="ttname"><a href="classValley.html#ae649240ef0637addb04763c92d41799e">Valley::GetCities</a></div><div class="ttdeci">static vector&lt; string &gt; GetCities()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00059">Valley.cc:59</a></div></div>
+<div class="ttc" id="aclassValley_html_afebc5484b9933c6d53d54e8a43632970"><div class="ttname"><a href="classValley.html#afebc5484b9933c6d53d54e8a43632970">Valley::invalid_city</a></div><div class="ttdeci">static City invalid_city</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00036">Valley.hh:36</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteResult_html"><div class="ttname"><a href="structValley_1_1RouteResult.html">Valley::RouteResult</a></div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00026">Valley.hh:27</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteResult_html_a1a8f7a04ac56b7c0acb71b1a6949a03d"><div class="ttname"><a href="structValley_1_1RouteResult.html#a1a8f7a04ac56b7c0acb71b1a6949a03d">Valley::RouteResult::TotalTrades</a></div><div class="ttdeci">int TotalTrades</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00030">Valley.hh:30</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteResult_html_a54aaa61829fddc105f0823834de90f48"><div class="ttname"><a href="structValley_1_1RouteResult.html#a54aaa61829fddc105f0823834de90f48">Valley::RouteResult::route</a></div><div class="ttdeci">vector&lt; Valley::NavStep &gt; route</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00028">Valley.hh:28</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteResult_html_ac16630438595fb160e705ffb0c1a438b"><div class="ttname"><a href="structValley_1_1RouteResult.html#ac16630438595fb160e705ffb0c1a438b">Valley::RouteResult::EffectiveLength</a></div><div class="ttdeci">int EffectiveLength</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00029">Valley.hh:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
