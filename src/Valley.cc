@@ -169,10 +169,10 @@ vector<Valley::NavStep> Valley::GetBestRoute()
     int best_index = 0;
     for(int i = 1; i < routes.size(); i++)
     {
-        if(routes[i].TotalTrades > routes[best_index].TotalTrades || (routes[i].TotalTrades == routes[best_index].TotalTrades && routes[i].EffectiveLength <= routes[best_index].EffectiveLength))
+        if(routes[i].TotalTrades > routes[best_index].TotalTrades || 
+        (routes[i].TotalTrades == routes[best_index].TotalTrades && routes[i].EffectiveLength <= routes[best_index].EffectiveLength))
             best_index = i;                                                                                                        // TODO: perhaps add a <= here, but in theory not
     }
-
     return routes[best_index].route;
 }
 

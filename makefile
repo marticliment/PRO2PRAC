@@ -1,3 +1,9 @@
+ifndef MAKEFLAGS
+CPUS ?= $(shell nproc)
+MAKEFLAGS += -j $(CPUS) -l $(CPUS)
+# $(info Note: running on $(CPUS) CPU cores by default, use flag -j to override.) 
+endif
+
 OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11 -fno-extended-identifiers
 
 program.exe: program.o City.o Product.o ProductData.o Valley.o Ship.o debug.o ProductReference.o

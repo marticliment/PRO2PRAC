@@ -83,37 +83,41 @@ int City::GetWeight() const
 
 void City::TradeWith(City& other)
 {
-    for(int product_id: this->GetProductIds())
+    auto& this_inventory = this->GetRawInventory();
+    auto& other_inventory = other.GetRawInventory();
+    
+    auto this_product = this_inventory.begin();
+    auto other_product = other_inventory.begin();
+    while(this_product != this_inventory.end() && other_product != other_inventory.end())
     {
-        // this -> SELLER
-        // other -> BUYER
-        if(!other.HasProduct(product_id))
-            continue;
-        else
+        if(this_product->first > other_product->first)
         {
-            if(this->GetProductExceedingAmount(product_id) == 0 || other.GetProductMissingAmount(product_id) == 0)
-                continue;
+            other_product++;
+        }
+        else if(this_product->first < other_product->first)
+        {
+            this_product++;
+        }
+        else // The product is present on both cities
+        {
+            int product_id = this_product->first;
 
-            int trade_amount = min(this->GetProductExceedingAmount(product_id), other.GetProductMissingAmount(product_id));
+            if(this_product->second.GetExceedingAmount() != 0 && other_product->second.GetMissingAmount() != 0)
+            {
+                int trade_amount = min(this_product->second.GetExceedingAmount(), other.GetProductMissingAmount(product_id));
             this->WithdrawProductAmount(product_id, trade_amount);
             other.RestockProductAmount(product_id, trade_amount);
-        }
-    }
+            }
 
-    for(int product_id: other.GetProductIds())
-    {
-        // other -> SELLER
-        // this -> BUYER
-        if(!this->HasProduct(product_id))
-            continue;
-        else
-        {
-            if(other.GetProductExceedingAmount(product_id) == 0 || this->GetProductMissingAmount(product_id) == 0)
-                continue;
-
-            int trade_amount = min(other.GetProductExceedingAmount(product_id), this->GetProductMissingAmount(product_id));
-            other.WithdrawProductAmount(product_id, trade_amount);
-            this->RestockProductAmount(product_id, trade_amount);
+            if(other_product->second.GetExceedingAmount() != 0 && this_product->second.GetMissingAmount() != 0)
+            {
+                int trade_amount = min(other_product->second.GetExceedingAmount(), this_product->second.GetMissingAmount());
+                other.WithdrawProductAmount(product_id, trade_amount);
+                this->RestockProductAmount(product_id, trade_amount);
+            }
+            
+            this_product++;
+            other_product++;
         }
     }
 }
@@ -153,4 +157,9 @@ void City::RestockProductAmount(int product_id, int amount)
     weight += product_data.GetWeight(amount);
     volume += product_data.GetVolume(amount);
     inventory.at(product_id).RestockAmount(amount);
+}
+
+const map<int, Product>&  City::GetRawInventory() const
+{
+    return inventory;
 }

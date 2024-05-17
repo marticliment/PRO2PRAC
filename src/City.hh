@@ -36,6 +36,7 @@ class City
         int GetWeight() const;
         int GetVolume() const;
         void TradeWith(City& other);
+        const map<int, Product>& GetRawInventory() const;
 };
 
 #endif
