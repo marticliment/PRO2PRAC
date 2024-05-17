@@ -59,12 +59,3 @@ void Ship::ResetVisitedCities()
 {
     visited_cities.clear();
 }
-
-Ship Ship::Copy() const
-{
-    Product sold_product = Product(selling_product.GetId(), selling_product.GetCurrentAmount(), selling_product.GetWantedAmount());
-    Product bougth_product = Product(buying_product.GetId(), buying_product.GetCurrentAmount(), buying_product.GetWantedAmount());
-    Ship copy = Ship(bougth_product, sold_product);
-    copy.visited_cities = this->visited_cities;
-    return copy;
-}

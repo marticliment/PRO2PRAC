@@ -24,7 +24,6 @@ class Ship
         void AddVisitedCity(const string& city);
         void ResetVisitedCities();
         void ReadFromStream(istream& stream);
-        Ship Copy() const;
 
 };
 

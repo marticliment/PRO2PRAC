@@ -84,44 +84,51 @@ int City::GetWeight() const
 
 void City::TradeWith(City& other)
 {
-    auto& this_inventory = this->GetRawProductIds();
-    auto& other_inventory = other.GetRawProductIds();
+    auto& this_product_set = this->GetRawProductIds();
+    auto& other_product_set = other.GetRawProductIds();
     
-    auto this_product = this_inventory.begin();
-    auto other_product = other_inventory.begin();
-    while(this_product != this_inventory.end() && other_product != other_inventory.end())
-    {
-        if(*this_product > *other_product)
-        {
-            other_product++;
-        }
-        else if(*this_product < *other_product)
-        {
-            this_product++;
-        }
-        else // The product is present on both cities
-        {
-            int product_id = *this_product;
+    auto this_product_it = this_product_set.begin();
+    auto other_product_it = other_product_set.begin();
 
-            if(this->GetProductExceedingAmount(product_id) != 0 && other.GetProductMissingAmount(product_id) != 0)
+    while(this_product_it != this_product_set.end() 
+        && other_product_it != other_product_set.end())
+    {
+        if(*this_product_it > *other_product_it)
+            other_product_it++;
+        else if(*this_product_it < *other_product_it)
+            this_product_it++;
+
+        else //(*this_product_it == *other_product_it)
+        {
+            int product_id = *this_product_it;
+
+            if(this->GetProductExceedingAmount(product_id) != 0
+                && other.GetProductMissingAmount(product_id) != 0)
             {
                 // this -> SELLER
                 // other -> BUYER
-                int trade_amount = min(this->GetProductExceedingAmount(product_id), other.GetProductMissingAmount(product_id));
+                int trade_amount = min(
+                    this->GetProductExceedingAmount(product_id),
+                    other.GetProductMissingAmount(product_id)
+                );
                 this->WithdrawProductAmount(product_id, trade_amount);
                 other.RestockProductAmount(product_id, trade_amount);
             } 
-            else if(other.GetProductExceedingAmount(product_id) != 0 && this->GetProductMissingAmount(product_id) != 0)
+            else if(other.GetProductExceedingAmount(product_id) != 0 
+                && this->GetProductMissingAmount(product_id) != 0)
             {
                 // other -> SELLER
                 // this -> BUYER
-                int trade_amount = min(other.GetProductExceedingAmount(product_id), this->GetProductMissingAmount(product_id));
+                int trade_amount = min(
+                    other.GetProductExceedingAmount(product_id), 
+                    this->GetProductMissingAmount(product_id)
+                );
                 other.WithdrawProductAmount(product_id, trade_amount);
                 this->RestockProductAmount(product_id, trade_amount);
             }
             
-            this_product++;
-            other_product++;
+            this_product_it++;
+            other_product_it++;
         }
     }
 }

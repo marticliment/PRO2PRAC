@@ -168,7 +168,8 @@ int main()
                 auto& city = Valley::GetCity(city_id);
                 for(int id: city.GetProductIds())
                 {
-                    cout << id << ' ' << city.GetProductCurrentAmount(id) << ' ' << city.GetProductWantedAmount(id) << endl;
+                    cout << id << ' ' << city.GetProductCurrentAmount(id) << ' ';
+                    cout << city.GetProductWantedAmount(id) << endl;
                 }
                 cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
             }

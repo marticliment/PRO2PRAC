@@ -1,6 +1,6 @@
 #include "ProductReference.hh"
 
-vector<ProductData> ProductReference::data = vector<ProductData>(0);
+vector<ProductData> ProductReference::data;
 
 void ProductReference::Add(ProductData new_data)
 {
