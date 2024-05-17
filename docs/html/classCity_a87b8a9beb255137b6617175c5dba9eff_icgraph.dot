@@ -1,0 +1,11 @@
+digraph "City::GetRawProductIds"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="City::GetRawProductIds",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="City::TradeWith",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19",tooltip="Trade products with another city. The two cities may or may not have products in common."];
+}
