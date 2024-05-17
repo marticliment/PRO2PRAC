@@ -111,7 +111,7 @@ void Valley::DoTrades()
     DoTrades(river_structure);
 }
 
-void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, 
+void Valley::TestRoutePiece(vector<NavStep>& current_route, const BinTree<string>& current_location, 
                             int buyable_amount, int sellable_amount, int skipped_cities,
                             Valley::RouteResult &best_route)
 {
@@ -120,17 +120,19 @@ void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>
 
     // If we have reached the end of the river 
     // or if we have reached the limits of the ship's trading capacity
-    if(current_location.empty() || (ship.BuyingProduct().GetMissingAmount() <= buyable_amount && ship.SellingProduct().GetExceedingAmount() <= sellable_amount))
+    if(current_location.empty() 
+        || (ship.BuyingProduct().GetMissingAmount() <= buyable_amount 
+        && ship.SellingProduct().GetExceedingAmount() <= sellable_amount))
     {
         Valley::RouteResult result;
         result.route = current_route;
-        result.EffectiveLength = current_route.size() - skipped_cities;
+        result.EffectiveLength = current_route.size();
         result.TotalTrades = min(buyable_amount, ship.BuyingProduct().GetMissingAmount()) + 
             min(sellable_amount, ship.SellingProduct().GetExceedingAmount());
-        // results.push_back(result);
 
-        if(result.TotalTrades > best_route.TotalTrades || 
-        (result.TotalTrades == best_route.TotalTrades && result.EffectiveLength < best_route.EffectiveLength))
+        if(result.TotalTrades > best_route.TotalTrades
+                || (result.TotalTrades == best_route.TotalTrades 
+                && result.EffectiveLength < best_route.EffectiveLength))
             best_route = result;                        // TODO: perhaps add a <= here, but in theory not
 
         return;
@@ -158,28 +160,21 @@ void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>
         skipped_cities++; 
 
     // Continue testing through the left
-    current_route.push_back(NavStep::Left);
-    TestRoutePiece(current_route, current_location.left(), buyable_amount, sellable_amount, skipped_cities, best_route);
+    auto left_route = current_route;
+    left_route.push_back(Valley::NavStep::Left);
+    TestRoutePiece(left_route, current_location.left(), buyable_amount, sellable_amount, skipped_cities, best_route);
     
     // Continue testing through the right
-    current_route[current_route.size() - 1] = NavStep::Right;
+    current_route.push_back(Valley::NavStep::Right);
     TestRoutePiece(current_route, current_location.right(), buyable_amount, sellable_amount, skipped_cities, best_route);
 }
 
 vector<Valley::NavStep> Valley::GetBestRoute()
 {
     Valley::RouteResult best_route;
-    TestRoutePiece(vector<Valley::NavStep>(), river_structure, 0, 0, 0, best_route);
-
-    /*int best_index = 0;
-    for(int i = 1; i < best_route.size(); i++)
-    {
-        if(best_route[i].TotalTrades > best_route[best_index].TotalTrades || 
-        (best_route[i].TotalTrades == best_route[best_index].TotalTrades && best_route[i].EffectiveLength <= best_route[best_index].EffectiveLength))
-            best_index = i;                                                                                                        // TODO: perhaps add a <= here, but in theory not
-    }
-    */
-   return best_route.route;
+    vector<Valley::NavStep> empty_route;
+    TestRoutePiece(empty_route, river_structure, 0, 0, 0, best_route);
+    return best_route.route;
 }
 
 

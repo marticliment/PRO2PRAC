@@ -210,4 +210,7 @@ escribir_ciudad derna
 escribir_ciudad dirna
 escribir_ciudad dorna
 escribir_ciudad durna
+pp durna 2 4 7
+pp durna 1 7 4
+escribir_ciudad durna
 fin
