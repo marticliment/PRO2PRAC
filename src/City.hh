@@ -1,7 +1,9 @@
 #ifndef CITY_HH
 #define CITY_HH
 
+#include <unordered_map>
 #include <map>
+#include <set>
 #include <iostream>
 #include "Product.hh"
 
@@ -11,7 +13,8 @@ class City
 {
     private:
         string __id;
-        map<int, Product> inventory;
+        unordered_map<int, Product> inventory;
+        set<int> products;
         int weight = 0;
         int volume = 0;
 
@@ -36,7 +39,7 @@ class City
         int GetWeight() const;
         int GetVolume() const;
         void TradeWith(City& other);
-        const map<int, Product>& GetRawInventory() const;
+        const set<int>& GetRawProductIds() const;
 };
 
 #endif

@@ -1,4 +1,5 @@
 #include <set>
+#include <unordered_map>
 #include "ProductReference.hh"
 #include "Valley.hh"
 #include "debug.hh"
@@ -8,7 +9,7 @@ using namespace std;
 bool Valley::initialized = false;
 City Valley::invalid_city = City("invalid");
 BinTree<string> Valley::river_structure = BinTree<string>();
-map<string, City> Valley::cities = map<string, City>();
+unordered_map<string, City> Valley::cities = unordered_map<string, City>();
 Ship Valley::ship = Ship();
 
 void Valley::AssertRiverArrayIsInitialized()
@@ -173,6 +174,7 @@ vector<Valley::NavStep> Valley::GetBestRoute()
 {
     Valley::RouteResult best_route;
     vector<Valley::NavStep> empty_route;
+    best_route.route = empty_route;
     TestRoutePiece(empty_route, river_structure, 0, 0, 0, best_route);
     return best_route.route;
 }

@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 #include "City.hh"
 #include "ProductData.hh"
 #include "ProductReference.hh"
@@ -21,6 +22,7 @@ string City::GetId() const
 void City::ReadFromStream(istream& stream)
 {
     inventory.clear();
+    products.clear();
     weight = 0;
     volume = 0;
     int count;
@@ -36,12 +38,9 @@ void City::ReadFromStream(istream& stream)
 vector<int> City::GetProductIds() const
 {
     vector<int> result;
-    auto it = inventory.begin();
-    while(it != inventory.end())
-    {
-        result.push_back(it->first);
-        it++;
-    }
+    auto it = products.begin();
+    while(it != products.end())
+        result.push_back(*(it++));
     return result;
 }
 
@@ -53,6 +52,7 @@ bool City::HasProduct(int id) const
 void City::AddProduct(Product p)
 {
     inventory[p.GetId()] = p;
+    products.insert(p.GetId());
     weight += p.GetWeight();
     volume += p.GetVolume();
 }
@@ -63,6 +63,7 @@ void City::RemoveProduct(int id)
     weight -= product.GetWeight();
     volume -= product.GetVolume();
     inventory.erase(id);
+    products.erase(id);
 }
 
 void City::UpdateProduct(Product p)
@@ -83,35 +84,38 @@ int City::GetWeight() const
 
 void City::TradeWith(City& other)
 {
-    auto& this_inventory = this->GetRawInventory();
-    auto& other_inventory = other.GetRawInventory();
+    auto& this_inventory = this->GetRawProductIds();
+    auto& other_inventory = other.GetRawProductIds();
     
     auto this_product = this_inventory.begin();
     auto other_product = other_inventory.begin();
     while(this_product != this_inventory.end() && other_product != other_inventory.end())
     {
-        if(this_product->first > other_product->first)
+        if(*this_product > *other_product)
         {
             other_product++;
         }
-        else if(this_product->first < other_product->first)
+        else if(*this_product < *other_product)
         {
             this_product++;
         }
         else // The product is present on both cities
         {
-            int product_id = this_product->first;
+            int product_id = *this_product;
 
-            if(this_product->second.GetExceedingAmount() != 0 && other_product->second.GetMissingAmount() != 0)
+            if(this->GetProductExceedingAmount(product_id) != 0 && other.GetProductMissingAmount(product_id) != 0)
             {
-                int trade_amount = min(this_product->second.GetExceedingAmount(), other.GetProductMissingAmount(product_id));
-            this->WithdrawProductAmount(product_id, trade_amount);
-            other.RestockProductAmount(product_id, trade_amount);
-            }
-
-            if(other_product->second.GetExceedingAmount() != 0 && this_product->second.GetMissingAmount() != 0)
+                // this -> SELLER
+                // other -> BUYER
+                int trade_amount = min(this->GetProductExceedingAmount(product_id), other.GetProductMissingAmount(product_id));
+                this->WithdrawProductAmount(product_id, trade_amount);
+                other.RestockProductAmount(product_id, trade_amount);
+            } 
+            else if(other.GetProductExceedingAmount(product_id) != 0 && this->GetProductMissingAmount(product_id) != 0)
             {
-                int trade_amount = min(other_product->second.GetExceedingAmount(), this_product->second.GetMissingAmount());
+                // other -> SELLER
+                // this -> BUYER
+                int trade_amount = min(other.GetProductExceedingAmount(product_id), this->GetProductMissingAmount(product_id));
                 other.WithdrawProductAmount(product_id, trade_amount);
                 this->RestockProductAmount(product_id, trade_amount);
             }
@@ -121,7 +125,6 @@ void City::TradeWith(City& other)
         }
     }
 }
-
 
 int City::GetProductCurrentAmount(int product_id) const
 {
@@ -159,7 +162,7 @@ void City::RestockProductAmount(int product_id, int amount)
     inventory.at(product_id).RestockAmount(amount);
 }
 
-const map<int, Product>&  City::GetRawInventory() const
+const set<int>& City::GetRawProductIds() const
 {
-    return inventory;
+    return products;
 }

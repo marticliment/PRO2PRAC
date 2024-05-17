@@ -3,6 +3,8 @@
 
 
 #include <vector>
+#include <unordered_map>
+#include <map>
 #include "BinTree.hh"
 #endif
 #include "City.hh"
@@ -33,7 +35,7 @@ class Valley
         // wanted city does not exist. This city will be returned instead.
         static City invalid_city;
         static BinTree<string> river_structure;
-        static map<string, City> cities;
+        static unordered_map<string, City> cities;
         static Ship ship;
 
         static void AssertRiverArrayIsInitialized();
