@@ -113,7 +113,7 @@ void Valley::DoTrades()
 
 void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>& current_location, 
                             int buyable_amount, int sellable_amount, int skipped_cities,
-                            vector<Valley::RouteResult> &results)
+                            Valley::RouteResult &best_route)
 {
     int buying_id = ship.BuyingProduct().GetId();
     int selling_id = ship.SellingProduct().GetId();
@@ -127,7 +127,12 @@ void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>
         result.EffectiveLength = current_route.size() - skipped_cities;
         result.TotalTrades = min(buyable_amount, ship.BuyingProduct().GetMissingAmount()) + 
             min(sellable_amount, ship.SellingProduct().GetExceedingAmount());
-        results.push_back(result);
+        // results.push_back(result);
+
+        if(result.TotalTrades > best_route.TotalTrades || 
+        (result.TotalTrades == best_route.TotalTrades && result.EffectiveLength < best_route.EffectiveLength))
+            best_route = result;                        // TODO: perhaps add a <= here, but in theory not
+
         return;
     }
     
@@ -154,26 +159,27 @@ void Valley::TestRoutePiece(vector<NavStep> current_route, const BinTree<string>
 
     // Continue testing through the left
     current_route.push_back(NavStep::Left);
-    TestRoutePiece(current_route, current_location.left(), buyable_amount, sellable_amount, skipped_cities, results);
+    TestRoutePiece(current_route, current_location.left(), buyable_amount, sellable_amount, skipped_cities, best_route);
     
     // Continue testing through the right
     current_route[current_route.size() - 1] = NavStep::Right;
-    TestRoutePiece(current_route, current_location.right(), buyable_amount, sellable_amount, skipped_cities, results);
+    TestRoutePiece(current_route, current_location.right(), buyable_amount, sellable_amount, skipped_cities, best_route);
 }
 
 vector<Valley::NavStep> Valley::GetBestRoute()
 {
-    vector<Valley::RouteResult> routes;
-    TestRoutePiece(vector<Valley::NavStep>(), river_structure, 0, 0, 0, routes);
+    Valley::RouteResult best_route;
+    TestRoutePiece(vector<Valley::NavStep>(), river_structure, 0, 0, 0, best_route);
 
-    int best_index = 0;
-    for(int i = 1; i < routes.size(); i++)
+    /*int best_index = 0;
+    for(int i = 1; i < best_route.size(); i++)
     {
-        if(routes[i].TotalTrades > routes[best_index].TotalTrades || 
-        (routes[i].TotalTrades == routes[best_index].TotalTrades && routes[i].EffectiveLength <= routes[best_index].EffectiveLength))
+        if(best_route[i].TotalTrades > best_route[best_index].TotalTrades || 
+        (best_route[i].TotalTrades == best_route[best_index].TotalTrades && best_route[i].EffectiveLength <= best_route[best_index].EffectiveLength))
             best_index = i;                                                                                                        // TODO: perhaps add a <= here, but in theory not
     }
-    return routes[best_index].route;
+    */
+   return best_route.route;
 }
 
 
