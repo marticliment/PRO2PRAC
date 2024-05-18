@@ -26,22 +26,22 @@ var NAVTREE =
 [
   [ "Pràctica de PRO2", "index.html", [
     [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+      [ "Llista de Classes", "annotated.html", "annotated_dup" ],
+      [ "Índex de Classes", "classes.html", null ],
+      [ "Membres de Classes", "functions.html", [
+        [ "Tot", "functions.html", null ],
+        [ "Funcions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Enumerations", "functions_enum.html", null ]
+        [ "Enumeracions", "functions_enum.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
+    [ "Fitxers", "files.html", [
+      [ "Llista dels Fitxers", "files.html", "files_dup" ],
+      [ "Membres de Fitxers", "globals.html", [
+        [ "Tot", "globals.html", null ],
+        [ "Funcions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Definicions", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
