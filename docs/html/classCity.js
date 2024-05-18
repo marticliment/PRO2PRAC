@@ -1,0 +1,27 @@
+var classCity =
+[
+    [ "City", "classCity.html#a1b1f549430f0a7ecd0ec7b1605415193", null ],
+    [ "City", "classCity.html#a9b24fe1a6c60582cabd70f38c02084e2", null ],
+    [ "AddProduct", "classCity.html#a23a27df1c37c22f2873e23346362a714", null ],
+    [ "GetId", "classCity.html#a3f8619e58f9e70bee39891bc11e4fb92", null ],
+    [ "GetProductCurrentAmount", "classCity.html#a1679449b2c11dc422ed5d1ebf9072a36", null ],
+    [ "GetProductExceedingAmount", "classCity.html#a96a9d3a5b4b1100df16e933bacfd590f", null ],
+    [ "GetProductIds", "classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d", null ],
+    [ "GetProductMissingAmount", "classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e", null ],
+    [ "GetProductWantedAmount", "classCity.html#aac03185bc21f66d2f96791a149f29265", null ],
+    [ "GetRawProductIds", "classCity.html#a87b8a9beb255137b6617175c5dba9eff", null ],
+    [ "GetVolume", "classCity.html#a66f94bd8a102d9f3e1933613fb6266ca", null ],
+    [ "GetWeight", "classCity.html#a374a423bc4febfb6d6ea7cab258d7dff", null ],
+    [ "HasProduct", "classCity.html#ace2a3dd52631a2c629e170590ef296bc", null ],
+    [ "ReadFromStream", "classCity.html#a5af26263a23635a2bd73a08aa5599faf", null ],
+    [ "RemoveProduct", "classCity.html#add1c7d762565f1b854095dfda7f073c0", null ],
+    [ "RestockProductAmount", "classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390", null ],
+    [ "TradeWith", "classCity.html#ae21b9eba53e1b04d630b69a3f0503f19", null ],
+    [ "UpdateProduct", "classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3", null ],
+    [ "WithdrawProductAmount", "classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9", null ],
+    [ "__id", "classCity.html#a908a22ad1ff3431257432dfff003ae10", null ],
+    [ "product_inventory", "classCity.html#a9af0c2f9b93c058ade1dfcf465d90296", null ],
+    [ "product_list", "classCity.html#a3fa5659e8e49574497226a0c2541f96d", null ],
+    [ "volume", "classCity.html#a6d98c02a579d8bd68e94850bf785decf", null ],
+    [ "weight", "classCity.html#a05b42733d4e4846c7a92a71df44493d0", null ]
+];
