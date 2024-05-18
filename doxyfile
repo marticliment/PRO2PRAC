@@ -113,10 +113,9 @@ FILE_PATTERNS          = *.hh \
                          *.cc
 
 RECURSIVE              = YES
-EXCLUDE                = BinTree.hh
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       =
-EXCLUDE_SYMBOLS        =
+EXCLUDE_PATTERNS       = BinTree.*
+EXCLUDE_SYMBOLS        = BinTree
 EXAMPLE_PATH           =
 EXAMPLE_PATTERNS       = *
 EXAMPLE_RECURSIVE      = NO
@@ -141,9 +140,17 @@ GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
 HTML_HEADER            =
+
+#
+# git submodule add https://github.com/jothepro/doxygen-awesome-css.git
+# cd doxygen-awesome-css
+# git checkout v2.3.3
+#
+
 HTML_FOOTER            =
 HTML_STYLESHEET        =
-HTML_EXTRA_STYLESHEET  =
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css
+HTML_COLORSTYLE        = LIGHT
 HTML_EXTRA_FILES       =
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
@@ -176,7 +183,7 @@ QHG_LOCATION           =
 GENERATE_ECLIPSEHELP   = NO
 ECLIPSE_DOC_ID         = org.doxygen.Project
 DISABLE_INDEX          = NO
-GENERATE_TREEVIEW      = NO
+GENERATE_TREEVIEW      = YES
 FULL_SIDEBAR           = NO
 ENUM_VALUES_PER_LINE   = 4
 TREEVIEW_WIDTH         = 250
@@ -275,7 +282,7 @@ CALL_GRAPH             = YES
 CALLER_GRAPH           = YES
 GRAPHICAL_HIERARCHY    = YES
 DIRECTORY_GRAPH        = YES
-DIR_GRAPH_MAX_DEPTH    = 1
+DIR_GRAPH_MAX_DEPTH    = 10
 DOT_IMAGE_FORMAT       = png
 INTERACTIVE_SVG        = NO
 DOT_PATH               = /usr/bin/dot
@@ -286,7 +293,7 @@ PLANTUML_JAR_PATH      =
 PLANTUML_CFG_FILE      =
 PLANTUML_INCLUDE_PATH  =
 DOT_GRAPH_MAX_NODES    = 50
-MAX_DOT_GRAPH_DEPTH    = 0
+MAX_DOT_GRAPH_DEPTH    = 10
 DOT_TRANSPARENT        = NO
 DOT_MULTI_TARGETS      = NO
 GENERATE_LEGEND        = YES

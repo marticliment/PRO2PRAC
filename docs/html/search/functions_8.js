@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['initializefromstream_0',['InitializeFromStream',['../classValley.html#aab63536d9205e6bbfede92c0c5d66d25',1,'Valley']]],
-  ['insertprefixvectorstring_1',['insertPrefixVectorString',['../classBinTree.html#a149055476180fe0ea7f8be81e39cabef',1,'BinTree']]],
-  ['insertspacevectorstring_2',['insertSpaceVectorString',['../classBinTree.html#aa6dac08ae0aa75840abd3b9360bafac0',1,'BinTree']]]
+  ['log_0',['log',['../debug_8cc.html#a665281e1290f72a38f7df50512e3ee4b',1,'Log(int number):&#160;debug.cc'],['../debug_8cc.html#a45cccc8bffcb9718be3b9be6fc7c1ef6',1,'Log(string message):&#160;debug.cc'],['../debug_8hh.html#a665281e1290f72a38f7df50512e3ee4b',1,'Log(int number):&#160;debug.cc'],['../debug_8hh.html#a45cccc8bffcb9718be3b9be6fc7c1ef6',1,'Log(string message):&#160;debug.cc']]]
 ];

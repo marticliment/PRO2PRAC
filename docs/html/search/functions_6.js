@@ -1,29 +1,5 @@
 var searchData=
 [
-  ['generateleftvisualformatrec_0',['generateLeftVisualFormatRec',['../classBinTree.html#a47ff2983a00ecfe83f6736c20e30e9e1',1,'BinTree']]],
-  ['generatevisualformat_1',['generateVisualFormat',['../classBinTree.html#a44629eefed8c902265c8d0d5a7ac87f3',1,'BinTree']]],
-  ['generatevisualformatrec_2',['generateVisualFormatRec',['../classBinTree.html#a440be9bcf7207523115c86a788742cd5',1,'BinTree']]],
-  ['get_3',['Get',['../classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80',1,'ProductReference']]],
-  ['getbestroute_4',['GetBestRoute',['../classValley.html#aa61921a453bfcab8a76822fb16553560',1,'Valley']]],
-  ['getcities_5',['GetCities',['../classValley.html#ae649240ef0637addb04763c92d41799e',1,'Valley']]],
-  ['getcity_6',['GetCity',['../classValley.html#a75ff9182c65289925ff544ac37e6b792',1,'Valley']]],
-  ['getcurrentamount_7',['GetCurrentAmount',['../classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e',1,'Product']]],
-  ['getdata_8',['GetData',['../classProduct.html#a68f0c88184e12f91987afe67d389187c',1,'Product']]],
-  ['getexceedingamount_9',['GetExceedingAmount',['../classProduct.html#a8f4bf3557d4819295e408fbf938e77bd',1,'Product']]],
-  ['getid_10',['getid',['../classCity.html#a3f8619e58f9e70bee39891bc11e4fb92',1,'City::GetId()'],['../classProduct.html#adae0bac61207aedcba747c07bbd0b893',1,'Product::GetId()']]],
-  ['getinputformat_11',['getInputFormat',['../classBinTree.html#a85c488db26fb7c728b5c2464a98b3f53',1,'BinTree']]],
-  ['getmissingamount_12',['GetMissingAmount',['../classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a',1,'Product']]],
-  ['getoutputformat_13',['getOutputFormat',['../classBinTree.html#ae8c613e9e61b6c4811406815708c1585',1,'BinTree']]],
-  ['getproductcurrentamount_14',['GetProductCurrentAmount',['../classCity.html#a1679449b2c11dc422ed5d1ebf9072a36',1,'City']]],
-  ['getproductexceedingamount_15',['GetProductExceedingAmount',['../classCity.html#a96a9d3a5b4b1100df16e933bacfd590f',1,'City']]],
-  ['getproductids_16',['GetProductIds',['../classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d',1,'City']]],
-  ['getproductmissingamount_17',['GetProductMissingAmount',['../classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e',1,'City']]],
-  ['getproductwantedamount_18',['GetProductWantedAmount',['../classCity.html#aac03185bc21f66d2f96791a149f29265',1,'City']]],
-  ['getrawproductids_19',['GetRawProductIds',['../classCity.html#a87b8a9beb255137b6617175c5dba9eff',1,'City']]],
-  ['getriverstructurefromstream_20',['GetRiverStructureFromStream',['../classValley.html#aa6c899cd791dea40579e15f0958222a0',1,'Valley']]],
-  ['getship_21',['GetShip',['../classValley.html#a070726f5f925f2a2891aa5226ef58f17',1,'Valley']]],
-  ['getvisitedcities_22',['GetVisitedCities',['../classShip.html#af8c39aa84b73bb9ba2e048885a062af1',1,'Ship']]],
-  ['getvolume_23',['getvolume',['../classCity.html#a66f94bd8a102d9f3e1933613fb6266ca',1,'City::GetVolume()'],['../classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602',1,'Product::GetVolume()'],['../classProductData.html#a0871ddc193b50e477dfbf848613beb63',1,'ProductData::GetVolume() const'],['../classProductData.html#aec45b46918c18ca8ff41eec4139390b1',1,'ProductData::GetVolume(int amount) const']]],
-  ['getwantedamount_24',['GetWantedAmount',['../classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f',1,'Product']]],
-  ['getweight_25',['getweight',['../classCity.html#a374a423bc4febfb6d6ea7cab258d7dff',1,'City::GetWeight()'],['../classProduct.html#a16d39b4890f1bc051d45b00055cf58e8',1,'Product::GetWeight()'],['../classProductData.html#ac787c267c0834d82095bca6479fa56d2',1,'ProductData::GetWeight() const'],['../classProductData.html#a663371de35626f9c19280501e686b414',1,'ProductData::GetWeight(int amount) const']]]
+  ['hascity_0',['HasCity',['../classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d',1,'Valley']]],
+  ['hasproduct_1',['HasProduct',['../classCity.html#ace2a3dd52631a2c629e170590ef296bc',1,'City']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['selling_5fproduct_0',['selling_product',['../classShip.html#a093aa10147cec3b96922d420363eda1e',1,'Ship']]],
-  ['ship_1',['ship',['../classValley.html#a79fb1ecacc49127f34e147ac01d76941',1,'Valley']]]
+  ['totaltrades_0',['TotalTrades',['../structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480',1,'Valley::RouteEvaluationResult']]]
 ];

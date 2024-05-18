@@ -9,10 +9,15 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('program_8cc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,11 +90,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a> &#124;
@@ -94,89 +111,89 @@ Include dependency graph for program.cc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7cc158960a0672bc8cab12c8b94eb709" id="r_a7cc158960a0672bc8cab12c8b94eb709"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a> (<a class="el" href="classBinTree.html">string</a> <a class="el" href="classBinTree.html">command</a>)</td></tr>
+<tr class="memitem:a7cc158960a0672bc8cab12c8b94eb709" id="r_a7cc158960a0672bc8cab12c8b94eb709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a> (string command)</td></tr>
 <tr class="separator:a7cc158960a0672bc8cab12c8b94eb709"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point of the program.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:adac6cf6884fd24f5854875fcac4daf59" id="r_adac6cf6884fd24f5854875fcac4daf59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#adac6cf6884fd24f5854875fcac4daf59">LEER_RIO</a> = &quot;lr&quot;</td></tr>
+<tr class="memitem:adac6cf6884fd24f5854875fcac4daf59" id="r_adac6cf6884fd24f5854875fcac4daf59"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#adac6cf6884fd24f5854875fcac4daf59">LEER_RIO</a> = &quot;lr&quot;</td></tr>
 <tr class="separator:adac6cf6884fd24f5854875fcac4daf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6080a577063a1844f61002506f1cdce" id="r_ae6080a577063a1844f61002506f1cdce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae6080a577063a1844f61002506f1cdce">LEER_RIO_L</a> = &quot;leer_rio&quot;</td></tr>
+<tr class="memitem:ae6080a577063a1844f61002506f1cdce" id="r_ae6080a577063a1844f61002506f1cdce"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae6080a577063a1844f61002506f1cdce">LEER_RIO_L</a> = &quot;leer_rio&quot;</td></tr>
 <tr class="separator:ae6080a577063a1844f61002506f1cdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24665259bb9caa3f680aec3e415a085c" id="r_a24665259bb9caa3f680aec3e415a085c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a24665259bb9caa3f680aec3e415a085c">LEER_INVENTARIO</a> = &quot;li&quot;</td></tr>
+<tr class="memitem:a24665259bb9caa3f680aec3e415a085c" id="r_a24665259bb9caa3f680aec3e415a085c"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a24665259bb9caa3f680aec3e415a085c">LEER_INVENTARIO</a> = &quot;li&quot;</td></tr>
 <tr class="separator:a24665259bb9caa3f680aec3e415a085c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8cef99c1b97c5777568050863d18e03" id="r_ae8cef99c1b97c5777568050863d18e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae8cef99c1b97c5777568050863d18e03">LEER_INVENTARIO_L</a> = &quot;leer_inventario&quot;</td></tr>
+<tr class="memitem:ae8cef99c1b97c5777568050863d18e03" id="r_ae8cef99c1b97c5777568050863d18e03"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ae8cef99c1b97c5777568050863d18e03">LEER_INVENTARIO_L</a> = &quot;leer_inventario&quot;</td></tr>
 <tr class="separator:ae8cef99c1b97c5777568050863d18e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7abe23509eb61b4340d723331331241" id="r_af7abe23509eb61b4340d723331331241"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af7abe23509eb61b4340d723331331241">LEER_INVENTARIOS</a> = &quot;ls&quot;</td></tr>
+<tr class="memitem:af7abe23509eb61b4340d723331331241" id="r_af7abe23509eb61b4340d723331331241"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af7abe23509eb61b4340d723331331241">LEER_INVENTARIOS</a> = &quot;ls&quot;</td></tr>
 <tr class="separator:af7abe23509eb61b4340d723331331241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d436ec4385b1f82adfc77596e596cb" id="r_a17d436ec4385b1f82adfc77596e596cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a17d436ec4385b1f82adfc77596e596cb">LEER_INVENTARIOS_L</a> = &quot;leer_inventarios&quot;</td></tr>
+<tr class="memitem:a17d436ec4385b1f82adfc77596e596cb" id="r_a17d436ec4385b1f82adfc77596e596cb"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a17d436ec4385b1f82adfc77596e596cb">LEER_INVENTARIOS_L</a> = &quot;leer_inventarios&quot;</td></tr>
 <tr class="separator:a17d436ec4385b1f82adfc77596e596cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bbcf1d10cbde17a805c72b78cd61f02" id="r_a1bbcf1d10cbde17a805c72b78cd61f02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02">MODIFICAR_BARCO</a> = &quot;mb&quot;</td></tr>
+<tr class="memitem:a1bbcf1d10cbde17a805c72b78cd61f02" id="r_a1bbcf1d10cbde17a805c72b78cd61f02"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02">MODIFICAR_BARCO</a> = &quot;mb&quot;</td></tr>
 <tr class="separator:a1bbcf1d10cbde17a805c72b78cd61f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9742dba09f2830179750c870b67924c9" id="r_a9742dba09f2830179750c870b67924c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9742dba09f2830179750c870b67924c9">MODIFICAR_BARCO_L</a> = &quot;modificar_barco&quot;</td></tr>
+<tr class="memitem:a9742dba09f2830179750c870b67924c9" id="r_a9742dba09f2830179750c870b67924c9"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9742dba09f2830179750c870b67924c9">MODIFICAR_BARCO_L</a> = &quot;modificar_barco&quot;</td></tr>
 <tr class="separator:a9742dba09f2830179750c870b67924c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac93400f1a272dcda92789f8e5a919a9" id="r_aac93400f1a272dcda92789f8e5a919a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aac93400f1a272dcda92789f8e5a919a9">ESCRIBIR_BARCO</a> = &quot;eb&quot;</td></tr>
+<tr class="memitem:aac93400f1a272dcda92789f8e5a919a9" id="r_aac93400f1a272dcda92789f8e5a919a9"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aac93400f1a272dcda92789f8e5a919a9">ESCRIBIR_BARCO</a> = &quot;eb&quot;</td></tr>
 <tr class="separator:aac93400f1a272dcda92789f8e5a919a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33c611c76da309ab0dc46407773de8f" id="r_ac33c611c76da309ab0dc46407773de8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ac33c611c76da309ab0dc46407773de8f">ESCRIBIR_BARCO_L</a> = &quot;escribir_barco&quot;</td></tr>
+<tr class="memitem:ac33c611c76da309ab0dc46407773de8f" id="r_ac33c611c76da309ab0dc46407773de8f"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ac33c611c76da309ab0dc46407773de8f">ESCRIBIR_BARCO_L</a> = &quot;escribir_barco&quot;</td></tr>
 <tr class="separator:ac33c611c76da309ab0dc46407773de8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b9c56b73f89980b6cb1e991214159d8" id="r_a0b9c56b73f89980b6cb1e991214159d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a0b9c56b73f89980b6cb1e991214159d8">CONSULTAR_NUM</a> = &quot;cn&quot;</td></tr>
+<tr class="memitem:a0b9c56b73f89980b6cb1e991214159d8" id="r_a0b9c56b73f89980b6cb1e991214159d8"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a0b9c56b73f89980b6cb1e991214159d8">CONSULTAR_NUM</a> = &quot;cn&quot;</td></tr>
 <tr class="separator:a0b9c56b73f89980b6cb1e991214159d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa41659821719723d1bbf208e48b0f91b" id="r_aa41659821719723d1bbf208e48b0f91b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aa41659821719723d1bbf208e48b0f91b">CONSULTAR_NUM_L</a> = &quot;consultar_num&quot;</td></tr>
+<tr class="memitem:aa41659821719723d1bbf208e48b0f91b" id="r_aa41659821719723d1bbf208e48b0f91b"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aa41659821719723d1bbf208e48b0f91b">CONSULTAR_NUM_L</a> = &quot;consultar_num&quot;</td></tr>
 <tr class="separator:aa41659821719723d1bbf208e48b0f91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af452c85c5c7e1ffd59ed06018fc70b2e" id="r_af452c85c5c7e1ffd59ed06018fc70b2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af452c85c5c7e1ffd59ed06018fc70b2e">AGREGAR_PRODUCTOS</a> = &quot;ap&quot;</td></tr>
+<tr class="memitem:af452c85c5c7e1ffd59ed06018fc70b2e" id="r_af452c85c5c7e1ffd59ed06018fc70b2e"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af452c85c5c7e1ffd59ed06018fc70b2e">AGREGAR_PRODUCTOS</a> = &quot;ap&quot;</td></tr>
 <tr class="separator:af452c85c5c7e1ffd59ed06018fc70b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a330ed53eeee0fad6fe1a70c9933a524a" id="r_a330ed53eeee0fad6fe1a70c9933a524a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a330ed53eeee0fad6fe1a70c9933a524a">AGREGAR_PRODUCTOS_L</a> = &quot;agregar_productos&quot;</td></tr>
+<tr class="memitem:a330ed53eeee0fad6fe1a70c9933a524a" id="r_a330ed53eeee0fad6fe1a70c9933a524a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a330ed53eeee0fad6fe1a70c9933a524a">AGREGAR_PRODUCTOS_L</a> = &quot;agregar_productos&quot;</td></tr>
 <tr class="separator:a330ed53eeee0fad6fe1a70c9933a524a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913859da6e8d9bb5e9772dd8205b4f0e" id="r_a913859da6e8d9bb5e9772dd8205b4f0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> = &quot;ep&quot;</td></tr>
+<tr class="memitem:a913859da6e8d9bb5e9772dd8205b4f0e" id="r_a913859da6e8d9bb5e9772dd8205b4f0e"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> = &quot;ep&quot;</td></tr>
 <tr class="separator:a913859da6e8d9bb5e9772dd8205b4f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c94d32ed6f087e8937b23974cfd57cf" id="r_a4c94d32ed6f087e8937b23974cfd57cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a> = &quot;escribir_producto&quot;</td></tr>
+<tr class="memitem:a4c94d32ed6f087e8937b23974cfd57cf" id="r_a4c94d32ed6f087e8937b23974cfd57cf"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a> = &quot;escribir_producto&quot;</td></tr>
 <tr class="separator:a4c94d32ed6f087e8937b23974cfd57cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf5029b8a1adffb7b6948c6152682136" id="r_aaf5029b8a1adffb7b6948c6152682136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aaf5029b8a1adffb7b6948c6152682136">ESCRIBIR_CIUDAD</a> = &quot;ec&quot;</td></tr>
+<tr class="memitem:aaf5029b8a1adffb7b6948c6152682136" id="r_aaf5029b8a1adffb7b6948c6152682136"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#aaf5029b8a1adffb7b6948c6152682136">ESCRIBIR_CIUDAD</a> = &quot;ec&quot;</td></tr>
 <tr class="separator:aaf5029b8a1adffb7b6948c6152682136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a890c662384a1c742276e628e2900ef25" id="r_a890c662384a1c742276e628e2900ef25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a890c662384a1c742276e628e2900ef25">ESCRIBIR_CIUDAD_L</a> = &quot;escribir_ciudad&quot;</td></tr>
+<tr class="memitem:a890c662384a1c742276e628e2900ef25" id="r_a890c662384a1c742276e628e2900ef25"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a890c662384a1c742276e628e2900ef25">ESCRIBIR_CIUDAD_L</a> = &quot;escribir_ciudad&quot;</td></tr>
 <tr class="separator:a890c662384a1c742276e628e2900ef25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fd44cca981d37ca918ccf31bd006315" id="r_a7fd44cca981d37ca918ccf31bd006315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> = &quot;pp&quot;</td></tr>
+<tr class="memitem:a7fd44cca981d37ca918ccf31bd006315" id="r_a7fd44cca981d37ca918ccf31bd006315"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> = &quot;pp&quot;</td></tr>
 <tr class="separator:a7fd44cca981d37ca918ccf31bd006315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b457db350420d4c74dda0abdb5b3137" id="r_a9b457db350420d4c74dda0abdb5b3137"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a> = &quot;poner_prod&quot;</td></tr>
+<tr class="memitem:a9b457db350420d4c74dda0abdb5b3137" id="r_a9b457db350420d4c74dda0abdb5b3137"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a> = &quot;poner_prod&quot;</td></tr>
 <tr class="separator:a9b457db350420d4c74dda0abdb5b3137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a42f6cbe50b539a65f3d04415318c5" id="r_a26a42f6cbe50b539a65f3d04415318c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> = &quot;mp&quot;</td></tr>
+<tr class="memitem:a26a42f6cbe50b539a65f3d04415318c5" id="r_a26a42f6cbe50b539a65f3d04415318c5"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> = &quot;mp&quot;</td></tr>
 <tr class="separator:a26a42f6cbe50b539a65f3d04415318c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460d7a5a299b7edf2b90e0c783025ef9" id="r_a460d7a5a299b7edf2b90e0c783025ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a> = &quot;modificar_prod&quot;</td></tr>
+<tr class="memitem:a460d7a5a299b7edf2b90e0c783025ef9" id="r_a460d7a5a299b7edf2b90e0c783025ef9"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a> = &quot;modificar_prod&quot;</td></tr>
 <tr class="separator:a460d7a5a299b7edf2b90e0c783025ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01f4ab0be13ca04eb7b96942174313b4" id="r_a01f4ab0be13ca04eb7b96942174313b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> = &quot;qp&quot;</td></tr>
+<tr class="memitem:a01f4ab0be13ca04eb7b96942174313b4" id="r_a01f4ab0be13ca04eb7b96942174313b4"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> = &quot;qp&quot;</td></tr>
 <tr class="separator:a01f4ab0be13ca04eb7b96942174313b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c66aefa9f04c80862d26cc04ba8867" id="r_a90c66aefa9f04c80862d26cc04ba8867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a> = &quot;quitar_prod&quot;</td></tr>
+<tr class="memitem:a90c66aefa9f04c80862d26cc04ba8867" id="r_a90c66aefa9f04c80862d26cc04ba8867"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a> = &quot;quitar_prod&quot;</td></tr>
 <tr class="separator:a90c66aefa9f04c80862d26cc04ba8867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e8573e6041ff11d0b3f21eeac517405" id="r_a9e8573e6041ff11d0b3f21eeac517405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> = &quot;cp&quot;</td></tr>
+<tr class="memitem:a9e8573e6041ff11d0b3f21eeac517405" id="r_a9e8573e6041ff11d0b3f21eeac517405"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> = &quot;cp&quot;</td></tr>
 <tr class="separator:a9e8573e6041ff11d0b3f21eeac517405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04ace247992056591435dd56893550f9" id="r_a04ace247992056591435dd56893550f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a> = &quot;consultar_prod&quot;</td></tr>
+<tr class="memitem:a04ace247992056591435dd56893550f9" id="r_a04ace247992056591435dd56893550f9"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a> = &quot;consultar_prod&quot;</td></tr>
 <tr class="separator:a04ace247992056591435dd56893550f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4108382a33f2cf5e52c294afab6ed54" id="r_af4108382a33f2cf5e52c294afab6ed54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> = &quot;co&quot;</td></tr>
+<tr class="memitem:af4108382a33f2cf5e52c294afab6ed54" id="r_af4108382a33f2cf5e52c294afab6ed54"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> = &quot;co&quot;</td></tr>
 <tr class="separator:af4108382a33f2cf5e52c294afab6ed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3487eb6db10628177d3a8d957bbccd40" id="r_a3487eb6db10628177d3a8d957bbccd40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a> = &quot;comerciar&quot;</td></tr>
+<tr class="memitem:a3487eb6db10628177d3a8d957bbccd40" id="r_a3487eb6db10628177d3a8d957bbccd40"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a> = &quot;comerciar&quot;</td></tr>
 <tr class="separator:a3487eb6db10628177d3a8d957bbccd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b609b89b03d3a312cfa8a86271782a" id="r_ac3b609b89b03d3a312cfa8a86271782a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> = &quot;re&quot;</td></tr>
+<tr class="memitem:ac3b609b89b03d3a312cfa8a86271782a" id="r_ac3b609b89b03d3a312cfa8a86271782a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> = &quot;re&quot;</td></tr>
 <tr class="separator:ac3b609b89b03d3a312cfa8a86271782a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61cd38a85990300c67d4b3a1fc65662d" id="r_a61cd38a85990300c67d4b3a1fc65662d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a> = &quot;redistribuir&quot;</td></tr>
+<tr class="memitem:a61cd38a85990300c67d4b3a1fc65662d" id="r_a61cd38a85990300c67d4b3a1fc65662d"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a> = &quot;redistribuir&quot;</td></tr>
 <tr class="separator:a61cd38a85990300c67d4b3a1fc65662d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af860a4819c1f8312a6b8cb415d155ca1" id="r_af860a4819c1f8312a6b8cb415d155ca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> = &quot;hv&quot;</td></tr>
+<tr class="memitem:af860a4819c1f8312a6b8cb415d155ca1" id="r_af860a4819c1f8312a6b8cb415d155ca1"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> = &quot;hv&quot;</td></tr>
 <tr class="separator:af860a4819c1f8312a6b8cb415d155ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd495f6035ee67eec43adace714cb4e" id="r_a0fd495f6035ee67eec43adace714cb4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a> = &quot;hacer_viaje&quot;</td></tr>
+<tr class="memitem:a0fd495f6035ee67eec43adace714cb4e" id="r_a0fd495f6035ee67eec43adace714cb4e"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a> = &quot;hacer_viaje&quot;</td></tr>
 <tr class="separator:a0fd495f6035ee67eec43adace714cb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c366d1d2b0f9f3d62dc03068d2868a1" id="r_a9c366d1d2b0f9f3d62dc03068d2868a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9c366d1d2b0f9f3d62dc03068d2868a1">FIN</a> = &quot;fin&quot;</td></tr>
+<tr class="memitem:a9c366d1d2b0f9f3d62dc03068d2868a1" id="r_a9c366d1d2b0f9f3d62dc03068d2868a1"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a9c366d1d2b0f9f3d62dc03068d2868a1">FIN</a> = &quot;fin&quot;</td></tr>
 <tr class="separator:a9c366d1d2b0f9f3d62dc03068d2868a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a26bf6ba1028d552fc2cdf95a42c1b5" id="r_a3a26bf6ba1028d552fc2cdf95a42c1b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> = &quot;error: <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">existe</a> <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad&quot;</a></td></tr>
+<tr class="memitem:a3a26bf6ba1028d552fc2cdf95a42c1b5" id="r_a3a26bf6ba1028d552fc2cdf95a42c1b5"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> = &quot;error: no existe la ciudad&quot;</td></tr>
 <tr class="separator:a3a26bf6ba1028d552fc2cdf95a42c1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5832cb057daf12055a17eb750b6ae318" id="r_a5832cb057daf12055a17eb750b6ae318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> = &quot;error: <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">repetida&quot;</a></td></tr>
+<tr class="memitem:a5832cb057daf12055a17eb750b6ae318" id="r_a5832cb057daf12055a17eb750b6ae318"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> = &quot;error: ciudad repetida&quot;</td></tr>
 <tr class="separator:a5832cb057daf12055a17eb750b6ae318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98913dae63b89fa36b977bc1961f1768" id="r_a98913dae63b89fa36b977bc1961f1768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> = &quot;error: <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">existe</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td></tr>
+<tr class="memitem:a98913dae63b89fa36b977bc1961f1768" id="r_a98913dae63b89fa36b977bc1961f1768"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> = &quot;error: no existe el producto&quot;</td></tr>
 <tr class="separator:a98913dae63b89fa36b977bc1961f1768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb62dcfb3be35d0f6e4d53cb576e0c17" id="r_afb62dcfb3be35d0f6e4d53cb576e0c17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> = &quot;error: <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">tiene</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td></tr>
+<tr class="memitem:afb62dcfb3be35d0f6e4d53cb576e0c17" id="r_afb62dcfb3be35d0f6e4d53cb576e0c17"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> = &quot;error: la ciudad no tiene el producto&quot;</td></tr>
 <tr class="separator:afb62dcfb3be35d0f6e4d53cb576e0c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f073bac06aa6b2a3274bb57105c9a16" id="r_a2f073bac06aa6b2a3274bb57105c9a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> = &quot;error: <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">ya</a> <a class="el" href="classBinTree.html">tiene</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td></tr>
+<tr class="memitem:a2f073bac06aa6b2a3274bb57105c9a16" id="r_a2f073bac06aa6b2a3274bb57105c9a16"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> = &quot;error: la ciudad ya tiene el producto&quot;</td></tr>
 <tr class="separator:a2f073bac06aa6b2a3274bb57105c9a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -187,7 +204,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">int</a> main </td>
+          <td class="memname">int main </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -199,18 +216,18 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="program_8cc_source.html#l00065">65</a> of file <a class="el" href="program_8cc_source.html">program.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   66</span>{</div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_function" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a>(<a class="code hl_class" href="classBinTree.html">cin</a>);</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">command</a>;</div>
-<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">while</span>(<a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">command</a> &amp;&amp; <a class="code hl_class" href="classBinTree.html">command</a> != <a class="code hl_variable" href="program_8cc.html#a9c366d1d2b0f9f3d62dc03068d2868a1">FIN</a>)</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_function" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a>(cin);</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordtype">string</span> command;</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">while</span>(cin &gt;&gt; command &amp;&amp; command != <a class="code hl_variable" href="program_8cc.html#a9c366d1d2b0f9f3d62dc03068d2868a1">FIN</a>)</div>
 <div class="line"><span class="lineno">   70</span>    {   </div>
 <div class="line"><span class="lineno">   71</span>        <span class="comment">//  Se leerán los identificadores de las ciudades indicando la estructura</span></div>
 <div class="line"><span class="lineno">   72</span>        <span class="comment">// de la cuenca. No se escribe nada. Los inventarios de las ciudades quedan vacíos. El</span></div>
 <div class="line"><span class="lineno">   73</span>        <span class="comment">// barco conserva sus atributos de productos pero no ha realizado viajes en la nueva</span></div>
 <div class="line"><span class="lineno">   74</span>        <span class="comment">// cuenca.</span></div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#adac6cf6884fd24f5854875fcac4daf59">LEER_RIO</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#ae6080a577063a1844f61002506f1cdce">LEER_RIO_L</a>)</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#adac6cf6884fd24f5854875fcac4daf59">LEER_RIO</a> || command == <a class="code hl_variable" href="program_8cc.html#ae6080a577063a1844f61002506f1cdce">LEER_RIO_L</a>)</div>
 <div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a>(<a class="code hl_class" href="classBinTree.html">cin</a>);</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a>(cin);</div>
 <div class="line"><span class="lineno">   79</span>        }</div>
 <div class="line"><span class="lineno">   80</span> </div>
 <div class="line"><span class="lineno">   81</span>        <span class="comment">// Se leerá el identificador de una ciudad. Si la ciudad no existe</span></div>
@@ -220,29 +237,29 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   85</span>        <span class="comment">// número de unidades necesitadas siempre ha de ser mayor que 0. Aunque la ciudad no exista, </span></div>
 <div class="line"><span class="lineno">   86</span>        <span class="comment">// habrá datos de su inventario que igualmente se han de leer aunque</span></div>
 <div class="line"><span class="lineno">   87</span>        <span class="comment">// no se usen, para pasar a la siguiente operación.</span></div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a24665259bb9caa3f680aec3e415a085c">LEER_INVENTARIO</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#ae8cef99c1b97c5777568050863d18e03">LEER_INVENTARIO_L</a>)</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a24665259bb9caa3f680aec3e415a085c">LEER_INVENTARIO</a> || command == <a class="code hl_variable" href="program_8cc.html#ae8cef99c1b97c5777568050863d18e03">LEER_INVENTARIO_L</a>)</div>
 <div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">   91</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">   92</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">   91</span>            cin &gt;&gt; city_id;</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id);</div>
 <div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">   95</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   96</span> </div>
 <div class="line"><span class="lineno">   97</span>            <span class="comment">// Even if the city is invalid we need to read the provided values through cin</span></div>
 <div class="line"><span class="lineno">   98</span>            <span class="comment">// Therefore we will read to the default invalid city</span></div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>).ReadFromStream(<a class="code hl_class" href="classBinTree.html">cin</a>);</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id).<a class="code hl_function" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">ReadFromStream</a>(cin);</div>
 <div class="line"><span class="lineno">  100</span>        }</div>
 <div class="line"><span class="lineno">  101</span>        </div>
 <div class="line"><span class="lineno">  102</span>        <span class="comment">// Se leerán los inventarios de ciudades del río. Todas las ciudades existirán. Los datos del inventario </span></div>
 <div class="line"><span class="lineno">  103</span>        <span class="comment">// son como en la funcionalidad anterior.</span></div>
 <div class="line"><span class="lineno">  104</span>        <span class="comment">// No necesariamente todas las ciudades del río tendrán inventario.</span></div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#af7abe23509eb61b4340d723331331241">LEER_INVENTARIOS</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a17d436ec4385b1f82adfc77596e596cb">LEER_INVENTARIOS_L</a>)</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af7abe23509eb61b4340d723331331241">LEER_INVENTARIOS</a> || command == <a class="code hl_variable" href="program_8cc.html#a17d436ec4385b1f82adfc77596e596cb">LEER_INVENTARIOS_L</a>)</div>
 <div class="line"><span class="lineno">  106</span>        {</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">while</span>(<a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a> &amp;&amp; <a class="code hl_class" href="classBinTree.html">city_id</a> != <span class="stringliteral">&quot;#&quot;</span>)</div>
-<div class="line"><span class="lineno">  110</span>                <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>).ReadFromStream(<a class="code hl_class" href="classBinTree.html">cin</a>);</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">while</span>(cin &gt;&gt; city_id &amp;&amp; city_id != <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><span class="lineno">  110</span>                <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id).<a class="code hl_function" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">ReadFromStream</a>(cin);</div>
 <div class="line"><span class="lineno">  111</span>        }</div>
 <div class="line"><span class="lineno">  112</span>        </div>
 <div class="line"><span class="lineno">  113</span>        <span class="comment">// Se leerá el identificador del producto que se quiere comprar</span></div>
@@ -250,83 +267,83 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  115</span>        <span class="comment">// Si algún producto no existe, se escribirá un mensaje de error. Si los dos productos</span></div>
 <div class="line"><span class="lineno">  116</span>        <span class="comment">// son el mismo, se escribirá un mensaje de error. Se garantiza que ambas cantidades</span></div>
 <div class="line"><span class="lineno">  117</span>        <span class="comment">// serán no negativas y al menos una de ellas será estrictamente positiva.</span></div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02">MODIFICAR_BARCO</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a9742dba09f2830179750c870b67924c9">MODIFICAR_BARCO_L</a>)</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02">MODIFICAR_BARCO</a> || command == <a class="code hl_variable" href="program_8cc.html#a9742dba09f2830179750c870b67924c9">MODIFICAR_BARCO_L</a>)</div>
 <div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a>().ReadFromStream(<a class="code hl_class" href="classBinTree.html">cin</a>);</div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a>().<a class="code hl_function" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">ReadFromStream</a>(cin);</div>
 <div class="line"><span class="lineno">  122</span>        }</div>
 <div class="line"><span class="lineno">  123</span>        </div>
 <div class="line"><span class="lineno">  124</span>        <span class="comment">// Se escriben los cuatro valores mencionados en la anterior operación y los viajes realizados en la cuenca </span></div>
 <div class="line"><span class="lineno">  125</span>        <span class="comment">// actual, en orden cronológico. Para cada</span></div>
 <div class="line"><span class="lineno">  126</span>        <span class="comment">// viaje solo se ha de escribir la última ciudad visitada de la ruta escogida.</span></div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#aac93400f1a272dcda92789f8e5a919a9">ESCRIBIR_BARCO</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#ac33c611c76da309ab0dc46407773de8f">ESCRIBIR_BARCO_L</a>)</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#aac93400f1a272dcda92789f8e5a919a9">ESCRIBIR_BARCO</a> || command == <a class="code hl_variable" href="program_8cc.html#ac33c611c76da309ab0dc46407773de8f">ESCRIBIR_BARCO_L</a>)</div>
 <div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
 <div class="line"><span class="lineno">  130</span>            <span class="keyword">auto</span>&amp; ship = <a class="code hl_function" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a>();</div>
-<div class="line"><span class="lineno">  131</span>            <a class="code hl_class" href="classProduct.html">Product</a>&amp; <a class="code hl_class" href="classBinTree.html">buying</a> = ship.BuyingProduct();</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_class" href="classProduct.html">Product</a>&amp; <a class="code hl_class" href="classBinTree.html">selling</a> = ship.SellingProduct();</div>
-<div class="line"><span class="lineno">  133</span>            <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">buying</a>.GetId() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">buying</a>.GetMissingAmount() &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  134</span>            <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">selling</a>.GetId() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">selling</a>.GetCurrentAmount() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">for</span>(<span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city</a>: ship.GetVisitedCities())</div>
-<div class="line"><span class="lineno">  136</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_class" href="classProduct.html">Product</a>&amp; buying = ship.BuyingProduct();</div>
+<div class="line"><span class="lineno">  132</span>            <a class="code hl_class" href="classProduct.html">Product</a>&amp; selling = ship.SellingProduct();</div>
+<div class="line"><span class="lineno">  133</span>            cout &lt;&lt; buying.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; buying.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  134</span>            cout &lt;&lt; selling.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; selling.<a class="code hl_function" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e">GetCurrentAmount</a>() &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">for</span>(<span class="keywordtype">string</span> city: ship.GetVisitedCities())</div>
+<div class="line"><span class="lineno">  136</span>                cout &lt;&lt; city &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  137</span>        }</div>
 <div class="line"><span class="lineno">  138</span>        </div>
 <div class="line"><span class="lineno">  139</span>        <span class="comment">// Escribe cuantos productos diferentes hay.</span></div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a0b9c56b73f89980b6cb1e991214159d8">CONSULTAR_NUM</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#aa41659821719723d1bbf208e48b0f91b">CONSULTAR_NUM_L</a>)</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a0b9c56b73f89980b6cb1e991214159d8">CONSULTAR_NUM</a> || command == <a class="code hl_variable" href="program_8cc.html#aa41659821719723d1bbf208e48b0f91b">CONSULTAR_NUM_L</a>)</div>
 <div class="line"><span class="lineno">  141</span>        {</div>
-<div class="line"><span class="lineno">  142</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
-<div class="line"><span class="lineno">  143</span>            <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_function" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a>() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
+<div class="line"><span class="lineno">  143</span>            cout &lt;&lt; <a class="code hl_function" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a>() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  144</span>        }</div>
 <div class="line"><span class="lineno">  145</span>        </div>
 <div class="line"><span class="lineno">  146</span>        <span class="comment">// Se lee el número de productos nuevos, mayor que 0. Sus</span></div>
 <div class="line"><span class="lineno">  147</span>        <span class="comment">// identificadores serán correlativos a partir del último producto existente. Se leerán</span></div>
 <div class="line"><span class="lineno">  148</span>        <span class="comment">// sus pesos y volúmenes respectivos</span></div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#af452c85c5c7e1ffd59ed06018fc70b2e">AGREGAR_PRODUCTOS</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a330ed53eeee0fad6fe1a70c9933a524a">AGREGAR_PRODUCTOS_L</a>)</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af452c85c5c7e1ffd59ed06018fc70b2e">AGREGAR_PRODUCTOS</a> || command == <a class="code hl_variable" href="program_8cc.html#a330ed53eeee0fad6fe1a70c9933a524a">AGREGAR_PRODUCTOS_L</a>)</div>
 <div class="line"><span class="lineno">  150</span>        {</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">count</a>;</div>
-<div class="line"><span class="lineno">  152</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">count</a>;</div>
-<div class="line"><span class="lineno">  153</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">count</a>));</div>
-<div class="line"><span class="lineno">  154</span>            <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(<a class="code hl_class" href="classBinTree.html">cin</a>, <a class="code hl_class" href="classBinTree.html">count</a>);</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordtype">int</span> count;</div>
+<div class="line"><span class="lineno">  152</span>            cin &gt;&gt; count;</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + to_string(count));</div>
+<div class="line"><span class="lineno">  154</span>            <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(cin, count);</div>
 <div class="line"><span class="lineno">  155</span>        }</div>
 <div class="line"><span class="lineno">  156</span>        </div>
 <div class="line"><span class="lineno">  157</span>        <span class="comment">// se escribirá un mensaje de error. Si la ciudad existe, se escribirá su inventario, y el</span></div>
 <div class="line"><span class="lineno">  158</span>        <span class="comment">// peso y el volumen total de los productos almacenados.</span></div>
 <div class="line"><span class="lineno">  159</span>        <span class="comment">// Se leerá el identificador de una ciudad. Si la ciudad no existe</span></div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#aaf5029b8a1adffb7b6948c6152682136">ESCRIBIR_CIUDAD</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a890c662384a1c742276e628e2900ef25">ESCRIBIR_CIUDAD_L</a>)</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#aaf5029b8a1adffb7b6948c6152682136">ESCRIBIR_CIUDAD</a> || command == <a class="code hl_variable" href="program_8cc.html#a890c662384a1c742276e628e2900ef25">ESCRIBIR_CIUDAD_L</a>)</div>
 <div class="line"><span class="lineno">  161</span>        {</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  163</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  163</span>            cin &gt;&gt; city_id;</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id);</div>
 <div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
 <div class="line"><span class="lineno">  167</span>            {</div>
-<div class="line"><span class="lineno">  168</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
-<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>: <a class="code hl_class" href="classBinTree.html">city</a>.GetProductIds())</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>: city.GetProductIds())</div>
 <div class="line"><span class="lineno">  170</span>                {</div>
-<div class="line"><span class="lineno">  171</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductCurrentAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  172</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductWantedAmount(<span class="keywordtype">id</span>) &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  171</span>                    cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductCurrentAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  172</span>                    cout &lt;&lt; city.GetProductWantedAmount(<span class="keywordtype">id</span>) &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  173</span>                }</div>
-<div class="line"><span class="lineno">  174</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetVolume() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  174</span>                cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  175</span>            }</div>
 <div class="line"><span class="lineno">  176</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  177</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  177</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  178</span>        }</div>
 <div class="line"><span class="lineno">  179</span> </div>
 <div class="line"><span class="lineno">  180</span>        <span class="comment">// Se lee el identificador de un producto. Si no existe el producto se escribe </span></div>
 <div class="line"><span class="lineno">  181</span>        <span class="comment">// un mensaje de error. En caso contrario se escribe el peso y volumen</span></div>
 <div class="line"><span class="lineno">  182</span>        <span class="comment">// del producto.</span></div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a>)</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> || command == <a class="code hl_variable" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a>)</div>
 <div class="line"><span class="lineno">  184</span>        {</div>
-<div class="line"><span class="lineno">  185</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  186</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  187</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>));</div>
-<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  186</span>            cin &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  187</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + to_string(product_id));</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
 <div class="line"><span class="lineno">  189</span>            {</div>
-<div class="line"><span class="lineno">  190</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">product</a> = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>);</div>
-<div class="line"><span class="lineno">  191</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">product_id</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">product</a>.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">product</a>.GetVolume() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  190</span>                <span class="keyword">auto</span>&amp; product = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
+<div class="line"><span class="lineno">  191</span>                cout &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetVolume() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  192</span>            }</div>
 <div class="line"><span class="lineno">  193</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  194</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  194</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  195</span>        }</div>
 <div class="line"><span class="lineno">  196</span>        </div>
 <div class="line"><span class="lineno">  197</span>        <span class="comment">// Se leerá el identificador de una ciudad, de un producto y las</span></div>
@@ -336,26 +353,26 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  201</span>        <span class="comment">// de ese producto se añaden a la ciudad, modificándose el peso y el volumen total si</span></div>
 <div class="line"><span class="lineno">  202</span>        <span class="comment">// hace falta. Se escribe el peso y el volumen total. El número de unidades necesitadas</span></div>
 <div class="line"><span class="lineno">  203</span>        <span class="comment">// siempre ha de ser mayor que 0.</span></div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a>)</div>
 <div class="line"><span class="lineno">  205</span>        {</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">product_id</a>, <a class="code hl_class" href="classBinTree.html">current</a>, <a class="code hl_class" href="classBinTree.html">wanted</a>;</div>
-<div class="line"><span class="lineno">  208</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">product_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">current</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">wanted</a>;</div>
-<div class="line"><span class="lineno">  209</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>));</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
+<div class="line"><span class="lineno">  208</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
+<div class="line"><span class="lineno">  209</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id + <span class="stringliteral">&quot; &quot;</span> + to_string(product_id));</div>
 <div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  212</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
-<div class="line"><span class="lineno">  214</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  212</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  214</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  215</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  216</span>            {</div>
-<div class="line"><span class="lineno">  217</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
-<div class="line"><span class="lineno">  218</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  219</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  217</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  218</span>                <span class="keywordflow">if</span> (city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  219</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  220</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  221</span>                {</div>
-<div class="line"><span class="lineno">  222</span>                    <a class="code hl_class" href="classBinTree.html">city</a>.AddProduct(<a class="code hl_class" href="classProduct.html">Product</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>, <a class="code hl_class" href="classBinTree.html">current</a>, <a class="code hl_class" href="classBinTree.html">wanted</a>));</div>
-<div class="line"><span class="lineno">  223</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetVolume() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  222</span>                    city.AddProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
+<div class="line"><span class="lineno">  223</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  224</span>                }</div>
 <div class="line"><span class="lineno">  225</span>            }</div>
 <div class="line"><span class="lineno">  226</span>        }</div>
@@ -367,26 +384,26 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  232</span>        <span class="comment">// de ese producto sustituyen a los que había en la ciudad, modificándose el peso y</span></div>
 <div class="line"><span class="lineno">  233</span>        <span class="comment">// el volumen total si hace falta. Se escribe el peso y el volumen total. El número de</span></div>
 <div class="line"><span class="lineno">  234</span>        <span class="comment">// unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.</span></div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a>)</div>
 <div class="line"><span class="lineno">  236</span>        {</div>
-<div class="line"><span class="lineno">  237</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">product_id</a>, <a class="code hl_class" href="classBinTree.html">current</a>, <a class="code hl_class" href="classBinTree.html">wanted</a>;</div>
-<div class="line"><span class="lineno">  239</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">product_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">current</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">wanted</a>;</div>
-<div class="line"><span class="lineno">  240</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>));</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
+<div class="line"><span class="lineno">  239</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
+<div class="line"><span class="lineno">  240</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id + <span class="stringliteral">&quot; &quot;</span> + to_string(product_id));</div>
 <div class="line"><span class="lineno">  241</span>            </div>
-<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  243</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
-<div class="line"><span class="lineno">  245</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  243</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  245</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  246</span>            <span class="keywordflow">else</span> </div>
 <div class="line"><span class="lineno">  247</span>            {</div>
-<div class="line"><span class="lineno">  248</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
-<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">if</span>(!<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  250</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  248</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  250</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  251</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  252</span>                {</div>
-<div class="line"><span class="lineno">  253</span>                    <a class="code hl_class" href="classBinTree.html">city</a>.UpdateProduct(<a class="code hl_class" href="classProduct.html">Product</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>, <a class="code hl_class" href="classBinTree.html">current</a>, <a class="code hl_class" href="classBinTree.html">wanted</a>));</div>
-<div class="line"><span class="lineno">  254</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetVolume() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  253</span>                    city.UpdateProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
+<div class="line"><span class="lineno">  254</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  255</span>                }</div>
 <div class="line"><span class="lineno">  256</span>            }</div>
 <div class="line"><span class="lineno">  257</span>        }</div>
@@ -397,26 +414,26 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  262</span>        <span class="comment">// un mensaje de error. Si no hay errores, se quitan los datos de este producto en la</span></div>
 <div class="line"><span class="lineno">  263</span>        <span class="comment">// ciudad, modificándose el peso y el volumen total si hace falta. Se escribe el peso y</span></div>
 <div class="line"><span class="lineno">  264</span>        <span class="comment">// el volumen total.</span></div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a>)</div>
 <div class="line"><span class="lineno">  266</span>        {</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  268</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  269</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  270</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>));</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  269</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  270</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id + <span class="stringliteral">&quot; &quot;</span> + to_string(product_id));</div>
 <div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  273</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
-<div class="line"><span class="lineno">  275</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  273</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  275</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  276</span>            <span class="keywordflow">else</span> </div>
 <div class="line"><span class="lineno">  277</span>            {</div>
-<div class="line"><span class="lineno">  278</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
-<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">if</span>(!<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  280</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  278</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  280</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  281</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  282</span>                {</div>
-<div class="line"><span class="lineno">  283</span>                    <a class="code hl_class" href="classBinTree.html">city</a>.RemoveProduct(<a class="code hl_class" href="classBinTree.html">product_id</a>);</div>
-<div class="line"><span class="lineno">  284</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetVolume() &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  283</span>                    city.RemoveProduct(product_id);</div>
+<div class="line"><span class="lineno">  284</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  285</span>                }</div>
 <div class="line"><span class="lineno">  286</span>            }</div>
 <div class="line"><span class="lineno">  287</span>        }</div>
@@ -426,25 +443,25 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  291</span>        <span class="comment">// mensaje de error. Si el producto no está en el inventario de la ciudad, escribe un</span></div>
 <div class="line"><span class="lineno">  292</span>        <span class="comment">// mensaje de error. Si no hay errores, se escribe cuantas unidades de ese producto</span></div>
 <div class="line"><span class="lineno">  293</span>        <span class="comment">// tiene y quiere la ciudad.</span></div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a>)</div>
 <div class="line"><span class="lineno">  295</span>        {</div>
-<div class="line"><span class="lineno">  296</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_id</a>;</div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  298</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">product_id</a>;</div>
-<div class="line"><span class="lineno">  299</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city_id</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">to_string</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>));</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  298</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  299</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city_id + <span class="stringliteral">&quot; &quot;</span> + to_string(product_id));</div>
 <div class="line"><span class="lineno">  300</span> </div>
-<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  302</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>))</div>
-<div class="line"><span class="lineno">  304</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  302</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  304</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  305</span>            <span class="keywordflow">else</span> </div>
 <div class="line"><span class="lineno">  306</span>            {</div>
-<div class="line"><span class="lineno">  307</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city_id</a>);</div>
-<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">if</span>(!<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">product_id</a>))</div>
-<div class="line"><span class="lineno">  309</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  307</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  309</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  310</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  311</span>                {</div>
-<div class="line"><span class="lineno">  312</span>                    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductCurrentAmount(<a class="code hl_class" href="classBinTree.html">product_id</a>) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductWantedAmount(<a class="code hl_class" href="classBinTree.html">product_id</a>) &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;                    </div>
+<div class="line"><span class="lineno">  312</span>                    cout &lt;&lt; city.GetProductCurrentAmount(product_id) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductWantedAmount(product_id) &lt;&lt; endl;                    </div>
 <div class="line"><span class="lineno">  313</span>                }</div>
 <div class="line"><span class="lineno">  314</span>            }</div>
 <div class="line"><span class="lineno">  315</span>        }</div>
@@ -453,30 +470,30 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  318</span>        <span class="comment">// de las dos (o las dos), se escribe un mensaje de error. Si las ciudades existen y son</span></div>
 <div class="line"><span class="lineno">  319</span>        <span class="comment">// la misma, se escribe un mensaje de error. Si las ciudades existen y son diferentes,</span></div>
 <div class="line"><span class="lineno">  320</span>        <span class="comment">// comercian entre ellas.</span></div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a>)</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> || command == <a class="code hl_variable" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a>)</div>
 <div class="line"><span class="lineno">  322</span>        {</div>
-<div class="line"><span class="lineno">  323</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city1_id</a>, <a class="code hl_class" href="classBinTree.html">city2_id</a>;</div>
-<div class="line"><span class="lineno">  324</span>            <a class="code hl_class" href="classBinTree.html">cin</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city1_id</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city2_id</a>;</div>
-<div class="line"><span class="lineno">  325</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city1_id</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classBinTree.html">city2_id</a>);</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordtype">string</span> city1_id, city2_id;</div>
+<div class="line"><span class="lineno">  324</span>            cin &gt;&gt; city1_id &gt;&gt; city2_id;</div>
+<div class="line"><span class="lineno">  325</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command + <span class="stringliteral">&quot; &quot;</span> + city1_id + <span class="stringliteral">&quot; &quot;</span> + city2_id);</div>
 <div class="line"><span class="lineno">  326</span> </div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city1_id</a>) || !<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(<a class="code hl_class" href="classBinTree.html">city2_id</a>))</div>
-<div class="line"><span class="lineno">  328</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
-<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classBinTree.html">city1_id</a> == <a class="code hl_class" href="classBinTree.html">city2_id</a>)</div>
-<div class="line"><span class="lineno">  330</span>                <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city1_id) || !<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city2_id))</div>
+<div class="line"><span class="lineno">  328</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (city1_id == city2_id)</div>
+<div class="line"><span class="lineno">  330</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  331</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  332</span>            {</div>
-<div class="line"><span class="lineno">  333</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city1</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city1_id</a>);</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city2</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(<a class="code hl_class" href="classBinTree.html">city2_id</a>);</div>
-<div class="line"><span class="lineno">  335</span>                <a class="code hl_class" href="classBinTree.html">city1</a>.TradeWith(<a class="code hl_class" href="classBinTree.html">city2</a>);</div>
+<div class="line"><span class="lineno">  333</span>                <span class="keyword">auto</span>&amp; city1 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city1_id);</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keyword">auto</span>&amp; city2 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city2_id);</div>
+<div class="line"><span class="lineno">  335</span>                city1.TradeWith(city2);</div>
 <div class="line"><span class="lineno">  336</span>            }</div>
 <div class="line"><span class="lineno">  337</span>        }</div>
 <div class="line"><span class="lineno">  338</span>        </div>
 <div class="line"><span class="lineno">  339</span>        <span class="comment">// No se leen datos. La ciudad de la desembocadura comercia con su</span></div>
 <div class="line"><span class="lineno">  340</span>        <span class="comment">// ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda,</span></div>
 <div class="line"><span class="lineno">  341</span>        <span class="comment">// y así sucesivamente.</span></div>
-<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a>)</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> || command == <a class="code hl_variable" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a>)</div>
 <div class="line"><span class="lineno">  343</span>        {</div>
-<div class="line"><span class="lineno">  344</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
+<div class="line"><span class="lineno">  344</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
 <div class="line"><span class="lineno">  345</span>            <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a>();</div>
 <div class="line"><span class="lineno">  346</span>        }</div>
 <div class="line"><span class="lineno">  347</span>        </div>
@@ -487,38 +504,42 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  352</span>        <span class="comment">// derecha. Una vez encontrada la ruta, se hace el viaje y se compran y venden los</span></div>
 <div class="line"><span class="lineno">  353</span>        <span class="comment">// productos a lo largo de la ruta, modificándose los inventarios de las ciudades. Se</span></div>
 <div class="line"><span class="lineno">  354</span>        <span class="comment">// escribe el total de unidades de productos compradas y vendidas por el barco.</span></div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> || <a class="code hl_class" href="classBinTree.html">command</a> == <a class="code hl_variable" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a>)</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> || command == <a class="code hl_variable" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a>)</div>
 <div class="line"><span class="lineno">  356</span>        {</div>
-<div class="line"><span class="lineno">  357</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(<a class="code hl_class" href="classBinTree.html">command</a>);</div>
+<div class="line"><span class="lineno">  357</span>            <a class="code hl_function" href="program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709">PrintCommand</a>(command);</div>
 <div class="line"><span class="lineno">  358</span>            <span class="keyword">auto</span> route = <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a>();</div>
-<div class="line"><span class="lineno">  359</span>            <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(route) &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">  359</span>            cout &lt;&lt; <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(route) &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  360</span>        }</div>
 <div class="line"><span class="lineno">  361</span>        </div>
 <div class="line"><span class="lineno">  362</span>        <span class="comment">// Comment line</span></div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classBinTree.html">command</a> == <span class="stringliteral">&quot;//&quot;</span>)</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;//&quot;</span>)</div>
 <div class="line"><span class="lineno">  364</span>        {</div>
-<div class="line"><span class="lineno">  365</span>            <a class="code hl_class" href="classBinTree.html">getline</a>(<a class="code hl_class" href="classBinTree.html">cin</a>, <a class="code hl_class" href="classBinTree.html">command</a>); <span class="comment">// Skip current line            </span></div>
+<div class="line"><span class="lineno">  365</span>            getline(cin, command); <span class="comment">// Skip current line            </span></div>
 <div class="line"><span class="lineno">  366</span>        }</div>
 <div class="line"><span class="lineno">  367</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  368</span>        {</div>
-<div class="line"><span class="lineno">  369</span>            <a class="code hl_function" href="debug_8cc.html#a811946f700e43ccd37d8f7141f837270">Error</a>(<span class="stringliteral">&quot;Invalid input &quot;</span>  + <a class="code hl_class" href="classBinTree.html">command</a>);</div>
+<div class="line"><span class="lineno">  369</span>            <a class="code hl_function" href="debug_8cc.html#a811946f700e43ccd37d8f7141f837270">Error</a>(<span class="stringliteral">&quot;Invalid input &quot;</span>  + command);</div>
 <div class="line"><span class="lineno">  370</span>        }</div>
 <div class="line"><span class="lineno">  371</span>    }</div>
 <div class="line"><span class="lineno">  372</span>}</div>
-<div class="ttc" id="aclassBinTree_html"><div class="ttname"><a href="classBinTree.html">BinTree</a></div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00022">BinTree.hh:22</a></div></div>
+<div class="ttc" id="aclassCity_html_a5af26263a23635a2bd73a08aa5599faf"><div class="ttname"><a href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">City::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Read the city product inventory from a stream. The old product inventory will be erased.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00022">City.cc:22</a></div></div>
 <div class="ttc" id="aclassProductReference_html_a1deb913d31efb6e9f2fbef4962304b60"><div class="ttname"><a href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a></div><div class="ttdeci">static int Count()</div><div class="ttdoc">Retrieves the number of product data in the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00036">ProductReference.cc:36</a></div></div>
 <div class="ttc" id="aclassProductReference_html_a9b2c978acd5d9989cd10ab93dc358cac"><div class="ttname"><a href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a></div><div class="ttdeci">static bool Contains(int id)</div><div class="ttdoc">Checks if the reference contains product data with the specified ID.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00018">ProductReference.cc:18</a></div></div>
 <div class="ttc" id="aclassProductReference_html_a9ff086f81c4e1c5d8fafa63ff18bf947"><div class="ttname"><a href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a></div><div class="ttdeci">static void AddFromStream(istream &amp;reader, int count)</div><div class="ttdoc">Adds multiple product data from an input stream to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00026">ProductReference.cc:26</a></div></div>
 <div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified ID from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
 <div class="ttc" id="aclassProduct_html"><div class="ttname"><a href="classProduct.html">Product</a></div><div class="ttdoc">Represents a product. A product object has an available amount and a wanted amount of units,...</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00014">Product.hh:15</a></div></div>
-<div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00053">Valley.cc:53</a></div></div>
-<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00184">Valley.cc:184</a></div></div>
-<div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00078">Valley.cc:78</a></div></div>
-<div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00036">Valley.cc:36</a></div></div>
-<div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
-<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00174">Valley.cc:174</a></div></div>
-<div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00043">Valley.cc:43</a></div></div>
-<div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
+<div class="ttc" id="aclassProduct_html_a0c42f35816a3fa42d9f3f985ca23f90a"><div class="ttname"><a href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">Product::GetMissingAmount</a></div><div class="ttdeci">int GetMissingAmount() const</div><div class="ttdoc">Get the missing amount of the product. This method returns 0 if the product has a positive balance (G...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00040">Product.cc:40</a></div></div>
+<div class="ttc" id="aclassProduct_html_a4b7b9ac3ecf67501fc1c36bddd09027e"><div class="ttname"><a href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e">Product::GetCurrentAmount</a></div><div class="ttdeci">int GetCurrentAmount() const</div><div class="ttdoc">Get the available amount of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00022">Product.cc:22</a></div></div>
+<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the ID of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00017">Product.cc:17</a></div></div>
+<div class="ttc" id="aclassShip_html_ac76c91ac599c08677f9540a4bf128d55"><div class="ttname"><a href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">Ship::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Reads ship data (buy and sell products) from a stream.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00027">Ship.cc:27</a></div></div>
+<div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdoc">Gets a reference to the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00053">Valley.cc:53</a></div></div>
+<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00184">Valley.cc:184</a></div></div>
+<div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdoc">Gets the city with the specified ID.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00078">Valley.cc:78</a></div></div>
+<div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdoc">Reads the cities from the input stream, overwriting the old Valley contents, if any....</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00036">Valley.cc:36</a></div></div>
+<div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
+<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00174">Valley.cc:174</a></div></div>
+<div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdoc">Initializes the Valley from the input stream. This implies reading the products to be added to the Pr...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00043">Valley.cc:43</a></div></div>
+<div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified ID exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
 <div class="ttc" id="adebug_8cc_html_a811946f700e43ccd37d8f7141f837270"><div class="ttname"><a href="debug_8cc.html#a811946f700e43ccd37d8f7141f837270">Error</a></div><div class="ttdeci">void Error(int number)</div><div class="ttdef"><b>Definition</b> <a href="debug_8cc_source.html#l00035">debug.cc:35</a></div></div>
 <div class="ttc" id="aprogram_8cc_html_a01f4ab0be13ca04eb7b96942174313b4"><div class="ttname"><a href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a></div><div class="ttdeci">const string QUITAR_PROD</div><div class="ttdef"><b>Definition</b> <a href="program_8cc_source.html#l00030">program.cc:30</a></div></div>
 <div class="ttc" id="aprogram_8cc_html_a04ace247992056591435dd56893550f9"><div class="ttname"><a href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a></div><div class="ttdeci">const string CONSULTAR_PROD_L</div><div class="ttdef"><b>Definition</b> <a href="program_8cc_source.html#l00033">program.cc:33</a></div></div>
@@ -574,9 +595,9 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> PrintCommand </td>
+          <td class="memname">void PrintCommand </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">string</a>&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>command</em></td><td>)</td>
           <td></td>
         </tr>
@@ -586,9 +607,9 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="program_8cc_source.html#l00054">54</a> of file <a class="el" href="program_8cc_source.html">program.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
 <div class="line"><span class="lineno">   56</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   57</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">green</a> &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> + <a class="code hl_class" href="classBinTree.html">command</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">reset</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   57</span>    cout &lt;&lt; green &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> + command &lt;&lt; reset &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   58</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> + <a class="code hl_class" href="classBinTree.html">command</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   59</span>    cout &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> + command &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   61</span>}</div>
 </div><!-- fragment --><div class="dynheader">
@@ -607,7 +628,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> AGREGAR_PRODUCTOS = &quot;ap&quot;</td>
+          <td class="memname">const string AGREGAR_PRODUCTOS = &quot;ap&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -623,7 +644,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> AGREGAR_PRODUCTOS_L = &quot;agregar_productos&quot;</td>
+          <td class="memname">const string AGREGAR_PRODUCTOS_L = &quot;agregar_productos&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -639,7 +660,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> COMERCIAR = &quot;co&quot;</td>
+          <td class="memname">const string COMERCIAR = &quot;co&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -655,7 +676,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> COMERCIAR_L = &quot;comerciar&quot;</td>
+          <td class="memname">const string COMERCIAR_L = &quot;comerciar&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -671,7 +692,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> CONSULTAR_NUM = &quot;cn&quot;</td>
+          <td class="memname">const string CONSULTAR_NUM = &quot;cn&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -687,7 +708,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> CONSULTAR_NUM_L = &quot;consultar_num&quot;</td>
+          <td class="memname">const string CONSULTAR_NUM_L = &quot;consultar_num&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -703,7 +724,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> CONSULTAR_PROD = &quot;cp&quot;</td>
+          <td class="memname">const string CONSULTAR_PROD = &quot;cp&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -719,7 +740,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> CONSULTAR_PROD_L = &quot;consultar_prod&quot;</td>
+          <td class="memname">const string CONSULTAR_PROD_L = &quot;consultar_prod&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -735,7 +756,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ERR_AE_PROD = &quot;error: <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">ya</a> <a class="el" href="classBinTree.html">tiene</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td>
+          <td class="memname">const string ERR_AE_PROD = &quot;error: la ciudad ya tiene el producto&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -751,7 +772,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ERR_NE_CITY = &quot;error: <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">existe</a> <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad&quot;</a></td>
+          <td class="memname">const string ERR_NE_CITY = &quot;error: no existe la ciudad&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -767,7 +788,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ERR_NE_PROD = &quot;error: <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">existe</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td>
+          <td class="memname">const string ERR_NE_PROD = &quot;error: no existe el producto&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -783,7 +804,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ERR_NE_PROD_CITY = &quot;error: <a class="el" href="classBinTree.html">la</a> <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">no</a> <a class="el" href="classBinTree.html">tiene</a> <a class="el" href="classBinTree.html">el</a> <a class="el" href="classBinTree.html">producto&quot;</a></td>
+          <td class="memname">const string ERR_NE_PROD_CITY = &quot;error: la ciudad no tiene el producto&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -799,7 +820,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ERR_RE_CITY = &quot;error: <a class="el" href="classBinTree.html">ciudad</a> <a class="el" href="classBinTree.html">repetida&quot;</a></td>
+          <td class="memname">const string ERR_RE_CITY = &quot;error: ciudad repetida&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -815,7 +836,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_BARCO = &quot;eb&quot;</td>
+          <td class="memname">const string ESCRIBIR_BARCO = &quot;eb&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -831,7 +852,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_BARCO_L = &quot;escribir_barco&quot;</td>
+          <td class="memname">const string ESCRIBIR_BARCO_L = &quot;escribir_barco&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -847,7 +868,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_CIUDAD = &quot;ec&quot;</td>
+          <td class="memname">const string ESCRIBIR_CIUDAD = &quot;ec&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -863,7 +884,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_CIUDAD_L = &quot;escribir_ciudad&quot;</td>
+          <td class="memname">const string ESCRIBIR_CIUDAD_L = &quot;escribir_ciudad&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -879,7 +900,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_PRODUCTO = &quot;ep&quot;</td>
+          <td class="memname">const string ESCRIBIR_PRODUCTO = &quot;ep&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -895,7 +916,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> ESCRIBIR_PRODUCTO_L = &quot;escribir_producto&quot;</td>
+          <td class="memname">const string ESCRIBIR_PRODUCTO_L = &quot;escribir_producto&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -911,7 +932,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> FIN = &quot;fin&quot;</td>
+          <td class="memname">const string FIN = &quot;fin&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -927,7 +948,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> HACER_VIAJE = &quot;hv&quot;</td>
+          <td class="memname">const string HACER_VIAJE = &quot;hv&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -943,7 +964,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> HACER_VIAJE_L = &quot;hacer_viaje&quot;</td>
+          <td class="memname">const string HACER_VIAJE_L = &quot;hacer_viaje&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -959,7 +980,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_INVENTARIO = &quot;li&quot;</td>
+          <td class="memname">const string LEER_INVENTARIO = &quot;li&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -975,7 +996,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_INVENTARIO_L = &quot;leer_inventario&quot;</td>
+          <td class="memname">const string LEER_INVENTARIO_L = &quot;leer_inventario&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -991,7 +1012,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_INVENTARIOS = &quot;ls&quot;</td>
+          <td class="memname">const string LEER_INVENTARIOS = &quot;ls&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1007,7 +1028,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_INVENTARIOS_L = &quot;leer_inventarios&quot;</td>
+          <td class="memname">const string LEER_INVENTARIOS_L = &quot;leer_inventarios&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1023,7 +1044,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_RIO = &quot;lr&quot;</td>
+          <td class="memname">const string LEER_RIO = &quot;lr&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1039,7 +1060,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> LEER_RIO_L = &quot;leer_rio&quot;</td>
+          <td class="memname">const string LEER_RIO_L = &quot;leer_rio&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1055,7 +1076,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> MODIFICAR_BARCO = &quot;mb&quot;</td>
+          <td class="memname">const string MODIFICAR_BARCO = &quot;mb&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1071,7 +1092,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> MODIFICAR_BARCO_L = &quot;modificar_barco&quot;</td>
+          <td class="memname">const string MODIFICAR_BARCO_L = &quot;modificar_barco&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1087,7 +1108,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> MODIFICAR_PROD = &quot;mp&quot;</td>
+          <td class="memname">const string MODIFICAR_PROD = &quot;mp&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1103,7 +1124,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> MODIFICAR_PROD_L = &quot;modificar_prod&quot;</td>
+          <td class="memname">const string MODIFICAR_PROD_L = &quot;modificar_prod&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1119,7 +1140,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> PONER_PROD = &quot;pp&quot;</td>
+          <td class="memname">const string PONER_PROD = &quot;pp&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1135,7 +1156,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> PONER_PROD_L = &quot;poner_prod&quot;</td>
+          <td class="memname">const string PONER_PROD_L = &quot;poner_prod&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1151,7 +1172,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> QUITAR_PROD = &quot;qp&quot;</td>
+          <td class="memname">const string QUITAR_PROD = &quot;qp&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1167,7 +1188,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> QUITAR_PROD_L = &quot;quitar_prod&quot;</td>
+          <td class="memname">const string QUITAR_PROD_L = &quot;quitar_prod&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1183,7 +1204,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> REDISTRIBUIR = &quot;re&quot;</td>
+          <td class="memname">const string REDISTRIBUIR = &quot;re&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1199,7 +1220,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> REDISTRIBUIR_L = &quot;redistribuir&quot;</td>
+          <td class="memname">const string REDISTRIBUIR_L = &quot;redistribuir&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1209,9 +1230,13 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="program_8cc.html">program.cc</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

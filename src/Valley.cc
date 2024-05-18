@@ -17,7 +17,7 @@ void Valley::AssertRiverArrayIsInitialized()
     assert(initialized && (true || "The current Valley object is not initialized, but a method that requires it to be is being called."));
 }
 
-BinTree<string> Valley::GetRiverStructureFromStream(istream& stream)
+BinTree<string> Valley::GetRiverNodeFromStream(istream& stream)
 {
     // Read city name and check if city is valid
     string city_name;
@@ -27,8 +27,8 @@ BinTree<string> Valley::GetRiverStructureFromStream(istream& stream)
     
     cities.emplace(city_name, City(city_name));
 
-    BinTree<string> left = GetRiverStructureFromStream(stream);
-    BinTree<string> right = GetRiverStructureFromStream(stream);
+    BinTree<string> left = GetRiverNodeFromStream(stream);
+    BinTree<string> right = GetRiverNodeFromStream(stream);
     
     return BinTree<string>(city_name, left, right);
 }
@@ -36,7 +36,7 @@ BinTree<string> Valley::GetRiverStructureFromStream(istream& stream)
 void Valley::ReadCitiesFromStream(istream& stream)
 {
     cities.clear();
-    river_structure = GetRiverStructureFromStream(stream);
+    river_structure = GetRiverNodeFromStream(stream);
     ship.ResetVisitedCities();
 }
 
@@ -56,7 +56,7 @@ Ship& Valley::GetShip()
     return ship;
 }
 
-vector<string> Valley::GetCities()
+vector<string> Valley::GetCityIds()
 {
     AssertRiverArrayIsInitialized();
     vector<string> names;
@@ -112,11 +112,11 @@ void Valley::DoTrades()
     DoTrades(river_structure);
 }
 
-void Valley::TestRoutePiece(vector<NavStep>& current_route, 
+void Valley::TestRouteStep(vector<NavStep>& current_route, 
         const BinTree<string>& current_location, 
         int buyable_amount, 
         int sellable_amount,
-        Valley::RouteResult &best_route)
+        Valley::RouteEvaluationResult &best_route)
 {
     int buying_id = ship.BuyingProduct().GetId();
     int selling_id = ship.SellingProduct().GetId();
@@ -127,7 +127,7 @@ void Valley::TestRoutePiece(vector<NavStep>& current_route,
         || (ship.BuyingProduct().GetMissingAmount() <= buyable_amount 
         && ship.SellingProduct().GetExceedingAmount() <= sellable_amount))
     {
-        Valley::RouteResult result;
+        Valley::RouteEvaluationResult result;
         result.route = current_route;
         result.EffectiveLength = current_route.size();
         result.TotalTrades = min(buyable_amount, ship.BuyingProduct().GetMissingAmount())
@@ -164,19 +164,19 @@ void Valley::TestRoutePiece(vector<NavStep>& current_route,
     // Continue testing through the left
     auto left_route = current_route;
     left_route.push_back(Valley::NavStep::Left);
-    TestRoutePiece(left_route, current_location.left(), buyable_amount, sellable_amount, best_route);
+    TestRouteStep(left_route, current_location.left(), buyable_amount, sellable_amount, best_route);
     
     // Continue testing through the right
     current_route.push_back(Valley::NavStep::Right);
-    TestRoutePiece(current_route, current_location.right(), buyable_amount, sellable_amount, best_route);
+    TestRouteStep(current_route, current_location.right(), buyable_amount, sellable_amount, best_route);
 }
 
 vector<Valley::NavStep> Valley::GetBestRoute()
 {
-    Valley::RouteResult best_route;
+    Valley::RouteEvaluationResult best_route;
     vector<Valley::NavStep> empty_route;
     best_route.route = empty_route;
-    TestRoutePiece(empty_route, river_structure, 0, 0, best_route);
+    TestRouteStep(empty_route, river_structure, 0, 0, best_route);
     return best_route.route;
 }
 

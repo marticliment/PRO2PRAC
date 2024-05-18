@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['effectivelength_0',['EffectiveLength',['../structValley_1_1RouteResult.html#ac16630438595fb160e705ffb0c1a438b',1,'Valley::RouteResult']]],
+  ['effectivelength_0',['EffectiveLength',['../structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777',1,'Valley::RouteEvaluationResult']]],
   ['err_5fae_5fprod_1',['ERR_AE_PROD',['../program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16',1,'program.cc']]],
   ['err_5fne_5fcity_2',['ERR_NE_CITY',['../program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5',1,'program.cc']]],
   ['err_5fne_5fprod_3',['ERR_NE_PROD',['../program_8cc.html#a98913dae63b89fa36b977bc1961f1768',1,'program.cc']]],

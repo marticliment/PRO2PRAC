@@ -9,7 +9,7 @@ digraph "ProductReference::Add"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="ProductReference::AddFrom\lStream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947",tooltip="Adds multiple product data from an input stream to the reference."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="Valley::InitializeFromStream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25",tooltip=" "];
+  Node3 [id="Node000003",label="Valley::InitializeFromStream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25",tooltip="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip="Entry point of the program."];
   Node2 -> Node4 [id="edge4_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

@@ -9,10 +9,15 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('debug_8hh.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,11 +90,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -95,13 +112,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a665281e1290f72a38f7df50512e3ee4b" id="r_a665281e1290f72a38f7df50512e3ee4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a665281e1290f72a38f7df50512e3ee4b">Log</a> (<a class="el" href="classBinTree.html">int</a> <a class="el" href="classBinTree.html">number</a>)</td></tr>
+<tr class="memitem:a665281e1290f72a38f7df50512e3ee4b" id="r_a665281e1290f72a38f7df50512e3ee4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a665281e1290f72a38f7df50512e3ee4b">Log</a> (int number)</td></tr>
 <tr class="separator:a665281e1290f72a38f7df50512e3ee4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45cccc8bffcb9718be3b9be6fc7c1ef6" id="r_a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a45cccc8bffcb9718be3b9be6fc7c1ef6">Log</a> (<a class="el" href="classBinTree.html">string</a> <a class="el" href="classBinTree.html">message</a>)</td></tr>
+<tr class="memitem:a45cccc8bffcb9718be3b9be6fc7c1ef6" id="r_a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a45cccc8bffcb9718be3b9be6fc7c1ef6">Log</a> (string message)</td></tr>
 <tr class="separator:a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a811946f700e43ccd37d8f7141f837270" id="r_a811946f700e43ccd37d8f7141f837270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a811946f700e43ccd37d8f7141f837270">Error</a> (<a class="el" href="classBinTree.html">int</a> <a class="el" href="classBinTree.html">number</a>)</td></tr>
+<tr class="memitem:a811946f700e43ccd37d8f7141f837270" id="r_a811946f700e43ccd37d8f7141f837270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a811946f700e43ccd37d8f7141f837270">Error</a> (int number)</td></tr>
 <tr class="separator:a811946f700e43ccd37d8f7141f837270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6b9df8609d512f6e90f00214a935d0" id="r_ace6b9df8609d512f6e90f00214a935d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#ace6b9df8609d512f6e90f00214a935d0">Error</a> (<a class="el" href="classBinTree.html">string</a> <a class="el" href="classBinTree.html">message</a>)</td></tr>
+<tr class="memitem:ace6b9df8609d512f6e90f00214a935d0" id="r_ace6b9df8609d512f6e90f00214a935d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#ace6b9df8609d512f6e90f00214a935d0">Error</a> (string message)</td></tr>
 <tr class="separator:ace6b9df8609d512f6e90f00214a935d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -112,9 +129,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Error </td>
+          <td class="memname">void Error </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">int</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>number</em></td><td>)</td>
           <td></td>
         </tr>
@@ -124,12 +141,11 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="debug_8cc_source.html#l00035">35</a> of file <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
 <div class="line"><span class="lineno">   37</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   38</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">red</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">number</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">reset</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   38</span>    cout &lt;&lt; red &lt;&lt; number &lt;&lt; reset &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_class" href="classBinTree.html">number</a>++;</div>
+<div class="line"><span class="lineno">   40</span>    number++;</div>
 <div class="line"><span class="lineno">   41</span> </div>
 <div class="line"><span class="lineno">   42</span>}</div>
-<div class="ttc" id="aclassBinTree_html"><div class="ttname"><a href="classBinTree.html">BinTree</a></div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00022">BinTree.hh:22</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -145,9 +161,9 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Error </td>
+          <td class="memname">void Error </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">string</a>&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
@@ -157,9 +173,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="debug_8cc_source.html#l00044">44</a> of file <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
 <div class="line"><span class="lineno">   46</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   47</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">red</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">message</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">reset</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   47</span>    cout &lt;&lt; red &lt;&lt; message &lt;&lt; reset &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_class" href="classBinTree.html">message</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   49</span>    message = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -171,9 +187,9 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Log </td>
+          <td class="memname">void Log </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">int</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>number</em></td><td>)</td>
           <td></td>
         </tr>
@@ -183,9 +199,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="debug_8cc_source.html#l00019">19</a> of file <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   20</span>{</div>
 <div class="line"><span class="lineno">   21</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   22</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">yellow</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">number</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">reset</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   22</span>    cout &lt;&lt; yellow &lt;&lt; number &lt;&lt; reset &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_class" href="classBinTree.html">number</a>++;</div>
+<div class="line"><span class="lineno">   24</span>    number++;</div>
 <div class="line"><span class="lineno">   25</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -197,9 +213,9 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Log </td>
+          <td class="memname">void Log </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">string</a>&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
@@ -209,17 +225,21 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="debug_8cc_source.html#l00027">27</a> of file <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
 <div class="line"><span class="lineno">   29</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   30</span>    <a class="code hl_class" href="classBinTree.html">cout</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">yellow</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">message</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">reset</a> &lt;&lt; <a class="code hl_class" href="classBinTree.html">endl</a>;</div>
+<div class="line"><span class="lineno">   30</span>    cout &lt;&lt; yellow &lt;&lt; message &lt;&lt; reset &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   32</span>    <a class="code hl_class" href="classBinTree.html">message</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>    message = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><span class="lineno">   33</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="debug_8hh.html">debug.hh</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

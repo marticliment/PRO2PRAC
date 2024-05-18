@@ -9,14 +9,16 @@ digraph "City::TradeWith"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="City::GetProductExceeding\lAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a96a9d3a5b4b1100df16e933bacfd590f",tooltip="Get the exceeding amount of a product in the city."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="City::GetRawProductIds",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a87b8a9beb255137b6617175c5dba9eff",tooltip="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..."];
+  Node3 [id="Node000003",label="City::GetProductMissingAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e",tooltip="Get the missing amount of a product in the city."];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="City::RestockProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390",tooltip="Restock a certain amount of a product in the city."];
-  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip="Retrieves the product data with the specified ID from the reference."];
+  Node4 [id="Node000004",label="City::GetRawProductIds",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a87b8a9beb255137b6617175c5dba9eff",tooltip="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..."];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="City::RestockProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390",tooltip="Restock a certain amount of a product in the city."];
   Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip="Checks if the reference contains product data with the specified ID."];
-  Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="City::WithdrawProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9",tooltip="Withdraw a certain amount of a product from the city."];
-  Node7 -> Node5 [id="edge7_Node000007_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip="Retrieves the product data with the specified ID from the reference."];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip="Checks if the reference contains product data with the specified ID."];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="City::WithdrawProductAmount",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9",tooltip="Withdraw a certain amount of a product from the city."];
+  Node8 -> Node6 [id="edge8_Node000008_Node000006",color="steelblue1",style="solid",tooltip=" "];
 }

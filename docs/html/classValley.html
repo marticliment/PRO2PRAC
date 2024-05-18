@@ -9,10 +9,15 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classValley.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,7 +90,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -81,16 +102,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a valley with cities (<a class="el" href="classCity.html" title="Represents a city with an inventory of Product items.">City</a> objects), and a <a class="el" href="classShip.html" title="Represents a ship that navigates through a Valley buying and selling products.">Ship</a> that navigates and trades between cities.  
+ <a href="classValley.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Valley_8hh_source.html">Valley.hh</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Valley:</div>
 <div class="dyncontent">
 <div class="center"><img src="classValley__coll__graph.png" border="0" usemap="#aValley_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structValley_1_1RouteResult.html">RouteResult</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structValley_1_1RouteEvaluationResult.html">RouteEvaluationResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structValley_1_1RouteEvaluationResult.html" title="The RouteEvaluationResult struct represents the result of evaluating a possible route for the ship.">RouteEvaluationResult</a> struct represents the result of evaluating a possible route for the ship.  <a href="structValley_1_1RouteEvaluationResult.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -98,56 +123,72 @@ Public Types</h2></td></tr>
 <tr class="memitem:a3771d0f650af806c24a71e9060093635" id="r_a3771d0f650af806c24a71e9060093635"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> { <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Left</a>
 , <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Right</a>
  }</td></tr>
+<tr class="memdesc:a3771d0f650af806c24a71e9060093635"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NavStep enum represents the navigation steps (left or right) the ship can take from a certain node.  <a href="classValley.html#a3771d0f650af806c24a71e9060093635">More...</a><br /></td></tr>
 <tr class="separator:a3771d0f650af806c24a71e9060093635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aab63536d9205e6bbfede92c0c5d66d25" id="r_aab63536d9205e6bbfede92c0c5d66d25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">InitializeFromStream</a> (<a class="el" href="classBinTree.html">istream</a> &amp;<a class="el" href="classBinTree.html">stream</a>)</td></tr>
+<tr class="memitem:aab63536d9205e6bbfede92c0c5d66d25" id="r_aab63536d9205e6bbfede92c0c5d66d25"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">InitializeFromStream</a> (istream &amp;stream)</td></tr>
+<tr class="memdesc:aab63536d9205e6bbfede92c0c5d66d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> from the input stream. This implies reading the products to be added to the <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a>, the cities that of the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> and the <a class="el" href="classShip.html" title="Represents a ship that navigates through a Valley buying and selling products.">Ship</a>.  <br /></td></tr>
 <tr class="separator:aab63536d9205e6bbfede92c0c5d66d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdfffd571d76986c7aaa277d2150362" id="r_a8bdfffd571d76986c7aaa277d2150362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">ReadCitiesFromStream</a> (<a class="el" href="classBinTree.html">istream</a> &amp;<a class="el" href="classBinTree.html">stream</a>)</td></tr>
+<tr class="memitem:a8bdfffd571d76986c7aaa277d2150362" id="r_a8bdfffd571d76986c7aaa277d2150362"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">ReadCitiesFromStream</a> (istream &amp;stream)</td></tr>
+<tr class="memdesc:a8bdfffd571d76986c7aaa277d2150362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the cities from the input stream, overwriting the old <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> contents, if any. All the data regarding the cities from the old valley is lost.  <br /></td></tr>
 <tr class="separator:a8bdfffd571d76986c7aaa277d2150362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070726f5f925f2a2891aa5226ef58f17" id="r_a070726f5f925f2a2891aa5226ef58f17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classShip.html">Ship</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">GetShip</a> ()</td></tr>
+<tr class="memitem:a070726f5f925f2a2891aa5226ef58f17" id="r_a070726f5f925f2a2891aa5226ef58f17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classShip.html">Ship</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">GetShip</a> ()</td></tr>
+<tr class="memdesc:a070726f5f925f2a2891aa5226ef58f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the ship.  <br /></td></tr>
 <tr class="separator:a070726f5f925f2a2891aa5226ef58f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae649240ef0637addb04763c92d41799e" id="r_ae649240ef0637addb04763c92d41799e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#ae649240ef0637addb04763c92d41799e">GetCities</a> ()</td></tr>
-<tr class="separator:ae649240ef0637addb04763c92d41799e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75ff9182c65289925ff544ac37e6b792" id="r_a75ff9182c65289925ff544ac37e6b792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classCity.html">City</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a> (<a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> &amp;id)</td></tr>
+<tr class="memitem:a150cd1a95764b0b85e8d57aecc73b0c0" id="r_a150cd1a95764b0b85e8d57aecc73b0c0"><td class="memItemLeft" align="right" valign="top">static vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a150cd1a95764b0b85e8d57aecc73b0c0">GetCityIds</a> ()</td></tr>
+<tr class="memdesc:a150cd1a95764b0b85e8d57aecc73b0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of city Ids in the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a>.  <br /></td></tr>
+<tr class="separator:a150cd1a95764b0b85e8d57aecc73b0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ff9182c65289925ff544ac37e6b792" id="r_a75ff9182c65289925ff544ac37e6b792"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCity.html">City</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a> (const string &amp;id)</td></tr>
+<tr class="memdesc:a75ff9182c65289925ff544ac37e6b792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the city with the specified ID.  <br /></td></tr>
 <tr class="separator:a75ff9182c65289925ff544ac37e6b792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ae654d0a8f51b5c80ec9e88447fe7d" id="r_ab9ae654d0a8f51b5c80ec9e88447fe7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">HasCity</a> (<a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> &amp;id)</td></tr>
+<tr class="memitem:ab9ae654d0a8f51b5c80ec9e88447fe7d" id="r_ab9ae654d0a8f51b5c80ec9e88447fe7d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">HasCity</a> (const string &amp;id)</td></tr>
+<tr class="memdesc:ab9ae654d0a8f51b5c80ec9e88447fe7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a city with the specified ID exists.  <br /></td></tr>
 <tr class="separator:ab9ae654d0a8f51b5c80ec9e88447fe7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5308f01b1b609a63508404fa8b7a46f" id="r_aa5308f01b1b609a63508404fa8b7a46f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a> ()</td></tr>
+<tr class="memitem:aa5308f01b1b609a63508404fa8b7a46f" id="r_aa5308f01b1b609a63508404fa8b7a46f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a> ()</td></tr>
+<tr class="memdesc:aa5308f01b1b609a63508404fa8b7a46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs trades in the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a>. Trades start recursively from the root node. The city in the root node trades with its children, which at their time trade with their children, etc.  <br /></td></tr>
 <tr class="separator:aa5308f01b1b609a63508404fa8b7a46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61921a453bfcab8a76822fb16553560" id="r_aa61921a453bfcab8a76822fb16553560"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aa61921a453bfcab8a76822fb16553560">GetBestRoute</a> ()</td></tr>
+<tr class="memitem:aa61921a453bfcab8a76822fb16553560" id="r_aa61921a453bfcab8a76822fb16553560"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aa61921a453bfcab8a76822fb16553560">GetBestRoute</a> ()</td></tr>
+<tr class="memdesc:aa61921a453bfcab8a76822fb16553560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the best route for the ship. The best route is the shortest route possible where the maximum amount of product is bought and sold.  <br /></td></tr>
 <tr class="separator:aa61921a453bfcab8a76822fb16553560"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d27338b1463dfa8f30f5e1e1c4e9a89" id="r_a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">NavigateRoute</a> (<a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;route)</td></tr>
+<tr class="memitem:a2d27338b1463dfa8f30f5e1e1c4e9a89" id="r_a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">NavigateRoute</a> (const vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;route)</td></tr>
+<tr class="memdesc:a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigates the specified route, updating the cities of the valley accordingly.  <br /></td></tr>
 <tr class="separator:a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a9ce0d2c2139f10629fcb12ec2e261f35" id="r_a9ce0d2c2139f10629fcb12ec2e261f35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a> ()</td></tr>
+<tr class="memitem:a9ce0d2c2139f10629fcb12ec2e261f35" id="r_a9ce0d2c2139f10629fcb12ec2e261f35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a> ()</td></tr>
+<tr class="memdesc:a9ce0d2c2139f10629fcb12ec2e261f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the river array is initialized.  <br /></td></tr>
 <tr class="separator:a9ce0d2c2139f10629fcb12ec2e261f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6c899cd791dea40579e15f0958222a0" id="r_aa6c899cd791dea40579e15f0958222a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aa6c899cd791dea40579e15f0958222a0">GetRiverStructureFromStream</a> (<a class="el" href="classBinTree.html">istream</a> &amp;<a class="el" href="classBinTree.html">stream</a>)</td></tr>
-<tr class="separator:aa6c899cd791dea40579e15f0958222a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97bd06aed292614351b1db74566d0259" id="r_a97bd06aed292614351b1db74566d0259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a97bd06aed292614351b1db74566d0259">DoTrades</a> (<a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; &amp;<a class="el" href="classBinTree.html">current_position</a>)</td></tr>
+<tr class="memitem:a32128482f1832fafabeb95954a489bec" id="r_a32128482f1832fafabeb95954a489bec"><td class="memItemLeft" align="right" valign="top">static BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a32128482f1832fafabeb95954a489bec">GetRiverNodeFromStream</a> (istream &amp;stream)</td></tr>
+<tr class="memdesc:a32128482f1832fafabeb95954a489bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a river node and its children from an input stream.  <br /></td></tr>
+<tr class="separator:a32128482f1832fafabeb95954a489bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bd06aed292614351b1db74566d0259" id="r_a97bd06aed292614351b1db74566d0259"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a97bd06aed292614351b1db74566d0259">DoTrades</a> (const BinTree&lt; string &gt; &amp;current_position)</td></tr>
+<tr class="memdesc:a97bd06aed292614351b1db74566d0259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will make the city at the given node trade with its children. At their time, the children will trade with their respective children, and so on.  <br /></td></tr>
 <tr class="separator:a97bd06aed292614351b1db74566d0259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15b78bc9bf20a95c9f733d28a5a50371" id="r_a15b78bc9bf20a95c9f733d28a5a50371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">TestRoutePiece</a> (<a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;<a class="el" href="classBinTree.html">current_route</a>, <a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; &amp;<a class="el" href="classBinTree.html">current_location</a>, <a class="el" href="classBinTree.html">int</a> <a class="el" href="classBinTree.html">buyable_amount</a>, <a class="el" href="classBinTree.html">int</a> <a class="el" href="classBinTree.html">sellable_amount</a>, <a class="el" href="structValley_1_1RouteResult.html">RouteResult</a> &amp;<a class="el" href="classBinTree.html">best_route</a>)</td></tr>
-<tr class="separator:a15b78bc9bf20a95c9f733d28a5a50371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca437e781152975022adef348bbbda23" id="r_aca437e781152975022adef348bbbda23"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a> (vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, <a class="el" href="structValley_1_1RouteEvaluationResult.html">RouteEvaluationResult</a> &amp;best_route)</td></tr>
+<tr class="memdesc:aca437e781152975022adef348bbbda23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests a route step and updates the best route if necessary.  <br /></td></tr>
+<tr class="separator:aca437e781152975022adef348bbbda23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:a837c0bfa444e667bb8d93e73d44ed3d4" id="r_a837c0bfa444e667bb8d93e73d44ed3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a> = <a class="el" href="classBinTree.html">false</a></td></tr>
+<tr class="memitem:a837c0bfa444e667bb8d93e73d44ed3d4" id="r_a837c0bfa444e667bb8d93e73d44ed3d4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a> = false</td></tr>
 <tr class="separator:a837c0bfa444e667bb8d93e73d44ed3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afebc5484b9933c6d53d54e8a43632970" id="r_afebc5484b9933c6d53d54e8a43632970"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classCity.html">City</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#afebc5484b9933c6d53d54e8a43632970">invalid_city</a> = <a class="el" href="classCity.html">City</a>(&quot;invalid&quot;)</td></tr>
+<tr class="memitem:afebc5484b9933c6d53d54e8a43632970" id="r_afebc5484b9933c6d53d54e8a43632970"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCity.html">City</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#afebc5484b9933c6d53d54e8a43632970">invalid_city</a> = <a class="el" href="classCity.html">City</a>(&quot;invalid&quot;)</td></tr>
 <tr class="separator:afebc5484b9933c6d53d54e8a43632970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c77616859a5ac6a822be4a2b6cd537e" id="r_a6c77616859a5ac6a822be4a2b6cd537e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = <a class="el" href="classBinTree.html">BinTree</a>&lt;<a class="el" href="classBinTree.html">string</a>&gt;()</td></tr>
+<tr class="memitem:a6c77616859a5ac6a822be4a2b6cd537e" id="r_a6c77616859a5ac6a822be4a2b6cd537e"><td class="memItemLeft" align="right" valign="top">static BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = BinTree&lt;string&gt;()</td></tr>
 <tr class="separator:a6c77616859a5ac6a822be4a2b6cd537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72b588ac6bb53e4777778a4ca8f89725" id="r_a72b588ac6bb53e4777778a4ca8f89725"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classBinTree.html">unordered_map</a>&lt; <a class="el" href="classBinTree.html">string</a>, <a class="el" href="classCity.html">City</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a> = <a class="el" href="classBinTree.html">unordered_map</a>&lt;<a class="el" href="classBinTree.html">string</a>, <a class="el" href="classCity.html">City</a>&gt;()</td></tr>
+<tr class="memitem:a72b588ac6bb53e4777778a4ca8f89725" id="r_a72b588ac6bb53e4777778a4ca8f89725"><td class="memItemLeft" align="right" valign="top">static unordered_map&lt; string, <a class="el" href="classCity.html">City</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a> = unordered_map&lt;string, <a class="el" href="classCity.html">City</a>&gt;()</td></tr>
 <tr class="separator:a72b588ac6bb53e4777778a4ca8f89725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79fb1ecacc49127f34e147ac01d76941" id="r_a79fb1ecacc49127f34e147ac01d76941"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBinTree.html">static</a> <a class="el" href="classShip.html">Ship</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a> = <a class="el" href="classShip.html">Ship</a>()</td></tr>
+<tr class="memitem:a79fb1ecacc49127f34e147ac01d76941" id="r_a79fb1ecacc49127f34e147ac01d76941"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classShip.html">Ship</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a> = <a class="el" href="classShip.html">Ship</a>()</td></tr>
 <tr class="separator:a79fb1ecacc49127f34e147ac01d76941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00015">15</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<div class="textblock"><p>Represents a valley with cities (<a class="el" href="classCity.html" title="Represents a city with an inventory of Product items.">City</a> objects), and a <a class="el" href="classShip.html" title="Represents a ship that navigates through a Valley buying and selling products.">Ship</a> that navigates and trades between cities. </p>
+<p>The cities are organized on a BinTree-like structure, where each city has either two or zero children. There is always a root city </p>
+
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00017">17</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a3771d0f650af806c24a71e9060093635" name="a3771d0f650af806c24a71e9060093635"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3771d0f650af806c24a71e9060093635">&#9670;&#160;</a></span>NavStep</h2>
@@ -159,7 +200,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">enum</a> <a class="el" href="classBinTree.html">class</a> <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">Valley::NavStep</a></td>
+          <td class="memname">enum class <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">Valley::NavStep</a></td>
         </tr>
       </table>
   </td>
@@ -168,16 +209,20 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The NavStep enum represents the navigation steps (left or right) the ship can take from a certain node. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff" name="a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c" name="a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff" name="a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"><p>Navigate to the left child assuming the root node is at the top. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c" name="a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"><p>Navigate to the right child assuming the root node is at the top. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00018">18</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Left</a>,</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Right</a>,</div>
-<div class="line"><span class="lineno">   22</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00023">23</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Left</a>, </div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Right</a> </div>
+<div class="line"><span class="lineno">   27</span>    };</div>
 <div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a></div><div class="ttdeci">@ Right</div></div>
 <div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a></div><div class="ttdeci">@ Left</div></div>
 </div><!-- fragment -->
@@ -194,7 +239,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::AssertRiverArrayIsInitialized </td>
+          <td class="memname">void Valley::AssertRiverArrayIsInitialized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -207,12 +252,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Asserts that the river array is initialized. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>None </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Will crash the program if the valley is not initialized. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00015">15</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_class" href="classBinTree.html">assert</a>(<a class="code hl_variable" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a> &amp;&amp; (<span class="keyword">true</span> || <span class="stringliteral">&quot;The current Valley object is not initialized, but a method that requires it to be is being called.&quot;</span>));</div>
+<div class="line"><span class="lineno">   17</span>    assert(<a class="code hl_variable" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a> &amp;&amp; (<span class="keyword">true</span> || <span class="stringliteral">&quot;The current Valley object is not initialized, but a method that requires it to be is being called.&quot;</span>));</div>
 <div class="line"><span class="lineno">   18</span>}</div>
-<div class="ttc" id="aclassBinTree_html"><div class="ttname"><a href="classBinTree.html">BinTree</a></div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00022">BinTree.hh:22</a></div></div>
-<div class="ttc" id="aclassValley_html_a837c0bfa444e667bb8d93e73d44ed3d4"><div class="ttname"><a href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">Valley::initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00033">Valley.hh:33</a></div></div>
+<div class="ttc" id="aclassValley_html_a837c0bfa444e667bb8d93e73d44ed3d4"><div class="ttname"><a href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">Valley::initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00040">Valley.hh:40</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -231,7 +279,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::DoTrades </td>
+          <td class="memname">void Valley::DoTrades </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -244,14 +292,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Performs trades in the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a>. Trades start recursively from the root node. The city in the root node trades with its children, which at their time trade with their children, etc. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is initialized. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Trades are performed recursively from the root city. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00109">109</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  110</span>{</div>
 <div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
 <div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(<a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>);</div>
 <div class="line"><span class="lineno">  113</span>}</div>
-<div class="ttc" id="aclassValley_html_a6c77616859a5ac6a822be4a2b6cd537e"><div class="ttname"><a href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">Valley::river_structure</a></div><div class="ttdeci">static BinTree&lt; string &gt; river_structure</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00037">Valley.hh:37</a></div></div>
-<div class="ttc" id="aclassValley_html_a9ce0d2c2139f10629fcb12ec2e261f35"><div class="ttname"><a href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">Valley::AssertRiverArrayIsInitialized</a></div><div class="ttdeci">static void AssertRiverArrayIsInitialized()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00015">Valley.cc:15</a></div></div>
-<div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
+<div class="ttc" id="aclassValley_html_a6c77616859a5ac6a822be4a2b6cd537e"><div class="ttname"><a href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">Valley::river_structure</a></div><div class="ttdeci">static BinTree&lt; string &gt; river_structure</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00042">Valley.hh:42</a></div></div>
+<div class="ttc" id="aclassValley_html_a9ce0d2c2139f10629fcb12ec2e261f35"><div class="ttname"><a href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">Valley::AssertRiverArrayIsInitialized</a></div><div class="ttdeci">static void AssertRiverArrayIsInitialized()</div><div class="ttdoc">Asserts that the river array is initialized.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00015">Valley.cc:15</a></div></div>
+<div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -275,9 +327,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::DoTrades </td>
+          <td class="memname">void Valley::DoTrades </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const BinTree&lt; string &gt; &amp;&#160;</td>
           <td class="paramname"><em>current_position</em></td><td>)</td>
           <td></td>
         </tr>
@@ -289,32 +341,38 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Will make the city at the given node trade with its children. At their time, the children will trade with their respective children, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_position</td><td>A node in the river structure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The current position is valid. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Trades are performed recursively starting from the current node. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00087">87</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
 <div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
 <div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#a74cda259ba5c25b8ee38ed4dc33e4fad">empty</a>())</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span>(current_position.empty())</div>
 <div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">current_city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>());</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keyword">auto</span>&amp; current_city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_position.value());</div>
 <div class="line"><span class="lineno">   95</span>    </div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span>(!<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">left</a>().<a class="code hl_function" href="classBinTree.html#a74cda259ba5c25b8ee38ed4dc33e4fad">empty</a>())</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span>(!current_position.left().empty())</div>
 <div class="line"><span class="lineno">   97</span>    {</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_class" href="classBinTree.html">current_city</a>.TradeWith(<a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">left</a>().<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>()));</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">left</a>());</div>
+<div class="line"><span class="lineno">   98</span>        current_city.TradeWith(<a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_position.left().value()));</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(current_position.left());</div>
 <div class="line"><span class="lineno">  100</span>    }</div>
 <div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span>(!<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">right</a>().<a class="code hl_function" href="classBinTree.html#a74cda259ba5c25b8ee38ed4dc33e4fad">empty</a>())</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span>(!current_position.right().empty())</div>
 <div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_class" href="classBinTree.html">current_city</a>.TradeWith(<a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">right</a>().<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>()));</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(<a class="code hl_class" href="classBinTree.html">current_position</a>.<a class="code hl_function" href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">right</a>());</div>
+<div class="line"><span class="lineno">  104</span>        current_city.TradeWith(<a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_position.right().value()));</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(current_position.right());</div>
 <div class="line"><span class="lineno">  106</span>    }</div>
 <div class="line"><span class="lineno">  107</span>}</div>
-<div class="ttc" id="aclassBinTree_html_a74cda259ba5c25b8ee38ed4dc33e4fad"><div class="ttname"><a href="classBinTree.html#a74cda259ba5c25b8ee38ed4dc33e4fad">BinTree::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00123">BinTree.hh:123</a></div></div>
-<div class="ttc" id="aclassBinTree_html_a82108db4c1b08d1f111027788c196d4e"><div class="ttname"><a href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">BinTree::left</a></div><div class="ttdeci">BinTree left() const</div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00128">BinTree.hh:128</a></div></div>
-<div class="ttc" id="aclassBinTree_html_aaccb0c5b6cfe3b84dfeefc58efa24cda"><div class="ttname"><a href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">BinTree::value</a></div><div class="ttdeci">const T &amp; value() const</div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00146">BinTree.hh:146</a></div></div>
-<div class="ttc" id="aclassBinTree_html_aff8e96651b27284c329667b5ad3e4d0b"><div class="ttname"><a href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">BinTree::right</a></div><div class="ttdeci">BinTree right() const</div><div class="ttdef"><b>Definition</b> <a href="BinTree_8hh_source.html#l00137">BinTree.hh:137</a></div></div>
-<div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00078">Valley.cc:78</a></div></div>
+<div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdoc">Gets the city with the specified ID.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00078">Valley.cc:78</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -333,7 +391,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">Valley::NavStep</a> &gt; Valley::GetBestRoute </td>
+          <td class="memname">vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">Valley::NavStep</a> &gt; Valley::GetBestRoute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -346,16 +404,22 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the best route for the ship. The best route is the shortest route possible where the maximum amount of product is bought and sold. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is initialized. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The best route is returned.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The best possible route. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00174">174</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  175</span>{</div>
-<div class="line"><span class="lineno">  176</span>    <a class="code hl_struct" href="structValley_1_1RouteResult.html">Valley::RouteResult</a> <a class="code hl_class" href="classBinTree.html">best_route</a>;</div>
-<div class="line"><span class="lineno">  177</span>    <a class="code hl_class" href="classBinTree.html">vector&lt;Valley::NavStep&gt;</a> <a class="code hl_class" href="classBinTree.html">empty_route</a>;</div>
-<div class="line"><span class="lineno">  178</span>    <a class="code hl_class" href="classBinTree.html">best_route</a>.route = <a class="code hl_class" href="classBinTree.html">empty_route</a>;</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">TestRoutePiece</a>(<a class="code hl_class" href="classBinTree.html">empty_route</a>, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, <a class="code hl_class" href="classBinTree.html">best_route</a>);</div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classBinTree.html">best_route</a>.route;</div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> best_route;</div>
+<div class="line"><span class="lineno">  177</span>    vector&lt;Valley::NavStep&gt; empty_route;</div>
+<div class="line"><span class="lineno">  178</span>    best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = empty_route;</div>
+<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(empty_route, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, best_route);</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span> best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a>;</div>
 <div class="line"><span class="lineno">  181</span>}</div>
-<div class="ttc" id="aclassValley_html_a15b78bc9bf20a95c9f733d28a5a50371"><div class="ttname"><a href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">Valley::TestRoutePiece</a></div><div class="ttdeci">static void TestRoutePiece(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, RouteResult &amp;best_route)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00115">Valley.cc:115</a></div></div>
-<div class="ttc" id="astructValley_1_1RouteResult_html"><div class="ttname"><a href="structValley_1_1RouteResult.html">Valley::RouteResult</a></div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00026">Valley.hh:27</a></div></div>
+<div class="ttc" id="aclassValley_html_aca437e781152975022adef348bbbda23"><div class="ttname"><a href="classValley.html#aca437e781152975022adef348bbbda23">Valley::TestRouteStep</a></div><div class="ttdeci">static void TestRouteStep(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, RouteEvaluationResult &amp;best_route)</div><div class="ttdoc">Tests a route step and updates the best route if necessary.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00115">Valley.cc:115</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteEvaluationResult_html"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a></div><div class="ttdoc">The RouteEvaluationResult struct represents the result of evaluating a possible route for the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00033">Valley.hh:34</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_abe1f6e8cbd027ff9cb234003b26fb247"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">Valley::RouteEvaluationResult::route</a></div><div class="ttdeci">vector&lt; Valley::NavStep &gt; route</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00035">Valley.hh:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -365,50 +429,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classValley_aa61921a453bfcab8a76822fb16553560_icgraph.png" border="0" usemap="#aclassValley_aa61921a453bfcab8a76822fb16553560_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ae649240ef0637addb04763c92d41799e" name="ae649240ef0637addb04763c92d41799e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae649240ef0637addb04763c92d41799e">&#9670;&#160;</a></span>GetCities()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; Valley::GetCities </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00059">59</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
-<div class="line"><span class="lineno">   61</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
-<div class="line"><span class="lineno">   62</span>    <a class="code hl_class" href="classBinTree.html">vector&lt;string&gt;</a> <a class="code hl_class" href="classBinTree.html">names</a>;</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keyword">auto</span> <a class="code hl_class" href="classBinTree.html">it</a> = <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.begin();</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">while</span>(<a class="code hl_class" href="classBinTree.html">it</a> != <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.end())</div>
-<div class="line"><span class="lineno">   65</span>    {</div>
-<div class="line"><span class="lineno">   66</span>        <a class="code hl_class" href="classBinTree.html">names</a>.push_back(<a class="code hl_class" href="classBinTree.html">it</a>-&gt;first);</div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_class" href="classBinTree.html">it</a>++;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classBinTree.html">names</a>;</div>
-<div class="line"><span class="lineno">   70</span>}</div>
-<div class="ttc" id="aclassValley_html_a72b588ac6bb53e4777778a4ca8f89725"><div class="ttname"><a href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">Valley::cities</a></div><div class="ttdeci">static unordered_map&lt; string, City &gt; cities</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00038">Valley.hh:38</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classValley_ae649240ef0637addb04763c92d41799e_cgraph.png" border="0" usemap="#aclassValley_ae649240ef0637addb04763c92d41799e_cgraph" alt=""/></div>
 </div>
 
 </div>
@@ -425,7 +445,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="classCity.html">City</a> &amp; Valley::GetCity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -437,6 +457,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the city with the specified ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID of the city.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The city with the specified ID exists. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The city with the specified ID is returned.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The city with the specified ID. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00078">78</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
 <div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
@@ -445,8 +476,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.at(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   85</span>}</div>
-<div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
-<div class="ttc" id="aclassValley_html_afebc5484b9933c6d53d54e8a43632970"><div class="ttname"><a href="classValley.html#afebc5484b9933c6d53d54e8a43632970">Valley::invalid_city</a></div><div class="ttdeci">static City invalid_city</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00036">Valley.hh:36</a></div></div>
+<div class="ttc" id="aclassValley_html_a72b588ac6bb53e4777778a4ca8f89725"><div class="ttname"><a href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">Valley::cities</a></div><div class="ttdeci">static unordered_map&lt; string, City &gt; cities</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00043">Valley.hh:43</a></div></div>
+<div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified ID exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
+<div class="ttc" id="aclassValley_html_afebc5484b9933c6d53d54e8a43632970"><div class="ttname"><a href="classValley.html#afebc5484b9933c6d53d54e8a43632970">Valley::invalid_city</a></div><div class="ttdeci">static City invalid_city</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00041">Valley.hh:41</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -460,8 +492,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa6c899cd791dea40579e15f0958222a0" name="aa6c899cd791dea40579e15f0958222a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6c899cd791dea40579e15f0958222a0">&#9670;&#160;</a></span>GetRiverStructureFromStream()</h2>
+<a id="a150cd1a95764b0b85e8d57aecc73b0c0" name="a150cd1a95764b0b85e8d57aecc73b0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150cd1a95764b0b85e8d57aecc73b0c0">&#9670;&#160;</a></span>GetCityIds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,9 +502,57 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; Valley::GetRiverStructureFromStream </td>
+          <td class="memname">vector&lt; string &gt; Valley::GetCityIds </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">istream</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the list of city Ids in the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The list of city Ids is returned.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The list of city Ids. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00059">59</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
+<div class="line"><span class="lineno">   62</span>    vector&lt;string&gt; names;</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">auto</span> it = <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.begin();</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">while</span>(it != <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.end())</div>
+<div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        names.push_back(it-&gt;first);</div>
+<div class="line"><span class="lineno">   67</span>        it++;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> names;</div>
+<div class="line"><span class="lineno">   70</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classValley_a150cd1a95764b0b85e8d57aecc73b0c0_cgraph.png" border="0" usemap="#aclassValley_a150cd1a95764b0b85e8d57aecc73b0c0_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a32128482f1832fafabeb95954a489bec" name="a32128482f1832fafabeb95954a489bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32128482f1832fafabeb95954a489bec">&#9670;&#160;</a></span>GetRiverNodeFromStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinTree&lt; string &gt; Valley::GetRiverNodeFromStream </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -484,32 +564,43 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Reads a river node and its children from an input stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>An input stream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The input stream is open and valid. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The current node and its children are read and returned.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The river structure represented on a BinTree&lt;string&gt; object. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00020">20</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
 <div class="line"><span class="lineno">   22</span>    <span class="comment">// Read city name and check if city is valid</span></div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">city_name</a>;</div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_class" href="classBinTree.html">stream</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">city_name</a>;</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city_name</a> == <span class="stringliteral">&quot;#&quot;</span>) </div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a>();</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">string</span> city_name;</div>
+<div class="line"><span class="lineno">   24</span>    stream &gt;&gt; city_name;</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span>(city_name == <span class="stringliteral">&quot;#&quot;</span>) </div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> BinTree&lt;string&gt;();</div>
 <div class="line"><span class="lineno">   27</span>    </div>
-<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.emplace(<a class="code hl_class" href="classBinTree.html">city_name</a>, <a class="code hl_class" href="classCity.html">City</a>(<a class="code hl_class" href="classBinTree.html">city_name</a>));</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.emplace(city_name, <a class="code hl_class" href="classCity.html">City</a>(city_name));</div>
 <div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> left = <a class="code hl_function" href="classValley.html#aa6c899cd791dea40579e15f0958222a0">GetRiverStructureFromStream</a>(<a class="code hl_class" href="classBinTree.html">stream</a>);</div>
-<div class="line"><span class="lineno">   31</span>    <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> right = <a class="code hl_function" href="classValley.html#aa6c899cd791dea40579e15f0958222a0">GetRiverStructureFromStream</a>(<a class="code hl_class" href="classBinTree.html">stream</a>);</div>
+<div class="line"><span class="lineno">   30</span>    BinTree&lt;string&gt; left = <a class="code hl_function" href="classValley.html#a32128482f1832fafabeb95954a489bec">GetRiverNodeFromStream</a>(stream);</div>
+<div class="line"><span class="lineno">   31</span>    BinTree&lt;string&gt; right = <a class="code hl_function" href="classValley.html#a32128482f1832fafabeb95954a489bec">GetRiverNodeFromStream</a>(stream);</div>
 <div class="line"><span class="lineno">   32</span>    </div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a>(<a class="code hl_class" href="classBinTree.html">city_name</a>, left, right);</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> BinTree&lt;string&gt;(city_name, left, right);</div>
 <div class="line"><span class="lineno">   34</span>}</div>
 <div class="ttc" id="aclassCity_html"><div class="ttname"><a href="classCity.html">City</a></div><div class="ttdoc">Represents a city with an inventory of Product items.</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00021">City.hh:22</a></div></div>
-<div class="ttc" id="aclassValley_html_aa6c899cd791dea40579e15f0958222a0"><div class="ttname"><a href="classValley.html#aa6c899cd791dea40579e15f0958222a0">Valley::GetRiverStructureFromStream</a></div><div class="ttdeci">static BinTree&lt; string &gt; GetRiverStructureFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00020">Valley.cc:20</a></div></div>
+<div class="ttc" id="aclassValley_html_a32128482f1832fafabeb95954a489bec"><div class="ttname"><a href="classValley.html#a32128482f1832fafabeb95954a489bec">Valley::GetRiverNodeFromStream</a></div><div class="ttdeci">static BinTree&lt; string &gt; GetRiverNodeFromStream(istream &amp;stream)</div><div class="ttdoc">Reads a river node and its children from an input stream.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00020">Valley.cc:20</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_aa6c899cd791dea40579e15f0958222a0_cgraph.png" border="0" usemap="#aclassValley_aa6c899cd791dea40579e15f0958222a0_cgraph" alt=""/></div>
+<div class="center"><img src="classValley_a32128482f1832fafabeb95954a489bec_cgraph.png" border="0" usemap="#aclassValley_a32128482f1832fafabeb95954a489bec_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_aa6c899cd791dea40579e15f0958222a0_icgraph.png" border="0" usemap="#aclassValley_aa6c899cd791dea40579e15f0958222a0_icgraph" alt=""/></div>
+<div class="center"><img src="classValley_a32128482f1832fafabeb95954a489bec_icgraph.png" border="0" usemap="#aclassValley_a32128482f1832fafabeb95954a489bec_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -537,12 +628,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets a reference to the ship. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>A reference to the ship is returned.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the ship. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00053">53</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>{</div>
 <div class="line"><span class="lineno">   55</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
 <div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>;</div>
 <div class="line"><span class="lineno">   57</span>}</div>
-<div class="ttc" id="aclassValley_html_a79fb1ecacc49127f34e147ac01d76941"><div class="ttname"><a href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">Valley::ship</a></div><div class="ttdeci">static Ship ship</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00039">Valley.hh:39</a></div></div>
+<div class="ttc" id="aclassValley_html_a79fb1ecacc49127f34e147ac01d76941"><div class="ttname"><a href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">Valley::ship</a></div><div class="ttdeci">static Ship ship</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00044">Valley.hh:44</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -566,9 +662,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">bool</a> Valley::HasCity </td>
+          <td class="memname">bool Valley::HasCity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">string</a> &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -579,6 +675,17 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks if a city with the specified ID exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID of the city.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>True is returned if a city with the specified ID exists, false otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if a city with the specified ID exists, false otherwise. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00072">72</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
@@ -608,9 +715,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::InitializeFromStream </td>
+          <td class="memname">void Valley::InitializeFromStream </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">istream</a> &amp;&#160;</td>
+          <td class="paramtype">istream &amp;&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -622,17 +729,28 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> from the input stream. This implies reading the products to be added to the <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a>, the cities that of the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> and the <a class="el" href="classShip.html" title="Represents a ship that navigates through a Valley buying and selling products.">Ship</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The input stream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The input stream is open and valid. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is initialized from the input stream. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00043">43</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   44</span>{</div>
-<div class="line"><span class="lineno">   45</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">count</a>;</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_class" href="classBinTree.html">stream</a> &gt;&gt; <a class="code hl_class" href="classBinTree.html">count</a>;</div>
-<div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(<a class="code hl_class" href="classBinTree.html">stream</a>, <a class="code hl_class" href="classBinTree.html">count</a>);</div>
-<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">ReadCitiesFromStream</a>(<a class="code hl_class" href="classBinTree.html">stream</a>);</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.ReadFromStream(<a class="code hl_class" href="classBinTree.html">stream</a>);</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordtype">int</span> count;</div>
+<div class="line"><span class="lineno">   46</span>    stream &gt;&gt; count;</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(stream, count);</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">ReadCitiesFromStream</a>(stream);</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">ReadFromStream</a>(stream);</div>
 <div class="line"><span class="lineno">   50</span>    <a class="code hl_variable" href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">initialized</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   51</span>}</div>
 <div class="ttc" id="aclassProductReference_html_a9ff086f81c4e1c5d8fafa63ff18bf947"><div class="ttname"><a href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a></div><div class="ttdeci">static void AddFromStream(istream &amp;reader, int count)</div><div class="ttdoc">Adds multiple product data from an input stream to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00026">ProductReference.cc:26</a></div></div>
-<div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00036">Valley.cc:36</a></div></div>
+<div class="ttc" id="aclassShip_html_ac76c91ac599c08677f9540a4bf128d55"><div class="ttname"><a href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">Ship::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Reads ship data (buy and sell products) from a stream.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00027">Ship.cc:27</a></div></div>
+<div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdoc">Reads the cities from the input stream, overwriting the old Valley contents, if any....</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00036">Valley.cc:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -656,9 +774,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">int</a> Valley::NavigateRoute </td>
+          <td class="memname">int Valley::NavigateRoute </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>route</em></td><td>)</td>
           <td></td>
         </tr>
@@ -670,69 +788,88 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Navigates the specified route, updating the cities of the valley accordingly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">route</td><td>The route to navigate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is initialized and the given route is valid. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The route is navigated and the total number of trades is returned. Cities have been updated with the performed trades, and the ship has saved the last traded city (if any). The products of the ship, however, have been maintained intact.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The total number of trades. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00184">184</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  185</span>{</div>
-<div class="line"><span class="lineno">  186</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">route_position</a> = 0;</div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">total_traded</a> = 0;</div>
-<div class="line"><span class="lineno">  188</span>    <a class="code hl_class" href="classBinTree.html">BinTree&lt;string&gt;</a> <a class="code hl_class" href="classBinTree.html">location</a> = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
-<div class="line"><span class="lineno">  189</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classBinTree.html">last_traded_city</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordtype">int</span> route_position = 0;</div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordtype">int</span> total_traded = 0;</div>
+<div class="line"><span class="lineno">  188</span>    BinTree&lt;string&gt; location = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordtype">string</span> last_traded_city = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>    <a class="code hl_class" href="classProduct.html">Product</a> <a class="code hl_class" href="classBinTree.html">current_buying_product</a> = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.BuyingProduct();</div>
-<div class="line"><span class="lineno">  192</span>    <a class="code hl_class" href="classProduct.html">Product</a> <a class="code hl_class" href="classBinTree.html">current_selling_product</a> = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.SellingProduct();</div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_buying_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_selling_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
 <div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">while</span>(<a class="code hl_class" href="classBinTree.html">route_position</a> &lt; route.size())</div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">while</span>(route_position &lt; route.size())</div>
 <div class="line"><span class="lineno">  195</span>    {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<a class="code hl_class" href="classBinTree.html">location</a>.<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>());</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">city_traded</a> = 0;</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(location.value());</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">int</span> city_traded = 0;</div>
 <div class="line"><span class="lineno">  198</span> </div>
 <div class="line"><span class="lineno">  199</span>        <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">buying_id</a> = <a class="code hl_class" href="classBinTree.html">current_buying_product</a>.GetId();</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">buying_id</a>) &amp;&amp; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductExceedingAmount(<a class="code hl_class" href="classBinTree.html">buying_id</a>) &gt; 0)</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">int</span> buying_id = current_buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span>(city.HasProduct(buying_id) &amp;&amp; city.GetProductExceedingAmount(buying_id) &gt; 0)</div>
 <div class="line"><span class="lineno">  202</span>        {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">amount_to_buy</a> = <a class="code hl_class" href="classBinTree.html">min</a>(</div>
-<div class="line"><span class="lineno">  204</span>                <a class="code hl_class" href="classBinTree.html">current_buying_product</a>.GetMissingAmount(),</div>
-<div class="line"><span class="lineno">  205</span>                <a class="code hl_class" href="classBinTree.html">city</a>.GetProductExceedingAmount(<a class="code hl_class" href="classBinTree.html">buying_id</a>)</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordtype">int</span> amount_to_buy = min(</div>
+<div class="line"><span class="lineno">  204</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>(),</div>
+<div class="line"><span class="lineno">  205</span>                city.GetProductExceedingAmount(buying_id)</div>
 <div class="line"><span class="lineno">  206</span>            );</div>
-<div class="line"><span class="lineno">  207</span>            <a class="code hl_class" href="classBinTree.html">current_buying_product</a>.RestockAmount(<a class="code hl_class" href="classBinTree.html">amount_to_buy</a>);</div>
-<div class="line"><span class="lineno">  208</span>            <a class="code hl_class" href="classBinTree.html">city</a>.WithdrawProductAmount(<a class="code hl_class" href="classBinTree.html">buying_id</a>, <a class="code hl_class" href="classBinTree.html">amount_to_buy</a>);</div>
-<div class="line"><span class="lineno">  209</span>            <a class="code hl_class" href="classBinTree.html">city_traded</a> += <a class="code hl_class" href="classBinTree.html">amount_to_buy</a>;</div>
+<div class="line"><span class="lineno">  207</span>            current_buying_product.<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy);</div>
+<div class="line"><span class="lineno">  208</span>            city.WithdrawProductAmount(buying_id, amount_to_buy);</div>
+<div class="line"><span class="lineno">  209</span>            city_traded += amount_to_buy;</div>
 <div class="line"><span class="lineno">  210</span>        }</div>
 <div class="line"><span class="lineno">  211</span> </div>
 <div class="line"><span class="lineno">  212</span>        <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">selling_id</a> = <a class="code hl_class" href="classBinTree.html">current_selling_product</a>.GetId();</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">selling_id</a>) &amp;&amp; <a class="code hl_class" href="classBinTree.html">city</a>.GetProductMissingAmount(<a class="code hl_class" href="classBinTree.html">selling_id</a>) &gt; 0)</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">int</span> selling_id = current_selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span>(city.HasProduct(selling_id) &amp;&amp; city.GetProductMissingAmount(selling_id) &gt; 0)</div>
 <div class="line"><span class="lineno">  215</span>        {</div>
-<div class="line"><span class="lineno">  216</span>            <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">amount_to_sell</a> = <a class="code hl_class" href="classBinTree.html">min</a>(</div>
-<div class="line"><span class="lineno">  217</span>                <a class="code hl_class" href="classBinTree.html">current_selling_product</a>.GetExceedingAmount(), </div>
-<div class="line"><span class="lineno">  218</span>                <a class="code hl_class" href="classBinTree.html">city</a>.GetProductMissingAmount(<a class="code hl_class" href="classBinTree.html">selling_id</a>)</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordtype">int</span> amount_to_sell = min(</div>
+<div class="line"><span class="lineno">  217</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>(), </div>
+<div class="line"><span class="lineno">  218</span>                city.GetProductMissingAmount(selling_id)</div>
 <div class="line"><span class="lineno">  219</span>            );</div>
-<div class="line"><span class="lineno">  220</span>            <a class="code hl_class" href="classBinTree.html">current_selling_product</a>.WithdrawAmount(<a class="code hl_class" href="classBinTree.html">amount_to_sell</a>);</div>
-<div class="line"><span class="lineno">  221</span>            <a class="code hl_class" href="classBinTree.html">city</a>.RestockProductAmount(<a class="code hl_class" href="classBinTree.html">selling_id</a>, <a class="code hl_class" href="classBinTree.html">amount_to_sell</a>);</div>
-<div class="line"><span class="lineno">  222</span>            <a class="code hl_class" href="classBinTree.html">city_traded</a> += <a class="code hl_class" href="classBinTree.html">amount_to_sell</a>;</div>
+<div class="line"><span class="lineno">  220</span>            current_selling_product.<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
+<div class="line"><span class="lineno">  221</span>            city.RestockProductAmount(selling_id, amount_to_sell);</div>
+<div class="line"><span class="lineno">  222</span>            city_traded += amount_to_sell;</div>
 <div class="line"><span class="lineno">  223</span>        }</div>
 <div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>        <a class="code hl_class" href="classBinTree.html">total_traded</a> += <a class="code hl_class" href="classBinTree.html">city_traded</a>;</div>
+<div class="line"><span class="lineno">  225</span>        total_traded += city_traded;</div>
 <div class="line"><span class="lineno">  226</span>        <span class="comment">// Only count a city as traded with when it has actually traded things</span></div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city_traded</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  228</span>            <a class="code hl_class" href="classBinTree.html">last_traded_city</a> = <a class="code hl_class" href="classBinTree.html">location</a>.<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>();</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span>(city_traded &gt; 0)</div>
+<div class="line"><span class="lineno">  228</span>            last_traded_city = location.value();</div>
 <div class="line"><span class="lineno">  229</span> </div>
 <div class="line"><span class="lineno">  230</span>        </div>
 <div class="line"><span class="lineno">  231</span>        <span class="comment">// If this is the last city, do not try to unpack the next position from route</span></div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">route_position</a> == route.size())</div>
-<div class="line"><span class="lineno">  233</span>            <a class="code hl_class" href="classBinTree.html">route_position</a>++;</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span>(route_position == route.size())</div>
+<div class="line"><span class="lineno">  233</span>            route_position++;</div>
 <div class="line"><span class="lineno">  234</span>        <span class="comment">// Otherwise, navigate to the next position</span></div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[<a class="code hl_class" href="classBinTree.html">route_position</a>++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
-<div class="line"><span class="lineno">  236</span>            <a class="code hl_class" href="classBinTree.html">location</a> = <a class="code hl_class" href="classBinTree.html">location</a>.<a class="code hl_function" href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">left</a>();</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[route_position++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
+<div class="line"><span class="lineno">  236</span>            location = location.left();</div>
 <div class="line"><span class="lineno">  237</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  238</span>            <a class="code hl_class" href="classBinTree.html">location</a> = <a class="code hl_class" href="classBinTree.html">location</a>.<a class="code hl_function" href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">right</a>();</div>
+<div class="line"><span class="lineno">  238</span>            location = location.right();</div>
 <div class="line"><span class="lineno">  239</span>    }</div>
 <div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">last_traded_city</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.AddVisitedCity(<a class="code hl_class" href="classBinTree.html">last_traded_city</a>);</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">if</span>(last_traded_city != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">AddVisitedCity</a>(last_traded_city);</div>
 <div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classBinTree.html">total_traded</a>;</div>
+<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> total_traded;</div>
 <div class="line"><span class="lineno">  245</span>}</div>
 <div class="ttc" id="aclassProduct_html"><div class="ttname"><a href="classProduct.html">Product</a></div><div class="ttdoc">Represents a product. A product object has an available amount and a wanted amount of units,...</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00014">Product.hh:15</a></div></div>
+<div class="ttc" id="aclassProduct_html_a0c42f35816a3fa42d9f3f985ca23f90a"><div class="ttname"><a href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">Product::GetMissingAmount</a></div><div class="ttdeci">int GetMissingAmount() const</div><div class="ttdoc">Get the missing amount of the product. This method returns 0 if the product has a positive balance (G...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00040">Product.cc:40</a></div></div>
+<div class="ttc" id="aclassProduct_html_a8dbcd165158a8d6f1f6d6fb143674890"><div class="ttname"><a href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">Product::WithdrawAmount</a></div><div class="ttdeci">void WithdrawAmount(int amount)</div><div class="ttdoc">Withdraw a certain amount from the product. This method will not update the weights and volumes on an...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00048">Product.cc:48</a></div></div>
+<div class="ttc" id="aclassProduct_html_a8f4bf3557d4819295e408fbf938e77bd"><div class="ttname"><a href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">Product::GetExceedingAmount</a></div><div class="ttdeci">int GetExceedingAmount() const</div><div class="ttdoc">Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00032">Product.cc:32</a></div></div>
+<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the ID of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00017">Product.cc:17</a></div></div>
+<div class="ttc" id="aclassProduct_html_af78eb83686a0703b6818721d31d0e7c2"><div class="ttname"><a href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">Product::RestockAmount</a></div><div class="ttdeci">void RestockAmount(int amount)</div><div class="ttdoc">Restock a certain amount of the product. This method will not update the weights and volumes on any c...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00053">Product.cc:53</a></div></div>
+<div class="ttc" id="aclassShip_html_ab23c83b11f4a3aadbbaaeff062975b76"><div class="ttname"><a href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">Ship::AddVisitedCity</a></div><div class="ttdeci">void AddVisitedCity(const string &amp;city)</div><div class="ttdoc">Adds a city to the list of visited cities.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00048">Ship.cc:48</a></div></div>
+<div class="ttc" id="aclassShip_html_abfe895d54721c20ddcff465cf37ac308"><div class="ttname"><a href="classShip.html#abfe895d54721c20ddcff465cf37ac308">Ship::BuyingProduct</a></div><div class="ttdeci">Product &amp; BuyingProduct()</div><div class="ttdoc">Getter for the buying product.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00017">Ship.cc:17</a></div></div>
+<div class="ttc" id="aclassShip_html_af97be45c84069be682979f6c9d90880f"><div class="ttname"><a href="classShip.html#af97be45c84069be682979f6c9d90880f">Ship::SellingProduct</a></div><div class="ttdeci">Product &amp; SellingProduct()</div><div class="ttdoc">Getter for the selling product.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00022">Ship.cc:22</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -756,9 +893,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::ReadCitiesFromStream </td>
+          <td class="memname">void Valley::ReadCitiesFromStream </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">istream</a> &amp;&#160;</td>
+          <td class="paramtype">istream &amp;&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -770,12 +907,23 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Reads the cities from the input stream, overwriting the old <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> contents, if any. All the data regarding the cities from the old valley is lost. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The input stream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The input stream is open and valid. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The cities are read from the input stream. The old <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is overwritten. The ship forgets the old travel routes, but maintains its attributes </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00036">36</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
 <div class="line"><span class="lineno">   38</span>    <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.clear();</div>
-<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = <a class="code hl_function" href="classValley.html#aa6c899cd791dea40579e15f0958222a0">GetRiverStructureFromStream</a>(<a class="code hl_class" href="classBinTree.html">stream</a>);</div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.ResetVisitedCities();</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = <a class="code hl_function" href="classValley.html#a32128482f1832fafabeb95954a489bec">GetRiverNodeFromStream</a>(stream);</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e">ResetVisitedCities</a>();</div>
 <div class="line"><span class="lineno">   41</span>}</div>
+<div class="ttc" id="aclassShip_html_abb2c0d5a167cbde9bc0e79c6a66a374e"><div class="ttname"><a href="classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e">Ship::ResetVisitedCities</a></div><div class="ttdeci">void ResetVisitedCities()</div><div class="ttdoc">Resets the list of visited cities.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00058">Ship.cc:58</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -789,8 +937,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a15b78bc9bf20a95c9f733d28a5a50371" name="a15b78bc9bf20a95c9f733d28a5a50371"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15b78bc9bf20a95c9f733d28a5a50371">&#9670;&#160;</a></span>TestRoutePiece()</h2>
+<a id="aca437e781152975022adef348bbbda23" name="aca437e781152975022adef348bbbda23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca437e781152975022adef348bbbda23">&#9670;&#160;</a></span>TestRouteStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -799,33 +947,33 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">void</a> Valley::TestRoutePiece </td>
+          <td class="memname">void Valley::TestRouteStep </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">vector</a>&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>current_route</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">const</a> <a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const BinTree&lt; string &gt; &amp;&#160;</td>
           <td class="paramname"><em>current_location</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">int</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>buyable_amount</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classBinTree.html">int</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>sellable_amount</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValley_1_1RouteResult.html">Valley::RouteResult</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> &amp;&#160;</td>
           <td class="paramname"><em>best_route</em>&#160;</td>
         </tr>
         <tr>
@@ -841,69 +989,85 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Tests a route step and updates the best route if necessary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_route</td><td>The already traveled steps. </td></tr>
+    <tr><td class="paramname">current_location</td><td>The current location in the river structure. </td></tr>
+    <tr><td class="paramname">buyable_amount</td><td>The amount that can still be bought. </td></tr>
+    <tr><td class="paramname">sellable_amount</td><td>The amount that can still be sold. </td></tr>
+    <tr><td class="paramname">best_route</td><td>A reference to a variable holding the best possible route.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>current_route and current_location are coherent with eachother, best_route is a valid reference and buyable_amount and sellable_amount are non_negative. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The current route is tested and the best route is updated if necessary. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Valley_8cc_source.html#l00115">115</a> of file <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">buying_id</a> = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.BuyingProduct().GetId();</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">selling_id</a> = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.SellingProduct().GetId();</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordtype">int</span> buying_id = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordtype">int</span> selling_id = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
 <div class="line"><span class="lineno">  123</span> </div>
 <div class="line"><span class="lineno">  124</span>    <span class="comment">// If we have reached the end of the river </span></div>
 <div class="line"><span class="lineno">  125</span>    <span class="comment">// or if we have reached the limits of the ship&#39;s trading capacity</span></div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">current_location</a>.<a class="code hl_function" href="classBinTree.html#a74cda259ba5c25b8ee38ed4dc33e4fad">empty</a>()</div>
-<div class="line"><span class="lineno">  127</span>        || (<a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.BuyingProduct().GetMissingAmount() &lt;= <a class="code hl_class" href="classBinTree.html">buyable_amount</a> </div>
-<div class="line"><span class="lineno">  128</span>        &amp;&amp; <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.SellingProduct().GetExceedingAmount() &lt;= <a class="code hl_class" href="classBinTree.html">sellable_amount</a>))</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span>(current_location.empty()</div>
+<div class="line"><span class="lineno">  127</span>        || (<a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>() &lt;= buyable_amount </div>
+<div class="line"><span class="lineno">  128</span>        &amp;&amp; <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>() &lt;= sellable_amount))</div>
 <div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>        <a class="code hl_struct" href="structValley_1_1RouteResult.html">Valley::RouteResult</a> <a class="code hl_class" href="classBinTree.html">result</a>;</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_class" href="classBinTree.html">result</a>.route = <a class="code hl_class" href="classBinTree.html">current_route</a>;</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_class" href="classBinTree.html">result</a>.EffectiveLength = <a class="code hl_class" href="classBinTree.html">current_route</a>.size();</div>
-<div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classBinTree.html">result</a>.TotalTrades = <a class="code hl_class" href="classBinTree.html">min</a>(<a class="code hl_class" href="classBinTree.html">buyable_amount</a>, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.BuyingProduct().GetMissingAmount())</div>
-<div class="line"><span class="lineno">  134</span>            + <a class="code hl_class" href="classBinTree.html">min</a>(<a class="code hl_class" href="classBinTree.html">sellable_amount</a>, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.SellingProduct().GetExceedingAmount());</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> result;</div>
+<div class="line"><span class="lineno">  131</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = current_route;</div>
+<div class="line"><span class="lineno">  132</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> = current_route.size();</div>
+<div class="line"><span class="lineno">  133</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> = min(buyable_amount, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>())</div>
+<div class="line"><span class="lineno">  134</span>            + min(sellable_amount, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>());</div>
 <div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">result</a>.TotalTrades &gt; <a class="code hl_class" href="classBinTree.html">best_route</a>.TotalTrades</div>
-<div class="line"><span class="lineno">  137</span>            || (<a class="code hl_class" href="classBinTree.html">result</a>.TotalTrades == <a class="code hl_class" href="classBinTree.html">best_route</a>.TotalTrades </div>
-<div class="line"><span class="lineno">  138</span>            &amp;&amp; <a class="code hl_class" href="classBinTree.html">result</a>.EffectiveLength &lt; <a class="code hl_class" href="classBinTree.html">best_route</a>.EffectiveLength))</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span>(result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> &gt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a></div>
+<div class="line"><span class="lineno">  137</span>            || (result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> == best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> </div>
+<div class="line"><span class="lineno">  138</span>            &amp;&amp; result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> &lt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a>))</div>
 <div class="line"><span class="lineno">  139</span>        {     <span class="comment">// TODO: perhaps add a &lt;= here, but in theory not</span></div>
-<div class="line"><span class="lineno">  140</span>            <a class="code hl_class" href="classBinTree.html">best_route</a> = <a class="code hl_class" href="classBinTree.html">result</a>;</div>
+<div class="line"><span class="lineno">  140</span>            best_route = result;</div>
 <div class="line"><span class="lineno">  141</span>        }</div>
 <div class="line"><span class="lineno">  142</span> </div>
 <div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  144</span>    }</div>
 <div class="line"><span class="lineno">  145</span>    </div>
 <div class="line"><span class="lineno">  146</span>    <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">traded_amount</a> = 0;</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classBinTree.html">city</a> = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(<a class="code hl_class" href="classBinTree.html">current_location</a>.<a class="code hl_function" href="classBinTree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda">value</a>());</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">buying_id</a>))</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">int</span> traded_amount = 0;</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_location.value());</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span>(city.HasProduct(buying_id))</div>
 <div class="line"><span class="lineno">  150</span>    {   </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">exceeding_amount</a> = <a class="code hl_class" href="classBinTree.html">city</a>.GetProductExceedingAmount(<a class="code hl_class" href="classBinTree.html">buying_id</a>);</div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_class" href="classBinTree.html">traded_amount</a> += <a class="code hl_class" href="classBinTree.html">exceeding_amount</a>;</div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_class" href="classBinTree.html">buyable_amount</a> += <a class="code hl_class" href="classBinTree.html">exceeding_amount</a>;</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">int</span> exceeding_amount = city.GetProductExceedingAmount(buying_id);</div>
+<div class="line"><span class="lineno">  152</span>        traded_amount += exceeding_amount;</div>
+<div class="line"><span class="lineno">  153</span>        buyable_amount += exceeding_amount;</div>
 <div class="line"><span class="lineno">  154</span>    }</div>
 <div class="line"><span class="lineno">  155</span> </div>
 <div class="line"><span class="lineno">  156</span>    <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(<a class="code hl_class" href="classBinTree.html">city</a>.HasProduct(<a class="code hl_class" href="classBinTree.html">selling_id</a>))</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(city.HasProduct(selling_id))</div>
 <div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordtype">int</span> <a class="code hl_class" href="classBinTree.html">missing_amount</a> = <a class="code hl_class" href="classBinTree.html">city</a>.GetProductMissingAmount(<a class="code hl_class" href="classBinTree.html">selling_id</a>); </div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_class" href="classBinTree.html">traded_amount</a> += <a class="code hl_class" href="classBinTree.html">missing_amount</a>;</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_class" href="classBinTree.html">sellable_amount</a> += <a class="code hl_class" href="classBinTree.html">missing_amount</a>;</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordtype">int</span> missing_amount = city.GetProductMissingAmount(selling_id); </div>
+<div class="line"><span class="lineno">  160</span>        traded_amount += missing_amount;</div>
+<div class="line"><span class="lineno">  161</span>        sellable_amount += missing_amount;</div>
 <div class="line"><span class="lineno">  162</span>    }</div>
 <div class="line"><span class="lineno">  163</span> </div>
 <div class="line"><span class="lineno">  164</span>    <span class="comment">// Continue testing through the left</span></div>
-<div class="line"><span class="lineno">  165</span>    <span class="keyword">auto</span> <a class="code hl_class" href="classBinTree.html">left_route</a> = <a class="code hl_class" href="classBinTree.html">current_route</a>;</div>
-<div class="line"><span class="lineno">  166</span>    <a class="code hl_class" href="classBinTree.html">left_route</a>.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
-<div class="line"><span class="lineno">  167</span>    <a class="code hl_function" href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">TestRoutePiece</a>(<a class="code hl_class" href="classBinTree.html">left_route</a>, <a class="code hl_class" href="classBinTree.html">current_location</a>.<a class="code hl_function" href="classBinTree.html#a82108db4c1b08d1f111027788c196d4e">left</a>(), <a class="code hl_class" href="classBinTree.html">buyable_amount</a>, <a class="code hl_class" href="classBinTree.html">sellable_amount</a>, <a class="code hl_class" href="classBinTree.html">best_route</a>);</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keyword">auto</span> left_route = current_route;</div>
+<div class="line"><span class="lineno">  166</span>    left_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
+<div class="line"><span class="lineno">  167</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(left_route, current_location.left(), buyable_amount, sellable_amount, best_route);</div>
 <div class="line"><span class="lineno">  168</span>    </div>
 <div class="line"><span class="lineno">  169</span>    <span class="comment">// Continue testing through the right</span></div>
-<div class="line"><span class="lineno">  170</span>    <a class="code hl_class" href="classBinTree.html">current_route</a>.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_function" href="classValley.html#a15b78bc9bf20a95c9f733d28a5a50371">TestRoutePiece</a>(<a class="code hl_class" href="classBinTree.html">current_route</a>, <a class="code hl_class" href="classBinTree.html">current_location</a>.<a class="code hl_function" href="classBinTree.html#aff8e96651b27284c329667b5ad3e4d0b">right</a>(), <a class="code hl_class" href="classBinTree.html">buyable_amount</a>, <a class="code hl_class" href="classBinTree.html">sellable_amount</a>, <a class="code hl_class" href="classBinTree.html">best_route</a>);</div>
+<div class="line"><span class="lineno">  170</span>    current_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(current_route, current_location.right(), buyable_amount, sellable_amount, best_route);</div>
 <div class="line"><span class="lineno">  172</span>}</div>
+<div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_a1831bb84b781a320c6e200daf0dd4480"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">Valley::RouteEvaluationResult::TotalTrades</a></div><div class="ttdeci">int TotalTrades</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00037">Valley.hh:37</a></div></div>
+<div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_a53733398076998454676d8f3f6926777"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">Valley::RouteEvaluationResult::EffectiveLength</a></div><div class="ttdeci">int EffectiveLength</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00036">Valley.hh:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_a15b78bc9bf20a95c9f733d28a5a50371_cgraph.png" border="0" usemap="#aclassValley_a15b78bc9bf20a95c9f733d28a5a50371_cgraph" alt=""/></div>
+<div class="center"><img src="classValley_aca437e781152975022adef348bbbda23_cgraph.png" border="0" usemap="#aclassValley_aca437e781152975022adef348bbbda23_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_a15b78bc9bf20a95c9f733d28a5a50371_icgraph.png" border="0" usemap="#aclassValley_a15b78bc9bf20a95c9f733d28a5a50371_icgraph" alt=""/></div>
+<div class="center"><img src="classValley_aca437e781152975022adef348bbbda23_icgraph.png" border="0" usemap="#aclassValley_aca437e781152975022adef348bbbda23_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -919,7 +1083,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">unordered_map</a>&lt; <a class="el" href="classBinTree.html">string</a>, <a class="el" href="classCity.html">City</a> &gt; Valley::cities = <a class="el" href="classBinTree.html">unordered_map</a>&lt;<a class="el" href="classBinTree.html">string</a>, <a class="el" href="classCity.html">City</a>&gt;()</td>
+          <td class="memname">unordered_map&lt; string, <a class="el" href="classCity.html">City</a> &gt; Valley::cities = unordered_map&lt;string, <a class="el" href="classCity.html">City</a>&gt;()</td>
         </tr>
       </table>
   </td>
@@ -928,8 +1092,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A map that links a given city id with its corresponding <a class="el" href="classCity.html" title="Represents a city with an inventory of Product items.">City</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00038">38</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00043">43</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -943,7 +1108,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">bool</a> Valley::initialized = <a class="el" href="classBinTree.html">false</a></td>
+          <td class="memname">bool Valley::initialized = false</td>
         </tr>
       </table>
   </td>
@@ -952,8 +1117,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Flag indicating if the <a class="el" href="classValley.html" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.">Valley</a> is initialized. </p>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00033">33</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00040">40</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -976,8 +1142,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>An invalid city used to perform read operations when an invalid Id is provided through cin. </p>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00036">36</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00041">41</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -991,7 +1158,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBinTree.html">BinTree</a>&lt; <a class="el" href="classBinTree.html">string</a> &gt; Valley::river_structure = <a class="el" href="classBinTree.html">BinTree</a>&lt;<a class="el" href="classBinTree.html">string</a>&gt;()</td>
+          <td class="memname">BinTree&lt; string &gt; Valley::river_structure = BinTree&lt;string&gt;()</td>
         </tr>
       </table>
   </td>
@@ -1000,8 +1167,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The river structure containing the city IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00037">37</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00042">42</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -1024,8 +1192,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The ship. </p>
 
-<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00039">39</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Valley_8hh_source.html#l00044">44</a> of file <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -1034,9 +1203,13 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="Valley_8cc_source.html">Valley.cc</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classValley.html">Valley</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

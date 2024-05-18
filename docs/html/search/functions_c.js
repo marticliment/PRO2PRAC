@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['obtainrootpositioninstring_0',['obtainRootPositionInString',['../classBinTree.html#a3babf1274e2b123b9c4c2afdc594507e',1,'BinTree']]],
-  ['operator_3c_3c_1',['operator&lt;&lt;',['../BinTree_8hh.html#aa932b6c9c89033250788dca605f35697',1,'BinTree.hh']]],
-  ['operator_3d_2',['operator=',['../classBinTree.html#a10173eced29b23e967ebb5ec989fba5f',1,'BinTree']]],
-  ['operator_3e_3e_3',['operator&gt;&gt;',['../BinTree_8hh.html#a65e9c70c68f0acb4b776c9083dc9c22e',1,'BinTree.hh']]]
+  ['readcitiesfromstream_0',['ReadCitiesFromStream',['../classValley.html#a8bdfffd571d76986c7aaa277d2150362',1,'Valley']]],
+  ['readfromstream_1',['readfromstream',['../classCity.html#a5af26263a23635a2bd73a08aa5599faf',1,'City::ReadFromStream()'],['../classShip.html#ac76c91ac599c08677f9540a4bf128d55',1,'Ship::ReadFromStream()']]],
+  ['removeproduct_2',['RemoveProduct',['../classCity.html#add1c7d762565f1b854095dfda7f073c0',1,'City']]],
+  ['resetvisitedcities_3',['ResetVisitedCities',['../classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e',1,'Ship']]],
+  ['restockamount_4',['RestockAmount',['../classProduct.html#af78eb83686a0703b6818721d31d0e7c2',1,'Product']]],
+  ['restockproductamount_5',['RestockProductAmount',['../classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390',1,'City']]]
 ];

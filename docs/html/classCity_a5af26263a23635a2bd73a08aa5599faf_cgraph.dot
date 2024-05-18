@@ -16,7 +16,11 @@ digraph "City::ReadFromStream"
   Node5 [id="Node000005",label="ProductReference::Get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80",tooltip="Retrieves the product data with the specified ID from the reference."];
   Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="ProductReference::Contains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac",tooltip="Checks if the reference contains product data with the specified ID."];
-  Node2 -> Node7 [id="edge6_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="Product::GetWeight",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8",tooltip="Get the weight of the product according to the current available amount of product."];
-  Node7 -> Node5 [id="edge7_Node000007_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node7 [id="edge6_Node000004_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ProductData::GetVolume",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductData.html#a0871ddc193b50e477dfbf848613beb63",tooltip="Get the volume of one unit of the product."];
+  Node2 -> Node8 [id="edge7_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Product::GetWeight",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8",tooltip="Get the weight of the product according to the current available amount of product."];
+  Node8 -> Node5 [id="edge8_Node000008_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node9 [id="edge9_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="ProductData::GetWeight",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classProductData.html#ac787c267c0834d82095bca6479fa56d2",tooltip="Get the weight of one unit the product."];
 }
