@@ -56,7 +56,7 @@ time: clean program.exe
 	chmod +x program.exe
 	time --verbose ./program.exe <in >out
 
-docs:
+docs: src/*.cc
 	rm -rf docs
 	doxygen doxyfile
 
