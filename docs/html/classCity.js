@@ -19,7 +19,7 @@ var classCity =
     [ "TradeWith", "classCity.html#ae21b9eba53e1b04d630b69a3f0503f19", null ],
     [ "UpdateProduct", "classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3", null ],
     [ "WithdrawProductAmount", "classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9", null ],
-    [ "__id", "classCity.html#a908a22ad1ff3431257432dfff003ae10", null ],
+    [ "id", "classCity.html#af7de9b481a8f3eb1f04aa7929cf6317c", null ],
     [ "product_inventory", "classCity.html#a9af0c2f9b93c058ade1dfcf465d90296", null ],
     [ "product_list", "classCity.html#a3fa5659e8e49574497226a0c2541f96d", null ],
     [ "volume", "classCity.html#a6d98c02a579d8bd68e94850bf785decf", null ],

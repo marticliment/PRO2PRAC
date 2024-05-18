@@ -38,7 +38,7 @@ private:
     };
 
     static bool initialized; /**< Flag indicating if the Valley is initialized. */
-    static City invalid_city; /**< An invalid city used to perform read operations when an invalid Id is provided through cin. */
+    static City invalid_city; /**< An invalid city used to perform read operations when an invalid city Id is provided through cin. */
     static BinTree<string> river_structure; /**< The river structure containing the city IDs. */
     static unordered_map<string, City> cities; /**< A map that links a given city id with its corresponding City object. */
     static Ship ship; /**< The ship. */

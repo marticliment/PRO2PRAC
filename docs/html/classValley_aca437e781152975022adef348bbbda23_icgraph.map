@@ -3,6 +3,6 @@
 <area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="433,20,423,11,396,8,374,10,362,15,360,20,366,28,362,31,355,21,358,11,373,5,396,3,425,6,436,15"/>
 <area shape="rect" id="Node000002" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,29,267,55"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,45,267,45,267,39,301,39"/>
-<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,29,60,55"/>
+<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,29,60,55"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,45,60,45,60,39,94,39"/>
 </map>

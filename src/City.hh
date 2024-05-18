@@ -21,7 +21,7 @@ using namespace std;
 class City
 {
     private:
-        string __id; /**< The unique identifier of the city */
+        string id; /**< The unique identifier of the city */
         unordered_map<int, Product> product_inventory; /**< The inventory of products in the city */
         set<int> product_list; /**< The "list" products the city has */
         int weight = 0; /**< The total weight of the products in the city */

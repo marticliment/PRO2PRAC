@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['modificar_5fbarco_0',['MODIFICAR_BARCO',['../program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02',1,'program.cc']]],
-  ['modificar_5fbarco_5fl_1',['MODIFICAR_BARCO_L',['../program_8cc.html#a9742dba09f2830179750c870b67924c9',1,'program.cc']]],
-  ['modificar_5fprod_2',['MODIFICAR_PROD',['../program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5',1,'program.cc']]],
-  ['modificar_5fprod_5fl_3',['MODIFICAR_PROD_L',['../program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9',1,'program.cc']]]
+  ['poner_5fprod_0',['PONER_PROD',['../program_8cc.html#a7fd44cca981d37ca918ccf31bd006315',1,'program.cc']]],
+  ['poner_5fprod_5fl_1',['PONER_PROD_L',['../program_8cc.html#a9b457db350420d4c74dda0abdb5b3137',1,'program.cc']]],
+  ['product_5finventory_2',['product_inventory',['../classCity.html#a9af0c2f9b93c058ade1dfcf465d90296',1,'City']]],
+  ['product_5flist_3',['product_list',['../classCity.html#a3fa5659e8e49574497226a0c2541f96d',1,'City']]]
 ];

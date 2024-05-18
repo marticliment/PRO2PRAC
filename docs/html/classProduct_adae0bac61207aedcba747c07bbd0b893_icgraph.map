@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Get the ID of the product." alt="" coords="539,107,653,132"/>
 <area shape="rect" id="Node000002" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="343,5,472,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="566,101,489,52,445,33,447,28,492,48,569,96"/>
-<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,132,60,157"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,132,60,157"/>
 <area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="525,124,337,129,108,141,60,145,60,139,108,135,337,124,525,118"/>
 <area shape="rect" id="Node000005" href="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="117,56,267,81"/>
 <area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="525,109,490,103,267,78,268,73,491,98,526,104"/>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['visited_5fcities_0',['visited_cities',['../classShip.html#a33ecb0c9ea2ab9be9591b6799e1f4af3',1,'Ship']]],
-  ['volume_1',['volume',['../classCity.html#a6d98c02a579d8bd68e94850bf785decf',1,'City::volume'],['../classProductData.html#a8b70e0b9bc40bfce398302ab7b0d61bc',1,'ProductData::volume']]]
+  ['wanted_5famount_0',['wanted_amount',['../classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33',1,'Product']]],
+  ['weight_1',['weight',['../classCity.html#a05b42733d4e4846c7a92a71df44493d0',1,'City::weight'],['../classProductData.html#a7c2b4161a659c1feb06ba6fa44727ca6',1,'ProductData::weight']]]
 ];

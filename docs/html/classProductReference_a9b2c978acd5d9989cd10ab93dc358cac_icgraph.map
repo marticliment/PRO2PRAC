@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Checks if the reference contains product data with the specified ID." alt="" coords="1061,305,1264,331"/>
 <area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="845,155,1013,180"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1129,300,949,182,952,178,1132,296"/>
-<area shape="rect" id="Node000007" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,305,60,331"/>
+<area shape="rect" id="Node000007" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,305,60,331"/>
 <area shape="poly" id="edge15_Node000001_Node000007" title=" " alt="" coords="1047,321,690,321,445,321,60,321,60,315,445,315,690,315,1047,315"/>
 <area shape="rect" id="Node000013" href="$classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="361,356,532,381"/>
 <area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="1056,335,1014,339,751,358,533,368,532,363,750,353,1013,334,1055,330"/>

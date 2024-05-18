@@ -1,6 +1,6 @@
 <map id="Product::GetMissingAmount" name="Product::GetMissingAmount">
 <area shape="rect" id="Node000001" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="533,32,736,57"/>
-<area shape="rect" id="Node000002" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,32,60,57"/>
+<area shape="rect" id="Node000002" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,32,60,57"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,33,485,29,296,10,213,10,109,22,61,36,59,31,107,17,213,4,296,5,486,23,530,28"/>
 <area shape="rect" id="Node000003" href="$classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,32,275,57"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="519,47,275,47,275,42,519,42"/>

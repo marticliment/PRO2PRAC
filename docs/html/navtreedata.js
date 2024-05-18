@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Pràctica de PRO2", "index.html", [
+    [ "Pràctica de PRO2", "index.html#autotoc_md0", null ],
     [ "Classes", "annotated.html", [
       [ "Llista de Classes", "annotated.html", "annotated_dup" ],
       [ "Índex de Classes", "classes.html", null ],

@@ -11,12 +11,12 @@ City::City()
 
 City::City(string id)
 {
-    __id = id;
+    this->id = id;
 }
 
 string City::GetId() const
 {
-    return __id;
+    return id;
 }
 
 void City::ReadFromStream(istream& stream)

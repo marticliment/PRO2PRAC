@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,46,580,46,580,41,614,41"/>
 <area shape="rect" id="Node000003" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,5,313,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,34,313,31,314,25,348,29"/>
-<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,31,60,56"/>
 <area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="347,46,60,46,60,41,347,41"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,35,60,42,60,37,107,30"/>
 </map>

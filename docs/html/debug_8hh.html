@@ -129,12 +129,16 @@ Aquest gràfic mostra quins fitxers inclouen, de forma directa o indirecta, aque
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funcions</h2></td></tr>
 <tr class="memitem:a665281e1290f72a38f7df50512e3ee4b" id="r_a665281e1290f72a38f7df50512e3ee4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a665281e1290f72a38f7df50512e3ee4b">Log</a> (int number)</td></tr>
+<tr class="memdesc:a665281e1290f72a38f7df50512e3ee4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a number in yellow.  <br /></td></tr>
 <tr class="separator:a665281e1290f72a38f7df50512e3ee4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45cccc8bffcb9718be3b9be6fc7c1ef6" id="r_a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a45cccc8bffcb9718be3b9be6fc7c1ef6">Log</a> (string message)</td></tr>
+<tr class="memdesc:a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a message in yellow only if the DEBUG flag is set.  <br /></td></tr>
 <tr class="separator:a45cccc8bffcb9718be3b9be6fc7c1ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811946f700e43ccd37d8f7141f837270" id="r_a811946f700e43ccd37d8f7141f837270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#a811946f700e43ccd37d8f7141f837270">Error</a> (int number)</td></tr>
+<tr class="memdesc:a811946f700e43ccd37d8f7141f837270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a number in red only if the DEBUG flag is set.  <br /></td></tr>
 <tr class="separator:a811946f700e43ccd37d8f7141f837270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace6b9df8609d512f6e90f00214a935d0" id="r_ace6b9df8609d512f6e90f00214a935d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hh.html#ace6b9df8609d512f6e90f00214a935d0">Error</a> (string message)</td></tr>
+<tr class="memdesc:ace6b9df8609d512f6e90f00214a935d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a message in red only if the DEBUG flag is set.  <br /></td></tr>
 <tr class="separator:ace6b9df8609d512f6e90f00214a935d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentació de les Funcions</h2>
@@ -154,6 +158,16 @@ Funcions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prints a number in red only if the DEBUG flag is set. </p>
+<dl class="params"><dt>Paràmetres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The number to display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondició</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>None. </dd></dl>
+
 <p class="definition">Definició a la línia <a class="el" href="debug_8cc_source.html#l00035">35</a> del fitxer <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
 <div class="line"><span class="lineno">   37</span><span class="preprocessor">#ifdef DEBUG</span></div>
@@ -167,8 +181,8 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_8hh_a811946f700e43ccd37d8f7141f837270_icgraph.png" border="0" usemap="#adebug_8hh_a811946f700e43ccd37d8f7141f837270_icgraph" alt=""/></div>
 <map name="adebug_8hh_a811946f700e43ccd37d8f7141f837270_icgraph" id="adebug_8hh_a811946f700e43ccd37d8f7141f837270_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,161,31"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,5,60,31"/>
+<area shape="rect" title="Prints a number in red only if the DEBUG flag is set." alt="" coords="108,5,161,31"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
@@ -190,6 +204,16 @@ Gràfic de crides a aquesta funció:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a message in red only if the DEBUG flag is set. </p>
+<dl class="params"><dt>Paràmetres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The error message to display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondició</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>None. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="debug_8cc_source.html#l00044">44</a> del fitxer <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
@@ -217,6 +241,16 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Prints a number in yellow. </p>
+<dl class="params"><dt>Paràmetres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The number to display only if the DEBUG flag is set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondició</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>None. </dd></dl>
+
 <p class="definition">Definició a la línia <a class="el" href="debug_8cc_source.html#l00019">19</a> del fitxer <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   20</span>{</div>
 <div class="line"><span class="lineno">   21</span><span class="preprocessor">#ifdef DEBUG</span></div>
@@ -242,6 +276,16 @@ Gràfic de crides a aquesta funció:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a message in yellow only if the DEBUG flag is set. </p>
+<dl class="params"><dt>Paràmetres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The error message to display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondició</dt><dd>None. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>None. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="debug_8cc_source.html#l00027">27</a> del fitxer <a class="el" href="debug_8cc_source.html">debug.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>

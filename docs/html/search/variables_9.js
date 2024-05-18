@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['leer_5finventario_0',['LEER_INVENTARIO',['../program_8cc.html#a24665259bb9caa3f680aec3e415a085c',1,'program.cc']]],
-  ['leer_5finventario_5fl_1',['LEER_INVENTARIO_L',['../program_8cc.html#ae8cef99c1b97c5777568050863d18e03',1,'program.cc']]],
-  ['leer_5finventarios_2',['LEER_INVENTARIOS',['../program_8cc.html#af7abe23509eb61b4340d723331331241',1,'program.cc']]],
-  ['leer_5finventarios_5fl_3',['LEER_INVENTARIOS_L',['../program_8cc.html#a17d436ec4385b1f82adfc77596e596cb',1,'program.cc']]],
-  ['leer_5frio_4',['LEER_RIO',['../program_8cc.html#adac6cf6884fd24f5854875fcac4daf59',1,'program.cc']]],
-  ['leer_5frio_5fl_5',['LEER_RIO_L',['../program_8cc.html#ae6080a577063a1844f61002506f1cdce',1,'program.cc']]]
+  ['modificar_5fbarco_0',['MODIFICAR_BARCO',['../program_8cc.html#a1bbcf1d10cbde17a805c72b78cd61f02',1,'program.cc']]],
+  ['modificar_5fbarco_5fl_1',['MODIFICAR_BARCO_L',['../program_8cc.html#a9742dba09f2830179750c870b67924c9',1,'program.cc']]],
+  ['modificar_5fprod_2',['MODIFICAR_PROD',['../program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5',1,'program.cc']]],
+  ['modificar_5fprod_5fl_3',['MODIFICAR_PROD_L',['../program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9',1,'program.cc']]]
 ];

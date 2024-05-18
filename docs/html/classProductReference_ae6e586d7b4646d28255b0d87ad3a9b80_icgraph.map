@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="825,122,778,82,748,61,718,44,676,30,678,25,720,40,751,57,781,78,829,118"/>
 <area shape="rect" id="Node000003" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="535,55,685,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="807,127,718,94,675,83,677,78,719,89,809,122"/>
-<area shape="rect" id="Node000006" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,105,60,131"/>
+<area shape="rect" id="Node000006" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,105,60,131"/>
 <area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="753,153,625,161,463,165,285,161,195,154,107,143,60,131,61,126,109,138,196,149,286,156,463,160,625,156,753,148"/>
 <area shape="rect" id="Node000008" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="537,104,683,129"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="753,134,683,127,684,122,753,129"/>

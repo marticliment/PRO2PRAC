@@ -51,6 +51,14 @@ const string green("\033[1;32m");
 const string reset("\033[0m");
 #endif
 
+/** 
+ * @brief Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green
+ * 
+ * @param command The message to print
+ * 
+ * @pre None
+ * @post None
+ */
 void PrintCommand(string command)
 {
 #ifdef DEBUG
@@ -61,7 +69,18 @@ void PrintCommand(string command)
 }
 
 
-/// @brief Entry point of the program
+/**
+ * @brief The main function of the program.
+ *
+ * This function initializes the Valley from the input stream and processes commands
+ * until the "fin" command is entered. It reads commands from the input stream and
+ * performs the corresponding operations based on the command.
+ * 
+ * @pre None
+ * @post None
+ * 
+ * @return The exit status of the program.
+ */
 int main()
 {
     Valley::InitializeFromStream(cin);
@@ -370,3 +389,12 @@ int main()
         }
     }
 }
+
+/** @mainpage
+
+    # Pràctica de PRO2
+    Alumne: Martí Climent (Grup 13)
+
+    Aquesta és la documentació del codi de la pràctica generada amb Doxygen.
+
+*/
