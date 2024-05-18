@@ -1,0 +1,14 @@
+<map id="src/ProductReference.cc" name="src/ProductReference.cc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="98,5,277,31"/>
+<area shape="rect" id="Node000002" href="$ProductReference_8hh.html" title=" " alt="" coords="109,79,266,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,31,190,65,185,65,185,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,68,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,106,75,148,73,144,162,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="93,152,173,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="180,106,152,143,148,140,176,103"/>
+<area shape="rect" id="Node000005" href="$Product_8hh.html" title=" " alt="" coords="197,152,287,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="198,103,227,140,223,143,194,106"/>
+<area shape="rect" id="Node000006" href="$ProductData_8hh.html" title=" " alt="" coords="222,225,345,251"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="233,102,271,120,288,134,302,151,307,166,308,183,299,213,294,212,302,182,302,167,297,153,284,137,268,124,231,106"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="251,176,272,212,267,215,247,179"/>
+</map>

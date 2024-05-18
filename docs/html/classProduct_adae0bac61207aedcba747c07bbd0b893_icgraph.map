@@ -1,0 +1,22 @@
+<map id="Product::GetId" name="Product::GetId">
+<area shape="rect" id="Node000001" title="Get the ID of the product." alt="" coords="539,107,653,132"/>
+<area shape="rect" id="Node000002" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="343,5,472,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="566,101,489,52,445,33,447,28,492,48,569,96"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,132,60,157"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="525,124,337,129,108,141,60,145,60,139,108,135,337,124,525,118"/>
+<area shape="rect" id="Node000005" href="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="117,56,267,81"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="525,109,490,103,267,78,268,73,491,98,526,104"/>
+<area shape="rect" id="Node000006" href="$classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="324,157,491,183"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="535,138,456,160,455,155,534,133"/>
+<area shape="rect" id="Node000007" href="$classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="326,231,489,256"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="568,143,492,196,432,233,430,228,489,192,565,138"/>
+<area shape="rect" id="Node000003" href="$classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,7,276,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,21,276,21,276,16,329,16"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="340,37,247,59,246,53,338,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="118,40,110,45,87,66,67,90,42,133,37,131,63,87,83,62,106,41,116,36"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="310,166,60,149,60,144,310,161"/>
+<area shape="poly" id="edge11_Node000007_Node000007" title=" " alt="" coords="440,220,431,212,407,209,388,211,377,216,375,222,381,229,376,232,370,222,373,212,386,206,407,204,433,208,444,216"/>
+<area shape="rect" id="Node000008" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="113,219,271,244"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="312,241,271,238,272,233,312,235"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="152,215,107,191,54,160,57,155,109,186,154,210"/>
+</map>

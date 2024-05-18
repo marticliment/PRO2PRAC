@@ -1,0 +1,5 @@
+<map id="Valley::GetCityIds" name="Valley::GetCityIds">
+<area shape="rect" id="Node000001" title="Gets the list of city Ids in the Valley." alt="" coords="5,13,143,38"/>
+<area shape="rect" id="Node000002" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="191,5,369,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,23,177,23,177,28,143,28"/>
+</map>

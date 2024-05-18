@@ -1,0 +1,14 @@
+<map id="Product::GetMissingAmount" name="Product::GetMissingAmount">
+<area shape="rect" id="Node000001" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="533,32,736,57"/>
+<area shape="rect" id="Node000002" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,32,60,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,33,485,29,296,10,213,10,109,22,61,36,59,31,107,17,213,4,296,5,486,23,530,28"/>
+<area shape="rect" id="Node000003" href="$classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,32,275,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="519,47,275,47,275,42,519,42"/>
+<area shape="rect" id="Node000004" href="$classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="323,107,485,132"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="582,64,445,109,443,104,580,59"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="94,47,60,47,60,42,94,42"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="442,97,431,89,404,85,382,87,370,92,367,98,374,105,369,108,362,98,366,89,380,82,404,80,433,84,445,93"/>
+<area shape="rect" id="Node000005" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="112,93,271,119"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="308,116,271,114,271,108,309,111"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="144,91,59,58,61,53,146,86"/>
+</map>

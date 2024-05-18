@@ -1,0 +1,9 @@
+<map id="Product::GetWeight" name="Product::GetWeight">
+<area shape="rect" id="Node000001" title="Get the weight of the product according to the current available amount of product." alt="" coords="5,31,152,56"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="205,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,32,192,27,192,32,152,37"/>
+<area shape="rect" id="Node000004" href="$classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="200,55,379,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,49,187,53,186,58,152,54"/>
+<area shape="rect" id="Node000003" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="427,5,629,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,15,413,15,413,21,374,21"/>
+</map>

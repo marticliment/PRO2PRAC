@@ -1,0 +1,7 @@
+<map id="Product::GetData" name="Product::GetData">
+<area shape="rect" id="Node000001" title="Get the data of the product from the ProductRefence Database." alt="" coords="5,5,139,31"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="187,5,355,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,15,173,15,173,21,139,21"/>
+<area shape="rect" id="Node000003" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="403,5,605,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,15,389,15,389,21,355,21"/>
+</map>

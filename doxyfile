@@ -1,3 +1,16 @@
+
+#
+# git submodule add https://github.com/jothepro/doxygen-awesome-css.git
+# cd doxygen-awesome-css
+# git checkout v2.3.3
+#
+# --------------------------------
+#
+# Also, the package graphviz must be installed:
+# $ sudo apt install graphviz
+#
+#
+
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Pràctica de PRO2"
 PROJECT_NUMBER         = "1.0"
@@ -140,12 +153,6 @@ GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
 HTML_HEADER            =
-
-#
-# git submodule add https://github.com/jothepro/doxygen-awesome-css.git
-# cd doxygen-awesome-css
-# git checkout v2.3.3
-#
 
 HTML_FOOTER            =
 HTML_STYLESHEET        =

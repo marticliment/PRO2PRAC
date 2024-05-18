@@ -1,0 +1,8 @@
+<map id="Valley::DoTrades" name="Valley::DoTrades">
+<area shape="rect" id="Node000001" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="183,31,312,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="278,20,269,12,247,9,229,11,219,16,217,22,222,29,218,32,212,22,215,13,227,6,247,4,272,8,282,16"/>
+<area shape="rect" id="Node000002" href="$classValley.html#a97bd06aed292614351b1db74566d0259" title="Will make the city at the given node trade with its children. At their time, the children will trade ..." alt="" coords="5,5,135,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="169,35,135,30,136,25,170,30"/>
+<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="43,55,97,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="170,57,98,66,97,61,169,51"/>
+</map>

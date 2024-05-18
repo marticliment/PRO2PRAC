@@ -1,0 +1,5 @@
+<map id="City::GetProductExceedingAmount" name="City::GetProductExceedingAmount">
+<area shape="rect" id="Node000001" title="Get the exceeding amount of a product in the city." alt="" coords="173,5,368,45"/>
+<area shape="rect" id="Node000002" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,13,125,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,28,126,28,126,23,159,23"/>
+</map>

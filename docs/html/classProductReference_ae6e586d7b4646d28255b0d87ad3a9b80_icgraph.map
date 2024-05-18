@@ -1,0 +1,26 @@
+<map id="ProductReference::Get" name="ProductReference::Get">
+<area shape="rect" id="Node000001" title="Retrieves the product data with the specified ID from the reference." alt="" coords="767,129,935,155"/>
+<area shape="rect" id="Node000002" href="$classProduct.html#a68f0c88184e12f91987afe67d389187c" title="Get the data of the product from the ProductRefence Database." alt="" coords="543,5,677,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="825,122,778,82,748,61,718,44,676,30,678,25,720,40,751,57,781,78,829,118"/>
+<area shape="rect" id="Node000003" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="535,55,685,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="807,127,718,94,675,83,677,78,719,89,809,122"/>
+<area shape="rect" id="Node000006" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Entry point of the program." alt="" coords="5,105,60,131"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="753,153,625,161,463,165,285,161,195,154,107,143,60,131,61,126,109,138,196,149,286,156,463,160,625,156,753,148"/>
+<area shape="rect" id="Node000008" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="537,104,683,129"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="753,134,683,127,684,122,753,129"/>
+<area shape="rect" id="Node000009" href="$classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390" title="Restock a certain amount of a product in the city." alt="" coords="507,205,713,231"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="801,162,719,189,656,208,655,203,718,183,799,157"/>
+<area shape="rect" id="Node000011" href="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9" title="Withdraw a certain amount of a product from the city." alt="" coords="501,255,719,280"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="829,167,781,207,751,228,720,246,689,257,687,252,718,241,749,224,778,203,825,162"/>
+<area shape="rect" id="Node000004" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="324,80,453,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="521,80,454,88,453,83,520,75"/>
+<area shape="rect" id="Node000005" href="$classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,55,276,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="310,85,276,81,276,75,311,80"/>
+<area shape="rect" id="Node000007" href="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="117,104,267,129"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="311,105,268,110,267,105,310,100"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="133,86,109,94,61,111,59,106,107,89,131,81"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="523,110,453,102,454,97,523,105"/>
+<area shape="rect" id="Node000010" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="329,229,449,255"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="493,233,449,238,448,233,493,228"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="488,256,449,252,449,246,488,251"/>
+</map>

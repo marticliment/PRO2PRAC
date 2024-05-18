@@ -1,0 +1,18 @@
+<map id="City::TradeWith" name="City::TradeWith">
+<area shape="rect" id="Node000001" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,119,125,145"/>
+<area shape="rect" id="Node000002" href="$classCity.html#a96a9d3a5b4b1100df16e933bacfd590f" title="Get the exceeding amount of a product in the city." alt="" coords="190,5,385,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,117,120,86,172,55,189,48,191,53,175,60,123,91,83,121"/>
+<area shape="rect" id="Node000003" href="$classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city." alt="" coords="173,70,401,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,117,173,104,211,96,212,101,174,109,120,122"/>
+<area shape="rect" id="Node000004" href="$classCity.html#a87b8a9beb255137b6617175c5dba9eff" title="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..." alt="" coords="200,119,375,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="125,129,186,129,186,135,125,135"/>
+<area shape="rect" id="Node000005" href="$classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390" title="Restock a certain amount of a product in the city." alt="" coords="184,169,391,194"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="124,142,217,163,215,168,123,147"/>
+<area shape="rect" id="Node000008" href="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9" title="Withdraw a certain amount of a product from the city." alt="" coords="179,218,396,243"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="83,143,123,173,174,203,199,212,197,217,172,208,120,178,80,147"/>
+<area shape="rect" id="Node000006" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="449,194,617,219"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="391,189,436,194,436,199,391,195"/>
+<area shape="rect" id="Node000007" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="665,194,868,219"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="618,204,652,204,652,209,618,209"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="396,217,436,213,436,219,396,223"/>
+</map>

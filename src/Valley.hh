@@ -18,7 +18,7 @@ class Valley
 {
 public:
     /**
-     * @brief The NavStep enum represents the navigation steps (left or right) the ship can take from a certain node.
+     * @brief The NavStep enum represents the navigation steps (left or right) the ship can take from a certain node, assuming the root node is at the top
      */
     enum class NavStep
     {
