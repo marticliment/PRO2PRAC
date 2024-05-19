@@ -102,29 +102,30 @@ void City::TradeWith(City& other)
         {
             int product_id = *this_product_it;
 
-            if(this->GetProductExceedingAmount(product_id) != 0
-                && other.GetProductMissingAmount(product_id) != 0)
+            // this -> SELLER
+            // other -> BUYER
+            int trade_amount = min(
+                this->GetProductExceedingAmount(product_id),
+                other.GetProductMissingAmount(product_id)
+            );
+            if(trade_amount != 0)
             {
-                // this -> SELLER
-                // other -> BUYER
-                int trade_amount = min(
-                    this->GetProductExceedingAmount(product_id),
-                    other.GetProductMissingAmount(product_id)
-                );
                 this->WithdrawProductAmount(product_id, trade_amount);
                 other.RestockProductAmount(product_id, trade_amount);
             } 
-            else if(other.GetProductExceedingAmount(product_id) != 0 
-                && this->GetProductMissingAmount(product_id) != 0)
+            else
             {
                 // other -> SELLER
                 // this -> BUYER
-                int trade_amount = min(
+                trade_amount = min(
                     other.GetProductExceedingAmount(product_id), 
                     this->GetProductMissingAmount(product_id)
                 );
-                other.WithdrawProductAmount(product_id, trade_amount);
-                this->RestockProductAmount(product_id, trade_amount);
+                if(trade_amount != 0)
+                {
+                    other.WithdrawProductAmount(product_id, trade_amount);
+                    this->RestockProductAmount(product_id, trade_amount);
+                }
             }
             
             this_product_it++;

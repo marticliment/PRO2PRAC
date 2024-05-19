@@ -219,8 +219,8 @@ class City
          * 
          * @param other The other city to trade with.
          * 
-         * @pre The other city is valid.
-         * @post The products are traded between the two cities.
+         * @pre Both cities are valid.
+         * @post All the possible trades are performed. 
          */
         void TradeWith(City& other);
 
