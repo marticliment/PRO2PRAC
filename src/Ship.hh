@@ -99,6 +99,23 @@ class Ship
          * @post The ship data is read from the stream and the object is updated accordingly.
          */
         void ReadFromStream(istream& stream);
+
+        /**
+         * @brief Deep-copies the current ship instance and its attributes.
+         * 
+         * @pre None
+         * @post The ship has been deep-copied
+         * 
+         * @return A deep copy of the ship
+         */
+        Ship Copy()
+        {
+            auto buying = Product(buying_product.GetId(), buying_product.GetCurrentAmount(), buying_product.GetWantedAmount());
+            auto selling = Product(selling_product.GetId(), selling_product.GetCurrentAmount(), selling_product.GetWantedAmount());
+            auto copy = Ship(buying, selling);
+            copy.visited_cities = visited_cities;
+            return copy;
+        }
 };
 
 #endif

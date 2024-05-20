@@ -374,7 +374,11 @@ int main()
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
             PrintCommand(command);
+            //Valley::river_structure.setOutputFormat(BinTree<string>::VISUALFORMAT);
+            //cout << Valley::river_structure << endl;
             auto route = Valley::GetBestRoute();
+            //for(auto item: route)
+            //    cout << (item == Valley::NavStep::Left? "Left, ": "Right, ") << endl;
             cout << Valley::NavigateRoute(route) << endl;
         }
         

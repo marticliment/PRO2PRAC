@@ -1,6 +1,7 @@
 #include "Product.hh"
 #include "ProductReference.hh"
 #include "ProductData.hh"
+#include <cassert>
 
 Product::Product()
 {
@@ -47,6 +48,7 @@ int Product::GetMissingAmount() const
 
 void Product::WithdrawAmount(int amount)
 {
+    assert(amount <= current_amount);
     current_amount -= amount;
 }
 

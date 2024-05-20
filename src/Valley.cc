@@ -114,61 +114,83 @@ void Valley::DoTrades()
 
 void Valley::TestRouteStep(vector<NavStep>& current_route, 
         const BinTree<string>& current_location, 
-        int buyable_amount, 
-        int sellable_amount,
+        int bought_amount,
+        int sold_amount,
+        int recently_skipped_cities,
+        Ship& test_ship,
         Valley::RouteEvaluationResult &best_route)
 {
-    int buying_id = ship.BuyingProduct().GetId();
-    int selling_id = ship.SellingProduct().GetId();
-
-    // If we have reached the end of the river 
-    // or if we have reached the limits of the ship's trading capacity
-    if(current_location.empty()
-        || (ship.BuyingProduct().GetMissingAmount() <= buyable_amount 
-        && ship.SellingProduct().GetExceedingAmount() <= sellable_amount))
-    {
-        Valley::RouteEvaluationResult result;
-        result.route = current_route;
-        result.EffectiveLength = current_route.size();
-        result.TotalTrades = min(buyable_amount, ship.BuyingProduct().GetMissingAmount())
-            + min(sellable_amount, ship.SellingProduct().GetExceedingAmount());
-
-        if(result.TotalTrades > best_route.TotalTrades
-            || (result.TotalTrades == best_route.TotalTrades 
-            && result.EffectiveLength < best_route.EffectiveLength))
-        {     // TODO: perhaps add a <= here, but in theory not
-            best_route = result;
-        }
-
-        return;
-    }
+    int buying_id = test_ship.BuyingProduct().GetId();
+    int selling_id = test_ship.SellingProduct().GetId();
     
-    // Calculate how much product is going to be bought from the city
     int traded_amount = 0;
     auto& city = GetCity(current_location.value());
+
+    // Calculate how much product is going to be bought from the city
     if(city.HasProduct(buying_id))
     {   
-        int exceeding_amount = city.GetProductExceedingAmount(buying_id);
-        traded_amount += exceeding_amount;
-        buyable_amount += exceeding_amount;
+        int amount_to_buy = min(city.GetProductExceedingAmount(buying_id), test_ship.BuyingProduct().GetMissingAmount());
+        test_ship.BuyingProduct().RestockAmount(amount_to_buy); 
+        traded_amount += amount_to_buy;
+        bought_amount += amount_to_buy;
     }
 
     // Calculate how much product is going to be sold to the city
     if(city.HasProduct(selling_id))
     {
-        int missing_amount = city.GetProductMissingAmount(selling_id); 
-        traded_amount += missing_amount;
-        sellable_amount += missing_amount;
+        int amount_to_sell = min(city.GetProductMissingAmount(selling_id), test_ship.SellingProduct().GetExceedingAmount());
+        test_ship.SellingProduct().WithdrawAmount(amount_to_sell);
+        traded_amount += amount_to_sell;
+        sold_amount += amount_to_sell;
     }
 
-    // Continue testing through the left
-    auto left_route = current_route;
-    left_route.push_back(Valley::NavStep::Left);
-    TestRouteStep(left_route, current_location.left(), buyable_amount, sellable_amount, best_route);
+    // If the current city has tradable product, reset the skipped cities counter
+    // Otherwhise, increase it
+    if(traded_amount > 0)
+        recently_skipped_cities = 0;
+    else
+        recently_skipped_cities++;
     
-    // Continue testing through the right
-    current_route.push_back(Valley::NavStep::Right);
-    TestRouteStep(current_route, current_location.right(), buyable_amount, sellable_amount, best_route);
+    // If we have reached the end of the river 
+    // or if we have reached the limits of the ship's trading capacity
+    if((current_location.right().empty() && current_location.left().empty())
+        || (test_ship.BuyingProduct().GetMissingAmount() == 0 
+        && test_ship.SellingProduct().GetExceedingAmount() == 0))
+    {
+        while(recently_skipped_cities > 0 && !current_route.empty())
+        {
+            // If the first city has been skipped, since the first city does not 
+            // have an asscoiated NavStep on current_route, attempting to pop_back() would crash
+            current_route.pop_back();
+            recently_skipped_cities--;
+        }
+
+        Valley::RouteEvaluationResult result;
+        result.route = current_route;
+        // We need to add 1 to take into account the first city, which does not 
+        // have associated any NavStep on current_route
+        result.EffectiveLength = current_route.size() + 1 - recently_skipped_cities;
+        result.TotalTrades = bought_amount + sold_amount;
+
+        if(result.TotalTrades > best_route.TotalTrades
+            || (result.TotalTrades == best_route.TotalTrades 
+            && result.EffectiveLength < best_route.EffectiveLength))
+        {
+            best_route = result;
+        }
+    }
+    else
+    {
+        // Continue testing through the left
+        auto left_route = current_route;
+        auto left_ship = test_ship.Copy();
+        left_route.push_back(Valley::NavStep::Left);
+        TestRouteStep(left_route, current_location.left(), bought_amount, sold_amount, recently_skipped_cities, left_ship, best_route);
+        
+        // Continue testing through the right
+        current_route.push_back(Valley::NavStep::Right);
+        TestRouteStep(current_route, current_location.right(), bought_amount, sold_amount, recently_skipped_cities, test_ship, best_route);
+    }
 }
 
 vector<Valley::NavStep> Valley::GetBestRoute()
@@ -176,13 +198,15 @@ vector<Valley::NavStep> Valley::GetBestRoute()
     Valley::RouteEvaluationResult best_route;
     vector<Valley::NavStep> empty_route;
     best_route.route = empty_route;
-    TestRouteStep(empty_route, river_structure, 0, 0, best_route);
+    auto test_ship = ship.Copy();
+    TestRouteStep(empty_route, river_structure, 0, 0, 0, test_ship, best_route);
     return best_route.route;
 }
 
 
-int Valley::NavigateRoute(const vector<Valley::NavStep>& route)
+int Valley::NavigateRoute(const vector<Valley::NavStep>& route_)
 {
+    auto route = route_;
     int route_position = 0;
     int total_traded = 0;
     BinTree<string> location = river_structure;
@@ -191,7 +215,7 @@ int Valley::NavigateRoute(const vector<Valley::NavStep>& route)
     Product current_buying_product = ship.BuyingProduct();
     Product current_selling_product = ship.SellingProduct();
 
-    while(route_position < route.size())
+    while(route_position <= route.size())
     {
         auto& city = GetCity(location.value());
         int city_traded = 0;
@@ -238,7 +262,7 @@ int Valley::NavigateRoute(const vector<Valley::NavStep>& route)
             location = location.right();
     }
 
-    if(last_traded_city != "")
+    if(total_traded > 0)
         ship.AddVisitedCity(last_traded_city);
 
     return total_traded;

@@ -39,7 +39,9 @@ private:
 
     static bool initialized; /**< Flag indicating if the Valley is initialized. */
     static City invalid_city; /**< An invalid city used to perform read operations when an invalid city Id is provided through cin. */
+public:
     static BinTree<string> river_structure; /**< The river structure containing the city IDs. */
+private:
     static unordered_map<string, City> cities; /**< A map that links a given city id with its corresponding City object. */
     static Ship ship; /**< The ship. */
 
@@ -77,20 +79,26 @@ private:
     /**
      * @brief Tests a route step and updates the best route if necessary.
      * 
-     * @param current_route The already traveled steps.
-     * @param current_location The current location in the river structure.
-     * @param buyable_amount The amount that can still be bought.
-     * @param sellable_amount The amount that can still be sold.
+     * @param current_route The already traveled steps. Must be a valid vector<Valley::NavStep> 
+     * and coherent with current_location
+     * @param current_location The current location in the river structure. Must be a non-empty BinTree<string> node, 
+     * where the value of the node is the id of an existing city. Both children of the node may be either empty or valid.
+     * @param buyable_amount The amount that can still be bought. Cannot be negative
+     * @param sellable_amount The amount that can still be sold. Cannot be negative
+     * @param recently_skipped_cities The amount of skipped cities since the last city where a tarde was performed. Cannot be negative
+     * @param test_ship The ship to use to test a route. Must be a valid ship.
      * @param best_route A reference to a variable holding the best possible route.
      * 
-     * @pre current_route and current_location are coherent with eachother, best_route is a 
-     * valid reference and buyable_amount and sellable_amount are non_negative.
-     * @post The current route is tested and the best route is updated if necessary.
+     * @pre current_location is a non-empty node and is coherent with current_route, best_route and ship are 
+     * valid references to valid instances of their respective types, and buyable_amount and sellable_amount are non_negative.
+     * @post All the possible routes parting from the given current_location are tested and the best route is saved to current_route.
      */
     static void TestRouteStep(vector<NavStep>& current_route, 
         const BinTree<string>& current_location, 
         int buyable_amount, 
-        int sellable_amount, 
+        int sellable_amount,
+        int recently_skipped_cities,
+        Ship& test_ship,
         RouteEvaluationResult &best_route
     );
 
