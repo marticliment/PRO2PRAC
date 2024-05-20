@@ -4,6 +4,7 @@ var classShip =
     [ "Ship", "classShip.html#accc98bf09bd1dea5b773b3327f964bb8", null ],
     [ "AddVisitedCity", "classShip.html#ab23c83b11f4a3aadbbaaeff062975b76", null ],
     [ "BuyingProduct", "classShip.html#abfe895d54721c20ddcff465cf37ac308", null ],
+    [ "Copy", "classShip.html#aa1d8fa2b53b89088bf55f1a760477835", null ],
     [ "GetVisitedCities", "classShip.html#af8c39aa84b73bb9ba2e048885a062af1", null ],
     [ "ReadFromStream", "classShip.html#ac76c91ac599c08677f9540a4bf128d55", null ],
     [ "ResetVisitedCities", "classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e", null ],

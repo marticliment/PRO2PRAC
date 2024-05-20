@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('classValley.html',''); initResizable()
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Tipus Públics</a> &#124;
 <a href="#pub-static-methods">Mètodes Públics Estàtics</a> &#124;
+<a href="#pub-static-attribs">Atributs Públics Estàtics</a> &#124;
 <a href="#pri-static-methods">Mètodes Privats Estàtics</a> &#124;
 <a href="#pri-static-attribs">Atributs Privats Estàtics</a> &#124;
 <a href="classValley-members.html">Llista de tots els membres</a>  </div>
@@ -165,6 +166,11 @@ Mètodes Públics Estàtics</h2></td></tr>
 <tr class="memdesc:a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigates the specified route, updating the cities of the valley accordingly.  <br /></td></tr>
 <tr class="separator:a2d27338b1463dfa8f30f5e1e1c4e9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributs Públics Estàtics</h2></td></tr>
+<tr class="memitem:a6c77616859a5ac6a822be4a2b6cd537e" id="r_a6c77616859a5ac6a822be4a2b6cd537e"><td class="memItemLeft" align="right" valign="top">static BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = BinTree&lt;string&gt;()</td></tr>
+<tr class="separator:a6c77616859a5ac6a822be4a2b6cd537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Mètodes Privats Estàtics</h2></td></tr>
 <tr class="memitem:a9ce0d2c2139f10629fcb12ec2e261f35" id="r_a9ce0d2c2139f10629fcb12ec2e261f35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a> ()</td></tr>
@@ -176,9 +182,9 @@ Mètodes Privats Estàtics</h2></td></tr>
 <tr class="memitem:a97bd06aed292614351b1db74566d0259" id="r_a97bd06aed292614351b1db74566d0259"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a97bd06aed292614351b1db74566d0259">DoTrades</a> (const BinTree&lt; string &gt; &amp;current_position)</td></tr>
 <tr class="memdesc:a97bd06aed292614351b1db74566d0259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will make the city at the given node trade with its children. At their time, the children will trade with their respective children, and so on.  <br /></td></tr>
 <tr class="separator:a97bd06aed292614351b1db74566d0259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca437e781152975022adef348bbbda23" id="r_aca437e781152975022adef348bbbda23"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a> (vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, <a class="el" href="structValley_1_1RouteEvaluationResult.html">RouteEvaluationResult</a> &amp;best_route)</td></tr>
-<tr class="memdesc:aca437e781152975022adef348bbbda23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests a route step and updates the best route if necessary.  <br /></td></tr>
-<tr class="separator:aca437e781152975022adef348bbbda23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1dbd01fd0fe0a9172bea82a6133721" id="r_a7e1dbd01fd0fe0a9172bea82a6133721"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721">TestRouteStep</a> (vector&lt; <a class="el" href="classValley.html#a3771d0f650af806c24a71e9060093635">NavStep</a> &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, int recently_skipped_cities, <a class="el" href="classShip.html">Ship</a> &amp;test_ship, <a class="el" href="structValley_1_1RouteEvaluationResult.html">RouteEvaluationResult</a> &amp;best_route)</td></tr>
+<tr class="memdesc:a7e1dbd01fd0fe0a9172bea82a6133721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests a route step and updates the best route if necessary.  <br /></td></tr>
+<tr class="separator:a7e1dbd01fd0fe0a9172bea82a6133721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Atributs Privats Estàtics</h2></td></tr>
@@ -186,8 +192,6 @@ Atributs Privats Estàtics</h2></td></tr>
 <tr class="separator:a837c0bfa444e667bb8d93e73d44ed3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afebc5484b9933c6d53d54e8a43632970" id="r_afebc5484b9933c6d53d54e8a43632970"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCity.html">City</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#afebc5484b9933c6d53d54e8a43632970">invalid_city</a> = <a class="el" href="classCity.html">City</a>(&quot;invalid&quot;)</td></tr>
 <tr class="separator:afebc5484b9933c6d53d54e8a43632970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c77616859a5ac6a822be4a2b6cd537e" id="r_a6c77616859a5ac6a822be4a2b6cd537e"><td class="memItemLeft" align="right" valign="top">static BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = BinTree&lt;string&gt;()</td></tr>
-<tr class="separator:a6c77616859a5ac6a822be4a2b6cd537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b588ac6bb53e4777778a4ca8f89725" id="r_a72b588ac6bb53e4777778a4ca8f89725"><td class="memItemLeft" align="right" valign="top">static unordered_map&lt; string, <a class="el" href="classCity.html">City</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a> = unordered_map&lt;string, <a class="el" href="classCity.html">City</a>&gt;()</td></tr>
 <tr class="separator:a72b588ac6bb53e4777778a4ca8f89725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79fb1ecacc49127f34e147ac01d76941" id="r_a79fb1ecacc49127f34e147ac01d76941"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classShip.html">Ship</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a> = <a class="el" href="classShip.html">Ship</a>()</td></tr>
@@ -296,7 +300,7 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="poly" title=" " alt="" coords="525,167,61,193,60,187,525,162"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,204,275,229"/>
 <area shape="poly" title=" " alt="" coords="530,179,486,187,376,202,275,213,275,207,375,197,485,182,529,174"/>
-<area shape="rect" href="classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="323,103,485,128"/>
+<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,103,485,128"/>
 <area shape="poly" title=" " alt="" coords="529,147,459,131,460,126,530,142"/>
 <area shape="poly" title=" " alt="" coords="98,204,60,198,61,193,99,199"/>
 <area shape="poly" title=" " alt="" coords="438,92,428,84,404,81,384,83,373,88,371,94,377,101,372,104,366,94,369,84,382,78,404,76,430,80,441,88"/>
@@ -343,7 +347,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
 <div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">DoTrades</a>(<a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>);</div>
 <div class="line"><span class="lineno">  113</span>}</div>
-<div class="ttc" id="aclassValley_html_a6c77616859a5ac6a822be4a2b6cd537e"><div class="ttname"><a href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">Valley::river_structure</a></div><div class="ttdeci">static BinTree&lt; string &gt; river_structure</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00042">Valley.hh:42</a></div></div>
+<div class="ttc" id="aclassValley_html_a6c77616859a5ac6a822be4a2b6cd537e"><div class="ttname"><a href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">Valley::river_structure</a></div><div class="ttdeci">static BinTree&lt; string &gt; river_structure</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00043">Valley.hh:43</a></div></div>
 <div class="ttc" id="aclassValley_html_a9ce0d2c2139f10629fcb12ec2e261f35"><div class="ttname"><a href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">Valley::AssertRiverArrayIsInitialized</a></div><div class="ttdeci">static void AssertRiverArrayIsInitialized()</div><div class="ttdoc">Asserts that the river array is initialized.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00015">Valley.cc:15</a></div></div>
 <div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00109">Valley.cc:109</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -480,15 +484,18 @@ Gràfic de crides d'aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The best route is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The best possible route. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Valley_8cc_source.html#l00174">174</a> del fitxer <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>{</div>
-<div class="line"><span class="lineno">  176</span>    <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> best_route;</div>
-<div class="line"><span class="lineno">  177</span>    vector&lt;Valley::NavStep&gt; empty_route;</div>
-<div class="line"><span class="lineno">  178</span>    best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = empty_route;</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(empty_route, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, best_route);</div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span> best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a>;</div>
-<div class="line"><span class="lineno">  181</span>}</div>
-<div class="ttc" id="aclassValley_html_aca437e781152975022adef348bbbda23"><div class="ttname"><a href="classValley.html#aca437e781152975022adef348bbbda23">Valley::TestRouteStep</a></div><div class="ttdeci">static void TestRouteStep(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, RouteEvaluationResult &amp;best_route)</div><div class="ttdoc">Tests a route step and updates the best route if necessary.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00115">Valley.cc:115</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Valley_8cc_source.html#l00196">196</a> del fitxer <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>{</div>
+<div class="line"><span class="lineno">  198</span>    <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> best_route;</div>
+<div class="line"><span class="lineno">  199</span>    vector&lt;Valley::NavStep&gt; empty_route;</div>
+<div class="line"><span class="lineno">  200</span>    best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = empty_route;</div>
+<div class="line"><span class="lineno">  201</span>    <span class="keyword">auto</span> test_ship = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_function" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721">TestRouteStep</a>(empty_route, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, 0, test_ship, best_route);</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">return</span> best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a>;</div>
+<div class="line"><span class="lineno">  204</span>}</div>
+<div class="ttc" id="aclassShip_html_aa1d8fa2b53b89088bf55f1a760477835"><div class="ttname"><a href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Ship::Copy</a></div><div class="ttdeci">Ship Copy()</div><div class="ttdoc">Deep-copies the current ship instance and its attributes.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8hh_source.html#l00111">Ship.hh:111</a></div></div>
+<div class="ttc" id="aclassValley_html_a79fb1ecacc49127f34e147ac01d76941"><div class="ttname"><a href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">Valley::ship</a></div><div class="ttdeci">static Ship ship</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00046">Valley.hh:46</a></div></div>
+<div class="ttc" id="aclassValley_html_a7e1dbd01fd0fe0a9172bea82a6133721"><div class="ttname"><a href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721">Valley::TestRouteStep</a></div><div class="ttdeci">static void TestRouteStep(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int buyable_amount, int sellable_amount, int recently_skipped_cities, Ship &amp;test_ship, RouteEvaluationResult &amp;best_route)</div><div class="ttdoc">Tests a route step and updates the best route if necessary.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00115">Valley.cc:115</a></div></div>
 <div class="ttc" id="astructValley_1_1RouteEvaluationResult_html"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a></div><div class="ttdoc">The RouteEvaluationResult struct represents the result of evaluating a possible route for the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00033">Valley.hh:34</a></div></div>
 <div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_abe1f6e8cbd027ff9cb234003b26fb247"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">Valley::RouteEvaluationResult::route</a></div><div class="ttdeci">vector&lt; Valley::NavStep &gt; route</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00035">Valley.hh:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -496,27 +503,42 @@ Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classValley_aa61921a453bfcab8a76822fb16553560_cgraph.png" border="0" usemap="#aclassValley_aa61921a453bfcab8a76822fb16553560_cgraph" alt=""/></div>
 <map name="aclassValley_aa61921a453bfcab8a76822fb16553560_cgraph" id="aclassValley_aa61921a453bfcab8a76822fb16553560_cgraph">
-<area shape="rect" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="5,129,164,155"/>
-<area shape="rect" href="classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="212,129,375,155"/>
-<area shape="poly" title=" " alt="" coords="164,139,198,139,198,145,164,145"/>
-<area shape="poly" title=" " alt="" coords="259,131,252,121,256,111,270,105,293,103,322,106,334,115,330,120,320,111,293,108,271,110,259,115,257,120,263,128"/>
-<area shape="rect" href="classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="457,5,609,31"/>
-<area shape="poly" title=" " alt="" coords="305,127,353,84,386,60,422,40,442,31,444,36,424,44,389,64,357,88,309,131"/>
-<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="473,55,592,80"/>
-<area shape="poly" title=" " alt="" coords="323,127,422,90,459,80,460,85,423,95,325,132"/>
-<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="423,104,643,129"/>
-<area shape="poly" title=" " alt="" coords="375,131,409,127,409,132,375,136"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="475,153,590,179"/>
-<area shape="poly" title=" " alt="" coords="375,147,462,156,461,162,375,153"/>
-<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="431,203,634,228"/>
-<area shape="poly" title=" " alt="" coords="325,152,423,189,453,197,452,202,422,194,323,157"/>
-<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="457,252,608,277"/>
-<area shape="poly" title=" " alt="" coords="309,153,357,195,389,219,424,238,445,246,443,251,422,243,386,223,354,199,305,157"/>
-<area shape="rect" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="859,47,1037,87"/>
-<area shape="poly" title=" " alt="" coords="592,65,845,65,845,70,592,70"/>
-<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="691,80,811,105"/>
-<area shape="poly" title=" " alt="" coords="593,72,678,82,677,87,592,77"/>
-<area shape="poly" title=" " alt="" coords="811,82,845,78,846,83,811,88"/>
+<area shape="rect" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="5,265,164,291"/>
+<area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="487,127,578,152"/>
+<area shape="poly" title=" " alt="" coords="126,263,476,154,478,159,127,268"/>
+<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="212,303,375,328"/>
+<area shape="poly" title=" " alt="" coords="157,288,209,298,208,303,156,293"/>
+<area shape="rect" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="691,5,893,31"/>
+<area shape="poly" title=" " alt="" coords="549,124,609,83,648,60,690,40,711,32,713,37,692,44,651,64,612,87,552,129"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="735,177,849,203"/>
+<area shape="poly" title=" " alt="" coords="579,145,722,174,721,179,578,151"/>
+<area shape="rect" href="classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="691,55,893,80"/>
+<area shape="poly" title=" " alt="" coords="572,124,690,89,721,81,723,86,691,94,574,129"/>
+<area shape="rect" href="classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="749,128,835,153"/>
+<area shape="poly" title=" " alt="" coords="578,137,734,138,734,143,578,142"/>
+<area shape="poly" title=" " alt="" coords="753,130,745,120,749,110,765,104,792,101,825,105,838,115,835,119,823,110,792,107,767,109,753,114,750,119,757,126"/>
+<area shape="poly" title=" " alt="" coords="300,301,346,238,381,201,421,169,447,156,473,147,475,152,449,161,424,174,384,205,350,241,305,304"/>
+<area shape="poly" title=" " alt="" coords="304,301,351,256,385,232,422,213,499,191,580,180,656,178,721,180,721,186,656,183,580,186,501,196,424,218,388,236,355,260,308,305"/>
+<area shape="poly" title=" " alt="" coords="259,304,252,294,256,284,270,278,293,276,322,280,334,289,330,293,320,285,293,281,271,283,259,288,257,294,263,301"/>
+<area shape="rect" href="classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="457,228,609,253"/>
+<area shape="poly" title=" " alt="" coords="322,300,422,262,452,254,453,259,423,267,324,305"/>
+<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="473,277,592,303"/>
+<area shape="poly" title=" " alt="" coords="375,304,459,295,460,300,375,309"/>
+<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="423,327,643,352"/>
+<area shape="poly" title=" " alt="" coords="375,321,409,324,409,330,375,326"/>
+<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="431,376,634,401"/>
+<area shape="poly" title=" " alt="" coords="325,326,423,362,453,370,452,375,422,367,323,331"/>
+<area shape="rect" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="441,425,624,451"/>
+<area shape="poly" title=" " alt="" coords="309,326,357,369,389,392,424,412,442,419,440,424,422,416,386,396,354,373,305,330"/>
+<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="457,475,608,500"/>
+<area shape="poly" title=" " alt="" coords="304,327,349,392,383,430,424,461,445,471,443,476,421,466,380,433,344,395,300,330"/>
+<area shape="rect" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="437,524,629,549"/>
+<area shape="poly" title=" " alt="" coords="302,327,316,364,342,414,378,467,400,490,424,510,433,516,430,520,421,515,396,494,374,470,337,417,312,367,297,329"/>
+<area shape="rect" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="941,271,1120,311"/>
+<area shape="poly" title=" " alt="" coords="592,287,927,288,927,294,592,293"/>
+<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="732,304,852,329"/>
+<area shape="poly" title=" " alt="" coords="593,293,718,306,718,312,592,299"/>
+<area shape="poly" title=" " alt="" coords="852,308,928,300,928,305,853,313"/>
 </map>
 </div>
 <div class="dynheader">
@@ -575,7 +597,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.at(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   85</span>}</div>
-<div class="ttc" id="aclassValley_html_a72b588ac6bb53e4777778a4ca8f89725"><div class="ttname"><a href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">Valley::cities</a></div><div class="ttdeci">static unordered_map&lt; string, City &gt; cities</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00043">Valley.hh:43</a></div></div>
+<div class="ttc" id="aclassValley_html_a72b588ac6bb53e4777778a4ca8f89725"><div class="ttname"><a href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">Valley::cities</a></div><div class="ttdeci">static unordered_map&lt; string, City &gt; cities</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00045">Valley.hh:45</a></div></div>
 <div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified ID exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
 <div class="ttc" id="aclassValley_html_afebc5484b9933c6d53d54e8a43632970"><div class="ttname"><a href="classValley.html#afebc5484b9933c6d53d54e8a43632970">Valley::invalid_city</a></div><div class="ttdeci">static City invalid_city</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00041">Valley.hh:41</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -603,7 +625,7 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="poly" title=" " alt="" coords="520,92,485,90,296,80,213,82,109,97,61,111,59,106,107,91,213,77,296,75,485,85,520,86"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,107,275,132"/>
 <area shape="poly" title=" " alt="" coords="519,101,275,117,275,111,519,96"/>
-<area shape="rect" href="classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="323,181,485,207"/>
+<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,181,485,207"/>
 <area shape="poly" title=" " alt="" coords="557,116,430,184,428,179,554,111"/>
 <area shape="poly" title=" " alt="" coords="94,122,60,122,60,117,94,117"/>
 <area shape="poly" title=" " alt="" coords="437,171,428,163,404,160,384,162,374,167,372,172,377,180,373,183,367,173,370,163,383,157,404,155,430,158,440,167"/>
@@ -781,7 +803,6 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">   55</span>    <a class="code hl_function" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35">AssertRiverArrayIsInitialized</a>();</div>
 <div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>;</div>
 <div class="line"><span class="lineno">   57</span>}</div>
-<div class="ttc" id="aclassValley_html_a79fb1ecacc49127f34e147ac01d76941"><div class="ttname"><a href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">Valley::ship</a></div><div class="ttdeci">static Ship ship</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00044">Valley.hh:44</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -870,7 +891,7 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="poly" title=" " alt="" coords="523,107,438,93,334,83,220,85,164,91,109,103,77,117,51,134,48,130,75,112,107,98,163,86,220,79,334,78,439,87,523,101"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,113,275,139"/>
 <area shape="poly" title=" " alt="" coords="519,123,275,127,275,122,519,118"/>
-<area shape="rect" href="classValley.html#aca437e781152975022adef348bbbda23" title="Tests a route step and updates the best route if necessary." alt="" coords="323,181,485,207"/>
+<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,181,485,207"/>
 <area shape="poly" title=" " alt="" coords="548,140,438,184,436,179,546,135"/>
 <area shape="poly" title=" " alt="" coords="95,140,60,144,60,139,94,135"/>
 <area shape="poly" title=" " alt="" coords="437,171,428,163,404,160,384,162,374,167,372,172,377,180,373,183,367,173,370,163,383,157,404,155,430,158,440,167"/>
@@ -999,74 +1020,75 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The route is navigated and the total number of trades is returned. Cities have been updated with the performed trades, and the ship has saved the last traded city (if any). The products of the ship, however, have been maintained intact.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The total number of trades. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Valley_8cc_source.html#l00184">184</a> del fitxer <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>{</div>
-<div class="line"><span class="lineno">  186</span>    <span class="keywordtype">int</span> route_position = 0;</div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordtype">int</span> total_traded = 0;</div>
-<div class="line"><span class="lineno">  188</span>    BinTree&lt;string&gt; location = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
-<div class="line"><span class="lineno">  189</span>    <span class="keywordtype">string</span> last_traded_city = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_buying_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
-<div class="line"><span class="lineno">  192</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_selling_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">while</span>(route_position &lt; route.size())</div>
-<div class="line"><span class="lineno">  195</span>    {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(location.value());</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">int</span> city_traded = 0;</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>        <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">int</span> buying_id = current_buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span>(city.HasProduct(buying_id) &amp;&amp; city.GetProductExceedingAmount(buying_id) &gt; 0)</div>
-<div class="line"><span class="lineno">  202</span>        {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordtype">int</span> amount_to_buy = min(</div>
-<div class="line"><span class="lineno">  204</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>(),</div>
-<div class="line"><span class="lineno">  205</span>                city.GetProductExceedingAmount(buying_id)</div>
-<div class="line"><span class="lineno">  206</span>            );</div>
-<div class="line"><span class="lineno">  207</span>            current_buying_product.<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy);</div>
-<div class="line"><span class="lineno">  208</span>            city.WithdrawProductAmount(buying_id, amount_to_buy);</div>
-<div class="line"><span class="lineno">  209</span>            city_traded += amount_to_buy;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span> </div>
-<div class="line"><span class="lineno">  212</span>        <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">int</span> selling_id = current_selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span>(city.HasProduct(selling_id) &amp;&amp; city.GetProductMissingAmount(selling_id) &gt; 0)</div>
-<div class="line"><span class="lineno">  215</span>        {</div>
-<div class="line"><span class="lineno">  216</span>            <span class="keywordtype">int</span> amount_to_sell = min(</div>
-<div class="line"><span class="lineno">  217</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>(), </div>
-<div class="line"><span class="lineno">  218</span>                city.GetProductMissingAmount(selling_id)</div>
-<div class="line"><span class="lineno">  219</span>            );</div>
-<div class="line"><span class="lineno">  220</span>            current_selling_product.<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
-<div class="line"><span class="lineno">  221</span>            city.RestockProductAmount(selling_id, amount_to_sell);</div>
-<div class="line"><span class="lineno">  222</span>            city_traded += amount_to_sell;</div>
-<div class="line"><span class="lineno">  223</span>        }</div>
-<div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>        total_traded += city_traded;</div>
-<div class="line"><span class="lineno">  226</span>        <span class="comment">// Only count a city as traded with when it has actually traded things</span></div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span>(city_traded &gt; 0)</div>
-<div class="line"><span class="lineno">  228</span>            last_traded_city = location.value();</div>
-<div class="line"><span class="lineno">  229</span> </div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        <span class="comment">// If this is the last city, do not try to unpack the next position from route</span></div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span>(route_position == route.size())</div>
-<div class="line"><span class="lineno">  233</span>            route_position++;</div>
-<div class="line"><span class="lineno">  234</span>        <span class="comment">// Otherwise, navigate to the next position</span></div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[route_position++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
-<div class="line"><span class="lineno">  236</span>            location = location.left();</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  238</span>            location = location.right();</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">if</span>(last_traded_city != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">AddVisitedCity</a>(last_traded_city);</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> total_traded;</div>
-<div class="line"><span class="lineno">  245</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Valley_8cc_source.html#l00207">207</a> del fitxer <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>{</div>
+<div class="line"><span class="lineno">  209</span>    <span class="keyword">auto</span> route = route_;</div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordtype">int</span> route_position = 0;</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordtype">int</span> total_traded = 0;</div>
+<div class="line"><span class="lineno">  212</span>    BinTree&lt;string&gt; location = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordtype">string</span> last_traded_city = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_buying_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
+<div class="line"><span class="lineno">  216</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_selling_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">while</span>(route_position &lt;= route.size())</div>
+<div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(location.value());</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">int</span> city_traded = 0;</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordtype">int</span> buying_id = current_buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span>(city.HasProduct(buying_id) &amp;&amp; city.GetProductExceedingAmount(buying_id) &gt; 0)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordtype">int</span> amount_to_buy = min(</div>
+<div class="line"><span class="lineno">  228</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>(),</div>
+<div class="line"><span class="lineno">  229</span>                city.GetProductExceedingAmount(buying_id)</div>
+<div class="line"><span class="lineno">  230</span>            );</div>
+<div class="line"><span class="lineno">  231</span>            current_buying_product.<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy);</div>
+<div class="line"><span class="lineno">  232</span>            city.WithdrawProductAmount(buying_id, amount_to_buy);</div>
+<div class="line"><span class="lineno">  233</span>            city_traded += amount_to_buy;</div>
+<div class="line"><span class="lineno">  234</span>        }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>        <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">int</span> selling_id = current_selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span>(city.HasProduct(selling_id) &amp;&amp; city.GetProductMissingAmount(selling_id) &gt; 0)</div>
+<div class="line"><span class="lineno">  239</span>        {</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordtype">int</span> amount_to_sell = min(</div>
+<div class="line"><span class="lineno">  241</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>(), </div>
+<div class="line"><span class="lineno">  242</span>                city.GetProductMissingAmount(selling_id)</div>
+<div class="line"><span class="lineno">  243</span>            );</div>
+<div class="line"><span class="lineno">  244</span>            current_selling_product.<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
+<div class="line"><span class="lineno">  245</span>            city.RestockProductAmount(selling_id, amount_to_sell);</div>
+<div class="line"><span class="lineno">  246</span>            city_traded += amount_to_sell;</div>
+<div class="line"><span class="lineno">  247</span>        }</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>        total_traded += city_traded;</div>
+<div class="line"><span class="lineno">  250</span>        <span class="comment">// Only count a city as traded with when it has actually traded things</span></div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span>(city_traded &gt; 0)</div>
+<div class="line"><span class="lineno">  252</span>            last_traded_city = location.value();</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>        </div>
+<div class="line"><span class="lineno">  255</span>        <span class="comment">// If this is the last city, do not try to unpack the next position from route</span></div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">if</span>(route_position == route.size())</div>
+<div class="line"><span class="lineno">  257</span>            route_position++;</div>
+<div class="line"><span class="lineno">  258</span>        <span class="comment">// Otherwise, navigate to the next position</span></div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[route_position++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
+<div class="line"><span class="lineno">  260</span>            location = location.left();</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  262</span>            location = location.right();</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>    <span class="keywordflow">if</span>(total_traded &gt; 0)</div>
+<div class="line"><span class="lineno">  266</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">AddVisitedCity</a>(last_traded_city);</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">return</span> total_traded;</div>
+<div class="line"><span class="lineno">  269</span>}</div>
 <div class="ttc" id="aclassProduct_html"><div class="ttname"><a href="classProduct.html">Product</a></div><div class="ttdoc">Represents a product. A product object has an available amount and a wanted amount of units,...</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00014">Product.hh:15</a></div></div>
-<div class="ttc" id="aclassProduct_html_a0c42f35816a3fa42d9f3f985ca23f90a"><div class="ttname"><a href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">Product::GetMissingAmount</a></div><div class="ttdeci">int GetMissingAmount() const</div><div class="ttdoc">Get the missing amount of the product. This method returns 0 if the product has a positive balance (G...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00040">Product.cc:40</a></div></div>
-<div class="ttc" id="aclassProduct_html_a8dbcd165158a8d6f1f6d6fb143674890"><div class="ttname"><a href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">Product::WithdrawAmount</a></div><div class="ttdeci">void WithdrawAmount(int amount)</div><div class="ttdoc">Withdraw a certain amount from the product. This method will not update the weights and volumes on an...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00048">Product.cc:48</a></div></div>
-<div class="ttc" id="aclassProduct_html_a8f4bf3557d4819295e408fbf938e77bd"><div class="ttname"><a href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">Product::GetExceedingAmount</a></div><div class="ttdeci">int GetExceedingAmount() const</div><div class="ttdoc">Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00032">Product.cc:32</a></div></div>
-<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the ID of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00017">Product.cc:17</a></div></div>
-<div class="ttc" id="aclassProduct_html_af78eb83686a0703b6818721d31d0e7c2"><div class="ttname"><a href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">Product::RestockAmount</a></div><div class="ttdeci">void RestockAmount(int amount)</div><div class="ttdoc">Restock a certain amount of the product. This method will not update the weights and volumes on any c...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00053">Product.cc:53</a></div></div>
+<div class="ttc" id="aclassProduct_html_a0c42f35816a3fa42d9f3f985ca23f90a"><div class="ttname"><a href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">Product::GetMissingAmount</a></div><div class="ttdeci">int GetMissingAmount() const</div><div class="ttdoc">Get the missing amount of the product. This method returns 0 if the product has a positive balance (G...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00041">Product.cc:41</a></div></div>
+<div class="ttc" id="aclassProduct_html_a8dbcd165158a8d6f1f6d6fb143674890"><div class="ttname"><a href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">Product::WithdrawAmount</a></div><div class="ttdeci">void WithdrawAmount(int amount)</div><div class="ttdoc">Withdraw a certain amount from the product. This method will not update the weights and volumes on an...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00049">Product.cc:49</a></div></div>
+<div class="ttc" id="aclassProduct_html_a8f4bf3557d4819295e408fbf938e77bd"><div class="ttname"><a href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">Product::GetExceedingAmount</a></div><div class="ttdeci">int GetExceedingAmount() const</div><div class="ttdoc">Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00033">Product.cc:33</a></div></div>
+<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the ID of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00018">Product.cc:18</a></div></div>
+<div class="ttc" id="aclassProduct_html_af78eb83686a0703b6818721d31d0e7c2"><div class="ttname"><a href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">Product::RestockAmount</a></div><div class="ttdeci">void RestockAmount(int amount)</div><div class="ttdoc">Restock a certain amount of the product. This method will not update the weights and volumes on any c...</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00055">Product.cc:55</a></div></div>
 <div class="ttc" id="aclassShip_html_ab23c83b11f4a3aadbbaaeff062975b76"><div class="ttname"><a href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">Ship::AddVisitedCity</a></div><div class="ttdeci">void AddVisitedCity(const string &amp;city)</div><div class="ttdoc">Adds a city to the list of visited cities.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00048">Ship.cc:48</a></div></div>
 <div class="ttc" id="aclassShip_html_abfe895d54721c20ddcff465cf37ac308"><div class="ttname"><a href="classShip.html#abfe895d54721c20ddcff465cf37ac308">Ship::BuyingProduct</a></div><div class="ttdeci">Product &amp; BuyingProduct()</div><div class="ttdoc">Getter for the buying product.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00017">Ship.cc:17</a></div></div>
 <div class="ttc" id="aclassShip_html_af97be45c84069be682979f6c9d90880f"><div class="ttname"><a href="classShip.html#af97be45c84069be682979f6c9d90880f">Ship::SellingProduct</a></div><div class="ttdeci">Product &amp; SellingProduct()</div><div class="ttdoc">Getter for the selling product.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00022">Ship.cc:22</a></div></div>
@@ -1184,8 +1206,8 @@ Gràfic de crides a aquesta funció:</div>
 
 </div>
 </div>
-<a id="aca437e781152975022adef348bbbda23" name="aca437e781152975022adef348bbbda23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca437e781152975022adef348bbbda23">&#9670;&#160;</a></span>TestRouteStep()</h2>
+<a id="a7e1dbd01fd0fe0a9172bea82a6133721" name="a7e1dbd01fd0fe0a9172bea82a6133721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1dbd01fd0fe0a9172bea82a6133721">&#9670;&#160;</a></span>TestRouteStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1220,6 +1242,18 @@ Gràfic de crides a aquesta funció:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>recently_skipped_cities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classShip.html">Ship</a> &amp;&#160;</td>
+          <td class="paramname"><em>test_ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> &amp;&#160;</td>
           <td class="paramname"><em>best_route</em>&#160;</td>
         </tr>
@@ -1239,104 +1273,140 @@ Gràfic de crides a aquesta funció:</div>
 <p>Tests a route step and updates the best route if necessary. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">current_route</td><td>The already traveled steps. </td></tr>
-    <tr><td class="paramname">current_location</td><td>The current location in the river structure. </td></tr>
-    <tr><td class="paramname">buyable_amount</td><td>The amount that can still be bought. </td></tr>
-    <tr><td class="paramname">sellable_amount</td><td>The amount that can still be sold. </td></tr>
+    <tr><td class="paramname">current_route</td><td>The already traveled steps. Must be a valid vector&lt;Valley::NavStep&gt; and coherent with current_location </td></tr>
+    <tr><td class="paramname">current_location</td><td>The current location in the river structure. Must be a non-empty BinTree&lt;string&gt; node, where the value of the node is the id of an existing city. Both children of the node may be either empty or valid. </td></tr>
+    <tr><td class="paramname">buyable_amount</td><td>The amount that can still be bought. Cannot be negative </td></tr>
+    <tr><td class="paramname">sellable_amount</td><td>The amount that can still be sold. Cannot be negative </td></tr>
+    <tr><td class="paramname">recently_skipped_cities</td><td>The amount of skipped cities since the last city where a tarde was performed. Cannot be negative </td></tr>
+    <tr><td class="paramname">test_ship</td><td>The ship to use to test a route. Must be a valid ship. </td></tr>
     <tr><td class="paramname">best_route</td><td>A reference to a variable holding the best possible route.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>current_route and current_location are coherent with eachother, best_route is a valid reference and buyable_amount and sellable_amount are non_negative. </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>The current route is tested and the best route is updated if necessary. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>current_location is a non-empty node and is coherent with current_route, best_route and ship are valid references to valid instances of their respective types, and buyable_amount and sellable_amount are non_negative. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>All the possible routes parting from the given current_location are tested and the best route is saved to current_route. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="Valley_8cc_source.html#l00115">115</a> del fitxer <a class="el" href="Valley_8cc_source.html">Valley.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordtype">int</span> buying_id = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordtype">int</span> selling_id = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>    <span class="comment">// If we have reached the end of the river </span></div>
-<div class="line"><span class="lineno">  125</span>    <span class="comment">// or if we have reached the limits of the ship&#39;s trading capacity</span></div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span>(current_location.empty()</div>
-<div class="line"><span class="lineno">  127</span>        || (<a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>() &lt;= buyable_amount </div>
-<div class="line"><span class="lineno">  128</span>        &amp;&amp; <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>() &lt;= sellable_amount))</div>
-<div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>        <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> result;</div>
-<div class="line"><span class="lineno">  131</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = current_route;</div>
-<div class="line"><span class="lineno">  132</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> = current_route.size();</div>
-<div class="line"><span class="lineno">  133</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> = min(buyable_amount, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>())</div>
-<div class="line"><span class="lineno">  134</span>            + min(sellable_amount, <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>());</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span>(result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> &gt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a></div>
-<div class="line"><span class="lineno">  137</span>            || (result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> == best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> </div>
-<div class="line"><span class="lineno">  138</span>            &amp;&amp; result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> &lt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a>))</div>
-<div class="line"><span class="lineno">  139</span>        {     <span class="comment">// TODO: perhaps add a &lt;= here, but in theory not</span></div>
-<div class="line"><span class="lineno">  140</span>            best_route = result;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="line"><span class="lineno">  145</span>    </div>
-<div class="line"><span class="lineno">  146</span>    <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">int</span> traded_amount = 0;</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_location.value());</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span>(city.HasProduct(buying_id))</div>
-<div class="line"><span class="lineno">  150</span>    {   </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">int</span> exceeding_amount = city.GetProductExceedingAmount(buying_id);</div>
-<div class="line"><span class="lineno">  152</span>        traded_amount += exceeding_amount;</div>
-<div class="line"><span class="lineno">  153</span>        buyable_amount += exceeding_amount;</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>    <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(city.HasProduct(selling_id))</div>
-<div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordtype">int</span> missing_amount = city.GetProductMissingAmount(selling_id); </div>
-<div class="line"><span class="lineno">  160</span>        traded_amount += missing_amount;</div>
-<div class="line"><span class="lineno">  161</span>        sellable_amount += missing_amount;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>    <span class="comment">// Continue testing through the left</span></div>
-<div class="line"><span class="lineno">  165</span>    <span class="keyword">auto</span> left_route = current_route;</div>
-<div class="line"><span class="lineno">  166</span>    left_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
-<div class="line"><span class="lineno">  167</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(left_route, current_location.left(), buyable_amount, sellable_amount, best_route);</div>
-<div class="line"><span class="lineno">  168</span>    </div>
-<div class="line"><span class="lineno">  169</span>    <span class="comment">// Continue testing through the right</span></div>
-<div class="line"><span class="lineno">  170</span>    current_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_function" href="classValley.html#aca437e781152975022adef348bbbda23">TestRouteStep</a>(current_route, current_location.right(), buyable_amount, sellable_amount, best_route);</div>
-<div class="line"><span class="lineno">  172</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordtype">int</span> buying_id = test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordtype">int</span> selling_id = test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><span class="lineno">  125</span>    </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordtype">int</span> traded_amount = 0;</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_location.value());</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span>(city.HasProduct(buying_id))</div>
+<div class="line"><span class="lineno">  131</span>    {   </div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">int</span> amount_to_buy = min(city.GetProductExceedingAmount(buying_id), test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>());</div>
+<div class="line"><span class="lineno">  133</span>        test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy); </div>
+<div class="line"><span class="lineno">  134</span>        traded_amount += amount_to_buy;</div>
+<div class="line"><span class="lineno">  135</span>        bought_amount += amount_to_buy;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span>(city.HasProduct(selling_id))</div>
+<div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> amount_to_sell = min(city.GetProductMissingAmount(selling_id), test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>());</div>
+<div class="line"><span class="lineno">  142</span>        test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
+<div class="line"><span class="lineno">  143</span>        traded_amount += amount_to_sell;</div>
+<div class="line"><span class="lineno">  144</span>        sold_amount += amount_to_sell;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>    <span class="comment">// If the current city has tradable product, reset the skipped cities counter</span></div>
+<div class="line"><span class="lineno">  148</span>    <span class="comment">// Otherwhise, increase it</span></div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span>(traded_amount &gt; 0)</div>
+<div class="line"><span class="lineno">  150</span>        recently_skipped_cities = 0;</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  152</span>        recently_skipped_cities++;</div>
+<div class="line"><span class="lineno">  153</span>    </div>
+<div class="line"><span class="lineno">  154</span>    <span class="comment">// If we have reached the end of the river </span></div>
+<div class="line"><span class="lineno">  155</span>    <span class="comment">// or if we have reached the limits of the ship&#39;s trading capacity</span></div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span>((current_location.right().empty() &amp;&amp; current_location.left().empty())</div>
+<div class="line"><span class="lineno">  157</span>        || (test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>() == 0 </div>
+<div class="line"><span class="lineno">  158</span>        &amp;&amp; test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>() == 0))</div>
+<div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">while</span>(recently_skipped_cities &gt; 0 &amp;&amp; !current_route.empty())</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="comment">// If the first city has been skipped, since the first city does not </span></div>
+<div class="line"><span class="lineno">  163</span>            <span class="comment">// have an asscoiated NavStep on current_route, attempting to pop_back() would crash</span></div>
+<div class="line"><span class="lineno">  164</span>            current_route.pop_back();</div>
+<div class="line"><span class="lineno">  165</span>            recently_skipped_cities--;</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> result;</div>
+<div class="line"><span class="lineno">  169</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = current_route;</div>
+<div class="line"><span class="lineno">  170</span>        <span class="comment">// We need to add 1 to take into account the first city, which does not </span></div>
+<div class="line"><span class="lineno">  171</span>        <span class="comment">// have associated any NavStep on current_route</span></div>
+<div class="line"><span class="lineno">  172</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> = current_route.size() + 1 - recently_skipped_cities;</div>
+<div class="line"><span class="lineno">  173</span>        result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> = bought_amount + sold_amount;</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span>(result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> &gt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a></div>
+<div class="line"><span class="lineno">  176</span>            || (result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> == best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> </div>
+<div class="line"><span class="lineno">  177</span>            &amp;&amp; result.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> &lt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a>))</div>
+<div class="line"><span class="lineno">  178</span>        {</div>
+<div class="line"><span class="lineno">  179</span>            best_route = result;</div>
+<div class="line"><span class="lineno">  180</span>        }</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  183</span>    {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="comment">// Continue testing through the left</span></div>
+<div class="line"><span class="lineno">  185</span>        <span class="keyword">auto</span> left_route = current_route;</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keyword">auto</span> left_ship = test_ship.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
+<div class="line"><span class="lineno">  187</span>        left_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721">TestRouteStep</a>(left_route, current_location.left(), bought_amount, sold_amount, recently_skipped_cities, left_ship, best_route);</div>
+<div class="line"><span class="lineno">  189</span>        </div>
+<div class="line"><span class="lineno">  190</span>        <span class="comment">// Continue testing through the right</span></div>
+<div class="line"><span class="lineno">  191</span>        current_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721">TestRouteStep</a>(current_route, current_location.right(), bought_amount, sold_amount, recently_skipped_cities, test_ship, best_route);</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="line"><span class="lineno">  194</span>}</div>
 <div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_a1831bb84b781a320c6e200daf0dd4480"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">Valley::RouteEvaluationResult::TotalTrades</a></div><div class="ttdeci">int TotalTrades</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00037">Valley.hh:37</a></div></div>
 <div class="ttc" id="astructValley_1_1RouteEvaluationResult_html_a53733398076998454676d8f3f6926777"><div class="ttname"><a href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">Valley::RouteEvaluationResult::EffectiveLength</a></div><div class="ttdeci">int EffectiveLength</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00036">Valley.hh:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_aca437e781152975022adef348bbbda23_cgraph.png" border="0" usemap="#aclassValley_aca437e781152975022adef348bbbda23_cgraph" alt=""/></div>
-<map name="aclassValley_aca437e781152975022adef348bbbda23_cgraph" id="aclassValley_aca437e781152975022adef348bbbda23_cgraph">
-<area shape="rect" title="Tests a route step and updates the best route if necessary." alt="" coords="5,129,168,155"/>
-<area shape="poly" title=" " alt="" coords="48,131,40,121,44,111,60,105,87,103,120,107,133,116,129,120,118,111,87,108,61,110,48,115,45,120,52,127"/>
+<div class="center"><img src="classValley_a7e1dbd01fd0fe0a9172bea82a6133721_cgraph.png" border="0" usemap="#aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_cgraph" alt=""/></div>
+<map name="aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_cgraph" id="aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_cgraph">
+<area shape="rect" title="Tests a route step and updates the best route if necessary." alt="" coords="5,205,168,231"/>
+<area shape="poly" title=" " alt="" coords="48,207,40,197,44,187,60,181,87,179,120,183,133,192,129,196,118,187,87,184,61,186,48,191,45,196,52,203"/>
 <area shape="rect" href="classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="250,5,402,31"/>
-<area shape="poly" title=" " alt="" coords="99,127,147,84,179,60,215,40,236,31,238,36,217,44,182,64,150,88,102,131"/>
-<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="267,55,385,80"/>
-<area shape="poly" title=" " alt="" coords="117,127,215,90,252,80,254,85,217,95,119,132"/>
-<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="216,104,436,129"/>
-<area shape="poly" title=" " alt="" coords="168,131,202,127,202,132,168,136"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="269,153,383,179"/>
-<area shape="poly" title=" " alt="" coords="168,147,255,156,255,162,168,153"/>
-<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="225,203,427,228"/>
-<area shape="poly" title=" " alt="" coords="118,152,217,189,247,197,245,202,215,194,117,157"/>
-<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="251,252,401,277"/>
-<area shape="poly" title=" " alt="" coords="102,153,150,195,182,219,217,238,238,246,236,251,215,243,179,223,147,199,99,157"/>
-<area shape="rect" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="652,47,831,87"/>
-<area shape="poly" title=" " alt="" coords="386,65,638,65,638,70,386,70"/>
-<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="484,80,604,105"/>
-<area shape="poly" title=" " alt="" coords="386,72,471,82,470,87,385,77"/>
-<area shape="poly" title=" " alt="" coords="604,82,638,78,639,83,605,88"/>
+<area shape="poly" title=" " alt="" coords="92,204,109,172,136,130,171,86,214,48,243,33,245,38,218,52,175,90,140,133,113,175,96,207"/>
+<area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="281,107,371,132"/>
+<area shape="poly" title=" " alt="" coords="104,203,153,172,215,141,267,126,268,131,217,146,155,177,107,207"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="528,8,643,33"/>
+<area shape="poly" title=" " alt="" coords="95,203,142,149,176,117,215,92,259,78,337,62,514,30,515,35,338,67,260,84,217,96,179,122,146,152,99,207"/>
+<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="267,156,385,181"/>
+<area shape="poly" title=" " alt="" coords="148,203,252,181,254,186,149,208"/>
+<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="216,205,436,231"/>
+<area shape="poly" title=" " alt="" coords="168,215,202,215,202,221,168,221"/>
+<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="225,255,427,280"/>
+<area shape="poly" title=" " alt="" coords="149,228,251,249,250,254,148,233"/>
+<area shape="rect" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="235,304,417,329"/>
+<area shape="poly" title=" " alt="" coords="107,229,155,259,217,290,240,298,238,303,215,295,153,264,104,233"/>
+<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="251,353,401,379"/>
+<area shape="poly" title=" " alt="" coords="99,229,146,283,179,314,217,340,238,349,236,354,215,344,176,318,142,287,95,233"/>
+<area shape="rect" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="230,403,422,428"/>
+<area shape="poly" title=" " alt="" coords="96,230,112,263,138,306,174,351,218,389,228,395,225,399,214,394,170,355,134,309,108,265,91,232"/>
+<area shape="rect" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="485,57,686,83"/>
+<area shape="poly" title=" " alt="" coords="371,108,504,83,505,88,372,113"/>
+<area shape="poly" title=" " alt="" coords="371,108,403,99,435,85,449,75,458,64,468,53,483,42,514,30,516,35,485,47,471,57,462,68,452,79,437,90,405,104,372,114"/>
+<area shape="rect" href="classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="484,107,687,132"/>
+<area shape="poly" title=" " alt="" coords="371,117,470,117,470,122,371,122"/>
+<area shape="rect" href="classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="542,180,629,205"/>
+<area shape="poly" title=" " alt="" coords="372,125,437,141,537,173,536,178,435,146,371,131"/>
+<area shape="poly" title=" " alt="" coords="547,182,538,172,543,162,559,156,585,153,619,157,631,167,628,171,617,162,585,159,560,161,546,166,544,171,551,178"/>
+<area shape="rect" href="classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="735,249,913,289"/>
+<area shape="poly" title=" " alt="" coords="386,176,437,190,461,203,485,214,545,231,607,243,722,259,721,264,606,248,544,236,483,219,459,207,435,195,385,181"/>
+<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="525,281,645,307"/>
+<area shape="poly" title=" " alt="" coords="387,171,413,178,438,191,455,208,463,226,470,243,486,260,513,275,511,280,482,264,466,246,458,228,450,211,434,195,411,183,385,176"/>
+<area shape="poly" title=" " alt="" coords="645,285,721,277,722,282,646,290"/>
 </map>
 </div>
 <div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValley_aca437e781152975022adef348bbbda23_icgraph.png" border="0" usemap="#aclassValley_aca437e781152975022adef348bbbda23_icgraph" alt=""/></div>
-<map name="aclassValley_aca437e781152975022adef348bbbda23_icgraph" id="aclassValley_aca437e781152975022adef348bbbda23_icgraph">
+<div class="center"><img src="classValley_a7e1dbd01fd0fe0a9172bea82a6133721_icgraph.png" border="0" usemap="#aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_icgraph" alt=""/></div>
+<map name="aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_icgraph" id="aclassValley_a7e1dbd01fd0fe0a9172bea82a6133721_icgraph">
 <area shape="rect" title="Tests a route step and updates the best route if necessary." alt="" coords="315,29,477,55"/>
 <area shape="poly" title=" " alt="" coords="433,20,423,11,396,8,374,10,362,15,360,20,366,28,362,31,355,21,358,11,373,5,396,3,425,6,436,15"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,29,267,55"/>
@@ -1370,7 +1440,7 @@ Gràfic de crides a aquesta funció:</div>
 </div><div class="memdoc">
 <p>A map that links a given city id with its corresponding <a class="el" href="classCity.html" title="Represents a city with an inventory of Product items.">City</a> object. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00043">43</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00045">45</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -1439,13 +1509,13 @@ Gràfic de crides a aquesta funció:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>The river structure containing the city IDs. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00042">42</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00043">43</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>
@@ -1470,7 +1540,7 @@ Gràfic de crides a aquesta funció:</div>
 </div><div class="memdoc">
 <p>The ship. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00044">44</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Valley_8hh_source.html#l00046">46</a> del fitxer <a class="el" href="Valley_8hh_source.html">Valley.hh</a>.</p>
 
 </div>
 </div>

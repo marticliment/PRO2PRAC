@@ -11,6 +11,7 @@ var searchData=
   ['consultar_5fprod_8',['CONSULTAR_PROD',['../program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405',1,'program.cc']]],
   ['consultar_5fprod_5fl_9',['CONSULTAR_PROD_L',['../program_8cc.html#a04ace247992056591435dd56893550f9',1,'program.cc']]],
   ['contains_10',['Contains',['../classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac',1,'ProductReference']]],
-  ['count_11',['Count',['../classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60',1,'ProductReference']]],
-  ['current_5famount_12',['current_amount',['../classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10',1,'Product']]]
+  ['copy_11',['Copy',['../classShip.html#aa1d8fa2b53b89088bf55f1a760477835',1,'Ship']]],
+  ['count_12',['Count',['../classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60',1,'ProductReference']]],
+  ['current_5famount_13',['current_amount',['../classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10',1,'Product']]]
 ];
