@@ -1275,9 +1275,9 @@ Gràfic de crides a aquesta funció:</div>
   <table class="params">
     <tr><td class="paramname">current_route</td><td>The already traveled steps. Must be a valid vector&lt;Valley::NavStep&gt; and coherent with current_location </td></tr>
     <tr><td class="paramname">current_location</td><td>The current location in the river structure. Must be a non-empty BinTree&lt;string&gt; node, where the value of the node is the id of an existing city. Both children of the node may be either empty or valid. </td></tr>
-    <tr><td class="paramname">buyable_amount</td><td>The amount that can still be bought. Cannot be negative </td></tr>
-    <tr><td class="paramname">sellable_amount</td><td>The amount that can still be sold. Cannot be negative </td></tr>
-    <tr><td class="paramname">recently_skipped_cities</td><td>The amount of skipped cities since the last city where a tarde was performed. Cannot be negative </td></tr>
+    <tr><td class="paramname">bought</td><td>The amount of buyable product that has been already bought. This value cannot be negative </td></tr>
+    <tr><td class="paramname">sold_amount</td><td>The amount of sellable product that has been already sold. This value cannot be negative </td></tr>
+    <tr><td class="paramname">recently_skipped_cities</td><td>The amount of skipped cities since the last city where a tarde was performed. This value cannot be negative </td></tr>
     <tr><td class="paramname">test_ship</td><td>The ship to use to test a route. Must be a valid ship. </td></tr>
     <tr><td class="paramname">best_route</td><td>A reference to a variable holding the best possible route.</td></tr>
   </table>

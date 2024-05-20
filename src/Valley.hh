@@ -83,9 +83,9 @@ private:
      * and coherent with current_location
      * @param current_location The current location in the river structure. Must be a non-empty BinTree<string> node, 
      * where the value of the node is the id of an existing city. Both children of the node may be either empty or valid.
-     * @param buyable_amount The amount that can still be bought. Cannot be negative
-     * @param sellable_amount The amount that can still be sold. Cannot be negative
-     * @param recently_skipped_cities The amount of skipped cities since the last city where a tarde was performed. Cannot be negative
+     * @param bought The amount of buyable product that has been already bought. This value cannot be negative
+     * @param sold_amount The amount of sellable product that has been already sold. This value cannot be negative
+     * @param recently_skipped_cities The amount of skipped cities since the last city where a tarde was performed. This value cannot be negative
      * @param test_ship The ship to use to test a route. Must be a valid ship.
      * @param best_route A reference to a variable holding the best possible route.
      * 
