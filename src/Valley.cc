@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 bool Valley::initialized = false;
 City Valley::invalid_city = City("invalid");
 BinTree<string> Valley::river_structure = BinTree<string>();
