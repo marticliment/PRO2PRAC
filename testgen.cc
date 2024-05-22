@@ -7,7 +7,7 @@
 
 std::random_device rd;
 std::mt19937 gen(rd());
-std::uniform_int_distribution<> dis(1, 50);
+std::uniform_int_distribution<> dis(1, 200);
 std::vector<std::string> Ciudades;
 int nprod = dis(gen);
 
@@ -51,7 +51,7 @@ int main() {
         std::cout << dis(gen) << " " << dis(gen) << std::endl;
     }
 
-    generate_tree(dis(gen)%20);
+    generate_tree(dis(gen));
     
     std::cout << dis(gen)%nprod + 1 << ' ' << dis(gen) << std::endl;
     std::cout << dis(gen)%nprod + 1 << ' ' << dis(gen)%25 << std::endl;
@@ -179,7 +179,7 @@ int main() {
     };
 
     std::uniform_int_distribution<> rind(0, commands.size() - 1);
-    for (int i = 0; i < 20000; i++) {
+    for (int i = 0; i < 1000; i++) {
         commands[rind(gen)]();
     }
 
