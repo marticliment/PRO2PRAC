@@ -116,13 +116,13 @@ Mètodes públics</h2></td></tr>
 <tr class="memdesc:ac787c267c0834d82095bca6479fa56d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the weight of one unit the product.  <br /></td></tr>
 <tr class="separator:ac787c267c0834d82095bca6479fa56d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a663371de35626f9c19280501e686b414" id="r_a663371de35626f9c19280501e686b414"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProductData.html#a663371de35626f9c19280501e686b414">GetWeight</a> (int amount) const</td></tr>
-<tr class="memdesc:a663371de35626f9c19280501e686b414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total weight of the product.  <br /></td></tr>
+<tr class="memdesc:a663371de35626f9c19280501e686b414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the weight of the given amount of product.  <br /></td></tr>
 <tr class="separator:a663371de35626f9c19280501e686b414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0871ddc193b50e477dfbf848613beb63" id="r_a0871ddc193b50e477dfbf848613beb63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63">GetVolume</a> () const</td></tr>
 <tr class="memdesc:a0871ddc193b50e477dfbf848613beb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume of one unit of the product.  <br /></td></tr>
 <tr class="separator:a0871ddc193b50e477dfbf848613beb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec45b46918c18ca8ff41eec4139390b1" id="r_aec45b46918c18ca8ff41eec4139390b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProductData.html#aec45b46918c18ca8ff41eec4139390b1">GetVolume</a> (int amount) const</td></tr>
-<tr class="memdesc:aec45b46918c18ca8ff41eec4139390b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total volume of the product.  <br /></td></tr>
+<tr class="memdesc:aec45b46918c18ca8ff41eec4139390b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume of the given amount of product.  <br /></td></tr>
 <tr class="separator:aec45b46918c18ca8ff41eec4139390b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -219,7 +219,7 @@ Gràfic de crides a aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>weight and volume are greater than zero. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The weight and volume are set to the given values. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="ProductData_8cc_source.html#l00008">8</a> del fitxer <a class="el" href="ProductData_8cc_source.html">ProductData.cc</a>.</p>
@@ -294,8 +294,8 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total volume of the product. </p>
-<p>Calculates the total volume of the product based on the given amount.</p>
+<p>Get the volume of the given amount of product. </p>
+<p>Calculates the total volume of the product based on a given amount.</p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>The amount of the product.</td></tr>
@@ -304,7 +304,7 @@ Gràfic de crides a aquesta funció:</div>
 </dl>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>The total volume of the product. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>The volume of this amount of product. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="ProductData_8cc_source.html#l00029">29</a> del fitxer <a class="el" href="ProductData_8cc_source.html">ProductData.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
@@ -374,8 +374,8 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total weight of the product. </p>
-<p>Calculates the total weight of the product based on the given amount.</p>
+<p>Get the weight of the given amount of product. </p>
+<p>Calculates the total weight of the product based on a given amount.</p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>The amount of the product.</td></tr>
@@ -384,7 +384,7 @@ Gràfic de crides a aquesta funció:</div>
 </dl>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>The total weight of the product. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>The weight of this amount of product. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="ProductData_8cc_source.html#l00019">19</a> del fitxer <a class="el" href="ProductData_8cc_source.html">ProductData.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   20</span>{</div>

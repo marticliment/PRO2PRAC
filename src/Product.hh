@@ -14,7 +14,7 @@ using namespace std;
 class Product
 {
     private:
-        int id; /**< The ID of the product. */
+        int id; /**< The Id of the product. */
         int wanted_amount; /**< The desired amount of the product. */
         int current_amount; /**< The current amount of the product. */
 
@@ -30,22 +30,22 @@ class Product
         /**
          * @brief Constructor for the Product class.
          * 
-         * @param id The ID of the product.
+         * @param id The Id of the product.
          * @param current The current amount of the product.
          * @param wanted The wanted amount of the product.
          * 
-         * @pre The ID of the product must be present on ProductReference
+         * @pre The Id of the product must be present on ProductReference
          * @post A Product object is created with the given values for its attributes.
          */
         Product(int id, int current, int wanted);
 
         /**
-         * @brief Get the ID of the product.
+         * @brief Get the Id of the product.
          * 
          * @pre None
-         * @post The ID of the product is returned.
+         * @post The Id of the product is returned.
          * 
-         * @return The ID of the product.
+         * @return The Id of the product.
          */
         int GetId() const;
 
@@ -110,7 +110,7 @@ class Product
          * the weights and volumes on any city instance.
          * @param amount The amount to be restocked.
          * 
-         * @pre None
+         * @pre The amount to restock is greater or equal to zero. To restock negative amounts of product, use WithdrawAmount() instead.
          * @post The current amount of the product is increased by the specified amount.
          */
         void RestockAmount(int amount);

@@ -52,7 +52,7 @@ class City
          * @return The unique identifier of the city.
          * 
          * @pre None
-         * @post None
+         * @post Returns the identifier of the city
          */
         string GetId() const;
 
@@ -62,26 +62,26 @@ class City
          * @param stream The input stream to read from.
          * 
          * @pre The stream is open and valid.
-         * @post The city products are read from the stream and saved to the inventory.
+         * @post The city products are read from the stream and saved to the inventory of this instance. Any previous inventory gets lost.
          */
         void ReadFromStream(istream& stream);
 
         /**
-         * @brief Get the IDs of all the products in the city.
+         * @brief Get the Ids of all the products in the city.
          * 
          * @pre None
          * @post None
          * 
-         * @return A vector containing the IDs of all the products in the city.
+         * @return A vector containing the Ids of all the products in the city.
          */
         vector<int> GetProductIds() const;
         
         /**
          * @brief Get the current amount of a product in the city.
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre The product with the given Id exists in the city.
          * @post None
          * 
          * @return The current amount of the product in the city.
@@ -89,25 +89,27 @@ class City
         int GetProductCurrentAmount(int product_id) const;
 
         /**
-         * @brief Get the wanted amount of a product in the city. The *wanted amount 
-         * does **not** reflect wether the city has fullfilled its needs. To get a real "missing"
-         * product counter, `GetProductMissingAmount()` should be used instead
+         * @brief Get the wanted amount of a product in the city. This method returns the
+         * initially set wanted amount, and does not reflect if the product has been restocked.
+         * For a real indicator of how many product units are required, use **GetProductMissingAmount()**
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre The product with the given Id exists in the city.
          * @post None
          * 
-         * @return The wanted amount of the product in the city.
+         * @return The amount of this product the city wants.
          */
         int GetProductWantedAmount(int product_id) const;
 
         /**
-         * @brief Get the exceeding amount of a product in the city.
+         * @brief Get the exceeding amount of a product in the city. This method returns 0 if 
+         * the product has a negative balance (GetProductMissingAmount() > 0).
+         * The exceeding product is calculated using the following formula: exceeding = max(0, current_amount - wanted_amount)
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre The product with the given Id exists in the city.
          * @post None
          * 
          * @return The exceeding amount of the product in the city.
@@ -115,11 +117,13 @@ class City
         int GetProductExceedingAmount(int product_id) const;
 
         /**
-         * @brief Get the missing amount of a product in the city.
+         * @brief Get the missing amount of a product in the city. This method returns 0 if 
+         * the product has a positive balance (GetProductExceedingAmount() > 0)
+         * The missing product is calculated using the following formula: missing = max(0, wanted_amount - current_amount)
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre The product with the given Id exists in the city.
          * @post None
          * 
          * @return The missing amount of the product in the city.
@@ -129,11 +133,11 @@ class City
         /**
          * @brief Withdraw a certain amount of a product from the city.
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * @param amount The amount to withdraw.
          * 
-         * @pre The product with the given ID exists in the city.
-         * @post The amount of the product in the city is reduced by the specified amount. 
+         * @pre The product with the given Id exists in the city.
+         * @post The amount of the product in the city is ddecreased by the specified amount. 
          * The total weight and volume of the city are updated accordingly
          */
         void WithdrawProductAmount(int product_id, int amount);
@@ -141,19 +145,19 @@ class City
         /**
          * @brief Restock a certain amount of a product in the city.
          * 
-         * @param product_id The ID of the product.
+         * @param product_id The Id of the product.
          * @param amount The amount to restock.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre The product with the given Id exists in the city.
          * @post The amount of the product in the city is increased by the specified amount.
          * The total weight and volume of the city are updated accordingly
          */
         void RestockProductAmount(int product_id, int amount);
                 
         /**
-         * @brief Check if the city has a product with the given ID.
+         * @brief Check if the city has a product with the given Id.
          * 
-         * @param id The ID of the product.
+         * @param id The Id of the product.
          * @return True if the city has the product, false otherwise.
          * 
          * @pre None
@@ -166,7 +170,7 @@ class City
          * 
          * @param p The product to add.
          * 
-         * @pre None
+         * @pre The product is valid, and its Id is present on ProductReference
          * @post The product is added to the city's inventory.
          * The total weight and volume of the city are updated accordingly
          */
@@ -177,7 +181,7 @@ class City
          * 
          * @param p The product to update.
          * 
-         * @pre The product with the same ID as the given product exists in the city.
+         * @pre A product with the same Id already exists in the city.
          * @post The product in the city's inventory is replaced with the given product.
          * The total weight and volume of the city are updated accordingly
          */
@@ -186,9 +190,9 @@ class City
         /**
          * @brief Remove a product from the city's inventory.
          * 
-         * @param product_id The ID of the product to remove.
+         * @param product_id The Id of the product to remove.
          * 
-         * @pre The product with the given ID exists in the city.
+         * @pre A product with the given Id exists in the city.
          * @post The product is removed from the city's inventory.
          * The total weight and volume of the city are updated accordingly
          */
@@ -225,14 +229,14 @@ class City
         void TradeWith(City& other);
 
         /**
-         * @brief Get the set of raw product IDs in the city. This method 
+         * @brief Get the set of raw product Ids in the city. This method 
          * is designed to be able to access the iterators on the set<int> containing
          * the products. Under normal circumstances **GetProductIds()** should be used instead
          * 
          * @pre None
          * @post None
          * 
-         * @return The set of raw product IDs in the city.
+         * @return The raw set of product Ids in the city.
          */
         const set<int>& GetRawProductIds() const;
 };

@@ -45,9 +45,6 @@ class BinTree {
   //   - default destructor is good. Θ(n) where n is the number of nodes in the tree.
   //   - std::swap() already works by default.
 
-
-
-
   int inputformat, outputformat;
   static void checkFormat(int format) {
     if (format == POSTORDERFORMAT or
@@ -83,7 +80,6 @@ class BinTree {
   static void readVisualFormat(const vector<string> &v, BinTree<T> &t);
   static vector<string> generateVisualFormatRec(const BinTree<T> &t);
   static vector<string> generateVisualFormat(const BinTree<T> &t);
-
   
 public:
 

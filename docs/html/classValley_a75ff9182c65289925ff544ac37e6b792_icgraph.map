@@ -1,5 +1,5 @@
 <map id="Valley::GetCity" name="Valley::GetCity">
-<area shape="rect" id="Node000001" title="Gets the city with the specified ID." alt="" coords="533,81,652,107"/>
+<area shape="rect" id="Node000001" title="Gets the city with the specified Id." alt="" coords="533,81,652,107"/>
 <area shape="rect" id="Node000002" href="$classValley.html#a97bd06aed292614351b1db74566d0259" title="Will make the city at the given node trade with its children. At their time, the children will trade ..." alt="" coords="339,5,469,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="547,78,484,52,436,33,438,28,486,48,549,73"/>
 <area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,107,60,132"/>

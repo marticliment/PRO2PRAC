@@ -1,5 +1,5 @@
 <map id="Ship::ReadFromStream" name="Ship::ReadFromStream">
 <area shape="rect" id="Node000001" title="Reads ship data (buy and sell products) from a stream." alt="" coords="5,5,176,31"/>
-<area shape="rect" id="Node000002" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="224,5,427,31"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="224,5,427,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,15,210,15,210,21,176,21"/>
 </map>

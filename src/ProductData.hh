@@ -32,7 +32,7 @@ class ProductData
          * @param weight The weight of the product per unit of product.
          * @param volume The volume of the product per unit of product.
          * 
-         * @pre None
+         * @pre weight and volume are greater than zero.
          * @post The weight and volume are set to the given values.
          */
         ProductData(int weight, int volume);
@@ -48,16 +48,16 @@ class ProductData
         int GetWeight() const;
 
         /**
-         * @brief Get the total weight of the product.
+         * @brief Get the weight of the given amount of product.
          *
-         * Calculates the total weight of the product based on the given amount.
+         * Calculates the total weight of the product based on a given amount.
          *
          * @param amount The amount of the product.
          * 
          * @pre None
          * @post None
          * 
-         * @return The total weight of the product.
+         * @return The weight of this amount of product.
          */
         int GetWeight(int amount) const;
         
@@ -72,16 +72,16 @@ class ProductData
         int GetVolume() const;
 
         /**
-         * @brief Get the total volume of the product.
+         * @brief Get the volume of the given amount of product.
          *
-         * Calculates the total volume of the product based on the given amount.
+         * Calculates the total volume of the product based on a given amount.
          *
          * @param amount The amount of the product.
          * 
          * @pre None
          * @post None
          * 
-         * @return The total volume of the product.
+         * @return The volume of this amount of product.
          */
         int GetVolume(int amount) const;
 

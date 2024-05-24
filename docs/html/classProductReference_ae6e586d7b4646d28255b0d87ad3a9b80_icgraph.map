@@ -1,5 +1,5 @@
 <map id="ProductReference::Get" name="ProductReference::Get">
-<area shape="rect" id="Node000001" title="Retrieves the product data with the specified ID from the reference." alt="" coords="767,129,935,155"/>
+<area shape="rect" id="Node000001" title="Retrieves the product data with the specified Id from the reference." alt="" coords="767,129,935,155"/>
 <area shape="rect" id="Node000002" href="$classProduct.html#a68f0c88184e12f91987afe67d389187c" title="Get the data of the product from the ProductRefence Database." alt="" coords="543,5,677,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="825,122,778,82,748,61,718,44,676,30,678,25,720,40,751,57,781,78,829,118"/>
 <area shape="rect" id="Node000003" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="535,55,685,80"/>

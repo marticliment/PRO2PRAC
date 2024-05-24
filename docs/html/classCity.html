@@ -119,19 +119,19 @@ Mètodes públics</h2></td></tr>
 <tr class="memdesc:a5af26263a23635a2bd73a08aa5599faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the city product inventory from a stream. The old product inventory will be erased.  <br /></td></tr>
 <tr class="separator:a5af26263a23635a2bd73a08aa5599faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9a4d896f0620ae00c0e55556cd0c0d" id="r_adb9a4d896f0620ae00c0e55556cd0c0d"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d">GetProductIds</a> () const</td></tr>
-<tr class="memdesc:adb9a4d896f0620ae00c0e55556cd0c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the IDs of all the products in the city.  <br /></td></tr>
+<tr class="memdesc:adb9a4d896f0620ae00c0e55556cd0c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Ids of all the products in the city.  <br /></td></tr>
 <tr class="separator:adb9a4d896f0620ae00c0e55556cd0c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1679449b2c11dc422ed5d1ebf9072a36" id="r_a1679449b2c11dc422ed5d1ebf9072a36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a1679449b2c11dc422ed5d1ebf9072a36">GetProductCurrentAmount</a> (int product_id) const</td></tr>
 <tr class="memdesc:a1679449b2c11dc422ed5d1ebf9072a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current amount of a product in the city.  <br /></td></tr>
 <tr class="separator:a1679449b2c11dc422ed5d1ebf9072a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac03185bc21f66d2f96791a149f29265" id="r_aac03185bc21f66d2f96791a149f29265"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#aac03185bc21f66d2f96791a149f29265">GetProductWantedAmount</a> (int product_id) const</td></tr>
-<tr class="memdesc:aac03185bc21f66d2f96791a149f29265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wanted amount of a product in the city. The *wanted amount does <b>not</b> reflect wether the city has fullfilled its needs. To get a real "missing" product counter, <code><a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city.">GetProductMissingAmount()</a></code> should be used instead.  <br /></td></tr>
+<tr class="memdesc:aac03185bc21f66d2f96791a149f29265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wanted amount of a product in the city. This method returns the initially set wanted amount, and does not reflect if the product has been restocked. For a real indicator of how many product units are required, use <b><a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...">GetProductMissingAmount()</a></b>  <br /></td></tr>
 <tr class="separator:aac03185bc21f66d2f96791a149f29265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96a9d3a5b4b1100df16e933bacfd590f" id="r_a96a9d3a5b4b1100df16e933bacfd590f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">GetProductExceedingAmount</a> (int product_id) const</td></tr>
-<tr class="memdesc:a96a9d3a5b4b1100df16e933bacfd590f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exceeding amount of a product in the city.  <br /></td></tr>
+<tr class="memdesc:a96a9d3a5b4b1100df16e933bacfd590f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exceeding amount of a product in the city. This method returns 0 if the product has a negative balance (<a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...">GetProductMissingAmount()</a> &gt; 0). The exceeding product is calculated using the following formula: exceeding = max(0, current_amount - wanted_amount)  <br /></td></tr>
 <tr class="separator:a96a9d3a5b4b1100df16e933bacfd590f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc929e8b06a0d86a9baade3d3dbd7d9e" id="r_abc929e8b06a0d86a9baade3d3dbd7d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">GetProductMissingAmount</a> (int product_id) const</td></tr>
-<tr class="memdesc:abc929e8b06a0d86a9baade3d3dbd7d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the missing amount of a product in the city.  <br /></td></tr>
+<tr class="memdesc:abc929e8b06a0d86a9baade3d3dbd7d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the missing amount of a product in the city. This method returns 0 if the product has a positive balance (<a class="el" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f" title="Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ...">GetProductExceedingAmount()</a> &gt; 0) The missing product is calculated using the following formula: missing = max(0, wanted_amount - current_amount)  <br /></td></tr>
 <tr class="separator:abc929e8b06a0d86a9baade3d3dbd7d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6931c4e0a1b33fb97e464a43dc30f9" id="r_a5b6931c4e0a1b33fb97e464a43dc30f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">WithdrawProductAmount</a> (int product_id, int amount)</td></tr>
 <tr class="memdesc:a5b6931c4e0a1b33fb97e464a43dc30f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Withdraw a certain amount of a product from the city.  <br /></td></tr>
@@ -140,7 +140,7 @@ Mètodes públics</h2></td></tr>
 <tr class="memdesc:a5aa2c8a7d6d7e4f1e4d009c97d5ae390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restock a certain amount of a product in the city.  <br /></td></tr>
 <tr class="separator:a5aa2c8a7d6d7e4f1e4d009c97d5ae390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2a3dd52631a2c629e170590ef296bc" id="r_ace2a3dd52631a2c629e170590ef296bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#ace2a3dd52631a2c629e170590ef296bc">HasProduct</a> (int <a class="el" href="classCity.html#af7de9b481a8f3eb1f04aa7929cf6317c">id</a>) const</td></tr>
-<tr class="memdesc:ace2a3dd52631a2c629e170590ef296bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the city has a product with the given ID.  <br /></td></tr>
+<tr class="memdesc:ace2a3dd52631a2c629e170590ef296bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the city has a product with the given Id.  <br /></td></tr>
 <tr class="separator:ace2a3dd52631a2c629e170590ef296bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a27df1c37c22f2873e23346362a714" id="r_a23a27df1c37c22f2873e23346362a714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a23a27df1c37c22f2873e23346362a714">AddProduct</a> (<a class="el" href="classProduct.html">Product</a> p)</td></tr>
 <tr class="memdesc:a23a27df1c37c22f2873e23346362a714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a product to the city's inventory.  <br /></td></tr>
@@ -161,7 +161,7 @@ Mètodes públics</h2></td></tr>
 <tr class="memdesc:ae21b9eba53e1b04d630b69a3f0503f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trade products with another city. The two cities may or may not have products in common.  <br /></td></tr>
 <tr class="separator:ae21b9eba53e1b04d630b69a3f0503f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b8a9beb255137b6617175c5dba9eff" id="r_a87b8a9beb255137b6617175c5dba9eff"><td class="memItemLeft" align="right" valign="top">const set&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">GetRawProductIds</a> () const</td></tr>
-<tr class="memdesc:a87b8a9beb255137b6617175c5dba9eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of raw product IDs in the city. This method is designed to be able to access the iterators on the set&lt;int&gt; containing the products. Under normal circumstances <b><a class="el" href="classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d" title="Get the IDs of all the products in the city.">GetProductIds()</a></b> should be used instead.  <br /></td></tr>
+<tr class="memdesc:a87b8a9beb255137b6617175c5dba9eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of raw product Ids in the city. This method is designed to be able to access the iterators on the set&lt;int&gt; containing the products. Under normal circumstances <b><a class="el" href="classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d" title="Get the Ids of all the products in the city.">GetProductIds()</a></b> should be used instead.  <br /></td></tr>
 <tr class="separator:a87b8a9beb255137b6617175c5dba9eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -204,7 +204,7 @@ Atributs Privats</h2></td></tr>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00007">7</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>{</div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_function" href="classCity.html#a1b1f549430f0a7ecd0ec7b1605415193">City</a>(<span class="stringliteral">&quot;INVALID&quot;</span>);</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_function" href="classCity.html#a1b1f549430f0a7ecd0ec7b1605415193">City</a>(<span class="stringliteral">&quot;INVALId&quot;</span>);</div>
 <div class="line"><span class="lineno">   10</span>}</div>
 <div class="ttc" id="aclassCity_html_a1b1f549430f0a7ecd0ec7b1605415193"><div class="ttname"><a href="classCity.html#a1b1f549430f0a7ecd0ec7b1605415193">City::City</a></div><div class="ttdeci">City()</div><div class="ttdoc">Default constructor for the City class.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00007">City.cc:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -286,7 +286,7 @@ Gràfic de crides a aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product is valid, and its Id is present on <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a> </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The product is added to the city's inventory. The total weight and volume of the city are updated accordingly </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00052">52</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
@@ -302,24 +302,24 @@ Gràfic de crides a aquesta funció:</div>
 <div class="ttc" id="aclassCity_html_a9af0c2f9b93c058ade1dfcf465d90296"><div class="ttname"><a href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">City::product_inventory</a></div><div class="ttdeci">unordered_map&lt; int, Product &gt; product_inventory</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00025">City.hh:25</a></div></div>
 <div class="ttc" id="aclassProduct_html_a16d39b4890f1bc051d45b00055cf58e8"><div class="ttname"><a href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8">Product::GetWeight</a></div><div class="ttdeci">int GetWeight() const</div><div class="ttdoc">Get the weight of the product according to the current available amount of product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00065">Product.cc:65</a></div></div>
 <div class="ttc" id="aclassProduct_html_ac62da93ee21d61c795c40d3fb0c3b602"><div class="ttname"><a href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602">Product::GetVolume</a></div><div class="ttdeci">int GetVolume() const</div><div class="ttdoc">Get the volume of the product according to the current available amount of product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00070">Product.cc:70</a></div></div>
-<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the ID of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00018">Product.cc:18</a></div></div>
+<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the Id of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00018">Product.cc:18</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_a23a27df1c37c22f2873e23346362a714_cgraph.png" border="0" usemap="#aclassCity_a23a27df1c37c22f2873e23346362a714_cgraph" alt=""/></div>
 <map name="aclassCity_a23a27df1c37c22f2873e23346362a714_cgraph" id="aclassCity_a23a27df1c37c22f2873e23346362a714_cgraph">
 <area shape="rect" title="Add a product to the city&#39;s inventory." alt="" coords="5,55,135,80"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="201,5,315,31"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="201,5,315,31"/>
 <area shape="poly" title=" " alt="" coords="118,52,195,32,196,37,120,57"/>
 <area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="183,55,333,80"/>
 <area shape="poly" title=" " alt="" coords="135,65,169,65,169,70,135,70"/>
 <area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="185,104,331,129"/>
 <area shape="poly" title=" " alt="" coords="120,77,196,98,195,103,118,83"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="389,79,557,104"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="389,79,557,104"/>
 <area shape="poly" title=" " alt="" coords="334,73,376,78,375,83,333,78"/>
 <area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="381,29,564,55"/>
 <area shape="poly" title=" " alt="" coords="333,56,367,52,368,57,334,61"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="612,79,815,104"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="612,79,815,104"/>
 <area shape="poly" title=" " alt="" coords="557,89,598,89,598,94,557,94"/>
 <area shape="poly" title=" " alt="" coords="331,105,375,100,375,105,332,111"/>
 <area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="383,128,562,153"/>
@@ -361,7 +361,7 @@ Gràfic de crides a aquesta funció:</div>
 <p>Get the unique identifier of the city. </p>
 <dl class="section return"><dt>Retorna</dt><dd>The unique identifier of the city.</dd></dl>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>None </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>Returns the identifier of the city </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00017">17</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>{</div>
@@ -389,11 +389,11 @@ Gràfic de crides a aquesta funció:</div>
 <p>Get the current amount of a product in the city. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product.</td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The current amount of the product in the city. </dd></dl>
 
@@ -420,14 +420,14 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the exceeding amount of a product in the city. </p>
+<p>Get the exceeding amount of a product in the city. This method returns 0 if the product has a negative balance (<a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...">GetProductMissingAmount()</a> &gt; 0). The exceeding product is calculated using the following formula: exceeding = max(0, current_amount - wanted_amount) </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product.</td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The exceeding amount of the product in the city. </dd></dl>
 
@@ -440,7 +440,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_a96a9d3a5b4b1100df16e933bacfd590f_icgraph.png" border="0" usemap="#aclassCity_a96a9d3a5b4b1100df16e933bacfd590f_icgraph" alt=""/></div>
 <map name="aclassCity_a96a9d3a5b4b1100df16e933bacfd590f_icgraph" id="aclassCity_a96a9d3a5b4b1100df16e933bacfd590f_icgraph">
-<area shape="rect" title="Get the exceeding amount of a product in the city." alt="" coords="173,5,368,45"/>
+<area shape="rect" title="Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ..." alt="" coords="173,5,368,45"/>
 <area shape="rect" href="classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,13,125,38"/>
 <area shape="poly" title=" " alt="" coords="159,28,126,28,126,23,159,23"/>
 </map>
@@ -463,10 +463,10 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the IDs of all the products in the city. </p>
+<p>Get the Ids of all the products in the city. </p>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>A vector containing the IDs of all the products in the city. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>A vector containing the Ids of all the products in the city. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00038">38</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
@@ -495,14 +495,14 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the missing amount of a product in the city. </p>
+<p>Get the missing amount of a product in the city. This method returns 0 if the product has a positive balance (<a class="el" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f" title="Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ...">GetProductExceedingAmount()</a> &gt; 0) The missing product is calculated using the following formula: missing = max(0, wanted_amount - current_amount) </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product.</td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The missing amount of the product in the city. </dd></dl>
 
@@ -515,7 +515,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_abc929e8b06a0d86a9baade3d3dbd7d9e_icgraph.png" border="0" usemap="#aclassCity_abc929e8b06a0d86a9baade3d3dbd7d9e_icgraph" alt=""/></div>
 <map name="aclassCity_abc929e8b06a0d86a9baade3d3dbd7d9e_icgraph" id="aclassCity_abc929e8b06a0d86a9baade3d3dbd7d9e_icgraph">
-<area shape="rect" title="Get the missing amount of a product in the city." alt="" coords="173,5,401,31"/>
+<area shape="rect" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ..." alt="" coords="173,5,401,31"/>
 <area shape="rect" href="classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
 <area shape="poly" title=" " alt="" coords="160,21,126,21,126,15,160,15"/>
 </map>
@@ -539,16 +539,16 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the wanted amount of a product in the city. The *wanted amount does <b>not</b> reflect wether the city has fullfilled its needs. To get a real "missing" product counter, <code><a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city.">GetProductMissingAmount()</a></code> should be used instead. </p>
+<p>Get the wanted amount of a product in the city. This method returns the initially set wanted amount, and does not reflect if the product has been restocked. For a real indicator of how many product units are required, use <b><a class="el" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...">GetProductMissingAmount()</a></b> </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product.</td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>The wanted amount of the product in the city. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>The amount of this product the city wants. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00142">142</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
@@ -572,10 +572,10 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the set of raw product IDs in the city. This method is designed to be able to access the iterators on the set&lt;int&gt; containing the products. Under normal circumstances <b><a class="el" href="classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d" title="Get the IDs of all the products in the city.">GetProductIds()</a></b> should be used instead. </p>
+<p>Get the set of raw product Ids in the city. This method is designed to be able to access the iterators on the set&lt;int&gt; containing the products. Under normal circumstances <b><a class="el" href="classCity.html#adb9a4d896f0620ae00c0e55556cd0c0d" title="Get the Ids of all the products in the city.">GetProductIds()</a></b> should be used instead. </p>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>The set of raw product IDs in the city. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>The raw set of product Ids in the city. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00173">173</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  174</span>{</div>
@@ -586,7 +586,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_a87b8a9beb255137b6617175c5dba9eff_icgraph.png" border="0" usemap="#aclassCity_a87b8a9beb255137b6617175c5dba9eff_icgraph" alt=""/></div>
 <map name="aclassCity_a87b8a9beb255137b6617175c5dba9eff_icgraph" id="aclassCity_a87b8a9beb255137b6617175c5dba9eff_icgraph">
-<area shape="rect" title="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..." alt="" coords="173,5,348,31"/>
+<area shape="rect" title="Get the set of raw product Ids in the city. This method is designed to be able to access the iterator..." alt="" coords="173,5,348,31"/>
 <area shape="rect" href="classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
 <area shape="poly" title=" " alt="" coords="160,21,126,21,126,15,160,15"/>
 </map>
@@ -664,10 +664,10 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Check if the city has a product with the given ID. </p>
+<p>Check if the city has a product with the given Id. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>The ID of the product. </td></tr>
+    <tr><td class="paramname">id</td><td>The Id of the product. </td></tr>
   </table>
   </dd>
 </dl>
@@ -706,7 +706,7 @@ Gràfic de crides a aquesta funció:</div>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondició</dt><dd>The stream is open and valid. </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>The city products are read from the stream and saved to the inventory. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>The city products are read from the stream and saved to the inventory of this instance. Any previous inventory gets lost. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00022">22</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>{</div>
@@ -733,17 +733,17 @@ Gràfic de crides d'aquesta funció:</div>
 <area shape="rect" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="5,55,173,80"/>
 <area shape="rect" href="classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="221,55,351,80"/>
 <area shape="poly" title=" " alt="" coords="174,65,207,65,207,70,174,70"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="417,5,531,31"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="417,5,531,31"/>
 <area shape="poly" title=" " alt="" coords="334,52,411,32,412,37,336,57"/>
 <area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="399,55,549,80"/>
 <area shape="poly" title=" " alt="" coords="351,65,385,65,385,70,351,70"/>
 <area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="401,104,547,129"/>
 <area shape="poly" title=" " alt="" coords="336,77,412,98,411,103,334,83"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="605,79,773,104"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="605,79,773,104"/>
 <area shape="poly" title=" " alt="" coords="550,73,592,78,591,83,549,78"/>
 <area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="597,29,780,55"/>
 <area shape="poly" title=" " alt="" coords="549,56,583,52,584,57,550,61"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="828,79,1031,104"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="828,79,1031,104"/>
 <area shape="poly" title=" " alt="" coords="773,89,814,89,814,94,773,94"/>
 <area shape="poly" title=" " alt="" coords="547,105,591,100,591,105,548,111"/>
 <area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="599,128,778,153"/>
@@ -782,11 +782,11 @@ Gràfic de crides a aquesta funció:</div>
 <p>Remove a product from the city's inventory. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product to remove.</td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product to remove.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>A product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The product is removed from the city's inventory. The total weight and volume of the city are updated accordingly </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00060">60</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
@@ -839,12 +839,12 @@ Gràfic de crides a aquesta funció:</div>
 <p>Restock a certain amount of a product in the city. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product. </td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product. </td></tr>
     <tr><td class="paramname">amount</td><td>The amount to restock.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The amount of the product in the city is increased by the specified amount. The total weight and volume of the city are updated accordingly </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00165">165</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
@@ -854,16 +854,16 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">  169</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += product_data.GetVolume(amount);</div>
 <div class="line"><span class="lineno">  170</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).RestockAmount(amount);</div>
 <div class="line"><span class="lineno">  171</span>}</div>
-<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified ID from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
+<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_a5aa2c8a7d6d7e4f1e4d009c97d5ae390_cgraph.png" border="0" usemap="#aclassCity_a5aa2c8a7d6d7e4f1e4d009c97d5ae390_cgraph" alt=""/></div>
 <map name="aclassCity_a5aa2c8a7d6d7e4f1e4d009c97d5ae390_cgraph" id="aclassCity_a5aa2c8a7d6d7e4f1e4d009c97d5ae390_cgraph">
 <area shape="rect" title="Restock a certain amount of a product in the city." alt="" coords="5,5,212,31"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="260,5,428,31"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="260,5,428,31"/>
 <area shape="poly" title=" " alt="" coords="212,15,246,15,246,21,212,21"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="476,5,679,31"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="476,5,679,31"/>
 <area shape="poly" title=" " alt="" coords="429,15,463,15,463,21,429,21"/>
 </map>
 </div>
@@ -959,28 +959,28 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">  135</span>}</div>
 <div class="ttc" id="aclassCity_html_a5aa2c8a7d6d7e4f1e4d009c97d5ae390"><div class="ttname"><a href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">City::RestockProductAmount</a></div><div class="ttdeci">void RestockProductAmount(int product_id, int amount)</div><div class="ttdoc">Restock a certain amount of a product in the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00165">City.cc:165</a></div></div>
 <div class="ttc" id="aclassCity_html_a5b6931c4e0a1b33fb97e464a43dc30f9"><div class="ttname"><a href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">City::WithdrawProductAmount</a></div><div class="ttdeci">void WithdrawProductAmount(int product_id, int amount)</div><div class="ttdoc">Withdraw a certain amount of a product from the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00157">City.cc:157</a></div></div>
-<div class="ttc" id="aclassCity_html_a87b8a9beb255137b6617175c5dba9eff"><div class="ttname"><a href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">City::GetRawProductIds</a></div><div class="ttdeci">const set&lt; int &gt; &amp; GetRawProductIds() const</div><div class="ttdoc">Get the set of raw product IDs in the city. This method is designed to be able to access the iterator...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00173">City.cc:173</a></div></div>
-<div class="ttc" id="aclassCity_html_a96a9d3a5b4b1100df16e933bacfd590f"><div class="ttname"><a href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">City::GetProductExceedingAmount</a></div><div class="ttdeci">int GetProductExceedingAmount(int product_id) const</div><div class="ttdoc">Get the exceeding amount of a product in the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00147">City.cc:147</a></div></div>
-<div class="ttc" id="aclassCity_html_abc929e8b06a0d86a9baade3d3dbd7d9e"><div class="ttname"><a href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">City::GetProductMissingAmount</a></div><div class="ttdeci">int GetProductMissingAmount(int product_id) const</div><div class="ttdoc">Get the missing amount of a product in the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00152">City.cc:152</a></div></div>
+<div class="ttc" id="aclassCity_html_a87b8a9beb255137b6617175c5dba9eff"><div class="ttname"><a href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">City::GetRawProductIds</a></div><div class="ttdeci">const set&lt; int &gt; &amp; GetRawProductIds() const</div><div class="ttdoc">Get the set of raw product Ids in the city. This method is designed to be able to access the iterator...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00173">City.cc:173</a></div></div>
+<div class="ttc" id="aclassCity_html_a96a9d3a5b4b1100df16e933bacfd590f"><div class="ttname"><a href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">City::GetProductExceedingAmount</a></div><div class="ttdeci">int GetProductExceedingAmount(int product_id) const</div><div class="ttdoc">Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00147">City.cc:147</a></div></div>
+<div class="ttc" id="aclassCity_html_abc929e8b06a0d86a9baade3d3dbd7d9e"><div class="ttname"><a href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">City::GetProductMissingAmount</a></div><div class="ttdeci">int GetProductMissingAmount(int product_id) const</div><div class="ttdoc">Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00152">City.cc:152</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_ae21b9eba53e1b04d630b69a3f0503f19_cgraph.png" border="0" usemap="#aclassCity_ae21b9eba53e1b04d630b69a3f0503f19_cgraph" alt=""/></div>
 <map name="aclassCity_ae21b9eba53e1b04d630b69a3f0503f19_cgraph" id="aclassCity_ae21b9eba53e1b04d630b69a3f0503f19_cgraph">
 <area shape="rect" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,119,125,145"/>
-<area shape="rect" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f" title="Get the exceeding amount of a product in the city." alt="" coords="190,5,385,45"/>
+<area shape="rect" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f" title="Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ..." alt="" coords="190,5,385,45"/>
 <area shape="poly" title=" " alt="" coords="80,117,120,86,172,55,189,48,191,53,175,60,123,91,83,121"/>
-<area shape="rect" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city." alt="" coords="173,70,401,95"/>
+<area shape="rect" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ..." alt="" coords="173,70,401,95"/>
 <area shape="poly" title=" " alt="" coords="119,117,173,104,211,96,212,101,174,109,120,122"/>
-<area shape="rect" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff" title="Get the set of raw product IDs in the city. This method is designed to be able to access the iterator..." alt="" coords="200,119,375,145"/>
+<area shape="rect" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff" title="Get the set of raw product Ids in the city. This method is designed to be able to access the iterator..." alt="" coords="200,119,375,145"/>
 <area shape="poly" title=" " alt="" coords="125,129,186,129,186,135,125,135"/>
 <area shape="rect" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390" title="Restock a certain amount of a product in the city." alt="" coords="184,169,391,194"/>
 <area shape="poly" title=" " alt="" coords="124,142,217,163,215,168,123,147"/>
 <area shape="rect" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9" title="Withdraw a certain amount of a product from the city." alt="" coords="179,218,396,243"/>
 <area shape="poly" title=" " alt="" coords="83,143,123,173,174,203,199,212,197,217,172,208,120,178,80,147"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="449,194,617,219"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="449,194,617,219"/>
 <area shape="poly" title=" " alt="" coords="391,189,436,194,436,199,391,195"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="665,194,868,219"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="665,194,868,219"/>
 <area shape="poly" title=" " alt="" coords="618,204,652,204,652,209,618,209"/>
 <area shape="poly" title=" " alt="" coords="396,217,436,213,436,219,396,223"/>
 </map>
@@ -1011,7 +1011,7 @@ Gràfic de crides d'aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the same ID as the given product exists in the city. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>A product with the same Id already exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The product in the city's inventory is replaced with the given product. The total weight and volume of the city are updated accordingly </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00069">69</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
@@ -1028,7 +1028,7 @@ Gràfic de crides d'aquesta funció:</div>
 <area shape="rect" title="Update a product in the city&#39;s inventory." alt="" coords="5,56,156,81"/>
 <area shape="rect" href="classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="219,56,348,81"/>
 <area shape="poly" title=" " alt="" coords="156,66,205,66,205,71,156,71"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="429,5,543,31"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="429,5,543,31"/>
 <area shape="poly" title=" " alt="" coords="136,53,204,41,315,28,415,19,415,25,315,33,204,46,137,59"/>
 <area shape="rect" href="classCity.html#add1c7d762565f1b854095dfda7f073c0" title="Remove a product from the city&#39;s inventory." alt="" coords="204,105,363,131"/>
 <area shape="poly" title=" " alt="" coords="134,79,218,99,217,105,133,84"/>
@@ -1037,11 +1037,11 @@ Gràfic de crides d'aquesta funció:</div>
 <area shape="poly" title=" " alt="" coords="348,66,397,65,397,71,349,71"/>
 <area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="413,104,559,129"/>
 <area shape="poly" title=" " alt="" coords="338,79,419,98,418,103,337,84"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="617,79,785,104"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="617,79,785,104"/>
 <area shape="poly" title=" " alt="" coords="562,73,604,78,603,83,561,78"/>
 <area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="609,29,792,55"/>
 <area shape="poly" title=" " alt="" coords="561,56,595,52,596,57,562,61"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="840,79,1043,104"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="840,79,1043,104"/>
 <area shape="poly" title=" " alt="" coords="785,89,826,89,826,94,785,94"/>
 <area shape="poly" title=" " alt="" coords="559,105,603,100,603,105,560,111"/>
 <area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="611,128,790,153"/>
@@ -1080,13 +1080,13 @@ Gràfic de crides d'aquesta funció:</div>
 <p>Withdraw a certain amount of a product from the city. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">product_id</td><td>The ID of the product. </td></tr>
+    <tr><td class="paramname">product_id</td><td>The Id of the product. </td></tr>
     <tr><td class="paramname">amount</td><td>The amount to withdraw.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The product with the given ID exists in the city. </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>The amount of the product in the city is reduced by the specified amount. The total weight and volume of the city are updated accordingly </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>The amount of the product in the city is ddecreased by the specified amount. The total weight and volume of the city are updated accordingly </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00157">157</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
@@ -1101,9 +1101,9 @@ Gràfic de crides d'aquesta funció:</div>
 <div class="center"><img src="classCity_a5b6931c4e0a1b33fb97e464a43dc30f9_cgraph.png" border="0" usemap="#aclassCity_a5b6931c4e0a1b33fb97e464a43dc30f9_cgraph" alt=""/></div>
 <map name="aclassCity_a5b6931c4e0a1b33fb97e464a43dc30f9_cgraph" id="aclassCity_a5b6931c4e0a1b33fb97e464a43dc30f9_cgraph">
 <area shape="rect" title="Withdraw a certain amount of a product from the city." alt="" coords="5,5,223,31"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="271,5,439,31"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="271,5,439,31"/>
 <area shape="poly" title=" " alt="" coords="223,15,257,15,257,21,223,21"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="487,5,689,31"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="487,5,689,31"/>
 <area shape="poly" title=" " alt="" coords="439,15,473,15,473,21,439,21"/>
 </map>
 </div>

@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Update a product in the city&#39;s inventory." alt="" coords="5,56,156,81"/>
 <area shape="rect" id="Node000002" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="219,56,348,81"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,66,205,66,205,71,156,71"/>
-<area shape="rect" id="Node000003" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="429,5,543,31"/>
+<area shape="rect" id="Node000003" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="429,5,543,31"/>
 <area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="136,53,204,41,315,28,415,19,415,25,315,33,204,46,137,59"/>
 <area shape="rect" id="Node000010" href="$classCity.html#add1c7d762565f1b854095dfda7f073c0" title="Remove a product from the city&#39;s inventory." alt="" coords="204,105,363,131"/>
 <area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="134,79,218,99,217,105,133,84"/>
@@ -11,11 +11,11 @@
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="348,66,397,65,397,71,349,71"/>
 <area shape="rect" id="Node000008" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="413,104,559,129"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="338,79,419,98,418,103,337,84"/>
-<area shape="rect" id="Node000005" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="617,79,785,104"/>
+<area shape="rect" id="Node000005" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="617,79,785,104"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="562,73,604,78,603,83,561,78"/>
 <area shape="rect" id="Node000007" href="$classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="609,29,792,55"/>
 <area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="561,56,595,52,596,57,562,61"/>
-<area shape="rect" id="Node000006" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="840,79,1043,104"/>
+<area shape="rect" id="Node000006" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="840,79,1043,104"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="785,89,826,89,826,94,785,94"/>
 <area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="559,105,603,100,603,105,560,111"/>
 <area shape="rect" id="Node000009" href="$classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="611,128,790,153"/>

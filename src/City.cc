@@ -6,7 +6,7 @@
 
 City::City()
 {
-    City("INVALID");
+    City("INVALId");
 }
 
 City::City(string id)

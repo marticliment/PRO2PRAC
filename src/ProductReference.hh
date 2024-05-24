@@ -41,26 +41,26 @@ public:
     static void AddFromStream(istream& reader, int count);
 
     /**
-     * @brief Retrieves the product data with the specified ID from the reference.
+     * @brief Retrieves the product data with the specified Id from the reference.
      * 
-     * @param id The ID of the product data to retrieve.
+     * @param id The Id of the product data to retrieve.
      * 
-     * @pre The ID must be a valid ID of an existing product data in the reference.
-     * @post The product data with the specified ID is returned.
+     * @pre The Id must be a valid Id of an existing product data in the reference.
+     * @post The product data with the specified Id is returned.
      * 
-     * @return The product data with the specified ID.
+     * @return The product data with the specified Id.
      */
     static const ProductData& Get(int id);
 
     /**
-     * @brief Checks if the reference contains product data with the specified ID.
+     * @brief Checks if the reference contains product data with the specified Id.
      * 
-     * @param id The ID to check.
+     * @param id The Id to check.
      * 
-     * @pre The ID must be a valid ID.
-     * @post Returns true if the reference contains product data with the specified ID, false otherwise.
+     * @pre The Id must be a valid Id.
+     * @post Returns true if the reference contains product data with the specified Id, false otherwise.
      * 
-     * @return True if the reference contains product data with the specified ID, false otherwise.
+     * @return True if the reference contains product data with the specified Id, false otherwise.
      */
     static bool Contains(int id);
 

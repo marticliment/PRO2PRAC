@@ -1,5 +1,5 @@
 <map id="Product::GetId" name="Product::GetId">
-<area shape="rect" id="Node000001" title="Get the ID of the product." alt="" coords="712,132,827,157"/>
+<area shape="rect" id="Node000001" title="Get the Id of the product." alt="" coords="712,132,827,157"/>
 <area shape="rect" id="Node000002" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="535,5,664,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="745,124,708,88,663,52,629,33,631,28,665,48,711,84,749,120"/>
 <area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,132,60,157"/>

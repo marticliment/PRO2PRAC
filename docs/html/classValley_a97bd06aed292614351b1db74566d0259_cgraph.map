@@ -4,12 +4,12 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,52,175,31,268,11,320,5,374,3,427,6,479,15,532,36,578,62,575,67,530,40,478,20,427,11,374,8,321,10,269,17,176,36,107,57"/>
 <area shape="rect" id="Node000003" href="$classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="349,54,479,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,64,336,64,336,70,135,70"/>
-<area shape="rect" id="Node000004" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="183,105,301,130"/>
+<area shape="rect" id="Node000004" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="183,105,301,130"/>
 <area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="115,77,186,98,184,103,113,82"/>
 <area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="479,72,513,77,513,82,479,78"/>
 <area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="385,56,379,46,383,36,395,30,414,28,437,31,447,40,444,44,435,36,414,33,396,35,387,40,385,45,390,53"/>
 <area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="301,111,513,97,514,102,302,116"/>
-<area shape="rect" id="Node000005" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="354,156,474,181"/>
+<area shape="rect" id="Node000005" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="354,156,474,181"/>
 <area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="287,128,358,149,356,154,285,133"/>
 <area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="448,153,549,115,550,120,450,158"/>
 </map>

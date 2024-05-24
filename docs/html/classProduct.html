@@ -113,7 +113,7 @@ Mètodes públics</h2></td></tr>
 <tr class="memdesc:a9cfe3967c10ed8158f057f0bc66df7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,...">Product</a> class.  <br /></td></tr>
 <tr class="separator:a9cfe3967c10ed8158f057f0bc66df7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae0bac61207aedcba747c07bbd0b893" id="r_adae0bac61207aedcba747c07bbd0b893"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a> () const</td></tr>
-<tr class="memdesc:adae0bac61207aedcba747c07bbd0b893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the product.  <br /></td></tr>
+<tr class="memdesc:adae0bac61207aedcba747c07bbd0b893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Id of the product.  <br /></td></tr>
 <tr class="separator:adae0bac61207aedcba747c07bbd0b893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b7b9ac3ecf67501fc1c36bddd09027e" id="r_a4b7b9ac3ecf67501fc1c36bddd09027e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e">GetCurrentAmount</a> () const</td></tr>
 <tr class="memdesc:a4b7b9ac3ecf67501fc1c36bddd09027e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the available amount of the product.  <br /></td></tr>
@@ -238,13 +238,13 @@ Gràfic de crides a aquesta funció:</div>
 <p>Constructor for the <a class="el" href="classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,...">Product</a> class. </p>
 <dl class="params"><dt>Paràmetres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>The ID of the product. </td></tr>
+    <tr><td class="paramname">id</td><td>The Id of the product. </td></tr>
     <tr><td class="paramname">current</td><td>The current amount of the product. </td></tr>
     <tr><td class="paramname">wanted</td><td>The wanted amount of the product.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The ID of the product must be present on <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a> </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The Id of the product must be present on <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a> </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>A <a class="el" href="classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,...">Product</a> object is created with the given values for its attributes. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00011">11</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
@@ -330,16 +330,16 @@ Gràfic de crides a aquesta funció:</div>
 <div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
 <div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   63</span>}</div>
-<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified ID from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
+<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProduct_a68f0c88184e12f91987afe67d389187c_cgraph.png" border="0" usemap="#aclassProduct_a68f0c88184e12f91987afe67d389187c_cgraph" alt=""/></div>
 <map name="aclassProduct_a68f0c88184e12f91987afe67d389187c_cgraph" id="aclassProduct_a68f0c88184e12f91987afe67d389187c_cgraph">
 <area shape="rect" title="Get the data of the product from the ProductRefence Database." alt="" coords="5,5,139,31"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="187,5,355,31"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="187,5,355,31"/>
 <area shape="poly" title=" " alt="" coords="139,15,173,15,173,21,139,21"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="403,5,605,31"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="403,5,605,31"/>
 <area shape="poly" title=" " alt="" coords="355,15,389,15,389,21,355,21"/>
 </map>
 </div>
@@ -409,10 +409,10 @@ Gràfic de crides a aquesta funció:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the ID of the product. </p>
+<p>Get the Id of the product. </p>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>The ID of the product is returned.</dd></dl>
-<dl class="section return"><dt>Retorna</dt><dd>The ID of the product. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>The Id of the product is returned.</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>The Id of the product. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00018">18</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   19</span>{</div>
@@ -423,7 +423,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProduct_adae0bac61207aedcba747c07bbd0b893_icgraph.png" border="0" usemap="#aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph" alt=""/></div>
 <map name="aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph" id="aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph">
-<area shape="rect" title="Get the ID of the product." alt="" coords="712,132,827,157"/>
+<area shape="rect" title="Get the Id of the product." alt="" coords="712,132,827,157"/>
 <area shape="rect" href="classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="535,5,664,31"/>
 <area shape="poly" title=" " alt="" coords="745,124,708,88,663,52,629,33,631,28,665,48,711,84,749,120"/>
 <area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,132,60,157"/>
@@ -532,11 +532,11 @@ Gràfic de crides d'aquesta funció:</div>
 <div class="center"><img src="classProduct_ac62da93ee21d61c795c40d3fb0c3b602_cgraph.png" border="0" usemap="#aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_cgraph" alt=""/></div>
 <map name="aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_cgraph" id="aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_cgraph">
 <area shape="rect" title="Get the volume of the product according to the current available amount of product." alt="" coords="5,31,156,56"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="211,5,379,31"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="211,5,379,31"/>
 <area shape="poly" title=" " alt="" coords="156,32,198,27,198,32,156,37"/>
 <area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="204,55,387,80"/>
 <area shape="poly" title=" " alt="" coords="156,49,191,53,190,58,156,54"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="435,5,637,31"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="435,5,637,31"/>
 <area shape="poly" title=" " alt="" coords="380,15,421,15,421,21,380,21"/>
 </map>
 </div>
@@ -635,11 +635,11 @@ Gràfic de crides d'aquesta funció:</div>
 <div class="center"><img src="classProduct_a16d39b4890f1bc051d45b00055cf58e8_cgraph.png" border="0" usemap="#aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_cgraph" alt=""/></div>
 <map name="aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_cgraph" id="aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_cgraph">
 <area shape="rect" title="Get the weight of the product according to the current available amount of product." alt="" coords="5,31,152,56"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified ID from the reference." alt="" coords="205,5,373,31"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="205,5,373,31"/>
 <area shape="poly" title=" " alt="" coords="152,32,192,27,192,32,152,37"/>
 <area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="200,55,379,80"/>
 <area shape="poly" title=" " alt="" coords="152,49,187,53,186,58,152,54"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified ID." alt="" coords="427,5,629,31"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="427,5,629,31"/>
 <area shape="poly" title=" " alt="" coords="374,15,413,15,413,21,374,21"/>
 </map>
 </div>
@@ -685,7 +685,7 @@ Gràfic de crides a aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The amount to restock is greater or equal to zero. To restock negative amounts of product, use <a class="el" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an...">WithdrawAmount()</a> instead. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The current amount of the product is increased by the specified amount. </dd></dl>
 
 <p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00055">55</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
@@ -810,7 +810,7 @@ Gràfic de crides a aquesta funció:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The ID of the product. </p>
+<p>The Id of the product. </p>
 
 <p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00017">17</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
 

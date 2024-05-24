@@ -4,11 +4,11 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,201,110,168,137,124,173,78,219,40,238,30,241,34,221,44,177,82,141,127,115,171,98,204"/>
 <area shape="rect" id="Node000003" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="254,55,406,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,201,145,146,180,115,219,89,240,80,242,85,221,94,183,119,149,150,101,204"/>
-<area shape="rect" id="Node000004" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="271,104,389,129"/>
+<area shape="rect" id="Node000004" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="271,104,389,129"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,200,156,170,219,140,256,128,258,133,221,144,159,175,110,205"/>
 <area shape="rect" id="Node000007" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="220,153,440,179"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="151,200,253,179,254,184,152,205"/>
-<area shape="rect" id="Node000008" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="273,203,387,228"/>
+<area shape="rect" id="Node000008" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="273,203,387,228"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="172,213,259,213,259,218,172,218"/>
 <area shape="rect" id="Node000009" href="$classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="229,252,431,277"/>
 <area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="152,225,254,247,253,252,151,231"/>
@@ -20,7 +20,7 @@
 <area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="98,227,115,260,141,304,177,349,222,386,232,392,229,397,218,391,173,352,137,307,110,263,93,229"/>
 <area shape="rect" id="Node000005" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="656,97,835,137"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="390,114,642,114,642,119,390,119"/>
-<area shape="rect" id="Node000006" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="488,129,608,155"/>
+<area shape="rect" id="Node000006" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="488,129,608,155"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="390,121,475,131,474,136,389,126"/>
 <area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="608,132,642,127,643,133,609,137"/>
 </map>

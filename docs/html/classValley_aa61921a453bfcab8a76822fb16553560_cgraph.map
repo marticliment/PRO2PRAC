@@ -6,7 +6,7 @@
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="157,288,209,298,208,303,156,293"/>
 <area shape="rect" id="Node000003" href="$classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="691,5,893,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="549,124,609,83,648,60,690,40,711,32,713,37,692,44,651,64,612,87,552,129"/>
-<area shape="rect" id="Node000004" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the ID of the product." alt="" coords="735,177,849,203"/>
+<area shape="rect" id="Node000004" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="735,177,849,203"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="579,145,722,174,721,179,578,151"/>
 <area shape="rect" id="Node000005" href="$classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="691,55,893,80"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="572,124,690,89,721,81,723,86,691,94,574,129"/>
@@ -18,7 +18,7 @@
 <area shape="poly" id="edge19_Node000007_Node000007" title=" " alt="" coords="259,304,252,294,256,284,270,278,293,276,322,280,334,289,330,293,320,285,293,281,271,283,259,288,257,294,263,301"/>
 <area shape="rect" id="Node000008" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="457,228,609,253"/>
 <area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="322,300,422,262,452,254,453,259,423,267,324,305"/>
-<area shape="rect" id="Node000009" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="473,277,592,303"/>
+<area shape="rect" id="Node000009" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="473,277,592,303"/>
 <area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="375,304,459,295,460,300,375,309"/>
 <area shape="rect" id="Node000012" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="423,327,643,352"/>
 <area shape="poly" id="edge14_Node000007_Node000012" title=" " alt="" coords="375,321,409,324,409,330,375,326"/>
@@ -32,7 +32,7 @@
 <area shape="poly" id="edge20_Node000007_Node000016" title=" " alt="" coords="302,327,316,364,342,414,378,467,400,490,424,510,433,516,430,520,421,515,396,494,374,470,337,417,312,367,297,329"/>
 <area shape="rect" id="Node000010" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="941,271,1120,311"/>
 <area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="592,287,927,288,927,294,592,293"/>
-<area shape="rect" id="Node000011" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="732,304,852,329"/>
+<area shape="rect" id="Node000011" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="732,304,852,329"/>
 <area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="593,293,718,306,718,312,592,299"/>
 <area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="852,308,928,300,928,305,853,313"/>
 </map>

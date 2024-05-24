@@ -40,7 +40,7 @@ private:
     static bool initialized; /**< Flag indicating if the Valley is initialized. */
     static City invalid_city; /**< An invalid city used to perform read operations when an invalid city Id is provided through cin. */
 public:
-    static BinTree<string> river_structure; /**< The river structure containing the city IDs. */
+    static BinTree<string> river_structure; /**< The river structure containing the city Ids. */
 private:
     static unordered_map<string, City> cities; /**< A map that links a given city id with its corresponding City object. */
     static Ship ship; /**< The ship. */
@@ -146,26 +146,26 @@ public:
     static vector<string> GetCityIds();
 
     /**
-     * @brief Gets the city with the specified ID.
+     * @brief Gets the city with the specified Id.
      * 
-     * @param id The ID of the city.
+     * @param id The Id of the city.
      * 
-     * @pre The city with the specified ID exists.
-     * @post The city with the specified ID is returned.
+     * @pre The city with the specified Id exists.
+     * @post The city with the specified Id is returned.
      * 
-     * @return The city with the specified ID.
+     * @return The city with the specified Id.
      */
     static City& GetCity(const string& id);
 
     /**
-     * @brief Checks if a city with the specified ID exists.
+     * @brief Checks if a city with the specified Id exists.
      * 
-     * @param id The ID of the city.
+     * @param id The Id of the city.
      * 
      * @pre None.
-     * @post True is returned if a city with the specified ID exists, false otherwise.
+     * @post True is returned if a city with the specified Id exists, false otherwise.
      * 
-     * @return True if a city with the specified ID exists, false otherwise.
+     * @return True if a city with the specified Id exists, false otherwise.
      */
     static bool HasCity(const string& id);
 

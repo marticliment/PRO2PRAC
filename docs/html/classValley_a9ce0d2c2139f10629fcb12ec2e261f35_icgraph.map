@@ -4,13 +4,13 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="951,156,904,119,847,87,800,71,752,60,663,48,663,42,753,54,802,66,849,82,907,115,955,152"/>
 <area shape="rect" id="Node000003" href="$classValley.html#a97bd06aed292614351b1db74566d0259" title="Will make the city at the given node trade with its children. At their time, the children will trade ..." alt="" coords="339,29,469,55"/>
 <area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="888,163,457,57,458,52,889,157"/>
-<area shape="rect" id="Node000005" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified ID." alt="" coords="539,148,657,173"/>
+<area shape="rect" id="Node000005" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="539,148,657,173"/>
 <area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="882,180,658,167,658,161,882,175"/>
 <area shape="rect" id="Node000009" href="$classValley.html#a150cd1a95764b0b85e8d57aecc73b0c0" title="Gets the list of city Ids in the Valley." alt="" coords="711,196,848,221"/>
 <area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="883,199,849,203,848,198,882,193"/>
 <area shape="rect" id="Node000010" href="$classValley.html#a070726f5f925f2a2891aa5226ef58f17" title="Gets a reference to the ship." alt="" coords="131,305,251,331"/>
 <area shape="poly" id="edge16_Node000001_Node000010" title=" " alt="" coords="956,215,909,254,880,272,849,286,768,310,684,326,599,336,515,340,365,338,251,328,252,323,365,333,515,335,598,330,683,321,767,305,847,281,877,267,906,249,953,211"/>
-<area shape="rect" id="Node000011" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified ID exists." alt="" coords="719,245,839,271"/>
+<area shape="rect" id="Node000011" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="719,245,839,271"/>
 <area shape="poly" id="edge18_Node000001_Node000011" title=" " alt="" coords="919,211,849,237,818,248,816,243,847,231,917,206"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="630,19,621,11,598,8,579,10,569,15,567,20,572,28,568,31,562,21,565,11,577,5,598,3,623,6,633,15"/>
 <area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="519,45,469,45,469,39,519,39"/>
