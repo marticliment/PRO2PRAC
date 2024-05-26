@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the implementation of the ProductData class
+ */
+
 #include "ProductData.hh"
 
 ProductData::ProductData()

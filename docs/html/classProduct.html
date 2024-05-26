@@ -156,7 +156,7 @@ Atributs Privats</h2></td></tr>
 <div class="textblock"><p>Represents a product. A product object has an available amount and a wanted amount of units, and can be used for trading. </p>
 <p>Each product has a weigth and volume associated to it, stored on the <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a> class. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00014">14</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00019">19</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
 </div><h2 class="groupheader">Documentació del Constructor i el Destructor</h2>
 <a id="a847c1d85e67ce387166a597579a55135" name="a847c1d85e67ce387166a597579a55135"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a847c1d85e67ce387166a597579a55135">&#9670;&#160;</a></span>Product() <span class="overload">[1/2]</span></h2>
@@ -177,11 +177,11 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd>None </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>An empty, invalid <a class="el" href="classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,...">Product</a> object is created. All the attributes are set to zero </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00009">9</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>{</div>
-<div class="line"><span class="lineno">   11</span>    <a class="code hl_function" href="classProduct.html#a847c1d85e67ce387166a597579a55135">Product</a>(0, 0, 0);</div>
-<div class="line"><span class="lineno">   12</span>}</div>
-<div class="ttc" id="aclassProduct_html_a847c1d85e67ce387166a597579a55135"><div class="ttname"><a href="classProduct.html#a847c1d85e67ce387166a597579a55135">Product::Product</a></div><div class="ttdeci">Product()</div><div class="ttdoc">Default constructor for the Product class.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00009">Product.cc:9</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00014">14</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="classProduct.html#a847c1d85e67ce387166a597579a55135">Product</a>(0, 0, 0);</div>
+<div class="line"><span class="lineno">   17</span>}</div>
+<div class="ttc" id="aclassProduct_html_a847c1d85e67ce387166a597579a55135"><div class="ttname"><a href="classProduct.html#a847c1d85e67ce387166a597579a55135">Product::Product</a></div><div class="ttdeci">Product()</div><div class="ttdoc">Default constructor for the Product class.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00014">Product.cc:14</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -247,15 +247,15 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section pre"><dt>Precondició</dt><dd>The Id of the product must be present on <a class="el" href="classProductReference.html" title="Stores the data (in ProductData objects) and keeps track of all the existing products.">ProductReference</a> </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>A <a class="el" href="classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,...">Product</a> object is created with the given values for its attributes. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00014">14</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>    this-&gt;<span class="keywordtype">id</span> = <a class="code hl_variable" href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">id</a>;</div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> = current;</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> = required;</div>
-<div class="line"><span class="lineno">   19</span>}</div>
-<div class="ttc" id="aclassProduct_html_a32e802ac149ad39a7a11acd4e804c407"><div class="ttname"><a href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">Product::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00017">Product.hh:17</a></div></div>
-<div class="ttc" id="aclassProduct_html_a66dca2d5ac5c5dc7b5519f8b65813a33"><div class="ttname"><a href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">Product::wanted_amount</a></div><div class="ttdeci">int wanted_amount</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00018">Product.hh:18</a></div></div>
-<div class="ttc" id="aclassProduct_html_aa0935b77e0eeeab897452fa99a7f3d10"><div class="ttname"><a href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">Product::current_amount</a></div><div class="ttdeci">int current_amount</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00019">Product.hh:19</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00019">19</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{</div>
+<div class="line"><span class="lineno">   21</span>    this-&gt;<span class="keywordtype">id</span> = <a class="code hl_variable" href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">id</a>;</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> = current;</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> = required;</div>
+<div class="line"><span class="lineno">   24</span>}</div>
+<div class="ttc" id="aclassProduct_html_a32e802ac149ad39a7a11acd4e804c407"><div class="ttname"><a href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">Product::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00022">Product.hh:22</a></div></div>
+<div class="ttc" id="aclassProduct_html_a66dca2d5ac5c5dc7b5519f8b65813a33"><div class="ttname"><a href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">Product::wanted_amount</a></div><div class="ttdeci">int wanted_amount</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00023">Product.hh:23</a></div></div>
+<div class="ttc" id="aclassProduct_html_aa0935b77e0eeeab897452fa99a7f3d10"><div class="ttname"><a href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">Product::current_amount</a></div><div class="ttdeci">int current_amount</div><div class="ttdef"><b>Definition</b> <a href="Product_8hh_source.html#l00024">Product.hh:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,10 +280,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The available amount of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The available amount of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00026">26</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>;</div>
-<div class="line"><span class="lineno">   29</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00031">31</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>;</div>
+<div class="line"><span class="lineno">   34</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -292,11 +292,11 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="rect" title="Get the available amount of the product." alt="" coords="664,79,865,105"/>
 <area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="525,54,616,79"/>
 <area shape="poly" title=" " alt="" coords="653,80,616,75,616,70,654,75"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,79,60,105"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,79,60,105"/>
 <area shape="poly" title=" " alt="" coords="650,95,60,95,60,89,650,89"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,54,267,79"/>
 <area shape="poly" title=" " alt="" coords="539,48,510,32,477,20,432,11,396,8,361,12,315,20,260,36,214,56,212,51,258,31,314,15,360,6,396,3,433,5,478,15,512,27,541,44"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="315,54,477,79"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="315,54,477,79"/>
 <area shape="poly" title=" " alt="" coords="512,69,478,69,478,64,512,64"/>
 <area shape="poly" title=" " alt="" coords="97,84,61,90,60,85,96,79"/>
 <area shape="poly" title=" " alt="" coords="301,69,267,69,267,64,301,64"/>
@@ -326,11 +326,11 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The data of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The weight and volume of the product in the form of a constant reference to a <a class="el" href="classProductData.html" title="Represents the data (weight and volume) for a specific product.">ProductData</a> object. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00063">63</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>{</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   66</span>}</div>
-<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00068">68</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00015">ProductReference.cc:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -366,13 +366,13 @@ Gràfic de crides d'aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The exceeding amount of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The exceeding amount of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00036">36</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> - <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> &lt; 0)</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   40</span>    </div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> - <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a>;</div>
-<div class="line"><span class="lineno">   42</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00041">41</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> - <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> &lt; 0)</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   45</span>    </div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> - <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a>;</div>
+<div class="line"><span class="lineno">   47</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -381,9 +381,9 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="rect" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="533,36,753,61"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,5,275,31"/>
 <area shape="poly" title=" " alt="" coords="519,42,485,39,275,26,275,20,486,34,520,36"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
 <area shape="poly" title=" " alt="" coords="548,66,486,76,485,71,547,61"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,37,60,63"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,37,60,63"/>
 <area shape="poly" title=" " alt="" coords="115,36,61,47,60,42,114,31"/>
 <area shape="poly" title=" " alt="" coords="442,64,431,55,404,52,382,54,370,59,367,64,374,72,369,75,362,65,366,55,380,49,404,47,433,50,445,59"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="112,61,271,87"/>
@@ -414,27 +414,27 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The Id of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The Id of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00021">21</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">id</a>;</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00026">26</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a32e802ac149ad39a7a11acd4e804c407">id</a>;</div>
+<div class="line"><span class="lineno">   29</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProduct_adae0bac61207aedcba747c07bbd0b893_icgraph.png" border="0" usemap="#aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph" alt=""/></div>
 <map name="aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph" id="aclassProduct_adae0bac61207aedcba747c07bbd0b893_icgraph">
 <area shape="rect" title="Get the Id of the product." alt="" coords="737,156,852,181"/>
-<area shape="rect" href="classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="549,5,679,31"/>
+<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="549,5,679,31"/>
 <area shape="poly" title=" " alt="" coords="775,146,738,99,714,74,688,52,652,33,655,28,691,48,718,70,742,96,779,143"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,81,60,107"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,81,60,107"/>
 <area shape="poly" title=" " alt="" coords="760,151,726,134,689,121,597,101,503,89,409,82,319,80,163,85,60,94,60,88,163,80,319,75,410,77,504,84,598,96,690,115,728,129,762,146"/>
 <area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="569,131,659,156"/>
 <area shape="poly" title=" " alt="" coords="723,161,659,152,660,147,724,156"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="325,181,488,207"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="325,181,488,207"/>
 <area shape="poly" title=" " alt="" coords="724,176,488,191,488,186,724,171"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,193,275,219"/>
 <area shape="poly" title=" " alt="" coords="726,187,690,194,588,212,507,222,426,225,323,222,275,218,275,213,323,217,426,220,507,217,587,206,689,189,725,182"/>
-<area shape="rect" href="classCity.html#a050d16749a7d5c037284b428c543073a" title="Update a product in the city&#39;s inventory." alt="" coords="539,283,689,308"/>
+<area shape="rect" href="classCity.html#a5fb23dbbba8f2f799eb1fb60d1e02e0c" title="Update a product in the city&#39;s inventory." alt="" coords="539,283,689,308"/>
 <area shape="poly" title=" " alt="" coords="774,194,737,230,691,266,652,285,650,280,688,261,734,226,771,190"/>
 <area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="323,5,491,31"/>
 <area shape="poly" title=" " alt="" coords="535,21,491,21,491,15,535,15"/>
@@ -471,24 +471,24 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The missing amount of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The missing amount of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00044">44</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
-<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> - <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> &lt; 0) </div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   48</span>    </div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> - <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>;</div>
-<div class="line"><span class="lineno">   50</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00049">49</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> - <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> &lt; 0) </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   53</span>    </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a> - <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProduct_a0c42f35816a3fa42d9f3f985ca23f90a_icgraph.png" border="0" usemap="#aclassProduct_a0c42f35816a3fa42d9f3f985ca23f90a_icgraph" alt=""/></div>
 <map name="aclassProduct_a0c42f35816a3fa42d9f3f985ca23f90a_icgraph" id="aclassProduct_a0c42f35816a3fa42d9f3f985ca23f90a_icgraph">
 <area shape="rect" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="533,32,736,57"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,32,60,57"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,32,60,57"/>
 <area shape="poly" title=" " alt="" coords="530,33,485,29,296,10,213,10,109,22,61,36,59,31,107,17,213,4,296,5,486,23,530,28"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,32,275,57"/>
 <area shape="poly" title=" " alt="" coords="519,47,275,47,275,42,519,42"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,107,485,132"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="323,107,485,132"/>
 <area shape="poly" title=" " alt="" coords="582,64,445,109,443,104,580,59"/>
 <area shape="poly" title=" " alt="" coords="94,47,60,47,60,42,94,42"/>
 <area shape="poly" title=" " alt="" coords="442,97,431,89,404,85,382,87,370,92,367,98,374,105,369,108,362,98,366,89,380,82,404,80,433,84,445,93"/>
@@ -520,11 +520,11 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The volume of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The volume of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00073">73</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>).<a class="code hl_function" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63">GetVolume</a>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
-<div class="line"><span class="lineno">   76</span>}</div>
-<div class="ttc" id="aclassProductData_html_a0871ddc193b50e477dfbf848613beb63"><div class="ttname"><a href="classProductData.html#a0871ddc193b50e477dfbf848613beb63">ProductData::GetVolume</a></div><div class="ttdeci">int GetVolume() const</div><div class="ttdoc">Get the volume of one unit of the product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8cc_source.html#l00024">ProductData.cc:24</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00078">78</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>).<a class="code hl_function" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63">GetVolume</a>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="aclassProductData_html_a0871ddc193b50e477dfbf848613beb63"><div class="ttname"><a href="classProductData.html#a0871ddc193b50e477dfbf848613beb63">ProductData::GetVolume</a></div><div class="ttdeci">int GetVolume() const</div><div class="ttdoc">Get the volume of one unit of the product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8cc_source.html#l00029">ProductData.cc:29</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -545,13 +545,13 @@ Gràfic de crides a aquesta funció:</div>
 <div class="center"><img src="classProduct_ac62da93ee21d61c795c40d3fb0c3b602_icgraph.png" border="0" usemap="#aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_icgraph" alt=""/></div>
 <map name="aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_icgraph" id="aclassProduct_ac62da93ee21d61c795c40d3fb0c3b602_icgraph">
 <area shape="rect" title="Get the volume of the product according to the current available amount of product." alt="" coords="523,31,673,56"/>
-<area shape="rect" href="classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="335,5,464,31"/>
+<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="335,5,464,31"/>
 <area shape="poly" title=" " alt="" coords="509,35,464,29,465,24,509,29"/>
-<area shape="rect" href="classCity.html#a050d16749a7d5c037284b428c543073a" title="Update a product in the city&#39;s inventory." alt="" coords="324,55,475,80"/>
+<area shape="rect" href="classCity.html#a5fb23dbbba8f2f799eb1fb60d1e02e0c" title="Update a product in the city&#39;s inventory." alt="" coords="324,55,475,80"/>
 <area shape="poly" title=" " alt="" coords="510,57,475,61,475,56,509,51"/>
 <area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,5,276,31"/>
 <area shape="poly" title=" " alt="" coords="321,21,276,21,276,15,321,15"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,5,60,31"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
@@ -578,10 +578,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The predefined wanted amount of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The predefined wanted amount of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00031">31</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a>;</div>
-<div class="line"><span class="lineno">   34</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00036">36</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProduct.html#a66dca2d5ac5c5dc7b5519f8b65813a33">wanted_amount</a>;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -592,9 +592,9 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="poly" title=" " alt="" coords="650,23,616,23,616,18,650,18"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,8,267,33"/>
 <area shape="poly" title=" " alt="" coords="511,14,477,11,396,8,315,11,267,15,267,9,315,6,396,3,478,6,512,9"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="315,45,477,71"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="315,45,477,71"/>
 <area shape="poly" title=" " alt="" coords="512,36,456,48,455,43,511,30"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,8,60,33"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,8,60,33"/>
 <area shape="poly" title=" " alt="" coords="94,23,60,23,60,18,94,18"/>
 <area shape="poly" title=" " alt="" coords="311,45,258,36,259,31,312,40"/>
 <area shape="poly" title=" " alt="" coords="426,35,418,27,396,24,378,26,368,31,366,36,372,44,367,47,361,37,364,27,376,21,396,19,420,22,430,31"/>
@@ -623,11 +623,11 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The weight of the product is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The weight of the product. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00068">68</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>).<a class="code hl_function" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2">GetWeight</a>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
-<div class="line"><span class="lineno">   71</span>}</div>
-<div class="ttc" id="aclassProductData_html_ac787c267c0834d82095bca6479fa56d2"><div class="ttname"><a href="classProductData.html#ac787c267c0834d82095bca6479fa56d2">ProductData::GetWeight</a></div><div class="ttdeci">int GetWeight() const</div><div class="ttdoc">Get the weight of one unit the product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8cc_source.html#l00014">ProductData.cc:14</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00073">73</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">id</span>).<a class="code hl_function" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2">GetWeight</a>(<a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+<div class="ttc" id="aclassProductData_html_ac787c267c0834d82095bca6479fa56d2"><div class="ttname"><a href="classProductData.html#ac787c267c0834d82095bca6479fa56d2">ProductData::GetWeight</a></div><div class="ttdeci">int GetWeight() const</div><div class="ttdoc">Get the weight of one unit the product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8cc_source.html#l00019">ProductData.cc:19</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -648,13 +648,13 @@ Gràfic de crides a aquesta funció:</div>
 <div class="center"><img src="classProduct_a16d39b4890f1bc051d45b00055cf58e8_icgraph.png" border="0" usemap="#aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_icgraph" alt=""/></div>
 <map name="aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_icgraph" id="aclassProduct_a16d39b4890f1bc051d45b00055cf58e8_icgraph">
 <area shape="rect" title="Get the weight of the product according to the current available amount of product." alt="" coords="523,31,669,56"/>
-<area shape="rect" href="classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="335,5,464,31"/>
+<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="335,5,464,31"/>
 <area shape="poly" title=" " alt="" coords="508,35,464,29,464,24,509,29"/>
-<area shape="rect" href="classCity.html#a050d16749a7d5c037284b428c543073a" title="Update a product in the city&#39;s inventory." alt="" coords="324,55,475,80"/>
+<area shape="rect" href="classCity.html#a5fb23dbbba8f2f799eb1fb60d1e02e0c" title="Update a product in the city&#39;s inventory." alt="" coords="324,55,475,80"/>
 <area shape="poly" title=" " alt="" coords="509,57,475,61,475,56,509,51"/>
 <area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,5,276,31"/>
 <area shape="poly" title=" " alt="" coords="321,21,276,21,276,15,321,15"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,5,60,31"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
@@ -684,13 +684,13 @@ Gràfic de crides a aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The amount to restock is greater or equal to zero. To restock negative amounts of product, use <a class="el" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an...">WithdrawAmount()</a> instead. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The amount to restock fulfills <b>0 &lt;= restock_amount</b>. To restock negative amounts of product, use <a class="el" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an...">WithdrawAmount()</a> instead. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The current amount of the product is increased by the specified amount. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00058">58</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> += amount;</div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00063">63</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> += amount;</div>
+<div class="line"><span class="lineno">   66</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -699,9 +699,9 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="rect" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="533,36,716,61"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,5,275,31"/>
 <area shape="poly" title=" " alt="" coords="519,42,485,39,275,25,275,20,486,34,520,37"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
 <area shape="poly" title=" " alt="" coords="536,66,480,76,479,71,535,61"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,37,60,63"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,37,60,63"/>
 <area shape="poly" title=" " alt="" coords="115,36,61,47,60,42,114,31"/>
 <area shape="poly" title=" " alt="" coords="442,64,431,55,404,52,382,54,370,59,367,64,374,72,369,75,362,65,366,55,380,49,404,47,433,50,445,59"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="112,61,271,87"/>
@@ -735,14 +735,14 @@ Gràfic de crides a aquesta funció:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondició</dt><dd>The current amount of the product is greater than or equal to the specified amount. </dd></dl>
+<dl class="section pre"><dt>Precondició</dt><dd>The amount to withdraw fulfills <b>0 &lt;= withdraw_amount &lt;= current_amount</b>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The current amount of the product is reduced by the specified amount. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00052">52</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
-<div class="line"><span class="lineno">   54</span>    assert(amount &lt;= <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> -= amount;</div>
-<div class="line"><span class="lineno">   56</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="Product_8cc_source.html#l00057">57</a> del fitxer <a class="el" href="Product_8cc_source.html">Product.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    assert(amount &lt;= <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a>);</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_variable" href="classProduct.html#aa0935b77e0eeeab897452fa99a7f3d10">current_amount</a> -= amount;</div>
+<div class="line"><span class="lineno">   61</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -751,9 +751,9 @@ Gràfic de crides a aquesta funció:</div>
 <area shape="rect" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="533,36,725,61"/>
 <area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="108,5,275,31"/>
 <area shape="poly" title=" " alt="" coords="519,42,485,39,275,25,275,20,486,34,520,37"/>
-<area shape="rect" href="classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
 <area shape="poly" title=" " alt="" coords="539,66,481,76,481,71,538,61"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,37,60,63"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,37,60,63"/>
 <area shape="poly" title=" " alt="" coords="115,36,61,47,60,42,114,31"/>
 <area shape="poly" title=" " alt="" coords="442,64,431,55,404,52,382,54,370,59,367,64,374,72,369,75,362,65,366,55,380,49,404,47,433,50,445,59"/>
 <area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="112,61,271,87"/>
@@ -786,7 +786,7 @@ Gràfic de crides a aquesta funció:</div>
 </div><div class="memdoc">
 <p>The current amount of the product. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00019">19</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00024">24</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
 
 </div>
 </div>
@@ -811,7 +811,7 @@ Gràfic de crides a aquesta funció:</div>
 </div><div class="memdoc">
 <p>The Id of the product. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00017">17</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00022">22</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
 
 </div>
 </div>
@@ -836,7 +836,7 @@ Gràfic de crides a aquesta funció:</div>
 </div><div class="memdoc">
 <p>The desired amount of the product. </p>
 
-<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00018">18</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
+<p class="definition">Definició a la línia <a class="el" href="Product_8hh_source.html#l00023">23</a> del fitxer <a class="el" href="Product_8hh_source.html">Product.hh</a>.</p>
 
 </div>
 </div>

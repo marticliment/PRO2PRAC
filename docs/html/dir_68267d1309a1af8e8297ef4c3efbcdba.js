@@ -2,8 +2,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "City.cc", "City_8cc.html", null ],
     [ "City.hh", "City_8hh.html", "City_8hh" ],
-    [ "debug.cc", "debug_8cc.html", "debug_8cc" ],
-    [ "debug.hh", "debug_8hh.html", "debug_8hh" ],
     [ "Product.cc", "Product_8cc.html", null ],
     [ "Product.hh", "Product_8hh.html", "Product_8hh" ],
     [ "ProductData.cc", "ProductData_8cc.html", null ],

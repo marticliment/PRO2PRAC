@@ -41,8 +41,7 @@ var NAVTREE =
       [ "Membres de Fitxers", "globals.html", [
         [ "Tot", "globals.html", null ],
         [ "Funcions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Definicions", "globals_defs.html", null ]
+        [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]

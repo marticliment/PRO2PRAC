@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hascity_0',['HasCity',['../classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d',1,'Valley']]],
-  ['hasproduct_1',['HasProduct',['../classCity.html#ace2a3dd52631a2c629e170590ef296bc',1,'City']]]
+  ['initializefromstream_0',['InitializeFromStream',['../classValley.html#aab63536d9205e6bbfede92c0c5d66d25',1,'Valley']]]
 ];

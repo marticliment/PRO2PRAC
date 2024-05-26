@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the specification of the ProductData class
+ */
+
 #ifndef PRODUCT_DATA_HH
 #define PRODUCT_DATA_HH
 

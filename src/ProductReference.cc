@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the implementation of the ProductReference <i>static</i> class
+ */
+
 #include "ProductReference.hh"
 
 vector<ProductData> ProductReference::data;
@@ -9,17 +14,13 @@ void ProductReference::Add(ProductData new_data)
 
 const ProductData& ProductReference::Get(int id)
 {
-    if(Contains(id))
-        return data[id-1];
-    else
-        throw exception();
+    assert(Contains(id));
+    return data[id-1];
 }
 
 bool ProductReference::Contains(int id)
 {
-    if(id <= 0)
-        return false;
-
+    assert(id > 0);
     return id <= data.size();
 }
 

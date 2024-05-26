@@ -1,10 +1,10 @@
 <map id="src/ProductReference.cc" name="src/ProductReference.cc">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,31"/>
-<area shape="rect" id="Node000002" href="$ProductReference_8hh.html" title=" " alt="" coords="16,79,173,104"/>
+<area shape="rect" id="Node000001" title="Contains the implementation of the ProductReference static class." alt="" coords="5,5,184,31"/>
+<area shape="rect" id="Node000002" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="16,79,173,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,31,97,65,92,65,92,31"/>
-<area shape="rect" id="Node000003" href="$Product_8hh.html" title=" " alt="" coords="8,152,99,177"/>
+<area shape="rect" id="Node000003" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="8,152,99,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,106,69,141,65,139,86,103"/>
-<area shape="rect" id="Node000004" href="$ProductData_8hh.html" title=" " alt="" coords="33,225,156,251"/>
+<area shape="rect" id="Node000004" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="33,225,156,251"/>
 <area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="102,103,111,136,113,178,105,213,100,212,108,177,106,137,97,105"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="62,176,83,212,79,215,58,179"/>
 </map>

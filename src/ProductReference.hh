@@ -1,9 +1,15 @@
+/**
+ * @file
+ * @brief Contains the specification of the ProductReference <i>static</i> class
+ */
+
 #ifndef PRODUCTREFERENCE_HH
 #define PRODUCTREFERENCE_HH
 
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <iostream>
+#include <cassert>
 #endif
 
 #include "Product.hh"
@@ -48,7 +54,7 @@ public:
      * 
      * @param id The Id of the product data to retrieve.
      * 
-     * @pre The Id must be a valid Id of an existing product data in the reference.
+     * @pre The Id must fulfill **0 < Id <= product_count**
      * @post The product data with the specified Id is returned.
      * 
      * @return The product data with the specified Id.
@@ -60,7 +66,7 @@ public:
      * 
      * @param id The Id to check.
      * 
-     * @pre The Id must be a valid Id.
+     * @pre The Id must fulfill **0 < Id <= product_count**
      * @post Returns true if the reference contains product data with the specified Id, false otherwise.
      * 
      * @return True if the reference contains product data with the specified Id, false otherwise.

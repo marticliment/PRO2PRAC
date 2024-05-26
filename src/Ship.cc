@@ -1,6 +1,10 @@
+/**
+ * @file
+ * @brief Contains the implementation of the Ship class
+ */
+
 #include "Ship.hh"
 #include "ProductReference.hh"
-#include "debug.hh"
 
 Ship::Ship()
 {

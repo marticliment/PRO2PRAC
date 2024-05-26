@@ -68,7 +68,6 @@ var menudata={children:[
 {text:"Tot",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"},
 {text:"c",url:"globals.html#index_c"},
-{text:"d",url:"globals.html#index_d"},
 {text:"e",url:"globals.html#index_e"},
 {text:"f",url:"globals.html#index_f"},
 {text:"h",url:"globals.html#index_h"},
@@ -88,5 +87,4 @@ var menudata={children:[
 {text:"m",url:"globals_vars.html#index_m"},
 {text:"p",url:"globals_vars.html#index_p"},
 {text:"q",url:"globals_vars.html#index_q"},
-{text:"r",url:"globals_vars.html#index_r"}]},
-{text:"Definicions",url:"globals_defs.html"}]}]}]}
+{text:"r",url:"globals_vars.html#index_r"}]}]}]}]}

@@ -1,8 +1,5 @@
 <map id="Valley::GetCity" name="Valley::GetCity">
-<area shape="rect" id="Node000001" title="Gets the city with the specified Id." alt="" coords="5,13,124,38"/>
-<area shape="rect" id="Node000002" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="340,5,519,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,23,326,23,326,28,124,28"/>
-<area shape="rect" id="Node000003" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="172,38,292,63"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,32,159,37,158,42,124,37"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="292,40,326,36,327,41,293,46"/>
+<area shape="rect" id="Node000001" title="Gets the city with the specified Id." alt="" coords="5,5,124,31"/>
+<area shape="rect" id="Node000002" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="172,5,292,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,15,158,15,158,21,124,21"/>
 </map>

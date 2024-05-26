@@ -2,7 +2,7 @@ var classCity =
 [
     [ "City", "classCity.html#a1b1f549430f0a7ecd0ec7b1605415193", null ],
     [ "City", "classCity.html#a9b24fe1a6c60582cabd70f38c02084e2", null ],
-    [ "AddProduct", "classCity.html#a502e496cee454e5e42f139e2ae3ec124", null ],
+    [ "AddProduct", "classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2", null ],
     [ "GetId", "classCity.html#a3de0d3fef9f191a0264ce8d198c305dc", null ],
     [ "GetProductCurrentAmount", "classCity.html#a1679449b2c11dc422ed5d1ebf9072a36", null ],
     [ "GetProductExceedingAmount", "classCity.html#a96a9d3a5b4b1100df16e933bacfd590f", null ],
@@ -17,7 +17,7 @@ var classCity =
     [ "RemoveProduct", "classCity.html#add1c7d762565f1b854095dfda7f073c0", null ],
     [ "RestockProductAmount", "classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390", null ],
     [ "TradeWith", "classCity.html#ae21b9eba53e1b04d630b69a3f0503f19", null ],
-    [ "UpdateProduct", "classCity.html#a050d16749a7d5c037284b428c543073a", null ],
+    [ "UpdateProduct", "classCity.html#a5fb23dbbba8f2f799eb1fb60d1e02e0c", null ],
     [ "WithdrawProductAmount", "classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9", null ],
     [ "id", "classCity.html#af7de9b481a8f3eb1f04aa7929cf6317c", null ],
     [ "product_inventory", "classCity.html#a9af0c2f9b93c058ade1dfcf465d90296", null ],

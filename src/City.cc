@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the implementation of the City class
+ */
+
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <algorithm>

@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the implementation of the Product class
+ */
+
 #include "Product.hh"
 #include "ProductReference.hh"
 #include "ProductData.hh"

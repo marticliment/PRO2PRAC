@@ -1,6 +1,4 @@
 <map id="Valley::DoTrades" name="Valley::DoTrades">
 <area shape="rect" id="Node000001" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="5,29,135,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="37,31,30,21,34,11,47,5,70,3,98,6,109,16,106,20,96,11,70,8,49,10,38,15,35,20,41,28"/>
-<area shape="rect" id="Node000002" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="183,22,361,62"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,39,169,39,169,45,135,45"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="48,30,43,21,46,11,55,5,70,3,88,6,96,14,92,18,85,11,70,8,57,10,50,14,49,20,53,28"/>
 </map>

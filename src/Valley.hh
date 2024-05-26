@@ -1,5 +1,10 @@
-#ifndef RIVER_ARRAY_HH
-#define RIVER_ARRAY_HH
+/**
+ * @file
+ * @brief Contains the specification of the Valley <i>static</i> class
+ */
+
+#ifndef VALLEY_HH
+#define VALLEY_HH
 
 #ifndef NO_DIAGRAM
 #include <vector>
@@ -49,14 +54,6 @@ private:
     static Ship ship; /**< The ship. */
 
     /**
-     * @brief Asserts that the river array is initialized.
-     * 
-     * @pre None
-     * @post Will crash the program if the valley is not initialized.
-     */
-    static void AssertRiverArrayIsInitialized();
-
-    /**
      * @brief Reads a river node and its children from an input stream.
      * 
      * @param stream An input stream.
@@ -74,8 +71,8 @@ private:
      * 
      * @param current_position A node in the river structure.
      * 
-     * @pre The current position is valid.
-     * @post Trades are performed recursively starting from the current node.
+     * @pre The current_position node is either empty or exists in the valley.
+     * @post Trades are performed recursively starting from the current node for every subtree.
      */
     static void DoTrades(const BinTree<string> &current_position);
 
@@ -86,20 +83,25 @@ private:
      * and coherent with current_location
      * @param current_location The current location in the river structure. Must be a non-empty BinTree<string> node, 
      * where the value of the node is the id of an existing city. Both children of the node may be either empty or valid.
-     * @param bought The amount of buyable product that has been already bought. This value cannot be negative
+     * @param bought_amount The amount of buyable product that has been already bought. This value cannot be negative
      * @param sold_amount The amount of sellable product that has been already sold. This value cannot be negative
      * @param recently_skipped_cities The amount of skipped cities since the last city where a tarde was performed. This value cannot be negative
      * @param test_ship The ship to use to test a route. Must be a valid ship.
      * @param best_route A reference to a variable holding the best possible route.
      * 
-     * @pre current_location is a non-empty node and is coherent with current_route, best_route and ship are 
-     * valid references to valid instances of their respective types, and buyable_amount and sellable_amount are non_negative.
-     * @post All the possible routes parting from the given current_location are tested and the best route is saved to current_route.
+     * @pre current_location is a non-empty node and is coherent with current_route.
+     * current_route is a vector containing the position of current_location city in the valley
+     * bought_amount, sold_amount and recently_skipped_cities are positive integers that are coherent with the already done route.
+     * They represent, respectivelty, the amount of already bought product, the amount of already sold product and the count of passed cities 
+     * from the last city where a trade was performed.
+     * test_ship is a valid ship containig the bought and sold products, whose current_amounts are coherent with the bought_amount and sold_amount parameters.
+     * best_route points to the best known route.
+     * @post All the possible routes starting from the given current_location are tested and the best route, if any, is saved to best_route.
      */
     static void TestRouteStep(vector<NavStep>& current_route, 
         const BinTree<string>& current_location, 
-        int buyable_amount, 
-        int sellable_amount,
+        int bought_amount, 
+        int sold_amount,
         int recently_skipped_cities,
         Ship& test_ship,
         RouteEvaluationResult &best_route
@@ -165,7 +167,7 @@ public:
      * 
      * @param id The Id of the city.
      * 
-     * @pre None.
+     * @pre The city Id is a non-empty string
      * @post True is returned if a city with the specified Id exists, false otherwise.
      * 
      * @return True if a city with the specified Id exists, false otherwise.
@@ -186,7 +188,7 @@ public:
      * The best route is the shortest route possible where the maximum amount of product is bought and sold.
      * 
      * @pre The Valley is initialized.
-     * @post The best route is returned.
+     * @post The best possible route for the current ship is returned. No cities nor the ship have been modified
      * 
      * @return The best possible route.
      */

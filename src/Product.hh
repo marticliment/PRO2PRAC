@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the specification of the Product class
+ */
+
 #ifndef PRODUCT_HH
 #define PRODUCT_HH
 
@@ -100,7 +105,7 @@ class Product
          * the weights and volumes on any city instance.
          * @param amount The amount to be withdrawn.
          * 
-         * @pre The current amount of the product is greater than or equal to the specified amount.
+         * @pre The amount to withdraw fulfills **0 <= withdraw_amount <= current_amount**.
          * @post The current amount of the product is reduced by the specified amount.
          */
         void WithdrawAmount(int amount);
@@ -110,7 +115,7 @@ class Product
          * the weights and volumes on any city instance.
          * @param amount The amount to be restocked.
          * 
-         * @pre The amount to restock is greater or equal to zero. To restock negative amounts of product, use WithdrawAmount() instead.
+         * @pre The amount to restock fulfills **0 <= restock_amount**. To restock negative amounts of product, use WithdrawAmount() instead.
          * @post The current amount of the product is increased by the specified amount.
          */
         void RestockAmount(int amount);

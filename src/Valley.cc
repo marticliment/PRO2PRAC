@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the implementation of the Valley <i>static</i> class
+ */
+
 #ifndef NO_DIAGRAM
 #include <set>
 #include <unordered_map>
@@ -5,7 +10,6 @@
 
 #include "ProductReference.hh"
 #include "Valley.hh"
-#include "debug.hh"
 
 using namespace std;
 
@@ -15,11 +19,6 @@ City Valley::invalid_city = City("invalid");
 BinTree<string> Valley::river_structure = BinTree<string>();
 unordered_map<string, City> Valley::cities = unordered_map<string, City>();
 Ship Valley::ship = Ship();
-
-void Valley::AssertRiverArrayIsInitialized()
-{
-    assert(initialized && (true || "The current Valley object is not initialized, but a method that requires it to be is being called."));
-}
 
 BinTree<string> Valley::GetRiverNodeFromStream(istream& stream)
 {
@@ -56,13 +55,13 @@ void Valley::InitializeFromStream(istream& stream)
 
 Ship& Valley::GetShip()
 {
-    AssertRiverArrayIsInitialized();
+    assert(initialized);
     return ship;
 }
 
 vector<string> Valley::GetCityIds()
 {
-    AssertRiverArrayIsInitialized();
+    assert(initialized);
     vector<string> names(cities.size(), "");
     int i = 0;
     auto it = cities.begin();
@@ -74,13 +73,13 @@ vector<string> Valley::GetCityIds()
 
 bool Valley::HasCity(const string& id)
 {
-    AssertRiverArrayIsInitialized();
+    assert(initialized);
     return cities.find(id) != cities.end();
 }
 
 City& Valley::GetCity(const string& id)
 {
-    AssertRiverArrayIsInitialized();
+    assert(initialized);
     if(!HasCity(id))
         return invalid_city;
 
@@ -89,8 +88,7 @@ City& Valley::GetCity(const string& id)
 
 void Valley::DoTrades(const BinTree<string> &current_position)
 {
-    AssertRiverArrayIsInitialized();
-
+    assert(initialized);
     if(current_position.empty())
         return;
 
@@ -111,7 +109,7 @@ void Valley::DoTrades(const BinTree<string> &current_position)
 
 void Valley::DoTrades()
 {
-    AssertRiverArrayIsInitialized();
+    assert(initialized);
     DoTrades(river_structure);
 }
 

@@ -2,11 +2,11 @@
 <area shape="rect" id="Node000001" title="Get the available amount of the product." alt="" coords="664,79,865,105"/>
 <area shape="rect" id="Node000002" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="525,54,616,79"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="653,80,616,75,616,70,654,75"/>
-<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,79,60,105"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,79,60,105"/>
 <area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="650,95,60,95,60,89,650,89"/>
 <area shape="rect" id="Node000003" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,54,267,79"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="539,48,510,32,477,20,432,11,396,8,361,12,315,20,260,36,214,56,212,51,258,31,314,15,360,6,396,3,433,5,478,15,512,27,541,44"/>
-<area shape="rect" id="Node000005" href="$classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="315,54,477,79"/>
+<area shape="rect" id="Node000005" href="$classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="315,54,477,79"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,69,478,69,478,64,512,64"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,84,61,90,60,85,96,79"/>
 <area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="301,69,267,69,267,64,301,64"/>

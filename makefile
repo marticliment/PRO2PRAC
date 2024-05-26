@@ -6,7 +6,7 @@ endif
 
 OPCIONS = -D_JUDGE_ -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11 -fno-extended-identifiers
 
-program.exe: program.o City.o Product.o ProductData.o Valley.o Ship.o debug.o ProductReference.o
+program.exe: program.o City.o Product.o ProductData.o Valley.o Ship.o ProductReference.o
 	g++ obj/*.o -o program.exe
 
 %.o: src/%.cc

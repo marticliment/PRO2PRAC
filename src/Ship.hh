@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Contains the specification of the Ship class
+ */
+
 #ifndef SHIP_HH
 #define SHIP_HH
 
@@ -40,7 +45,7 @@ class Ship
          * @param buying The product that the ship buys.
          * @param selling The product that the ship sells.
          * 
-         * @pre None
+         * @pre **buying** and **selling** are valid products.
          * @post A Ship object is created with the specified buying and selling products.
          */
         Ship(Product buying, Product selling);

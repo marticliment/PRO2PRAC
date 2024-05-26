@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,31,580,56"/>
 <area shape="rect" id="Node000002" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,5,313,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,34,313,31,314,25,348,29"/>
-<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,31,60,56"/>
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="347,46,60,46,60,41,347,41"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,35,60,42,60,37,107,30"/>
 </map>

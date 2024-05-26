@@ -1,9 +1,21 @@
+/** @mainpage
+
+    # Pràctica de PRO2
+    Alumne: Martí Climent (Grup 13)
+
+    Aquesta és la documentació del codi de la pràctica generada amb Doxygen.
+
+*/
+/**
+ * @file
+ * @brief Contains the entry point of the valley commerce simulator
+ */
+
 #ifndef NO_DIAGRAM
 #include <iostream>
 #endif
 
 #include "Valley.hh"
-#include "debug.hh"
 #include "ProductReference.hh"
 
 using namespace std;
@@ -49,30 +61,16 @@ const string ERR_NE_PROD = "error: no existe el producto";
 const string ERR_NE_PROD_CITY = "error: la ciudad no tiene el producto";
 const string ERR_AE_PROD = "error: la ciudad ya tiene el producto";
 
-#ifdef DEBUG
-const string green("\033[1;32m");
-const string reset("\033[0m");
-#endif
-
-/** 
- * @brief Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green
- * 
- * @param command The message to print
- * 
- * @pre None
- * @post None
- */
-
 
 /**
- * @brief The main function of the program.
+ * @brief The entry point of the program.
  *
  * This function initializes the Valley from the input stream and processes commands
  * until the "fin" command is entered. It reads commands from the input stream and
  * performs the corresponding operations based on the command.
  * 
- * @pre None
- * @post None
+ * @pre cin is readable and cout is writable
+ * @post The program will read and execute commands to simulate commerce in a valley
  * 
  * @return The exit status of the program.
  */
@@ -385,11 +383,3 @@ int main()
     flush(cout);
 }
 
-/** @mainpage
-
-    # Pràctica de PRO2
-    Alumne: Martí Climent (Grup 13)
-
-    Aquesta és la documentació del codi de la pràctica generada amb Doxygen.
-
-*/
