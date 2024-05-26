@@ -1,7 +1,0 @@
-<map id="src/City.hh" name="src/City.hh">
-<area shape="rect" id="Node000001" title="Contains the specification of the City class." alt="" coords="22,5,111,31"/>
-<area shape="rect" id="Node000002" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="21,79,112,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,31,69,65,64,65,64,31"/>
-<area shape="rect" id="Node000003" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="5,152,128,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,104,69,138,64,138,64,104"/>
-</map>

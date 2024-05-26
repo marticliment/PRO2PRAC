@@ -3,11 +3,6 @@
  * @brief Contains the implementation of the Ship class
  */
 
-#ifndef NO_DIAGRAM
-#include <vector>
-#include <iostream>
-#endif
-
 #include "Ship.hh"
 #include "ProductReference.hh"
 

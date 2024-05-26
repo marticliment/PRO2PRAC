@@ -1,8 +1,0 @@
-<map id="Ship::ReadFromStream" name="Ship::ReadFromStream">
-<area shape="rect" id="Node000001" title="Reads ship data (buy and sell products) from a stream." alt="" coords="361,31,532,56"/>
-<area shape="rect" id="Node000002" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,5,313,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,35,313,32,314,26,348,30"/>
-<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,31,60,56"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="348,46,60,46,60,41,348,41"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,35,60,42,60,37,107,30"/>
-</map>

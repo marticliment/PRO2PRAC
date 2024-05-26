@@ -4,14 +4,12 @@
  */
 
 #ifndef NO_DIAGRAM
-#include <unordered_map>
-#include <set>
-#include <iostream>
 #include <vector>
 #endif
 
-#include "ProductReference.hh"
 #include "City.hh"
+#include "ProductData.hh"
+#include "ProductReference.hh"
 
 City::City()
 {

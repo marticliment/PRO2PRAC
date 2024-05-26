@@ -1,5 +1,0 @@
-<map id="City::RestockProductAmount" name="City::RestockProductAmount">
-<area shape="rect" id="Node000001" title="Restock a certain amount of a product in the city." alt="" coords="173,5,380,31"/>
-<area shape="rect" id="Node000002" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,21,125,21,125,15,159,15"/>
-</map>

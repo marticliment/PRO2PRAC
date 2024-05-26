@@ -1,5 +1,0 @@
-<map id="City::RestockProductAmount" name="City::RestockProductAmount">
-<area shape="rect" id="Node000001" title="Restock a certain amount of a product in the city." alt="" coords="5,5,212,31"/>
-<area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="260,5,428,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,15,246,15,246,21,212,21"/>
-</map>

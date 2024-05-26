@@ -4,7 +4,6 @@
  */
 
 #ifndef NO_DIAGRAM
-#include <vector>
 #include <unordered_map>
 #include "BinTree.hh"
 #endif

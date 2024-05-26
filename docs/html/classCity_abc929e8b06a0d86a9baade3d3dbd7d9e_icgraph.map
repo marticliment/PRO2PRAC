@@ -1,5 +1,0 @@
-<map id="City::GetProductMissingAmount" name="City::GetProductMissingAmount">
-<area shape="rect" id="Node000001" title="Get the missing amount of a product in the city. This method returns 0 if the product has a positive ..." alt="" coords="173,5,401,31"/>
-<area shape="rect" id="Node000002" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,21,126,21,126,15,160,15"/>
-</map>

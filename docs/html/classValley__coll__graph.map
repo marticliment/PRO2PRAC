@@ -1,9 +1,0 @@
-<map id="Valley" name="Valley">
-<area shape="rect" id="Node000001" title="Represents a valley with cities (City objects), and a Ship that navigates and trades between cities." alt="" coords="53,196,115,221"/>
-<area shape="rect" id="Node000002" href="$classCity.html" title="Represents a city with an inventory of Product items." alt="" coords="5,108,53,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="28,147,33,171,44,184,58,194,55,198,40,188,28,173,23,148"/>
-<area shape="rect" id="Node000003" href="$classShip.html" title="Represents a ship that navigates through a Valley buying and selling products." alt="" coords="115,108,165,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,147,113,173,95,197,91,194,108,171,125,144"/>
-<area shape="rect" id="Node000004" href="$classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,..." alt="" coords="105,5,175,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="143,45,143,108,137,108,137,45"/>
-</map>

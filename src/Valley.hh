@@ -12,8 +12,9 @@
 #include "BinTree.hh"
 #endif
 
-#include "Ship.hh"
 #include "City.hh"
+#include "Ship.hh"
+#include "Valley.hh"
 
 /**
  * @brief Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.

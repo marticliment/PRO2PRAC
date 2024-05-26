@@ -1,8 +1,0 @@
-<map id="src/ProductReference.hh" name="src/ProductReference.hh">
-<area shape="rect" id="Node000001" title="Contains the specification of the ProductReference static class." alt="" coords="5,5,185,31"/>
-<area shape="rect" id="Node000002" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="9,79,99,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,32,70,68,65,65,86,30"/>
-<area shape="rect" id="Node000003" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="34,152,157,177"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="102,30,112,63,114,104,106,139,101,138,109,104,106,64,97,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,103,84,139,79,141,59,106"/>
-</map>
