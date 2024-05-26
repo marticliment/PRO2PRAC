@@ -490,12 +490,12 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">   31</span> </div>
 <div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span>(buy_id == sell_id)</div>
 <div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        cout &lt;&lt; <span class="stringliteral">&quot;error: no se puede comprar y vender el mismo producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   34</span>        cout &lt;&lt; <span class="stringliteral">&quot;error: no se puede comprar y vender el mismo producto&quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   36</span>    }</div>
 <div class="line"><span class="lineno">   37</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(sell_id) || !<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(buy_id))</div>
 <div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   39</span>        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
 <div class="line"><span class="lineno">   42</span> </div>

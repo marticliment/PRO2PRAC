@@ -22,7 +22,7 @@ const string reset("\033[0m");
 void Log(int number)
 {
 #ifdef DEBUG
-    cout << yellow << number << reset << endl;
+    cout << yellow << number << reset << '\n';
 #endif
     number++;
 }
@@ -30,7 +30,7 @@ void Log(int number)
 void Log(string message)
 {
 #ifdef DEBUG
-    cout << yellow << message << reset << endl;
+    cout << yellow << message << reset << '\n';
 #endif
     message = "";
 }
@@ -38,7 +38,7 @@ void Log(string message)
 void Error(int number)
 {
 #ifdef DEBUG
-    cout << red << number << reset << endl;
+    cout << red << number << reset << '\n';
 #endif
     number++;
 
@@ -47,7 +47,7 @@ void Error(int number)
 void Error(string message)
 {
 #ifdef DEBUG
-    cout << red << message << reset << endl;
+    cout << red << message << reset << '\n';
 #endif
     message = "";
 }

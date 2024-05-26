@@ -31,12 +31,12 @@ void Ship::ReadFromStream(istream& stream)
 
     if(buy_id == sell_id)
     {
-        cout << "error: no se puede comprar y vender el mismo producto" << endl;
+        cout << "error: no se puede comprar y vender el mismo producto" << '\n';
         return;
     }
     else if(!ProductReference::Contains(sell_id) || !ProductReference::Contains(buy_id))
     {
-        cout << "error: no existe el producto" << endl;
+        cout << "error: no existe el producto" << '\n';
         return;
     }
 

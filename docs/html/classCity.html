@@ -291,18 +291,15 @@ Gràfic de crides a aquesta funció:</div>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00055">55</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
-<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>[p.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>()] = p;</div>
-<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>.insert(p.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>());</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> += p.<a class="code hl_function" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8">GetWeight</a>();</div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += p.<a class="code hl_function" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602">GetVolume</a>();</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>[new_prod.GetId()] = new_prod;</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>.insert(new_prod.GetId());</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> += new_prod.GetWeight();</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += new_prod.GetVolume();</div>
 <div class="line"><span class="lineno">   61</span>}</div>
 <div class="ttc" id="aclassCity_html_a05b42733d4e4846c7a92a71df44493d0"><div class="ttname"><a href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">City::weight</a></div><div class="ttdeci">int weight</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00030">City.hh:30</a></div></div>
 <div class="ttc" id="aclassCity_html_a3fa5659e8e49574497226a0c2541f96d"><div class="ttname"><a href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">City::product_list</a></div><div class="ttdeci">set&lt; int &gt; product_list</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00029">City.hh:29</a></div></div>
 <div class="ttc" id="aclassCity_html_a6d98c02a579d8bd68e94850bf785decf"><div class="ttname"><a href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">City::volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00031">City.hh:31</a></div></div>
 <div class="ttc" id="aclassCity_html_a9af0c2f9b93c058ade1dfcf465d90296"><div class="ttname"><a href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">City::product_inventory</a></div><div class="ttdeci">unordered_map&lt; int, Product &gt; product_inventory</div><div class="ttdef"><b>Definition</b> <a href="City_8hh_source.html#l00028">City.hh:28</a></div></div>
-<div class="ttc" id="aclassProduct_html_a16d39b4890f1bc051d45b00055cf58e8"><div class="ttname"><a href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8">Product::GetWeight</a></div><div class="ttdeci">int GetWeight() const</div><div class="ttdoc">Get the weight of the product according to the current available amount of product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00068">Product.cc:68</a></div></div>
-<div class="ttc" id="aclassProduct_html_ac62da93ee21d61c795c40d3fb0c3b602"><div class="ttname"><a href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602">Product::GetVolume</a></div><div class="ttdeci">int GetVolume() const</div><div class="ttdoc">Get the volume of the product according to the current available amount of product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00073">Product.cc:73</a></div></div>
-<div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the Id of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00021">Product.cc:21</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -331,11 +328,9 @@ Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_a23a27df1c37c22f2873e23346362a714_icgraph.png" border="0" usemap="#aclassCity_a23a27df1c37c22f2873e23346362a714_icgraph" alt=""/></div>
 <map name="aclassCity_a23a27df1c37c22f2873e23346362a714_icgraph" id="aclassCity_a23a27df1c37c22f2873e23346362a714_icgraph">
-<area shape="rect" title="Add a product to the city&#39;s inventory." alt="" coords="324,31,453,56"/>
+<area shape="rect" title="Add a product to the city&#39;s inventory." alt="" coords="324,5,453,31"/>
 <area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,5,276,31"/>
-<area shape="poly" title=" " alt="" coords="310,36,276,31,276,26,311,31"/>
-<area shape="rect" href="classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="117,55,267,80"/>
-<area shape="poly" title=" " alt="" coords="311,55,268,61,267,56,310,50"/>
+<area shape="poly" title=" " alt="" coords="310,21,276,21,276,15,310,15"/>
 <area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
@@ -397,10 +392,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The current amount of the product in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00140">140</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>{</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetCurrentAmount();</div>
-<div class="line"><span class="lineno">  143</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00145">145</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetCurrentAmount();</div>
+<div class="line"><span class="lineno">  148</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -431,10 +426,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The exceeding amount of the product in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00150">150</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>{</div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetExceedingAmount();</div>
-<div class="line"><span class="lineno">  153</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00155">155</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetExceedingAmount();</div>
+<div class="line"><span class="lineno">  158</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -506,10 +501,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The missing amount of the product in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00155">155</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetMissingAmount();</div>
-<div class="line"><span class="lineno">  158</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00160">160</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>{</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetMissingAmount();</div>
+<div class="line"><span class="lineno">  163</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -550,10 +545,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The amount of this product the city wants. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00145">145</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetWantedAmount();</div>
-<div class="line"><span class="lineno">  148</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00150">150</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>{</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).GetWantedAmount();</div>
+<div class="line"><span class="lineno">  153</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -577,10 +572,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The raw set of product Ids in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00176">176</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>{</div>
-<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>;</div>
-<div class="line"><span class="lineno">  179</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00181">181</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>{</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -614,10 +609,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The total volume of the products in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00078">78</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a>;</div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00083">83</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a>;</div>
+<div class="line"><span class="lineno">   86</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -641,10 +636,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>None</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The total weight of the products in the city. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00083">83</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a>;</div>
-<div class="line"><span class="lineno">   86</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00088">88</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>{</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a>;</div>
+<div class="line"><span class="lineno">   91</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -797,17 +792,7 @@ Gràfic de crides a aquesta funció:</div>
 <div class="line"><span class="lineno">   68</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.erase(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   69</span>    <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>.erase(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   70</span>}</div>
-</div><!-- fragment --><div class="dynheader">
-Gràfic de crides a aquesta funció:</div>
-<div class="dyncontent">
-<div class="center"><img src="classCity_add1c7d762565f1b854095dfda7f073c0_icgraph.png" border="0" usemap="#aclassCity_add1c7d762565f1b854095dfda7f073c0_icgraph" alt=""/></div>
-<map name="aclassCity_add1c7d762565f1b854095dfda7f073c0_icgraph" id="aclassCity_add1c7d762565f1b854095dfda7f073c0_icgraph">
-<area shape="rect" title="Remove a product from the city&#39;s inventory." alt="" coords="204,5,363,31"/>
-<area shape="rect" href="classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="5,5,156,31"/>
-<area shape="poly" title=" " alt="" coords="190,21,156,21,156,15,190,15"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5aa2c8a7d6d7e4f1e4d009c97d5ae390" name="a5aa2c8a7d6d7e4f1e4d009c97d5ae390"></a>
@@ -847,13 +832,13 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The amount of the product in the city is increased by the specified amount. The total weight and volume of the city are updated accordingly </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00168">168</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>{</div>
-<div class="line"><span class="lineno">  170</span>    <span class="keyword">auto</span>&amp; product_data = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> += product_data.GetWeight(amount);</div>
-<div class="line"><span class="lineno">  172</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += product_data.GetVolume(amount);</div>
-<div class="line"><span class="lineno">  173</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).RestockAmount(amount);</div>
-<div class="line"><span class="lineno">  174</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00173">173</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>{</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keyword">auto</span>&amp; product_data = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> += product_data.GetWeight(amount);</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += product_data.GetVolume(amount);</div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).RestockAmount(amount);</div>
+<div class="line"><span class="lineno">  179</span>}</div>
 <div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
@@ -906,62 +891,62 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section pre"><dt>Precondició</dt><dd>Both cities are valid. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>All the possible trades are performed. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00088">88</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>{</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keyword">auto</span>&amp; this_product_set = this-&gt;<a class="code hl_function" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">GetRawProductIds</a>();</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keyword">auto</span>&amp; other_product_set = other.<a class="code hl_function" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">GetRawProductIds</a>();</div>
-<div class="line"><span class="lineno">   92</span>    </div>
-<div class="line"><span class="lineno">   93</span>    <span class="keyword">auto</span> this_product_it = this_product_set.begin();</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">auto</span> other_product_it = other_product_set.begin();</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">while</span>(this_product_it != this_product_set.end() </div>
-<div class="line"><span class="lineno">   97</span>        &amp;&amp; other_product_it != other_product_set.end())</div>
-<div class="line"><span class="lineno">   98</span>    {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span>(*this_product_it &gt; *other_product_it)</div>
-<div class="line"><span class="lineno">  100</span>            other_product_it++;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(*this_product_it &lt; *other_product_it)</div>
-<div class="line"><span class="lineno">  102</span>            this_product_it++;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">else</span> <span class="comment">//(*this_product_it == *other_product_it)</span></div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordtype">int</span> product_id = *this_product_it;</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>            <span class="comment">// this -&gt; SELLER</span></div>
-<div class="line"><span class="lineno">  109</span>            <span class="comment">// other -&gt; BUYER</span></div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordtype">int</span> trade_amount = min(</div>
-<div class="line"><span class="lineno">  111</span>                this-&gt;<a class="code hl_function" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">GetProductExceedingAmount</a>(product_id),</div>
-<div class="line"><span class="lineno">  112</span>                other.<a class="code hl_function" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">GetProductMissingAmount</a>(product_id)</div>
-<div class="line"><span class="lineno">  113</span>            );</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span>(trade_amount != 0)</div>
-<div class="line"><span class="lineno">  115</span>            {</div>
-<div class="line"><span class="lineno">  116</span>                this-&gt;<a class="code hl_function" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">WithdrawProductAmount</a>(product_id, trade_amount);</div>
-<div class="line"><span class="lineno">  117</span>                other.<a class="code hl_function" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">RestockProductAmount</a>(product_id, trade_amount);</div>
-<div class="line"><span class="lineno">  118</span>            } </div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">else</span></div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00093">93</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>{</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keyword">auto</span>&amp; this_product_set = this-&gt;<a class="code hl_function" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">GetRawProductIds</a>();</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keyword">auto</span>&amp; other_product_set = other.<a class="code hl_function" href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">GetRawProductIds</a>();</div>
+<div class="line"><span class="lineno">   97</span>    </div>
+<div class="line"><span class="lineno">   98</span>    <span class="keyword">auto</span> this_product_it = this_product_set.begin();</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keyword">auto</span> other_product_it = other_product_set.begin();</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">while</span>(this_product_it != this_product_set.end() </div>
+<div class="line"><span class="lineno">  102</span>        &amp;&amp; other_product_it != other_product_set.end())</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span>(*this_product_it &gt; *other_product_it)</div>
+<div class="line"><span class="lineno">  105</span>            other_product_it++;</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(*this_product_it &lt; *other_product_it)</div>
+<div class="line"><span class="lineno">  107</span>            this_product_it++;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">else</span> <span class="comment">//(*this_product_it == *other_product_it)</span></div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordtype">int</span> product_id = *this_product_it;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>            <span class="comment">// this -&gt; SELLER</span></div>
+<div class="line"><span class="lineno">  114</span>            <span class="comment">// other -&gt; BUYER</span></div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordtype">int</span> trade_amount = min(</div>
+<div class="line"><span class="lineno">  116</span>                this-&gt;<a class="code hl_function" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">GetProductExceedingAmount</a>(product_id),</div>
+<div class="line"><span class="lineno">  117</span>                other.<a class="code hl_function" href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">GetProductMissingAmount</a>(product_id)</div>
+<div class="line"><span class="lineno">  118</span>            );</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span>(trade_amount != 0)</div>
 <div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                <span class="comment">// other -&gt; SELLER</span></div>
-<div class="line"><span class="lineno">  122</span>                <span class="comment">// this -&gt; BUYER</span></div>
-<div class="line"><span class="lineno">  123</span>                trade_amount = min(</div>
-<div class="line"><span class="lineno">  124</span>                    other.<a class="code hl_function" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">GetProductExceedingAmount</a>(product_id), </div>
-<div class="line"><span class="lineno">  125</span>                    this-&gt;GetProductMissingAmount(product_id)</div>
-<div class="line"><span class="lineno">  126</span>                );</div>
-<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span>(trade_amount != 0)</div>
-<div class="line"><span class="lineno">  128</span>                {</div>
-<div class="line"><span class="lineno">  129</span>                    other.<a class="code hl_function" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">WithdrawProductAmount</a>(product_id, trade_amount);</div>
-<div class="line"><span class="lineno">  130</span>                    this-&gt;<a class="code hl_function" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">RestockProductAmount</a>(product_id, trade_amount);</div>
-<div class="line"><span class="lineno">  131</span>                }</div>
-<div class="line"><span class="lineno">  132</span>            }</div>
-<div class="line"><span class="lineno">  133</span>            </div>
-<div class="line"><span class="lineno">  134</span>            this_product_it++;</div>
-<div class="line"><span class="lineno">  135</span>            other_product_it++;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="line"><span class="lineno">  138</span>}</div>
-<div class="ttc" id="aclassCity_html_a5aa2c8a7d6d7e4f1e4d009c97d5ae390"><div class="ttname"><a href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">City::RestockProductAmount</a></div><div class="ttdeci">void RestockProductAmount(int product_id, int amount)</div><div class="ttdoc">Restock a certain amount of a product in the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00168">City.cc:168</a></div></div>
-<div class="ttc" id="aclassCity_html_a5b6931c4e0a1b33fb97e464a43dc30f9"><div class="ttname"><a href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">City::WithdrawProductAmount</a></div><div class="ttdeci">void WithdrawProductAmount(int product_id, int amount)</div><div class="ttdoc">Withdraw a certain amount of a product from the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00160">City.cc:160</a></div></div>
-<div class="ttc" id="aclassCity_html_a87b8a9beb255137b6617175c5dba9eff"><div class="ttname"><a href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">City::GetRawProductIds</a></div><div class="ttdeci">const set&lt; int &gt; &amp; GetRawProductIds() const</div><div class="ttdoc">Get the set of raw product Ids in the city. This method is designed to be able to access the iterator...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00176">City.cc:176</a></div></div>
-<div class="ttc" id="aclassCity_html_a96a9d3a5b4b1100df16e933bacfd590f"><div class="ttname"><a href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">City::GetProductExceedingAmount</a></div><div class="ttdeci">int GetProductExceedingAmount(int product_id) const</div><div class="ttdoc">Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00150">City.cc:150</a></div></div>
-<div class="ttc" id="aclassCity_html_abc929e8b06a0d86a9baade3d3dbd7d9e"><div class="ttname"><a href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">City::GetProductMissingAmount</a></div><div class="ttdeci">int GetProductMissingAmount(int product_id) const</div><div class="ttdoc">Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00155">City.cc:155</a></div></div>
+<div class="line"><span class="lineno">  121</span>                this-&gt;<a class="code hl_function" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">WithdrawProductAmount</a>(product_id, trade_amount);</div>
+<div class="line"><span class="lineno">  122</span>                other.<a class="code hl_function" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">RestockProductAmount</a>(product_id, trade_amount);</div>
+<div class="line"><span class="lineno">  123</span>            } </div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="comment">// other -&gt; SELLER</span></div>
+<div class="line"><span class="lineno">  127</span>                <span class="comment">// this -&gt; BUYER</span></div>
+<div class="line"><span class="lineno">  128</span>                trade_amount = min(</div>
+<div class="line"><span class="lineno">  129</span>                    other.<a class="code hl_function" href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">GetProductExceedingAmount</a>(product_id), </div>
+<div class="line"><span class="lineno">  130</span>                    this-&gt;GetProductMissingAmount(product_id)</div>
+<div class="line"><span class="lineno">  131</span>                );</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">if</span>(trade_amount != 0)</div>
+<div class="line"><span class="lineno">  133</span>                {</div>
+<div class="line"><span class="lineno">  134</span>                    other.<a class="code hl_function" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">WithdrawProductAmount</a>(product_id, trade_amount);</div>
+<div class="line"><span class="lineno">  135</span>                    this-&gt;<a class="code hl_function" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">RestockProductAmount</a>(product_id, trade_amount);</div>
+<div class="line"><span class="lineno">  136</span>                }</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>            </div>
+<div class="line"><span class="lineno">  139</span>            this_product_it++;</div>
+<div class="line"><span class="lineno">  140</span>            other_product_it++;</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+<div class="ttc" id="aclassCity_html_a5aa2c8a7d6d7e4f1e4d009c97d5ae390"><div class="ttname"><a href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390">City::RestockProductAmount</a></div><div class="ttdeci">void RestockProductAmount(int product_id, int amount)</div><div class="ttdoc">Restock a certain amount of a product in the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00173">City.cc:173</a></div></div>
+<div class="ttc" id="aclassCity_html_a5b6931c4e0a1b33fb97e464a43dc30f9"><div class="ttname"><a href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9">City::WithdrawProductAmount</a></div><div class="ttdeci">void WithdrawProductAmount(int product_id, int amount)</div><div class="ttdoc">Withdraw a certain amount of a product from the city.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00165">City.cc:165</a></div></div>
+<div class="ttc" id="aclassCity_html_a87b8a9beb255137b6617175c5dba9eff"><div class="ttname"><a href="classCity.html#a87b8a9beb255137b6617175c5dba9eff">City::GetRawProductIds</a></div><div class="ttdeci">const set&lt; int &gt; &amp; GetRawProductIds() const</div><div class="ttdoc">Get the set of raw product Ids in the city. This method is designed to be able to access the iterator...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00181">City.cc:181</a></div></div>
+<div class="ttc" id="aclassCity_html_a96a9d3a5b4b1100df16e933bacfd590f"><div class="ttname"><a href="classCity.html#a96a9d3a5b4b1100df16e933bacfd590f">City::GetProductExceedingAmount</a></div><div class="ttdeci">int GetProductExceedingAmount(int product_id) const</div><div class="ttdoc">Get the exceeding amount of a product in the city. This method returns 0 if the product has a negativ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00155">City.cc:155</a></div></div>
+<div class="ttc" id="aclassCity_html_abc929e8b06a0d86a9baade3d3dbd7d9e"><div class="ttname"><a href="classCity.html#abc929e8b06a0d86a9baade3d3dbd7d9e">City::GetProductMissingAmount</a></div><div class="ttdeci">int GetProductMissingAmount(int product_id) const</div><div class="ttdoc">Get the missing amount of a product in the city. This method returns 0 if the product has a positive ...</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00160">City.cc:160</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -1016,36 +1001,35 @@ Gràfic de crides d'aquesta funció:</div>
 
 <p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00072">72</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="classCity.html#add1c7d762565f1b854095dfda7f073c0">RemoveProduct</a>(p.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>());</div>
-<div class="line"><span class="lineno">   75</span>    <a class="code hl_function" href="classCity.html#a23a27df1c37c22f2873e23346362a714">AddProduct</a>(p);</div>
-<div class="line"><span class="lineno">   76</span>}</div>
-<div class="ttc" id="aclassCity_html_add1c7d762565f1b854095dfda7f073c0"><div class="ttname"><a href="classCity.html#add1c7d762565f1b854095dfda7f073c0">City::RemoveProduct</a></div><div class="ttdeci">void RemoveProduct(int product_id)</div><div class="ttdoc">Remove a product from the city's inventory.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00063">City.cc:63</a></div></div>
+<div class="line"><span class="lineno">   74</span>    <span class="keyword">auto</span>&amp; old_prod = <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(new_prod.GetId());</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> -= old_prod.GetWeight();</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> -= old_prod.GetVolume();</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> += new_prod.GetWeight();</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> += new_prod.GetVolume();</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>[new_prod.GetId()] = new_prod;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCity_ab86b6efb986a81583d7c3b82b4e94ff3_cgraph.png" border="0" usemap="#aclassCity_ab86b6efb986a81583d7c3b82b4e94ff3_cgraph" alt=""/></div>
 <map name="aclassCity_ab86b6efb986a81583d7c3b82b4e94ff3_cgraph" id="aclassCity_ab86b6efb986a81583d7c3b82b4e94ff3_cgraph">
-<area shape="rect" title="Update a product in the city&#39;s inventory." alt="" coords="5,56,156,81"/>
-<area shape="rect" href="classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="219,56,348,81"/>
-<area shape="poly" title=" " alt="" coords="156,66,205,66,205,71,156,71"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="429,5,543,31"/>
-<area shape="poly" title=" " alt="" coords="136,53,204,41,315,28,415,19,415,25,315,33,204,46,137,59"/>
-<area shape="rect" href="classCity.html#add1c7d762565f1b854095dfda7f073c0" title="Remove a product from the city&#39;s inventory." alt="" coords="204,105,363,131"/>
-<area shape="poly" title=" " alt="" coords="134,79,218,99,217,105,133,84"/>
-<area shape="poly" title=" " alt="" coords="334,53,421,31,422,37,336,58"/>
-<area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="411,55,561,80"/>
-<area shape="poly" title=" " alt="" coords="348,66,397,65,397,71,349,71"/>
-<area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="413,104,559,129"/>
-<area shape="poly" title=" " alt="" coords="338,79,419,98,418,103,337,84"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="617,79,785,104"/>
-<area shape="poly" title=" " alt="" coords="562,73,604,78,603,83,561,78"/>
-<area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="609,29,792,55"/>
-<area shape="poly" title=" " alt="" coords="561,56,595,52,596,57,562,61"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="840,79,1043,104"/>
-<area shape="poly" title=" " alt="" coords="785,89,826,89,826,94,785,94"/>
-<area shape="poly" title=" " alt="" coords="559,105,603,100,603,105,560,111"/>
-<area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="611,128,790,153"/>
-<area shape="poly" title=" " alt="" coords="560,122,598,127,598,132,559,128"/>
+<area shape="rect" title="Update a product in the city&#39;s inventory." alt="" coords="5,55,156,80"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="222,5,337,31"/>
+<area shape="poly" title=" " alt="" coords="132,52,214,31,215,37,133,57"/>
+<area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="204,55,355,80"/>
+<area shape="poly" title=" " alt="" coords="156,65,190,65,190,70,156,70"/>
+<area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="206,104,353,129"/>
+<area shape="poly" title=" " alt="" coords="133,77,215,98,214,103,132,83"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="410,79,578,104"/>
+<area shape="poly" title=" " alt="" coords="355,73,397,78,396,83,355,78"/>
+<area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="403,29,585,55"/>
+<area shape="poly" title=" " alt="" coords="354,56,389,52,389,57,355,61"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="633,79,836,104"/>
+<area shape="poly" title=" " alt="" coords="578,89,620,89,620,94,578,94"/>
+<area shape="poly" title=" " alt="" coords="353,105,396,100,397,105,353,111"/>
+<area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="405,128,583,153"/>
+<area shape="poly" title=" " alt="" coords="353,122,391,127,391,132,353,128"/>
 </map>
 </div>
 
@@ -1088,13 +1072,13 @@ Gràfic de crides d'aquesta funció:</div>
 <dl class="section pre"><dt>Precondició</dt><dd>The product with the given Id exists in the city. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The amount of the product in the city is ddecreased by the specified amount. The total weight and volume of the city are updated accordingly </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00160">160</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>{</div>
-<div class="line"><span class="lineno">  162</span>    <span class="keyword">auto</span>&amp; product_data = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
-<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> -= product_data.GetWeight(amount);</div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> -= product_data.GetVolume(amount);</div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).WithdrawAmount(amount);</div>
-<div class="line"><span class="lineno">  166</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="City_8cc_source.html#l00165">165</a> del fitxer <a class="el" href="City_8cc_source.html">City.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>{</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keyword">auto</span>&amp; product_data = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
+<div class="line"><span class="lineno">  168</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> -= product_data.GetWeight(amount);</div>
+<div class="line"><span class="lineno">  169</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> -= product_data.GetVolume(amount);</div>
+<div class="line"><span class="lineno">  170</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.at(product_id).WithdrawAmount(amount);</div>
+<div class="line"><span class="lineno">  171</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">

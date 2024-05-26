@@ -1,5 +1,0 @@
-<map id="City::RemoveProduct" name="City::RemoveProduct">
-<area shape="rect" id="Node000001" title="Remove a product from the city&#39;s inventory." alt="" coords="204,5,363,31"/>
-<area shape="rect" id="Node000002" href="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="5,5,156,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,21,156,21,156,15,190,15"/>
-</map>

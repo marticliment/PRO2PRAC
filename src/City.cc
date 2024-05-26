@@ -52,12 +52,12 @@ bool City::HasProduct(int id) const
     return product_inventory.find(id) != product_inventory.end();
 }
 
-void City::AddProduct(Product p)
+void City::AddProduct(Product new_prod)
 {
-    product_inventory[p.GetId()] = p;
-    product_list.insert(p.GetId());
-    weight += p.GetWeight();
-    volume += p.GetVolume();
+    product_inventory[new_prod.GetId()] = new_prod;
+    product_list.insert(new_prod.GetId());
+    weight += new_prod.GetWeight();
+    volume += new_prod.GetVolume();
 }
 
 void City::RemoveProduct(int id)
@@ -69,10 +69,15 @@ void City::RemoveProduct(int id)
     product_list.erase(id);
 }
 
-void City::UpdateProduct(Product p)
+void City::UpdateProduct(Product new_prod)
 {
-    RemoveProduct(p.GetId());
-    AddProduct(p);
+    auto& old_prod = product_inventory.at(new_prod.GetId());
+    weight -= old_prod.GetWeight();
+    volume -= old_prod.GetVolume();
+
+    weight += new_prod.GetWeight();
+    volume += new_prod.GetVolume();
+    product_inventory[new_prod.GetId()] = new_prod;
 }
 
 int City::GetVolume() const

@@ -65,9 +65,9 @@ const string reset("\033[0m");
 void PrintCommand(string command)
 {
 #ifdef DEBUG
-    cout << green << "#" + command << reset << endl;
+    cout << green << "#" + command << reset << '\n';
 #else
-    cout << "#" + command << endl;
+    cout << "#" + command << '\n';
 #endif
 }
 
@@ -114,7 +114,7 @@ int main()
             PrintCommand(command + " " + city_id);
 
             if(!Valley::HasCity(city_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
 
             // Even if the city is invalid we need to read the provided values through cin
             // Therefore we will read to the default invalid city
@@ -153,16 +153,16 @@ int main()
             Product& buying = ship.BuyingProduct();
             Product& selling = ship.SellingProduct();
             cout << buying.GetId() << ' ' << buying.GetMissingAmount() << ' ';
-            cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << endl;
+            cout << selling.GetId() << ' ' << selling.GetCurrentAmount() << '\n';
             for(string city: ship.GetVisitedCities())
-                cout << city << endl;
+                cout << city << '\n';
         }
         
         // Escribe cuantos productos diferentes hay.
         else if(command == CONSULTAR_NUM || command == CONSULTAR_NUM_L)
         {
             PrintCommand(command);
-            cout << ProductReference::Count() << endl;
+            cout << ProductReference::Count() << '\n';
         }
         
         // Se lee el número de productos nuevos, mayor que 0. Sus
@@ -191,12 +191,12 @@ int main()
                 for(int id: city.GetProductIds())
                 {
                     cout << id << ' ' << city.GetProductCurrentAmount(id) << ' ';
-                    cout << city.GetProductWantedAmount(id) << endl;
+                    cout << city.GetProductWantedAmount(id) << '\n';
                 }
-                cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                cout << city.GetWeight() << ' ' << city.GetVolume() << '\n';
             }
             else
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
         }
 
         // Se lee el identificador de un producto. Si no existe el producto se escribe 
@@ -210,10 +210,10 @@ int main()
             if(ProductReference::Contains(product_id))
             {
                 auto& product = ProductReference::Get(product_id);
-                cout << product_id << ' ' << product.GetWeight() << ' ' << product.GetVolume() << endl;
+                cout << product_id << ' ' << product.GetWeight() << ' ' << product.GetVolume() << '\n';
             }
             else
-                cout << ERR_NE_PROD << endl;
+                cout << ERR_NE_PROD << '\n';
         }
         
         // Se leerá el identificador de una ciudad, de un producto y las
@@ -231,18 +231,18 @@ int main()
             PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
-                cout << ERR_NE_PROD << endl;
+                cout << ERR_NE_PROD << '\n';
             else if(!Valley::HasCity(city_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
             else
             {
                 auto& city = Valley::GetCity(city_id);
                 if (city.HasProduct(product_id))
-                    cout << ERR_AE_PROD << endl;
+                    cout << ERR_AE_PROD << '\n';
                 else
                 {
                     city.AddProduct(Product(product_id, current, wanted));
-                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << '\n';
                 }
             }
         }
@@ -262,18 +262,18 @@ int main()
             PrintCommand(command + " " + city_id + " " + to_string(product_id));
             
             if (!ProductReference::Contains(product_id))
-                cout << ERR_NE_PROD << endl;
+                cout << ERR_NE_PROD << '\n';
             else if(!Valley::HasCity(city_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
             else 
             {
                 auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
-                    cout << ERR_NE_PROD_CITY << endl;
+                    cout << ERR_NE_PROD_CITY << '\n';
                 else
                 {
                     city.UpdateProduct(Product(product_id, current, wanted));
-                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << '\n';
                 }
             }
         }
@@ -292,18 +292,18 @@ int main()
             PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
-                cout << ERR_NE_PROD << endl;
+                cout << ERR_NE_PROD << '\n';
             else if(!Valley::HasCity(city_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
             else 
             {
                 auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
-                    cout << ERR_NE_PROD_CITY << endl;
+                    cout << ERR_NE_PROD_CITY << '\n';
                 else
                 {
                     city.RemoveProduct(product_id);
-                    cout << city.GetWeight() << ' ' << city.GetVolume() << endl;
+                    cout << city.GetWeight() << ' ' << city.GetVolume() << '\n';
                 }
             }
         }
@@ -321,17 +321,17 @@ int main()
             PrintCommand(command + " " + city_id + " " + to_string(product_id));
 
             if (!ProductReference::Contains(product_id))
-                cout << ERR_NE_PROD << endl;
+                cout << ERR_NE_PROD << '\n';
             else if(!Valley::HasCity(city_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
             else 
             {
                 auto& city = Valley::GetCity(city_id);
                 if(!city.HasProduct(product_id))
-                    cout << ERR_NE_PROD_CITY << endl;
+                    cout << ERR_NE_PROD_CITY << '\n';
                 else
                 {
-                    cout << city.GetProductCurrentAmount(product_id) << ' ' << city.GetProductWantedAmount(product_id) << endl;                    
+                    cout << city.GetProductCurrentAmount(product_id) << ' ' << city.GetProductWantedAmount(product_id) << '\n';                    
                 }
             }
         }
@@ -347,9 +347,9 @@ int main()
             PrintCommand(command + " " + city1_id + " " + city2_id);
 
             if(!Valley::HasCity(city1_id) || !Valley::HasCity(city2_id))
-                cout << ERR_NE_CITY << endl;
+                cout << ERR_NE_CITY << '\n';
             else if (city1_id == city2_id)
-                cout << ERR_RE_CITY << endl;
+                cout << ERR_RE_CITY << '\n';
             else
             {
                 auto& city1 = Valley::GetCity(city1_id);
@@ -378,11 +378,11 @@ int main()
         {
             PrintCommand(command);
             //Valley::river_structure.setOutputFormat(BinTree<string>::VISUALFORMAT);
-            //cout << Valley::river_structure << endl;
+            //cout << Valley::river_structure << '\n';
             auto route = Valley::GetBestRoute();
             //for(auto item: route)
-            //    cout << (item == Valley::NavStep::Left? "Left, ": "Right, ") << endl;
-            cout << Valley::NavigateRoute(route) << endl;
+            //    cout << (item == Valley::NavStep::Left? "Left, ": "Right, ") << '\n';
+            cout << Valley::NavigateRoute(route) << '\n';
         }
         
         // Comment line
@@ -395,6 +395,7 @@ int main()
             Error("Invalid input "  + command);
         }
     }
+    flush(cout);
 }
 
 /** @mainpage
