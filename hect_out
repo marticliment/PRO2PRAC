@@ -1,0 +1,1667 @@
+#agregar_productos 8
+#escribir_barco
+56 67 22 3
+#escribir_producto 69
+69 37 115
+#hacer_viaje
+0
+#poner_prod sqmgb 51
+1755 435
+#escribir_barco
+56 67 22 3
+#agregar_productos 5
+#comerciar owkky cdarz
+#quitar_prod fwkho 84
+error: la ciudad no tiene el producto
+#redistribuir
+#escribir_barco
+56 67 22 3
+#modificar_prod rxsjy 86
+error: la ciudad no tiene el producto
+#poner_prod mpapq 89
+60 168
+#escribir_barco
+56 67 22 3
+#quitar_prod pkmco 34
+error: la ciudad no tiene el producto
+#leer_inventario nwlrb
+#leer_rio
+#poner_prod cehch 9
+51 182
+#escribir_ciudad fmoxe
+0 0
+#consultar_num
+89
+#escribir_barco
+56 67 22 3
+#modificar_barco
+#escribir_barco
+59 79 72 6
+#escribir_barco
+59 79 72 6
+#quitar_prod xztqr 72
+error: la ciudad no tiene el producto
+#escribir_barco
+59 79 72 6
+#consultar_num
+89
+#leer_rio
+#escribir_barco
+59 79 72 6
+#quitar_prod wmjob 1
+error: la ciudad no tiene el producto
+#escribir_barco
+59 79 72 6
+#leer_inventario msksk
+#leer_rio
+#modificar_prod zifkt 78
+error: no existe la ciudad
+#modificar_prod mkblj 8
+error: la ciudad no tiene el producto
+#leer_inventario mouwq
+#modificar_prod nofwl 49
+error: la ciudad no tiene el producto
+#escribir_ciudad vjjaf
+0 0
+#leer_inventarios
+#quitar_prod olvyb 534
+error: no existe el producto
+#poner_prod wxgxn 83
+4932 5128
+#leer_rio
+#escribir_ciudad digzn
+0 0
+#comerciar soxle iysrs
+#leer_inventarios
+#escribir_producto 42
+42 15 145
+#leer_rio
+#modificar_barco
+#consultar_prod eggin 24327
+error: no existe el producto
+#escribir_ciudad bhuqb
+0 0
+#poner_prod drfwk 462
+error: no existe el producto
+#poner_prod gaede 2
+48 300
+#agregar_productos 2
+#leer_inventario nhevk
+#leer_inventarios
+#quitar_prod alznm 21484
+error: no existe el producto
+#agregar_productos 7
+#leer_inventario rniys
+#escribir_ciudad pkmct
+0 0
+#agregar_productos 8
+#escribir_producto 82
+82 13 6
+#escribir_barco
+4 148 32 24
+#escribir_ciudad mgdyp
+error: no existe la ciudad
+#modificar_barco
+#agregar_productos 7
+#quitar_prod kpesu 55
+error: la ciudad no tiene el producto
+#comerciar qjuij uywsn
+#consultar_prod wwlex 112
+error: la ciudad no tiene el producto
+#comerciar qjuij aqapy
+#modificar_prod hxgmd 82
+error: no existe la ciudad
+#quitar_prod keglm 101
+error: la ciudad no tiene el producto
+#leer_rio
+#leer_inventarios
+#consultar_prod oyrsg 2
+error: la ciudad no tiene el producto
+#poner_prod ycmyx 80
+160 10
+#agregar_productos 1
+#leer_inventario oyrsg
+#comerciar hzrvb qsdcs
+#leer_rio
+#consultar_num
+114
+#leer_inventarios
+#modificar_prod wcylg 57
+error: no existe la ciudad
+#consultar_prod vadad 5
+error: la ciudad no tiene el producto
+#comerciar yovkj yovkj
+error: ciudad repetida
+#modificar_prod vadad 25
+error: la ciudad no tiene el producto
+#leer_inventarios
+#redistribuir
+#redistribuir
+#escribir_producto 17
+17 197 9
+#comerciar yovkj yovkj
+error: ciudad repetida
+#leer_inventario vadad
+#leer_inventarios
+#leer_inventarios
+#modificar_prod hmvvp 2
+error: la ciudad no tiene el producto
+#escribir_barco
+14 155 76 6
+#escribir_ciudad yovkj
+50 152 177
+18240 25232
+#modificar_barco
+#escribir_producto 48
+48 78 43
+#escribir_barco
+41 110 34 23
+#leer_rio
+#escribir_ciudad qnlbl
+0 0
+#leer_inventarios
+#escribir_ciudad qhibu
+47 178 134
+48 182 12
+54 106 1
+74 100 54
+82 79 1
+90 12 199
+66984 46454
+#escribir_producto 49
+49 43 7
+#modificar_barco
+#leer_inventarios
+#modificar_prod spbuo 73
+error: la ciudad no tiene el producto
+#consultar_num
+114
+#agregar_productos 9
+#escribir_barco
+18 185 75 21
+#escribir_barco
+18 185 75 21
+#consultar_prod vjusg 75
+error: la ciudad no tiene el producto
+#consultar_prod wladi 4929
+error: no existe el producto
+#consultar_prod ctsmo 98
+error: la ciudad no tiene el producto
+#escribir_barco
+18 185 75 21
+#consultar_prod eewbr 80
+error: la ciudad no tiene el producto
+#modificar_barco
+#escribir_ciudad zrfgc
+9 4 166
+21 149 127
+33 66 146
+87 177 150
+42628 25717
+#redistribuir
+#escribir_barco
+26 158 2 18
+#leer_rio
+#escribir_ciudad wgfco
+0 0
+#modificar_prod ssche 18760
+error: no existe el producto
+#leer_inventarios
+#redistribuir
+#redistribuir
+#leer_inventarios
+#leer_inventarios
+#consultar_num
+123
+#consultar_prod ssche 62
+error: la ciudad no tiene el producto
+#escribir_barco
+26 158 2 18
+#quitar_prod ibprh 113
+error: la ciudad no tiene el producto
+#consultar_num
+123
+#consultar_prod iykbu 116
+error: la ciudad no tiene el producto
+#escribir_ciudad wtlzn
+0 0
+#leer_inventarios
+#modificar_prod ssche 85
+error: la ciudad no tiene el producto
+#hacer_viaje
+0
+#hacer_viaje
+0
+#consultar_num
+123
+#redistribuir
+#leer_inventario srkpw
+#quitar_prod iykbu 38
+error: la ciudad no tiene el producto
+#consultar_num
+123
+#poner_prod pcwcb 5
+error: no existe la ciudad
+#leer_inventarios
+#poner_prod zvplk 22
+46621 86059
+#redistribuir
+#consultar_num
+123
+#modificar_barco
+#leer_inventario wtlzn
+#escribir_barco
+76 159 82 7
+#redistribuir
+#leer_rio
+#comerciar rgpix mvuwm
+#modificar_prod mvuwm 95
+error: la ciudad no tiene el producto
+#modificar_barco
+#escribir_barco
+70 69 2 20
+#leer_inventario rgpix
+#escribir_barco
+70 69 2 20
+#redistribuir
+#redistribuir
+#quitar_prod rgpix 110
+error: la ciudad no tiene el producto
+#leer_rio
+#comerciar gcqwe eupon
+#redistribuir
+#escribir_producto 15
+15 78 85
+#modificar_prod skkqo 49
+error: la ciudad no tiene el producto
+#quitar_prod pkahc 37
+error: la ciudad no tiene el producto
+#escribir_barco
+70 69 2 20
+#quitar_prod ckntm 34
+error: la ciudad no tiene el producto
+#comerciar tpifa yrrki
+#leer_rio
+#escribir_ciudad nagnb
+0 0
+#poner_prod mgybc 50
+2040 2822
+#escribir_barco
+70 69 2 20
+#agregar_productos 8
+#escribir_ciudad nwobg
+0 0
+#consultar_num
+131
+#modificar_prod mlowp 29
+error: la ciudad no tiene el producto
+#escribir_barco
+70 69 2 20
+#modificar_barco
+#hacer_viaje
+0
+#consultar_num
+131
+#escribir_barco
+96 199 105 15
+#leer_inventario lgtla
+#poner_prod gcvfq 94
+error: no existe la ciudad
+#escribir_barco
+96 199 105 15
+#modificar_prod yznhx 5
+error: la ciudad no tiene el producto
+#escribir_barco
+96 199 105 15
+#quitar_prod mgybc 2
+error: la ciudad no tiene el producto
+#quitar_prod yznhx 5
+error: la ciudad no tiene el producto
+#escribir_ciudad nagnb
+0 0
+#modificar_barco
+#redistribuir
+#hacer_viaje
+0
+#escribir_producto 59
+59 81 132
+#leer_inventario fnysk
+#escribir_barco
+5 43 25 24
+#consultar_prod lgtla 35
+error: la ciudad no tiene el producto
+#escribir_barco
+5 43 25 24
+#agregar_productos 8
+#leer_inventarios
+#escribir_producto 69
+69 37 115
+#redistribuir
+#comerciar nagnb fvvym
+#escribir_barco
+5 43 25 24
+#quitar_prod vvrrq 45
+error: la ciudad no tiene el producto
+#consultar_prod yznhx 8
+error: la ciudad no tiene el producto
+#consultar_prod nwobg 35
+error: la ciudad no tiene el producto
+#quitar_prod lgtla 52
+error: la ciudad no tiene el producto
+#escribir_ciudad vvrrq
+0 0
+#escribir_barco
+5 43 25 24
+#consultar_prod icoya 78
+error: la ciudad no tiene el producto
+#escribir_producto 130
+130 6 12
+#leer_inventarios
+#leer_inventarios
+#modificar_barco
+#leer_rio
+#consultar_prod bwttx 44
+error: la ciudad no tiene el producto
+#agregar_productos 5
+#leer_rio
+#modificar_prod yshei 47
+error: la ciudad no tiene el producto
+#leer_rio
+#consultar_num
+144
+#redistribuir
+#leer_inventario bpikr
+#leer_rio
+#quitar_prod vybin 60
+error: la ciudad no tiene el producto
+#leer_inventarios
+#leer_inventario twttv
+#modificar_prod ufchl 122
+error: la ciudad no tiene el producto
+#quitar_prod omwva 10
+error: no existe la ciudad
+#consultar_prod bcsts 72
+error: la ciudad no tiene el producto
+#quitar_prod sphwy 95
+error: no existe la ciudad
+#leer_rio
+#comerciar xbfqp xuqcj
+#leer_inventarios
+#leer_rio
+#escribir_producto 52
+52 43 56
+#modificar_prod mjkgp 47
+error: la ciudad no tiene el producto
+#escribir_barco
+33 24 91 2
+#escribir_barco
+33 24 91 2
+#leer_rio
+#consultar_prod oycem 134
+error: la ciudad no tiene el producto
+#modificar_prod bufep 21
+error: la ciudad no tiene el producto
+#escribir_barco
+33 24 91 2
+#leer_inventarios
+#modificar_prod zxpqr 98
+error: la ciudad no tiene el producto
+#escribir_barco
+33 24 91 2
+#leer_inventarios
+#leer_rio
+#escribir_ciudad ywjvu
+0 0
+#consultar_prod bgdzt 16
+error: la ciudad no tiene el producto
+#leer_inventario udxxj
+#consultar_num
+144
+#modificar_prod jhbez 12
+error: la ciudad no tiene el producto
+#hacer_viaje
+0
+#modificar_barco
+#agregar_productos 3
+#escribir_barco
+46 33 41 15
+#escribir_barco
+46 33 41 15
+#modificar_prod aevrj 113
+error: la ciudad no tiene el producto
+#comerciar fjwhq blevc
+#leer_inventario czqja
+#escribir_producto 84
+84 18 2
+#consultar_num
+147
+#hacer_viaje
+0
+#quitar_prod sfjiv 31
+error: la ciudad no tiene el producto
+#escribir_ciudad jrfov
+0 0
+#comerciar mgqtb aaqpk
+error: no existe la ciudad
+#hacer_viaje
+0
+#leer_inventarios
+#leer_rio
+#consultar_num
+147
+#escribir_barco
+46 33 41 15
+#modificar_barco
+#agregar_productos 6
+#consultar_num
+153
+#leer_inventarios
+#leer_inventario hfbnp
+#escribir_barco
+62 26 16 19
+#poner_prod hpnex 148
+112 140
+#poner_prod wignf 320
+error: no existe el producto
+#escribir_producto 12
+12 142 61
+#consultar_prod panav 15
+error: la ciudad no tiene el producto
+#comerciar ryvtf zhysb
+#poner_prod gggge 26
+error: no existe la ciudad
+#leer_inventarios
+#escribir_producto 41
+41 159 22
+#consultar_num
+153
+#escribir_producto 54
+54 29 30
+#modificar_prod xiddz 97
+error: la ciudad no tiene el producto
+#comerciar fasld veund
+#poner_prod txsga 27
+1485 682
+#poner_prod zettj 19
+115129 74668
+#escribir_producto 45
+45 81 170
+#leer_rio
+#modificar_prod dpehd 15
+error: no existe la ciudad
+#escribir_producto 55
+55 21 83
+#leer_inventario jcuqj
+#escribir_ciudad jcuqj
+12 101 146
+47 9 55
+16034 7241
+#hacer_viaje
+0
+#consultar_num
+153
+#escribir_barco
+62 26 16 19
+#hacer_viaje
+0
+#agregar_productos 5
+#escribir_ciudad boyqq
+0 0
+#modificar_prod ztrbu 15
+error: la ciudad no tiene el producto
+#redistribuir
+#modificar_prod jcuqj 102
+error: la ciudad no tiene el producto
+#poner_prod boyqq 61
+2964 2964
+#quitar_prod ztrbu 38
+error: la ciudad no tiene el producto
+#redistribuir
+#hacer_viaje
+0
+#leer_rio
+#leer_inventarios
+#leer_inventarios
+#quitar_prod ppyjc 26
+error: la ciudad no tiene el producto
+#leer_inventario dxnfn
+#agregar_productos 4
+#redistribuir
+#modificar_barco
+#comerciar ydkvw agebu
+#modificar_barco
+#leer_inventarios
+#escribir_producto 163
+error: no existe el producto
+#poner_prod mfylf 117
+0 0
+#leer_rio
+#quitar_prod orkjr 11
+error: la ciudad no tiene el producto
+#escribir_ciudad ybhzb
+0 0
+#modificar_barco
+#leer_rio
+#escribir_barco
+97 55 22 13
+#modificar_prod kdqyw 160
+error: la ciudad no tiene el producto
+#poner_prod olcav 18733
+error: no existe el producto
+#hacer_viaje
+0
+#escribir_barco
+97 55 22 13
+#poner_prod brjxz 50
+1440 1992
+#redistribuir
+#comerciar mmjej pzibt
+#leer_rio
+#leer_inventarios
+#escribir_barco
+97 55 22 13
+#modificar_prod eilas 49
+error: no existe la ciudad
+#poner_prod lphem 66
+950 1729
+#modificar_barco
+#consultar_num
+162
+#escribir_barco
+149 95 31 11
+#escribir_producto 130
+130 6 12
+#hacer_viaje
+0
+#agregar_productos 5
+#consultar_prod rsenh 21
+error: la ciudad no tiene el producto
+#comerciar vqdub rtrii
+error: no existe la ciudad
+#modificar_prod refqv 130
+error: la ciudad no tiene el producto
+#escribir_barco
+149 95 31 11
+#escribir_ciudad cpntt
+0 0
+#hacer_viaje
+0
+#escribir_ciudad duvae
+0 0
+#leer_inventarios
+#hacer_viaje
+0
+#modificar_prod ionst 6030
+error: no existe el producto
+#leer_inventario cpntt
+#agregar_productos 6
+#quitar_prod tklck 27
+error: la ciudad no tiene el producto
+#quitar_prod yhhar 25
+error: la ciudad no tiene el producto
+#consultar_prod ionst 136
+error: la ciudad no tiene el producto
+#redistribuir
+#escribir_ciudad fgdsx
+0 0
+#escribir_ciudad cxdvv
+0 0
+#escribir_producto 109
+109 3 14
+#leer_inventarios
+#agregar_productos 9
+#escribir_barco
+149 95 31 11
+#quitar_prod ywxjx 29548
+error: no existe el producto
+#modificar_barco
+#consultar_prod hjwnm 159
+error: la ciudad no tiene el producto
+#modificar_barco
+#quitar_prod vqdub 49
+error: la ciudad no tiene el producto
+#modificar_prod wqgxh 17
+error: la ciudad no tiene el producto
+#leer_inventarios
+#escribir_producto 139
+139 16 4
+#escribir_barco
+7 127 83 12
+#leer_inventario refqv
+#agregar_productos 4
+#leer_rio
+#redistribuir
+#hacer_viaje
+0
+#hacer_viaje
+0
+#quitar_prod zjjle 43
+error: la ciudad no tiene el producto
+#comerciar cbudg nwwny
+error: no existe la ciudad
+#modificar_prod nkuzq 53
+error: la ciudad no tiene el producto
+#redistribuir
+#leer_inventarios
+#leer_inventarios
+#quitar_prod ywbas 32
+error: la ciudad no tiene el producto
+#leer_rio
+#agregar_productos 2
+#escribir_barco
+7 127 83 12
+#consultar_prod bknlr 62
+error: la ciudad no tiene el producto
+#modificar_barco
+#escribir_ciudad kqtgl
+error: no existe la ciudad
+#hacer_viaje
+0
+#modificar_prod nuxib 145
+error: la ciudad no tiene el producto
+#hacer_viaje
+0
+#leer_inventarios
+#hacer_viaje
+0
+#hacer_viaje
+0
+#poner_prod qsoqt 134
+70 80
+#agregar_productos 8
+#poner_prod vmpik 32
+2295 2940
+#leer_rio
+#poner_prod xpmdb 158
+80 120
+#escribir_producto 153
+153 4 19
+#leer_rio
+#escribir_producto 123
+123 1 18
+#escribir_ciudad gqqgw
+0 0
+#escribir_ciudad xttpc
+0 0
+#modificar_barco
+#modificar_barco
+#leer_inventarios
+#escribir_barco
+156 124 5 4
+#escribir_barco
+156 124 5 4
+#modificar_barco
+#consultar_num
+196
+#consultar_num
+196
+#poner_prod vsxwk 37412
+error: no existe el producto
+#consultar_prod rzcfv 145
+error: no existe la ciudad
+#escribir_producto 169
+169 20 10
+#leer_rio
+#escribir_producto 121
+121 8 9
+#escribir_producto 107
+107 4 20
+#modificar_prod zitlg 160
+error: la ciudad no tiene el producto
+#leer_inventario dmpcm
+#leer_inventario uivfz
+#leer_inventarios
+#escribir_producto 116
+116 16 9
+#leer_inventario iesar
+error: no existe la ciudad
+#escribir_producto 120
+120 7 6
+#escribir_ciudad mhbkw
+0 0
+#comerciar dhxzf xnzhm
+#consultar_prod zjewi 43
+error: la ciudad no tiene el producto
+#hacer_viaje
+0
+#consultar_num
+196
+#comerciar lnkxa rbehb
+#hacer_viaje
+0
+#quitar_prod krqeo 31
+error: la ciudad no tiene el producto
+#escribir_barco
+179 72 67 9
+#escribir_producto 76
+76 149 148
+#escribir_barco
+179 72 67 9
+#escribir_producto 183
+183 6 4
+#escribir_barco
+179 72 67 9
+#poner_prod rxghb 161
+42 77
+#quitar_prod lykmr 196
+error: la ciudad no tiene el producto
+#comerciar pnvry seabx
+#quitar_prod uyeql 61
+error: la ciudad no tiene el producto
+#redistribuir
+#leer_inventario ugrvg
+#escribir_barco
+179 72 67 9
+#quitar_prod lnkxa 54
+error: la ciudad no tiene el producto
+#leer_inventario ubjqk
+#leer_inventario dhxzf
+#escribir_producto 26
+26 105 43
+#quitar_prod bzqjb 50
+error: la ciudad no tiene el producto
+#leer_rio
+#consultar_num
+196
+#modificar_barco
+#redistribuir
+#modificar_barco
+#poner_prod phiax 80
+112 7
+#escribir_ciudad alixe
+0 0
+#leer_inventario rgljs
+#consultar_prod kajhh 151
+error: la ciudad no tiene el producto
+#escribir_barco
+43 176 136 15
+#comerciar yofag ewbmu
+#escribir_ciudad fphju
+0 0
+#leer_inventario hrjjc
+#escribir_barco
+43 176 136 15
+#poner_prod yofag 36
+370 98
+#escribir_ciudad fgasr
+0 0
+#quitar_prod bjvil 131
+error: la ciudad no tiene el producto
+#consultar_prod rgljs 38
+error: la ciudad no tiene el producto
+#escribir_barco
+43 176 136 15
+#poner_prod kajhh 1674
+error: no existe el producto
+#consultar_num
+196
+#escribir_barco
+43 176 136 15
+#comerciar phiax fgasr
+#agregar_productos 5
+#quitar_prod nvqzg 132
+error: no existe la ciudad
+#poner_prod dhytp 28
+2793 2774
+#escribir_producto 123
+123 1 18
+#escribir_barco
+43 176 136 15
+#escribir_producto 67
+67 14 18
+#escribir_producto 52
+52 43 56
+#comerciar iwjjy yhivu
+#leer_inventarios
+#escribir_ciudad hlwpv
+0 0
+#agregar_productos 3
+#leer_inventarios
+#leer_inventarios
+#redistribuir
+#modificar_prod rgljs 1350
+error: no existe el producto
+#escribir_producto 19
+19 111 22
+#escribir_barco
+43 176 136 15
+#hacer_viaje
+0
+#leer_rio
+#consultar_num
+204
+#escribir_barco
+43 176 136 15
+#escribir_barco
+43 176 136 15
+#escribir_producto 24
+24 47 49
+#escribir_barco
+43 176 136 15
+#consultar_num
+204
+#comerciar zizee ddgav
+#escribir_barco
+43 176 136 15
+#leer_rio
+#escribir_barco
+43 176 136 15
+#redistribuir
+#escribir_barco
+43 176 136 15
+#hacer_viaje
+0
+#modificar_prod nkigw 154
+error: la ciudad no tiene el producto
+#escribir_ciudad ugnfr
+0 0
+#escribir_barco
+43 176 136 15
+#leer_rio
+#poner_prod towjb 154
+68 119
+#redistribuir
+#redistribuir
+#escribir_producto 128
+128 7 7
+#hacer_viaje
+0
+#consultar_prod ditei 89
+error: la ciudad no tiene el producto
+#consultar_prod bidhg 166
+error: la ciudad no tiene el producto
+#redistribuir
+#hacer_viaje
+0
+#agregar_productos 3
+#comerciar rqqnb qpykr
+error: no existe la ciudad
+#escribir_barco
+43 176 136 15
+#hacer_viaje
+0
+#hacer_viaje
+0
+#consultar_prod vcuuf 148
+error: la ciudad no tiene el producto
+#consultar_prod paxdf 197
+error: la ciudad no tiene el producto
+#redistribuir
+#redistribuir
+#consultar_num
+207
+#modificar_prod acxyh 10710
+error: no existe el producto
+#leer_rio
+#escribir_barco
+43 176 136 15
+#escribir_barco
+43 176 136 15
+#quitar_prod oidci 6
+error: la ciudad no tiene el producto
+#poner_prod oidci 179
+56 4
+#consultar_prod etehz 153
+error: no existe la ciudad
+#leer_rio
+#redistribuir
+#escribir_ciudad vpfar
+0 0
+#leer_inventario dhzow
+#escribir_ciudad lbwfo
+0 0
+#leer_rio
+#leer_inventario fghxb
+error: no existe la ciudad
+#consultar_prod uxrvm 107
+error: la ciudad no tiene el producto
+#escribir_ciudad kznyr
+0 0
+#agregar_productos 7
+#leer_inventario ekzrz
+#escribir_ciudad xockg
+0 0
+#leer_inventarios
+#quitar_prod umxmz 127
+error: la ciudad no tiene el producto
+#modificar_prod nozbw 63
+error: la ciudad no tiene el producto
+#quitar_prod ljqlk 113
+error: la ciudad no tiene el producto
+#escribir_producto 110
+110 8 12
+#redistribuir
+#escribir_producto 167
+167 15 5
+#hacer_viaje
+15
+#leer_rio
+#escribir_barco
+43 176 136 15
+#redistribuir
+#comerciar fgesm laqjj
+#leer_inventario aguca
+#modificar_prod zsvuf 34
+error: la ciudad no tiene el producto
+#escribir_barco
+43 176 136 15
+#consultar_prod cgdzt 62
+error: no existe la ciudad
+#leer_inventario flzqw
+#leer_inventarios
+#escribir_producto 107
+107 4 20
+#comerciar kefpk wxmdp
+#escribir_barco
+43 176 136 15
+#leer_rio
+#leer_inventarios
+#escribir_producto 83
+83 12 16
+#escribir_barco
+43 176 136 15
+#leer_inventario tczbb
+#leer_inventarios
+#leer_inventarios
+#escribir_ciudad bwxla
+8 32 77
+13 43 136
+79 43 80
+122 130 48
+128 123 116
+162 133 158
+11796 12093
+#consultar_prod yekfk 602
+error: no existe el producto
+#escribir_ciudad ldmmo
+16 194 18
+85 125 23
+106 100 3
+123 62 174
+129 25 30
+144 53 109
+34394 36890
+#escribir_producto 58
+58 42 78
+#escribir_producto 62
+62 131 182
+#hacer_viaje
+0
+#leer_rio
+#escribir_ciudad zyzlc
+0 0
+#leer_inventario fcvye
+#quitar_prod uqpzx 151
+error: la ciudad no tiene el producto
+#modificar_barco
+#comerciar vyypb fwbmx
+#quitar_prod izceg 107
+error: no existe la ciudad
+#agregar_productos 1
+#modificar_prod nlfnj 101
+error: la ciudad no tiene el producto
+#consultar_num
+215
+#modificar_prod jgrkr 5
+error: la ciudad no tiene el producto
+#hacer_viaje
+0
+#comerciar dzygw jkehg
+#modificar_barco
+#consultar_num
+215
+#leer_rio
+#comerciar rmqgq qyzko
+#escribir_ciudad tctax
+0 0
+#comerciar xbsqg hmaol
+error: no existe la ciudad
+#comerciar glium hsyqm
+#modificar_prod kuitl 107
+error: la ciudad no tiene el producto
+#modificar_prod shpbj 190
+error: no existe la ciudad
+#modificar_barco
+#leer_inventario esnii
+#hacer_viaje
+0
+#leer_inventarios
+#agregar_productos 1
+#escribir_barco
+136 85 146 18
+#consultar_prod szpaq 168
+error: la ciudad no tiene el producto
+#poner_prod uthpx 35
+728 1326
+#leer_rio
+#modificar_prod trvun 29
+error: la ciudad no tiene el producto
+#poner_prod jrgra 69
+481 1495
+#escribir_producto 130
+130 6 12
+#consultar_num
+216
+#comerciar vmuuj urnyw
+#consultar_prod orghc 65
+error: la ciudad no tiene el producto
+#escribir_barco
+136 85 146 18
+#hacer_viaje
+0
+#poner_prod wxgwy 54
+290 300
+#poner_prod fzjge 45
+1377 2890
+#leer_inventario egery
+#escribir_barco
+136 85 146 18
+#agregar_productos 3
+#consultar_num
+219
+#leer_inventarios
+#consultar_num
+219
+#escribir_ciudad kcjga
+56 157 32
+75 137 85
+124 120 168
+26072 23593
+#poner_prod zdgrt 116
+6568 4288
+#escribir_producto 200
+200 15 4
+#escribir_producto 204
+204 20 15
+#escribir_barco
+136 85 146 18
+#leer_rio
+#leer_inventarios
+#leer_inventario imsxl
+#modificar_prod zpmuj 9
+error: la ciudad no tiene el producto
+#comerciar czkra imsxl
+#escribir_barco
+136 85 146 18
+#leer_inventario czkra
+#escribir_barco
+136 85 146 18
+#agregar_productos 2
+#hacer_viaje
+85
+#agregar_productos 2
+#escribir_ciudad jgpzq
+error: no existe la ciudad
+#modificar_prod bwyox 183
+error: la ciudad no tiene el producto
+#consultar_prod vzrob 90
+error: la ciudad no tiene el producto
+#quitar_prod kvcum 104
+error: la ciudad no tiene el producto
+#hacer_viaje
+51
+#modificar_prod ettdu 77
+error: la ciudad no tiene el producto
+#agregar_productos 1
+#agregar_productos 9
+#agregar_productos 1
+#consultar_num
+234
+#leer_rio
+#quitar_prod ybovn 20790
+error: no existe el producto
+#escribir_producto 168
+168 15 4
+#leer_rio
+#consultar_num
+234
+#hacer_viaje
+0
+#consultar_prod jwjod 30
+error: la ciudad no tiene el producto
+#consultar_num
+234
+#escribir_barco
+136 85 146 18
+#modificar_barco
+#modificar_barco
+#quitar_prod tyxib 25258
+error: no existe el producto
+#agregar_productos 2
+#comerciar msgjx kklpz
+error: no existe la ciudad
+#consultar_num
+236
+#poner_prod skdia 176
+180 168
+#leer_inventario xoffc
+#consultar_num
+236
+#leer_inventarios
+#redistribuir
+#escribir_producto 49
+49 43 7
+#modificar_barco
+#consultar_prod fqbts 43
+error: la ciudad no tiene el producto
+#escribir_ciudad tfbjv
+0 0
+#agregar_productos 7
+#consultar_prod bqyup 22
+error: la ciudad no tiene el producto
+#escribir_ciudad kklpz
+0 0
+#modificar_prod jpavf 119
+error: la ciudad no tiene el producto
+#agregar_productos 8
+#escribir_ciudad fhigt
+0 0
+#agregar_productos 8
+#escribir_producto 117
+117 18 9
+#consultar_num
+259
+#consultar_num
+259
+#escribir_barco
+19 57 47 5
+#redistribuir
+#agregar_productos 5
+#leer_inventario jivna
+#escribir_barco
+19 57 47 5
+#quitar_prod bqyup 49
+error: la ciudad no tiene el producto
+#redistribuir
+#hacer_viaje
+57
+#hacer_viaje
+39
+#leer_rio
+#escribir_producto 198
+198 4 2
+#escribir_ciudad lchlu
+0 0
+#escribir_ciudad iwuoq
+0 0
+#agregar_productos 8
+#escribir_barco
+19 57 47 5
+#escribir_producto 51
+51 117 29
+#leer_inventarios
+#hacer_viaje
+0
+#quitar_prod nbevi 13943
+error: no existe el producto
+#consultar_prod ifdle 105
+error: la ciudad no tiene el producto
+#escribir_barco
+19 57 47 5
+#consultar_num
+272
+#quitar_prod nbevi 105
+error: la ciudad no tiene el producto
+#comerciar ryyhw fkwhl
+#escribir_ciudad ifdle
+26 62 132
+54 77 33
+100 35 198
+165 12 38
+171 121 16
+176 95 95
+181 78 147
+13746 7341
+#leer_rio
+#leer_inventario uvpht
+error: no existe la ciudad
+#leer_rio
+#redistribuir
+#redistribuir
+#agregar_productos 9
+#leer_rio
+#redistribuir
+#consultar_num
+281
+#consultar_num
+281
+#comerciar btqpq phrcm
+#hacer_viaje
+0
+#escribir_barco
+19 57 47 5
+#modificar_barco
+#poner_prod rkpql 163
+68 72
+#comerciar zlgbp qanel
+#comerciar emtbd bhwyv
+error: no existe la ciudad
+#modificar_barco
+#consultar_num
+281
+#escribir_barco
+154 189 173 23
+#comerciar rkpql cxika
+error: no existe la ciudad
+#escribir_producto 17
+17 197 9
+#redistribuir
+#escribir_barco
+154 189 173 23
+#agregar_productos 1
+#escribir_ciudad zbkqu
+error: no existe la ciudad
+#escribir_producto 82
+82 13 6
+#leer_inventarios
+#escribir_producto 126
+126 4 19
+#redistribuir
+#escribir_barco
+154 189 173 23
+#leer_inventario emtbd
+#poner_prod zlgbp 11
+340 150
+#escribir_ciudad emtbd
+21 139 168
+36 174 63
+89 61 38
+98 56 57
+137 3 18
+154 182 12
+158 157 45
+181 53 98
+62453 33806
+#comerciar rkpql phrcm
+#agregar_productos 2
+#poner_prod rkpql 118
+138 114
+#leer_rio
+#leer_inventarios
+#escribir_barco
+154 189 173 23
+#comerciar awjai mblon
+#leer_inventario awjai
+#quitar_prod nynao 16
+error: la ciudad no tiene el producto
+#leer_inventario riyrq
+#consultar_prod cmmpc 128
+error: la ciudad no tiene el producto
+#consultar_prod dldmm 87
+error: la ciudad no tiene el producto
+#leer_inventarios
+#escribir_barco
+154 189 173 23
+#escribir_barco
+154 189 173 23
+#consultar_prod dldmm 47
+error: la ciudad no tiene el producto
+#leer_rio
+#quitar_prod kishx 6
+error: la ciudad no tiene el producto
+#escribir_barco
+154 189 173 23
+#escribir_ciudad ieqpy
+0 0
+#escribir_barco
+154 189 173 23
+#leer_inventario zylrh
+#comerciar wvufn aprkn
+#escribir_ciudad tkmww
+0 0
+#comerciar mlxns aprkn
+#escribir_barco
+154 189 173 23
+#comerciar zaxuf yjwnj
+#redistribuir
+#escribir_barco
+154 189 173 23
+#consultar_prod hchdz 48
+error: la ciudad no tiene el producto
+#modificar_prod rhsod 23
+error: la ciudad no tiene el producto
+#agregar_productos 3
+#leer_inventarios
+#hacer_viaje
+1
+#comerciar hchdz pbuhr
+#redistribuir
+#escribir_producto 47
+47 188 120
+#escribir_ciudad aprkn
+0 0
+#escribir_ciudad tezkl
+0 0
+#escribir_producto 16
+16 150 167
+#escribir_barco
+154 189 173 23
+tkmww
+#escribir_producto 144
+144 19 17
+#escribir_barco
+154 189 173 23
+tkmww
+#leer_inventarios
+#modificar_barco
+#hacer_viaje
+0
+#leer_inventarios
+#consultar_num
+287
+#escribir_producto 74
+74 106 87
+#redistribuir
+#modificar_prod pbuhr 133
+error: la ciudad no tiene el producto
+#comerciar suuxq ngesw
+#modificar_prod rhsod 85
+error: la ciudad no tiene el producto
+#escribir_barco
+53 180 149 15
+tkmww
+#consultar_prod vrywe 780
+error: no existe el producto
+#escribir_producto 136
+136 11 7
+#modificar_barco
+#quitar_prod lbkdl 179
+error: la ciudad no tiene el producto
+#poner_prod bmpab 109
+38667 9071
+#agregar_productos 1
+#quitar_prod rhsod 17
+error: la ciudad no tiene el producto
+#leer_inventario amphq
+#escribir_producto 83
+83 12 16
+#leer_inventario lnfgu
+error: no existe la ciudad
+#poner_prod yjwnj 148
+10214 15088
+#modificar_prod pqiwu 28
+error: la ciudad no tiene el producto
+#comerciar zylrh kvkbv
+#escribir_barco
+177 180 72 22
+tkmww
+#escribir_producto 166
+166 18 7
+#modificar_prod ngesw 164
+error: la ciudad no tiene el producto
+#modificar_barco
+#poner_prod lbkdl 123
+12 216
+#poner_prod mbuwc 58
+252 468
+#agregar_productos 7
+#hacer_viaje
+5
+#agregar_productos 3
+#agregar_productos 8
+#comerciar rhfem aprkn
+#agregar_productos 4
+#escribir_barco
+93 160 95 5
+tkmww
+zhfnf
+#leer_inventarios
+#escribir_barco
+93 160 95 5
+tkmww
+zhfnf
+#poner_prod ngesw 15435
+error: no existe el producto
+#leer_inventario zhfnf
+#leer_inventario nohyq
+#poner_prod wvufn 176
+5559 30570
+#leer_rio
+#redistribuir
+#consultar_prod pgsby 15
+error: la ciudad no tiene el producto
+#leer_inventarios
+#escribir_barco
+93 160 95 5
+#consultar_num
+310
+#escribir_barco
+93 160 95 5
+#escribir_producto 122
+122 17 13
+#escribir_producto 140
+140 6 14
+#escribir_barco
+93 160 95 5
+#comerciar xfcos afftw
+#quitar_prod iberz 146
+error: la ciudad no tiene el producto
+#modificar_barco
+#comerciar wxrpy pgsby
+#modificar_barco
+#redistribuir
+#redistribuir
+#consultar_num
+310
+#redistribuir
+#quitar_prod afftw 8456
+error: no existe el producto
+#consultar_prod vbtbu 149
+error: la ciudad no tiene el producto
+#consultar_num
+310
+#escribir_barco
+82 151 148 14
+#modificar_prod vbtbu 49
+error: la ciudad no tiene el producto
+#poner_prod qiuxb 197
+112 304
+#leer_rio
+#escribir_barco
+82 151 148 14
+#poner_prod ebhwc 161
+78 143
+#escribir_barco
+82 151 148 14
+#consultar_prod cqwmq 155
+error: la ciudad no tiene el producto
+#agregar_productos 3
+#quitar_prod fricm 121
+error: la ciudad no tiene el producto
+#consultar_prod tpsdu 9
+error: la ciudad no tiene el producto
+#consultar_num
+313
+#poner_prod fricm 171
+114 30
+#consultar_prod tddxf 99
+error: la ciudad no tiene el producto
+#modificar_prod bbpiz 106
+error: la ciudad no tiene el producto
+#escribir_barco
+82 151 148 14
+#modificar_barco
+#quitar_prod ehjhh 131
+error: la ciudad no tiene el producto
+#comerciar frzke bbpiz
+#redistribuir
+#poner_prod tpmwm 198
+error: no existe la ciudad
+#poner_prod fricm 143
+132 49
+#hacer_viaje
+0
+#escribir_barco
+26 151 29 24
+#leer_inventarios
+#leer_inventario frzke
+#agregar_productos 4
+#poner_prod qcjzl 9
+765 2730
+#quitar_prod nbdxn 89
+error: la ciudad no tiene el producto
+#modificar_barco
+#leer_rio
+#escribir_ciudad vqjwc
+0 0
+#hacer_viaje
+0
+#consultar_num
+317
+#agregar_productos 8
+#leer_inventarios
+#leer_inventarios
+#comerciar jotuo qmblq
+#leer_inventarios
+#redistribuir
+#leer_inventario nrfyp
+#escribir_barco
+156 14 150 23
+#leer_inventarios
+#quitar_prod jotuo 32
+error: la ciudad no tiene el producto
+#escribir_ciudad jotuo
+21 181 86
+62 145 111
+97 65 49
+125 190 34
+57116 56222
+#leer_inventarios
+#modificar_prod czprk 60
+error: la ciudad no tiene el producto
+#leer_inventarios
+#comerciar jotuo nrfyp
+#leer_inventario jotuo
+#escribir_barco
+156 14 150 23
+#escribir_producto 149
+149 15 4
+#leer_inventario qmblq
+#redistribuir
+#hacer_viaje
+0
+#poner_prod vqjwc 183
+78 52
+#leer_rio
+#leer_inventario zzvbc
+#hacer_viaje
+0
+#modificar_prod ieitc 83
+error: la ciudad no tiene el producto
+#quitar_prod gakqk 163
+error: la ciudad no tiene el producto
+#leer_rio
+#modificar_barco
+#escribir_barco
+132 2 124 22
+#escribir_barco
+132 2 124 22
+#redistribuir
+#leer_rio
+#redistribuir
+#modificar_prod qsefw 112
+error: la ciudad no tiene el producto
+#poner_prod srwgn 178
+72 102
+#leer_inventario vyubp
+error: no existe la ciudad
+#escribir_barco
+132 2 124 22
+#leer_rio
+#modificar_prod umjog 50
+error: la ciudad no tiene el producto
+#leer_rio
+#escribir_barco
+132 2 124 22
+#consultar_prod eiuge 12
+error: la ciudad no tiene el producto
+#escribir_producto 32
+32 153 196
+#escribir_ciudad uzsog
+error: no existe la ciudad
+#escribir_barco
+132 2 124 22
+#consultar_prod nzhqr 31
+error: no existe la ciudad
+#escribir_producto 114
+114 2 8
+#escribir_ciudad cmapx
+0 0
+#escribir_barco
+132 2 124 22
+#leer_inventario rtrsh
+#leer_rio
+#agregar_productos 6
+#modificar_prod bcajs 9
+error: la ciudad no tiene el producto
+#escribir_producto 61
+61 156 156
+#hacer_viaje
+0
+#escribir_barco
+132 2 124 22
+#escribir_producto 190
+190 12 10
+#poner_prod qsqie 199
+error: no existe la ciudad
+#quitar_prod nskoy 24
+error: la ciudad no tiene el producto
+#consultar_num
+331
+#consultar_prod sxztr 35
+error: la ciudad no tiene el producto
+#leer_rio
+#leer_inventarios
+#escribir_producto 33
+33 166 50
+#agregar_productos 8
+#comerciar eoquu eoquu
+error: ciudad repetida
+#redistribuir
+#poner_prod tgodo 185
+0 0
+#consultar_prod ynewm 139
+error: la ciudad no tiene el producto
+#escribir_producto 175
+175 17 7
+#modificar_barco
+#escribir_producto 196
+196 20 19
+#escribir_ciudad emqmn
+0 0
+#consultar_prod lohvh 148
+error: la ciudad no tiene el producto
+#modificar_barco
+#leer_inventarios
+#modificar_barco
+#escribir_ciudad gldqw
+0 0
+#leer_inventarios
+#quitar_prod wnoaa 9
+error: la ciudad no tiene el producto
+#consultar_num
+339
+#agregar_productos 4
+#agregar_productos 3
+#redistribuir
+#escribir_producto 106
+106 20 16
+#leer_inventario uewfl
+#modificar_prod vyxgu 63
+error: la ciudad no tiene el producto
+#modificar_barco
+#hacer_viaje
+69
+#redistribuir
+#leer_inventario tgodo
+#escribir_barco
+23 58 100 14
+sxgiy
+#agregar_productos 9
+#escribir_barco
+23 58 100 14
+sxgiy
+#quitar_prod ibhdo 40
+error: no existe la ciudad
+#poner_prod fkpxq 27
+6329 4523
