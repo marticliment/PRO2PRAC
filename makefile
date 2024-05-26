@@ -18,9 +18,15 @@ clean:
 	rm -rf obj/
 	rm -rf *.exe
 
-tar: clean
+tar: clean docs
 	rm -rf practica.tar
 	cd src; tar -cvf practica.tar *.cc *.hh makefile; mv practica.tar ..
+	cd docs; zip -r html.zip html/*; mv html.zip ..
+	tar -rvf practica.tar Justificació.pdf
+	tar -rvf practica.tar html.zip
+	rm html.zip
+
+
 
 #
 # --------------------------------------------------------
@@ -56,7 +62,7 @@ time: clean program.exe
 	chmod +x program.exe
 	time --verbose ./program.exe <in >out
 
-docs: src/*.cc
+docs: src/*.cc doxyfile
 	rm -rf docs
 	doxygen doxyfile
 
