@@ -4,17 +4,18 @@
  */
 
 #ifndef NO_DIAGRAM
+#include <unordered_map>
+#include <set>
+#include <iostream>
 #include <vector>
-#include <algorithm>
 #endif
 
-#include "City.hh"
-#include "ProductData.hh"
 #include "ProductReference.hh"
+#include "City.hh"
 
 City::City()
 {
-    City("INVALId");
+    City("INVALID");
 }
 
 City::City(string id)

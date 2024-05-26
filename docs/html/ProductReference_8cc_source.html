@@ -100,59 +100,65 @@ $(document).ready(function(){initNavTree('ProductReference_8cc_source.html','');
 </div><!--header-->
 <div class="contents">
 <a href="ProductReference_8cc.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="ProductReference_8hh.html">ProductReference.hh</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>vector&lt;ProductData&gt; <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">ProductReference::data</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a> new_data)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.push_back(new_data);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
-</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">   15</a></span><span class="keyword">const</span> <a class="code hl_class" href="classProductData.html">ProductData</a>&amp; <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    assert(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">Contains</a>(<span class="keywordtype">id</span>));</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>[<span class="keywordtype">id</span>-1];</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="ProductReference_8hh.html">ProductReference.hh</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>vector&lt;ProductData&gt; <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">ProductReference::data</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">   16</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a> new_data)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.push_back(new_data);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">   21</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">   21</a></span><span class="keyword">const</span> <a class="code hl_class" href="classProductData.html">ProductData</a>&amp; <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    assert(<span class="keywordtype">id</span> &gt; 0);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt;= <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    assert(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">Contains</a>(<span class="keywordtype">id</span>));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>[<span class="keywordtype">id</span>-1];</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(istream&amp; stream, <span class="keywordtype">int</span> count)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">   27</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">int</span> weight, volume;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        stream &gt;&gt; weight &gt;&gt; volume;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a>(weight, volume));</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    assert(<span class="keywordtype">id</span> &gt; 0);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt;= <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">   37</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a>()</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">   33</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a>(istream&amp; stream, <span class="keywordtype">int</span> count)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> weight, volume;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        stream &gt;&gt; weight &gt;&gt; volume;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a>(weight, volume));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">   43</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 </div>
 <div class="ttc" id="aProductReference_8hh_html"><div class="ttname"><a href="ProductReference_8hh.html">ProductReference.hh</a></div><div class="ttdoc">Contains the specification of the ProductReference static class.</div></div>
 <div class="ttc" id="aclassProductData_html"><div class="ttname"><a href="classProductData.html">ProductData</a></div><div class="ttdoc">Represents the data (weight and volume) for a specific product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8hh_source.html#l00015">ProductData.hh:16</a></div></div>
-<div class="ttc" id="aclassProductReference_html_a1deb913d31efb6e9f2fbef4962304b60"><div class="ttname"><a href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a></div><div class="ttdeci">static int Count()</div><div class="ttdoc">Retrieves the number of product data in the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00037">ProductReference.cc:37</a></div></div>
-<div class="ttc" id="aclassProductReference_html_a29882c4ee068fd3b9c1707ba624f9a2e"><div class="ttname"><a href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">ProductReference::data</a></div><div class="ttdeci">static vector&lt; ProductData &gt; data</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8hh_source.html#l00028">ProductReference.hh:28</a></div></div>
-<div class="ttc" id="aclassProductReference_html_a9b2c978acd5d9989cd10ab93dc358cac"><div class="ttname"><a href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a></div><div class="ttdeci">static bool Contains(int id)</div><div class="ttdoc">Checks if the reference contains product data with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00021">ProductReference.cc:21</a></div></div>
-<div class="ttc" id="aclassProductReference_html_a9ff086f81c4e1c5d8fafa63ff18bf947"><div class="ttname"><a href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a></div><div class="ttdeci">static void AddFromStream(istream &amp;reader, int count)</div><div class="ttdoc">Adds multiple product data from an input stream to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00027">ProductReference.cc:27</a></div></div>
-<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00015">ProductReference.cc:15</a></div></div>
-<div class="ttc" id="aclassProductReference_html_af630d539e0634a36b34767a7d2c0ea6a"><div class="ttname"><a href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a></div><div class="ttdeci">static void Add(ProductData new_data)</div><div class="ttdoc">Adds a new product data to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00010">ProductReference.cc:10</a></div></div>
+<div class="ttc" id="aclassProductReference_html_a1deb913d31efb6e9f2fbef4962304b60"><div class="ttname"><a href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a></div><div class="ttdeci">static int Count()</div><div class="ttdoc">Retrieves the number of product data in the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00043">ProductReference.cc:43</a></div></div>
+<div class="ttc" id="aclassProductReference_html_a29882c4ee068fd3b9c1707ba624f9a2e"><div class="ttname"><a href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">ProductReference::data</a></div><div class="ttdeci">static vector&lt; ProductData &gt; data</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8hh_source.html#l00027">ProductReference.hh:27</a></div></div>
+<div class="ttc" id="aclassProductReference_html_a9b2c978acd5d9989cd10ab93dc358cac"><div class="ttname"><a href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a></div><div class="ttdeci">static bool Contains(int id)</div><div class="ttdoc">Checks if the reference contains product data with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00027">ProductReference.cc:27</a></div></div>
+<div class="ttc" id="aclassProductReference_html_a9ff086f81c4e1c5d8fafa63ff18bf947"><div class="ttname"><a href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947">ProductReference::AddFromStream</a></div><div class="ttdeci">static void AddFromStream(istream &amp;reader, int count)</div><div class="ttdoc">Adds multiple product data from an input stream to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00033">ProductReference.cc:33</a></div></div>
+<div class="ttc" id="aclassProductReference_html_ae6e586d7b4646d28255b0d87ad3a9b80"><div class="ttname"><a href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a></div><div class="ttdeci">static const ProductData &amp; Get(int id)</div><div class="ttdoc">Retrieves the product data with the specified Id from the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00021">ProductReference.cc:21</a></div></div>
+<div class="ttc" id="aclassProductReference_html_af630d539e0634a36b34767a7d2c0ea6a"><div class="ttname"><a href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a></div><div class="ttdeci">static void Add(ProductData new_data)</div><div class="ttdoc">Adds a new product data to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00016">ProductReference.cc:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

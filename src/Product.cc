@@ -3,13 +3,12 @@
  * @brief Contains the implementation of the Product class
  */
 
-#include "Product.hh"
-#include "ProductReference.hh"
-#include "ProductData.hh"
-
 #ifndef NO_DIAGRAM
 #include <cassert>
 #endif
+
+#include "Product.hh"
+#include "ProductReference.hh"
 
 Product::Product()
 {

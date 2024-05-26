@@ -1,19 +1,18 @@
 <map id="src/Valley.cc" name="src/Valley.cc">
-<area shape="rect" id="Node000001" title="Contains the implementation of the Valley static class." alt="" coords="148,5,249,31"/>
+<area shape="rect" id="Node000001" title="Contains the implementation of the Valley static class." alt="" coords="103,5,204,31"/>
 <area shape="rect" id="Node000002" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="5,152,163,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,33,104,143,100,140,187,29"/>
-<area shape="rect" id="Node000005" href="$Valley_8hh.html" title="Contains the specification of the Valley static class." alt="" coords="227,79,307,104"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="212,29,248,67,244,70,208,33"/>
-<area shape="rect" id="Node000003" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="175,225,265,251"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,175,187,217,185,221,105,180"/>
-<area shape="rect" id="Node000004" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="159,299,281,324"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="97,176,165,249,201,287,197,290,161,252,93,179"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,251,223,285,217,285,217,251"/>
-<area shape="poly" id="edge10_Node000005_Node000004" title=" " alt="" coords="300,102,326,115,350,132,365,153,367,165,364,178,342,215,313,247,282,273,254,293,251,289,279,269,309,243,338,212,359,176,362,165,360,155,346,135,323,119,298,107"/>
-<area shape="rect" id="Node000006" href="$City_8hh.html" title="Contains the specification of the City class." alt="" coords="187,152,253,177"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="261,106,237,142,233,139,257,103"/>
-<area shape="rect" id="Node000007" href="$Ship_8hh.html" title="Contains the specification of the Ship class." alt="" coords="278,152,349,177"/>
-<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="277,103,300,139,296,142,272,106"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="223,178,223,212,217,212,217,178"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="300,179,248,219,244,215,297,175"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,32,98,141,93,138,145,30"/>
+<area shape="rect" id="Node000005" href="$Valley_8hh.html" title="Contains the specification of the Valley static class." alt="" coords="183,79,263,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="167,29,204,67,200,71,163,33"/>
+<area shape="rect" id="Node000003" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="163,225,253,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,175,177,216,175,221,103,180"/>
+<area shape="rect" id="Node000004" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="99,299,221,324"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="93,177,150,285,145,288,88,179"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="202,253,178,289,173,286,198,250"/>
+<area shape="rect" id="Node000006" href="$Ship_8hh.html" title="Contains the specification of the Ship class." alt="" coords="187,152,258,177"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="225,104,225,138,220,138,220,104"/>
+<area shape="rect" id="Node000007" href="$City_8hh.html" title="Contains the specification of the City class." alt="" coords="283,152,349,177"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="239,102,292,141,288,146,236,106"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="223,178,216,212,211,211,218,177"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="300,180,239,220,236,215,297,175"/>
 </map>

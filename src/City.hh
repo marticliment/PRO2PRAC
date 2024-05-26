@@ -8,9 +8,9 @@
 
 #ifndef NO_DIAGRAM
 #include <unordered_map>
-#include <map>
 #include <set>
 #include <iostream>
+#include <vector>
 #endif
 
 #include "Product.hh"

@@ -1,37 +1,34 @@
 <map id="src/ProductData.hh" name="src/ProductData.hh">
-<area shape="rect" id="Node000001" title="Contains the specification of the ProductData class." alt="" coords="339,5,484,31"/>
-<area shape="rect" id="Node000002" href="$City_8cc.html" title="Contains the implementation of the City class." alt="" coords="132,225,219,251"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="368,39,332,57,297,81,259,118,226,160,184,227,179,224,222,157,255,115,294,77,329,52,366,34"/>
-<area shape="rect" id="Node000003" href="$Product_8cc.html" title="Contains the implementation of the Product class." alt="" coords="662,225,774,251"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="441,36,608,150,705,223,702,227,604,154,438,40"/>
-<area shape="rect" id="Node000004" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="307,79,422,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="398,44,374,80,370,77,394,41"/>
-<area shape="rect" id="Node000006" href="$Valley_8hh.html" title="Contains the specification of the Valley static class." alt="" coords="5,225,108,251"/>
-<area shape="poly" id="edge22_Node000001_Node000006" title=" " alt="" coords="325,33,263,47,195,71,130,106,101,128,76,154,66,171,61,190,58,225,53,225,55,189,61,169,72,150,98,124,127,101,193,66,261,42,324,27"/>
-<area shape="rect" id="Node000009" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="369,152,549,177"/>
-<area shape="poly" id="edge21_Node000001_Node000009" title=" " alt="" coords="424,43,437,78,459,151,454,153,431,80,419,45"/>
-<area shape="rect" id="Node000013" href="$ProductData_8cc.html" title="Contains the implementation of the ProductData class." alt="" coords="676,79,819,104"/>
-<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="479,31,693,76,692,81,478,36"/>
-<area shape="poly" id="edge9_Node000004_Node000003" title=" " alt="" coords="426,105,493,124,563,150,641,188,701,223,699,228,639,192,561,154,491,129,424,110"/>
-<area shape="rect" id="Node000005" href="$City_8hh.html" title="Contains the specification of the City class." alt="" coords="87,152,176,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="315,110,170,154,168,149,314,105"/>
-<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="392,110,445,150,442,154,389,114"/>
-<area shape="rect" id="Node000012" href="$Ship_8hh.html" title="Contains the specification of the Ship class." alt="" coords="251,152,345,177"/>
-<area shape="poly" id="edge17_Node000004_Node000012" title=" " alt="" coords="346,116,311,154,307,150,342,113"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="148,188,170,224,166,227,144,191"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="111,189,71,227,67,223,108,185"/>
-<area shape="rect" id="Node000007" href="$Valley_8cc.html" title="Contains the implementation of the Valley static class." alt="" coords="163,299,265,324"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="96,254,189,296,187,301,93,259"/>
-<area shape="rect" id="Node000008" href="$program_8cc.html" title="Contains the entry point of the valley commerce simulator." alt="" coords="427,299,545,324"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="122,248,427,298,426,303,121,254"/>
-<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="401,183,220,228,218,223,400,178"/>
-<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="515,178,677,223,675,228,513,183"/>
-<area shape="poly" id="edge15_Node000009_Node000007" title=" " alt="" coords="437,188,396,220,347,253,294,280,245,301,243,296,292,276,345,248,393,216,434,184"/>
-<area shape="poly" id="edge16_Node000009_Node000008" title=" " alt="" coords="540,179,574,197,602,224,607,237,606,250,588,272,560,289,527,301,526,296,557,284,585,268,601,248,602,238,597,227,571,201,537,184"/>
-<area shape="rect" id="Node000010" href="$ProductReference_8cc.html" title="Contains the implementation of the ProductReference static class." alt="" coords="409,225,587,251"/>
-<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="475,188,494,224,489,226,470,191"/>
-<area shape="rect" id="Node000011" href="$Ship_8cc.html" title="Contains the implementation of the Ship class." alt="" coords="243,225,334,251"/>
-<area shape="poly" id="edge14_Node000009_Node000011" title=" " alt="" coords="420,185,318,228,316,223,418,180"/>
-<area shape="poly" id="edge19_Node000012_Node000006" title=" " alt="" coords="247,184,96,228,95,223,245,179"/>
-<area shape="poly" id="edge18_Node000012_Node000011" title=" " alt="" coords="297,191,293,226,288,225,292,191"/>
+<area shape="rect" id="Node000001" title="Contains the specification of the ProductData class." alt="" coords="351,5,497,31"/>
+<area shape="rect" id="Node000002" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="367,79,481,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,44,427,79,421,79,421,44"/>
+<area shape="rect" id="Node000009" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="239,152,419,177"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="396,41,375,58,357,80,341,118,333,152,328,151,335,116,352,77,371,55,393,37"/>
+<area shape="rect" id="Node000013" href="$ProductData_8cc.html" title="Contains the implementation of the ProductData class." alt="" coords="506,79,649,104"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="462,34,553,76,551,81,460,39"/>
+<area shape="rect" id="Node000003" href="$City_8hh.html" title="Contains the specification of the City class." alt="" coords="562,152,651,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="467,106,578,149,576,154,465,111"/>
+<area shape="rect" id="Node000008" href="$Product_8cc.html" title="Contains the implementation of the Product class." alt="" coords="5,225,117,251"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="366,110,299,129,228,154,146,193,82,228,79,223,143,188,226,150,297,124,364,105"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="399,114,346,154,343,150,396,110"/>
+<area shape="rect" id="Node000012" href="$Ship_8hh.html" title="Contains the specification of the Ship class." alt="" coords="444,152,537,177"/>
+<area shape="poly" id="edge15_Node000002_Node000012" title=" " alt="" coords="446,113,482,150,478,154,443,116"/>
+<area shape="rect" id="Node000004" href="$City_8cc.html" title="Contains the implementation of the City class." alt="" coords="561,225,647,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="608,191,607,225,602,225,603,191"/>
+<area shape="rect" id="Node000005" href="$Valley_8hh.html" title="Contains the specification of the Valley static class." alt="" coords="671,225,774,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="638,182,705,223,702,227,635,187"/>
+<area shape="rect" id="Node000006" href="$Valley_8cc.html" title="Contains the implementation of the Valley static class." alt="" coords="321,299,423,324"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="658,255,423,302,422,297,657,250"/>
+<area shape="rect" id="Node000007" href="$program_8cc.html" title="Contains the entry point of the valley commerce simulator." alt="" coords="506,299,625,324"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="686,259,592,301,590,296,684,254"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="387,178,561,223,560,228,386,183"/>
+<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="254,183,219,195,190,210,181,218,176,228,176,238,182,249,211,276,246,293,285,303,321,307,321,313,284,308,245,298,208,280,178,252,171,239,171,226,177,215,187,205,217,190,253,178"/>
+<area shape="poly" id="edge14_Node000009_Node000007" title=" " alt="" coords="353,185,390,216,435,248,487,276,535,296,533,301,484,281,432,253,387,221,350,189"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="273,183,105,228,104,223,272,178"/>
+<area shape="rect" id="Node000010" href="$ProductReference_8cc.html" title="Contains the implementation of the ProductReference static class." alt="" coords="192,225,371,251"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="316,190,291,227,287,224,312,187"/>
+<area shape="rect" id="Node000011" href="$Ship_8cc.html" title="Contains the implementation of the Ship class." alt="" coords="445,225,536,251"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="369,180,465,223,463,228,367,185"/>
+<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="542,179,686,223,684,228,540,184"/>
+<area shape="poly" id="edge16_Node000012_Node000011" title=" " alt="" coords="493,191,493,225,488,225,488,191"/>
 </map>

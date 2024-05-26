@@ -9,7 +9,6 @@
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <iostream>
-#include <cassert>
 #endif
 
 #include "Product.hh"

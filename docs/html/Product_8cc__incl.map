@@ -1,12 +1,11 @@
 <map id="src/Product.cc" name="src/Product.cc">
-<area shape="rect" id="Node000001" title="Contains the implementation of the Product class." alt="" coords="5,5,117,31"/>
-<area shape="rect" id="Node000002" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="48,152,139,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,31,90,138,85,139,61,32"/>
-<area shape="rect" id="Node000003" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="32,225,155,251"/>
-<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="58,32,47,59,36,95,31,136,33,157,38,176,51,197,68,215,64,219,47,201,34,178,28,158,26,136,30,94,42,57,53,30"/>
-<area shape="rect" id="Node000004" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="99,79,256,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="81,28,148,69,145,74,79,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,178,96,212,91,212,91,178"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="166,106,119,145,116,141,162,102"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="178,105,170,139,153,179,137,200,120,218,116,214,133,196,148,176,165,137,173,104"/>
+<area shape="rect" id="Node000001" title="Contains the implementation of the Product class." alt="" coords="19,5,131,31"/>
+<area shape="rect" id="Node000002" href="$Product_8hh.html" title="Contains the specification of the Product class." alt="" coords="5,152,96,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,32,56,54,45,79,43,109,47,138,41,139,37,110,40,78,51,51,64,29"/>
+<area shape="rect" id="Node000004" href="$ProductReference_8hh.html" title="Contains the specification of the ProductReference static class." alt="" coords="55,79,212,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="86,29,117,67,113,70,82,33"/>
+<area shape="rect" id="Node000003" href="$ProductData_8hh.html" title="Contains the specification of the ProductData class." alt="" coords="31,225,153,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="60,176,81,212,76,215,55,179"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="122,106,76,145,73,141,118,102"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="133,105,102,213,96,211,127,104"/>
 </map>

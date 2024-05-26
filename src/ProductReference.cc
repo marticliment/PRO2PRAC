@@ -3,6 +3,12 @@
  * @brief Contains the implementation of the ProductReference <i>static</i> class
  */
 
+#ifndef NO_DIAGRAM
+#include <vector>
+#include <iostream>
+#include <cassert>
+#endif
+
 #include "ProductReference.hh"
 
 vector<ProductData> ProductReference::data;

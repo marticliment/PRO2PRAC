@@ -9,13 +9,11 @@
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <unordered_map>
-#include <map>
 #include "BinTree.hh"
 #endif
 
-#include "City.hh"
 #include "Ship.hh"
-#include "ProductData.hh"
+#include "City.hh"
 
 /**
  * @brief Represents a valley with cities (City objects), and a Ship that navigates and trades between cities.

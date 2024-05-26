@@ -4,8 +4,9 @@
  */
 
 #ifndef NO_DIAGRAM
-#include <set>
+#include <vector>
 #include <unordered_map>
+#include "BinTree.hh"
 #endif
 
 #include "ProductReference.hh"
