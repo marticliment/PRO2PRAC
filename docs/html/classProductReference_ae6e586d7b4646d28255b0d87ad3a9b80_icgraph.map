@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="844,125,797,88,739,52,687,33,689,28,741,48,800,84,848,121"/>
 <area shape="rect" id="Node000003" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="556,107,707,132"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="774,137,707,130,707,125,774,132"/>
-<area shape="rect" id="Node000006" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,81,60,107"/>
+<area shape="rect" id="Node000006" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,81,60,107"/>
 <area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="833,129,789,110,739,97,639,82,537,74,435,71,338,72,170,82,61,93,60,88,170,77,338,67,435,66,537,69,640,77,741,91,791,105,835,124"/>
 <area shape="rect" id="Node000008" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="558,156,705,181"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="775,157,705,164,705,159,774,152"/>
@@ -12,9 +12,9 @@
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="828,165,741,195,693,208,691,203,739,190,826,160"/>
 <area shape="rect" id="Node000011" href="$classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9" title="Withdraw a certain amount of a product from the city." alt="" coords="523,255,740,280"/>
 <area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="850,169,802,208,773,229,741,246,709,257,708,252,739,241,770,224,799,204,846,165"/>
-<area shape="rect" id="Node000004" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="335,107,464,132"/>
+<area shape="rect" id="Node000004" href="$classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="335,107,464,132"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="542,122,464,122,464,117,542,117"/>
-<area shape="rect" id="Node000007" href="$classCity.html#ab86b6efb986a81583d7c3b82b4e94ff3" title="Update a product in the city&#39;s inventory." alt="" coords="324,156,475,181"/>
+<area shape="rect" id="Node000007" href="$classCity.html#a050d16749a7d5c037284b428c543073a" title="Update a product in the city&#39;s inventory." alt="" coords="324,156,475,181"/>
 <area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="558,137,460,159,459,153,557,132"/>
 <area shape="rect" id="Node000005" href="$classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="108,107,276,132"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="321,122,276,122,276,117,321,117"/>

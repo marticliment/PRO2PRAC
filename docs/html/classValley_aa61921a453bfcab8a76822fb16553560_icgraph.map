@@ -1,5 +1,5 @@
 <map id="Valley::GetBestRoute" name="Valley::GetBestRoute">
 <area shape="rect" id="Node000001" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,5,267,31"/>
-<area shape="rect" id="Node000002" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,5,60,31"/>
+<area shape="rect" id="Node000002" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,5,60,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>

@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="519,42,485,39,275,25,275,20,486,34,520,37"/>
 <area shape="rect" id="Node000004" href="$classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="323,73,485,99"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="525,67,474,76,473,71,525,61"/>
-<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The main function of the program." alt="" coords="5,37,60,63"/>
+<area shape="rect" id="Node000003" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,37,60,63"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,36,61,47,60,42,114,31"/>
 <area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="440,64,430,55,404,52,382,54,371,59,369,64,375,72,371,75,364,65,367,55,381,49,404,47,432,50,444,60"/>
 <area shape="rect" id="Node000005" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="112,61,271,87"/>

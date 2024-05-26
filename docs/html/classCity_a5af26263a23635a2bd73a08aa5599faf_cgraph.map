@@ -1,6 +1,6 @@
 <map id="City::ReadFromStream" name="City::ReadFromStream">
 <area shape="rect" id="Node000001" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="5,55,173,80"/>
-<area shape="rect" id="Node000002" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="221,55,351,80"/>
+<area shape="rect" id="Node000002" href="$classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="221,55,351,80"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,65,207,65,207,70,174,70"/>
 <area shape="rect" id="Node000003" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="417,5,531,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,52,411,32,412,37,336,57"/>

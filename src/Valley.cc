@@ -63,13 +63,12 @@ Ship& Valley::GetShip()
 vector<string> Valley::GetCityIds()
 {
     AssertRiverArrayIsInitialized();
-    vector<string> names;
+    vector<string> names(cities.size(), "");
+    int i = 0;
     auto it = cities.begin();
     while(it != cities.end())
-    {
-        names.push_back(it->first);
-        it++;
-    }
+        names[i++] = (it++)->first;
+
     return names;
 }
 

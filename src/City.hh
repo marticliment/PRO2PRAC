@@ -57,7 +57,7 @@ class City
          * @pre None
          * @post Returns the identifier of the city
          */
-        string GetId() const;
+        const string& GetId() const;
 
         /**
          * @brief Read the city product inventory from a stream. The old product inventory will be erased
@@ -177,7 +177,7 @@ class City
          * @post The product is added to the city's inventory.
          * The total weight and volume of the city are updated accordingly
          */
-        void AddProduct(Product p);
+        void AddProduct(const Product& p);
 
         /**
          * @brief Update a product in the city's inventory.
@@ -188,7 +188,7 @@ class City
          * @post The product in the city's inventory is replaced with the given product.
          * The total weight and volume of the city are updated accordingly
          */
-        void UpdateProduct(Product p);
+        void UpdateProduct(const Product& p);
 
         /**
          * @brief Remove a product from the city's inventory.

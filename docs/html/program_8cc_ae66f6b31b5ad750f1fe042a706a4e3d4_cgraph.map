@@ -1,109 +1,105 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title="The main function of the program." alt="" coords="5,747,60,772"/>
+<area shape="rect" id="Node000001" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="5,648,60,673"/>
 <area shape="rect" id="Node000002" href="$classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947" title="Adds multiple product data from an input stream to the reference." alt="" coords="369,49,572,89"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,746,38,614,51,405,61,298,74,203,88,131,97,107,106,92,135,70,168,53,203,43,239,36,312,35,379,43,379,49,312,41,240,42,204,48,170,58,138,74,110,96,102,109,93,133,79,204,67,298,57,405,43,614,37,747"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,648,40,532,55,355,77,185,90,125,106,92,135,70,168,54,203,43,239,37,312,36,379,44,378,49,311,41,239,42,204,48,170,59,138,74,110,96,96,127,82,186,60,356,45,533,37,648"/>
 <area shape="rect" id="Node000004" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="1147,295,1349,320"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="37,745,62,695,82,664,106,637,193,558,232,526,270,501,310,481,355,467,407,458,469,455,739,455,842,451,922,438,1000,414,1098,380,1160,353,1213,324,1216,329,1162,358,1100,384,1001,419,923,443,843,456,739,461,469,461,408,463,356,472,312,486,272,505,235,531,197,562,110,641,86,668,67,697,41,748"/>
-<area shape="rect" id="Node000005" href="$classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60" title="Retrieves the number of product data in the reference." alt="" coords="119,1273,302,1299"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="37,772,39,869,48,1016,57,1093,70,1164,88,1222,98,1244,110,1260,113,1263,109,1267,106,1264,94,1246,83,1223,65,1165,52,1094,43,1016,33,869,31,773"/>
-<area shape="rect" id="Node000006" href="$classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="406,1197,535,1223"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="37,772,42,850,54,965,63,1025,76,1079,91,1123,110,1152,129,1165,157,1175,230,1191,314,1201,393,1206,392,1211,314,1206,229,1197,155,1181,126,1170,106,1156,86,1126,70,1081,58,1026,48,966,36,850,32,772"/>
-<area shape="rect" id="Node000008" href="$debug_8cc.html#a811946f700e43ccd37d8f7141f837270" title="Prints a number in red only if the DEBUG flag is set." alt="" coords="184,1323,237,1348"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="36,772,37,876,45,1039,54,1124,67,1202,86,1267,97,1291,110,1310,123,1320,138,1327,171,1334,170,1339,136,1332,120,1324,106,1313,93,1294,81,1268,62,1203,49,1125,40,1039,32,877,31,772"/>
-<area shape="rect" id="Node000009" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="913,295,1081,320"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="32,746,36,667,48,549,57,488,70,433,86,387,106,356,133,336,166,319,206,305,250,293,351,277,461,269,573,267,680,269,848,279,923,290,922,295,848,285,680,275,573,272,461,274,351,283,251,298,207,310,168,324,136,340,110,360,91,389,75,434,63,489,53,550,41,667,37,747"/>
-<area shape="rect" id="Node000010" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="131,845,290,871"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="58,770,176,836,173,841,55,774"/>
-<area shape="rect" id="Node000012" href="$classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="897,1045,1098,1071"/>
-<area shape="poly" id="edge33_Node000001_Node000012" title=" " alt="" coords="37,772,39,815,49,874,58,906,71,938,88,967,110,992,136,1011,169,1028,252,1055,353,1073,462,1083,574,1088,680,1088,848,1081,922,1071,923,1076,848,1086,680,1094,573,1093,462,1089,352,1078,251,1060,167,1033,133,1016,106,996,84,970,66,940,53,908,44,876,34,815,31,772"/>
-<area shape="rect" id="Node000013" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="940,597,1055,623"/>
-<area shape="poly" id="edge34_Node000001_Node000013" title=" " alt="" coords="47,744,74,724,107,704,246,636,358,591,475,560,628,533,689,523,738,518,787,521,849,533,882,543,914,557,968,587,965,592,912,562,880,548,847,538,787,526,739,524,690,528,628,538,476,565,360,596,248,641,109,708,77,728,51,749"/>
-<area shape="rect" id="Node000018" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="679,1045,797,1071"/>
-<area shape="poly" id="edge32_Node000001_Node000018" title=" " alt="" coords="41,771,64,825,84,855,110,881,176,926,249,963,326,992,403,1014,478,1030,549,1042,665,1053,665,1058,548,1047,477,1036,401,1019,324,997,247,968,174,931,106,885,80,858,60,827,36,773"/>
-<area shape="rect" id="Node000019" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="937,1147,1057,1172"/>
-<area shape="poly" id="edge38_Node000001_Node000019" title=" " alt="" coords="38,772,45,836,58,927,80,1015,94,1049,110,1071,126,1080,153,1089,233,1105,340,1118,463,1130,720,1146,923,1154,923,1160,719,1151,463,1135,339,1124,232,1110,152,1094,124,1085,106,1075,89,1052,75,1017,53,928,39,837,32,773"/>
-<area shape="rect" id="Node000021" href="$classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="637,648,839,673"/>
-<area shape="poly" id="edge35_Node000001_Node000021" title=" " alt="" coords="60,749,107,738,246,715,385,695,623,668,623,674,385,700,246,720,109,743,61,755"/>
-<area shape="rect" id="Node000025" href="$classValley.html#a070726f5f925f2a2891aa5226ef58f17" title="Gets a reference to the ship." alt="" coords="151,1224,271,1249"/>
-<area shape="poly" id="edge36_Node000001_Node000025" title=" " alt="" coords="37,772,41,858,53,988,62,1055,75,1117,91,1168,110,1203,123,1214,139,1223,136,1227,120,1219,106,1206,86,1171,70,1119,57,1056,47,988,36,858,32,772"/>
-<area shape="rect" id="Node000026" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,107,313,132"/>
-<area shape="poly" id="edge39_Node000001_Node000026" title=" " alt="" coords="31,746,31,633,38,454,47,360,60,272,80,200,92,171,106,150,120,137,124,141,110,153,97,174,85,202,66,274,52,361,44,455,36,633,36,746"/>
-<area shape="rect" id="Node000027" href="$classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,132,580,157"/>
-<area shape="poly" id="edge58_Node000001_Node000027" title=" " alt="" coords="31,747,32,643,39,481,48,397,62,319,80,255,92,230,106,211,122,198,145,188,205,170,276,158,347,150,348,155,276,163,206,176,147,193,125,203,110,215,97,232,85,256,67,320,54,397,45,482,37,643,36,747"/>
-<area shape="rect" id="Node000030" href="$classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="385,193,556,219"/>
-<area shape="poly" id="edge68_Node000001_Node000030" title=" " alt="" coords="31,746,32,649,41,499,50,421,63,349,81,290,93,268,106,251,125,238,151,228,218,214,296,206,372,203,372,208,296,212,219,219,152,233,127,243,110,255,97,271,86,292,68,351,55,422,46,500,38,649,37,747"/>
-<area shape="rect" id="Node000031" href="$classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="387,747,554,772"/>
-<area shape="poly" id="edge47_Node000001_Node000031" title=" " alt="" coords="61,757,373,757,373,762,61,762"/>
-<area shape="rect" id="Node000033" href="$program_8cc.html#a7cc158960a0672bc8cab12c8b94eb709" title="Prints to the console the given message. If the DEBUG flag is set, the text will be printed in green." alt="" coords="151,1372,270,1397"/>
-<area shape="poly" id="edge57_Node000001_Node000033" title=" " alt="" coords="36,772,36,885,42,1062,51,1155,64,1241,84,1312,96,1339,110,1359,123,1370,139,1377,137,1382,120,1374,106,1362,91,1341,79,1314,59,1242,46,1156,37,1062,30,885,31,772"/>
-<area shape="rect" id="Node000034" href="$classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="127,369,295,395"/>
-<area shape="poly" id="edge59_Node000001_Node000034" title=" " alt="" coords="31,746,32,692,40,612,49,567,62,522,81,478,106,438,130,415,157,398,160,403,133,419,110,441,86,480,67,523,54,568,45,613,37,693,36,746"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="40,646,67,611,106,576,199,518,239,497,277,481,317,469,361,461,469,455,739,455,842,451,922,438,1000,414,1098,380,1160,353,1213,324,1216,329,1162,358,1100,384,1001,419,923,443,843,456,739,461,469,461,362,466,319,474,279,486,241,502,202,522,110,580,71,615,45,649"/>
+<area shape="rect" id="Node000005" href="$classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60" title="Retrieves the number of product data in the reference." alt="" coords="119,1320,302,1345"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="37,674,44,803,59,1005,81,1200,95,1270,102,1293,110,1307,113,1310,109,1313,106,1310,98,1295,90,1271,76,1201,54,1006,39,803,32,674"/>
+<area shape="rect" id="Node000006" href="$classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="146,1221,275,1247"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="37,673,41,770,52,920,62,999,74,1072,90,1134,110,1176,131,1198,157,1214,154,1218,128,1202,106,1180,85,1136,69,1074,57,1000,47,920,36,770,32,674"/>
+<area shape="rect" id="Node000008" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="913,295,1081,320"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="33,648,40,586,54,498,76,412,90,379,106,356,133,336,167,320,251,295,352,279,462,270,574,268,680,270,848,279,923,290,922,295,848,285,680,275,574,273,462,276,353,284,253,300,169,325,136,341,110,360,95,381,81,414,60,499,45,586,38,648"/>
+<area shape="rect" id="Node000009" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="131,845,290,871"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="47,672,191,833,187,837,44,675"/>
+<area shape="rect" id="Node000011" href="$classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="897,1045,1098,1071"/>
+<area shape="poly" id="edge32_Node000001_Node000011" title=" " alt="" coords="38,673,44,743,57,843,79,942,93,980,110,1006,135,1025,168,1042,207,1056,251,1068,351,1084,460,1092,572,1093,679,1091,848,1081,922,1071,923,1076,848,1086,679,1096,572,1099,460,1097,350,1089,249,1073,205,1061,166,1047,132,1030,106,1009,89,983,74,944,52,844,39,743,32,674"/>
+<area shape="rect" id="Node000012" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="940,597,1055,623"/>
+<area shape="poly" id="edge33_Node000001_Node000012" title=" " alt="" coords="59,647,183,601,273,573,377,547,491,526,610,514,731,515,790,522,849,533,882,543,914,557,968,587,965,592,912,562,880,548,847,538,790,527,731,520,611,519,492,531,379,552,275,578,184,606,61,652"/>
+<area shape="rect" id="Node000017" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="679,1045,797,1071"/>
+<area shape="poly" id="edge31_Node000001_Node000017" title=" " alt="" coords="37,674,41,714,52,770,74,829,90,857,110,881,172,932,243,972,318,1003,396,1025,473,1040,545,1050,665,1057,665,1062,545,1055,472,1046,395,1030,317,1008,240,977,169,937,106,885,85,860,69,832,47,771,36,715,32,674"/>
+<area shape="rect" id="Node000018" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="937,1147,1057,1172"/>
+<area shape="poly" id="edge37_Node000001_Node000018" title=" " alt="" coords="37,673,40,757,51,882,60,946,73,1005,89,1052,110,1083,136,1101,170,1117,211,1130,259,1142,368,1157,489,1166,613,1170,732,1169,923,1161,923,1167,732,1174,613,1175,488,1172,367,1163,258,1147,210,1136,168,1122,133,1106,106,1087,85,1054,68,1006,55,947,46,882,35,757,32,674"/>
+<area shape="rect" id="Node000020" href="$classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="637,648,839,673"/>
+<area shape="poly" id="edge34_Node000001_Node000020" title=" " alt="" coords="60,658,623,658,623,663,60,663"/>
+<area shape="rect" id="Node000024" href="$classValley.html#a070726f5f925f2a2891aa5226ef58f17" title="Gets a reference to the ship." alt="" coords="151,1271,271,1296"/>
+<area shape="poly" id="edge35_Node000001_Node000024" title=" " alt="" coords="36,674,36,786,43,962,51,1055,65,1140,84,1211,96,1237,110,1258,123,1268,139,1275,136,1280,120,1273,106,1261,91,1240,79,1212,59,1141,46,1055,37,962,31,786,31,674"/>
+<area shape="rect" id="Node000025" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,107,313,132"/>
+<area shape="poly" id="edge38_Node000001_Node000025" title=" " alt="" coords="31,648,34,551,44,402,53,324,66,251,83,191,106,150,121,136,125,141,110,153,88,193,71,252,58,324,49,403,39,551,37,648"/>
+<area shape="rect" id="Node000026" href="$classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,132,580,157"/>
+<area shape="poly" id="edge56_Node000001_Node000026" title=" " alt="" coords="32,648,35,560,45,429,55,360,68,298,84,246,106,211,123,198,146,188,205,171,276,158,347,150,348,155,277,164,207,176,147,193,125,203,110,214,89,248,73,299,60,361,51,429,40,561,37,648"/>
+<area shape="rect" id="Node000029" href="$classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="385,193,556,219"/>
+<area shape="poly" id="edge66_Node000001_Node000029" title=" " alt="" coords="32,648,36,567,47,447,57,385,69,329,86,282,106,251,125,238,151,228,218,214,296,207,371,203,372,209,296,212,219,220,152,233,127,243,110,255,90,284,74,330,62,386,52,448,41,568,37,648"/>
+<area shape="rect" id="Node000030" href="$classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="387,723,554,748"/>
+<area shape="poly" id="edge46_Node000001_Node000030" title=" " alt="" coords="61,665,109,677,248,702,374,720,373,726,247,707,107,682,60,671"/>
+<area shape="rect" id="Node000032" href="$classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="127,369,295,395"/>
+<area shape="poly" id="edge57_Node000001_Node000032" title=" " alt="" coords="32,647,38,608,50,553,72,493,87,464,106,438,131,415,159,398,162,403,134,419,110,441,92,467,77,495,55,555,43,609,38,648"/>
 <area shape="rect" id="Node000003" href="$classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a" title="Adds a new product data to the reference." alt="" coords="653,5,823,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="572,47,656,31,657,36,573,52"/>
-<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="429,1199,420,1189,424,1179,442,1173,471,1171,507,1175,517,1179,521,1185,517,1188,514,1183,506,1180,471,1176,443,1178,428,1183,425,1188,433,1195"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="181,1223,175,1213,178,1203,191,1197,211,1195,235,1198,245,1207,242,1211,233,1203,211,1200,192,1202,182,1207,180,1212,186,1220"/>
 <area shape="rect" id="Node000007" href="$classValley.html#a9ce0d2c2139f10629fcb12ec2e261f35" title="Asserts that the river array is initialized." alt="" coords="1159,1165,1337,1205"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="535,1205,1145,1185,1145,1191,535,1211"/>
-<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="1082,305,1133,305,1133,310,1082,310"/>
-<area shape="rect" id="Node000011" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="693,996,783,1021"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="257,868,680,990,679,995,256,873"/>
-<area shape="rect" id="Node000016" href="$classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="389,845,552,871"/>
-<area shape="poly" id="edge18_Node000010_Node000016" title=" " alt="" coords="290,855,376,855,376,861,290,861"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="784,1015,917,1040,916,1045,783,1020"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="783,1002,816,993,846,975,866,950,887,912,928,816,963,713,986,635,991,637,968,715,933,817,892,915,871,953,850,979,818,998,784,1007"/>
-<area shape="rect" id="Node000014" href="$classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="896,996,1099,1021"/>
-<area shape="poly" id="edge15_Node000011_Node000014" title=" " alt="" coords="783,1006,882,1006,882,1011,783,1011"/>
-<area shape="rect" id="Node000015" href="$classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="954,947,1041,972"/>
-<area shape="poly" id="edge16_Node000011_Node000015" title=" " alt="" coords="783,998,940,967,941,973,784,1003"/>
-<area shape="poly" id="edge17_Node000015_Node000015" title=" " alt="" coords="957,948,948,938,952,928,969,922,997,920,1033,924,1043,929,1047,934,1042,937,1039,933,1031,929,997,925,970,927,956,932,953,938,961,945"/>
-<area shape="poly" id="edge20_Node000016_Node000011" title=" " alt="" coords="512,868,548,884,582,907,597,925,606,942,614,959,630,975,654,988,680,997,678,1002,652,993,626,979,610,962,601,945,593,928,578,911,545,889,510,873"/>
-<area shape="poly" id="edge26_Node000016_Node000013" title=" " alt="" coords="499,868,629,930,692,947,743,958,767,959,792,955,818,946,847,930,882,901,912,865,936,825,955,782,979,700,991,636,996,637,984,701,960,784,941,827,916,868,886,905,849,935,820,951,793,961,768,964,743,963,690,952,627,935,497,873"/>
-<area shape="poly" id="edge30_Node000016_Node000016" title=" " alt="" coords="429,847,420,837,424,827,442,821,471,819,507,823,517,827,521,833,517,836,514,831,506,828,471,824,443,826,428,831,425,836,433,843"/>
-<area shape="rect" id="Node000017" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="662,747,814,772"/>
-<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="494,843,553,813,627,782,658,773,659,778,629,787,556,818,496,848"/>
-<area shape="poly" id="edge21_Node000016_Node000018" title=" " alt="" coords="484,869,554,956,595,1003,629,1032,666,1046,664,1051,627,1036,592,1006,549,960,480,873"/>
-<area shape="rect" id="Node000020" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="628,796,848,821"/>
-<area shape="poly" id="edge25_Node000016_Node000020" title=" " alt="" coords="540,843,655,821,656,827,541,848"/>
-<area shape="poly" id="edge27_Node000016_Node000021" title=" " alt="" coords="497,843,538,818,578,783,593,757,599,732,607,708,626,684,635,678,638,682,630,688,611,710,604,734,598,759,582,786,541,822,500,847"/>
-<area shape="rect" id="Node000022" href="$classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="647,845,829,871"/>
-<area shape="poly" id="edge28_Node000016_Node000022" title=" " alt="" coords="552,855,633,855,633,861,552,861"/>
-<area shape="rect" id="Node000023" href="$classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="663,895,813,920"/>
-<area shape="poly" id="edge29_Node000016_Node000023" title=" " alt="" coords="541,868,656,889,655,895,540,873"/>
-<area shape="rect" id="Node000024" href="$classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="642,697,834,723"/>
-<area shape="poly" id="edge31_Node000016_Node000024" title=" " alt="" coords="492,843,533,816,578,783,601,757,611,745,627,733,643,725,646,730,629,738,614,749,605,760,582,787,536,821,495,847"/>
-<area shape="poly" id="edge22_Node000018_Node000007" title=" " alt="" coords="798,1066,936,1094,1099,1133,1179,1158,1178,1163,1098,1138,935,1099,797,1071"/>
-<area shape="poly" id="edge23_Node000018_Node000019" title=" " alt="" coords="767,1068,897,1125,941,1140,939,1145,895,1130,765,1073"/>
-<area shape="poly" id="edge24_Node000019_Node000007" title=" " alt="" coords="1058,1163,1145,1172,1144,1177,1057,1168"/>
-<area shape="poly" id="edge37_Node000025_Node000007" title=" " alt="" coords="271,1235,412,1236,580,1233,839,1220,1098,1198,1145,1194,1145,1199,1099,1203,840,1225,580,1238,412,1241,271,1240"/>
-<area shape="poly" id="edge40_Node000026_Node000002" title=" " alt="" coords="276,104,355,88,356,94,277,109"/>
-<area shape="poly" id="edge41_Node000026_Node000027" title=" " alt="" coords="314,127,348,130,348,135,313,132"/>
-<area shape="poly" id="edge45_Node000026_Node000030" title=" " alt="" coords="251,130,420,187,418,192,249,135"/>
-<area shape="rect" id="Node000028" href="$classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="641,129,835,169"/>
-<area shape="poly" id="edge42_Node000027_Node000028" title=" " alt="" coords="580,144,628,144,628,150,580,149"/>
-<area shape="rect" id="Node000029" href="$classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="649,55,827,80"/>
-<area shape="poly" id="edge44_Node000027_Node000029" title=" " alt="" coords="506,129,627,90,664,81,665,86,629,95,508,134"/>
-<area shape="poly" id="edge43_Node000028_Node000028" title=" " alt="" coords="690,129,687,119,695,110,712,104,738,102,768,105,784,112,782,117,767,110,738,107,713,109,698,114,692,120,695,127"/>
-<area shape="poly" id="edge46_Node000030_Node000004" title=" " alt="" coords="556,196,666,191,802,191,952,203,1027,214,1099,230,1164,255,1218,285,1215,290,1162,260,1098,235,1026,219,951,208,802,197,666,196,556,201"/>
-<area shape="poly" id="edge52_Node000031_Node000013" title=" " alt="" coords="481,744,539,689,581,658,627,634,705,612,785,601,861,598,926,601,926,606,861,604,785,607,706,617,629,639,584,663,543,693,485,748"/>
-<area shape="poly" id="edge49_Node000031_Node000017" title=" " alt="" coords="554,757,648,757,648,762,554,762"/>
-<area shape="poly" id="edge50_Node000031_Node000018" title=" " alt="" coords="524,770,555,785,582,808,600,839,607,868,607,897,603,925,601,952,602,979,610,1006,630,1032,646,1044,666,1052,664,1057,644,1049,626,1036,606,1008,597,980,595,952,598,925,601,897,601,869,595,841,578,812,552,789,521,775"/>
-<area shape="poly" id="edge51_Node000031_Node000020" title=" " alt="" coords="541,769,656,791,655,796,540,775"/>
-<area shape="poly" id="edge53_Node000031_Node000021" title=" " alt="" coords="494,744,553,714,627,683,658,674,659,679,629,689,556,719,496,749"/>
-<area shape="poly" id="edge54_Node000031_Node000022" title=" " alt="" coords="501,770,581,808,605,821,629,832,655,839,653,845,627,836,602,825,579,812,498,774"/>
-<area shape="poly" id="edge55_Node000031_Node000023" title=" " alt="" coords="513,770,548,785,582,808,598,828,605,847,613,865,630,881,651,892,648,897,626,885,609,868,601,849,593,830,578,812,546,790,511,774"/>
-<area shape="poly" id="edge56_Node000031_Node000024" title=" " alt="" coords="540,744,655,723,656,728,541,749"/>
-<area shape="rect" id="Node000032" href="$classShip.html#ab23c83b11f4a3aadbbaaeff062975b76" title="Adds a city to the list of visited cities." alt="" coords="661,547,815,572"/>
-<area shape="poly" id="edge48_Node000031_Node000032" title=" " alt="" coords="478,745,534,672,577,627,627,589,658,574,660,579,629,594,580,631,538,675,482,748"/>
-<area shape="rect" id="Node000035" href="$classCity.html#a23a27df1c37c22f2873e23346362a714" title="Add a product to the city&#39;s inventory." alt="" coords="406,369,535,395"/>
-<area shape="poly" id="edge60_Node000034_Node000035" title=" " alt="" coords="295,379,392,379,392,385,295,385"/>
-<area shape="poly" id="edge61_Node000035_Node000013" title=" " alt="" coords="536,390,603,403,683,424,768,452,849,488,886,510,921,536,976,585,972,589,918,540,883,515,847,492,766,457,681,429,602,409,535,395"/>
-<area shape="rect" id="Node000036" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="663,295,813,320"/>
-<area shape="poly" id="edge62_Node000035_Node000036" title=" " alt="" coords="509,367,627,330,664,321,666,326,629,335,510,372"/>
-<area shape="rect" id="Node000038" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="665,344,811,369"/>
-<area shape="poly" id="edge65_Node000035_Node000038" title=" " alt="" coords="535,373,651,362,651,368,536,379"/>
-<area shape="poly" id="edge63_Node000036_Node000009" title=" " alt="" coords="814,305,899,305,899,310,814,310"/>
-<area shape="rect" id="Node000037" href="$classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="906,245,1089,271"/>
-<area shape="poly" id="edge64_Node000036_Node000037" title=" " alt="" coords="805,292,916,271,917,276,806,297"/>
-<area shape="poly" id="edge66_Node000038_Node000009" title=" " alt="" coords="805,341,916,320,917,325,806,347"/>
-<area shape="rect" id="Node000039" href="$classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="908,344,1087,369"/>
-<area shape="poly" id="edge67_Node000038_Node000039" title=" " alt="" coords="812,354,894,354,894,359,812,359"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,1228,1145,1187,1145,1192,276,1234"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="1082,305,1133,305,1133,310,1082,310"/>
+<area shape="rect" id="Node000010" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="693,996,783,1021"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="257,868,680,990,679,995,256,873"/>
+<area shape="rect" id="Node000015" href="$classValley.html#a7e1dbd01fd0fe0a9172bea82a6133721" title="Tests a route step and updates the best route if necessary." alt="" coords="389,845,552,871"/>
+<area shape="poly" id="edge17_Node000009_Node000015" title=" " alt="" coords="290,855,376,855,376,861,290,861"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="784,1015,917,1040,916,1045,783,1020"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="783,1002,816,993,846,975,866,950,887,912,928,816,963,713,986,635,991,637,968,715,933,817,892,915,871,953,850,979,818,998,784,1007"/>
+<area shape="rect" id="Node000013" href="$classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="896,996,1099,1021"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="783,1006,882,1006,882,1011,783,1011"/>
+<area shape="rect" id="Node000014" href="$classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="954,947,1041,972"/>
+<area shape="poly" id="edge15_Node000010_Node000014" title=" " alt="" coords="783,998,940,967,941,973,784,1003"/>
+<area shape="poly" id="edge16_Node000014_Node000014" title=" " alt="" coords="957,948,948,938,952,928,969,922,997,920,1033,924,1043,929,1047,934,1042,937,1039,933,1031,929,997,925,970,927,956,932,953,938,961,945"/>
+<area shape="poly" id="edge19_Node000015_Node000010" title=" " alt="" coords="507,868,544,887,582,912,597,929,606,945,614,960,630,975,654,988,680,996,679,1002,652,992,626,979,610,963,601,948,593,932,578,916,541,891,504,873"/>
+<area shape="poly" id="edge25_Node000015_Node000012" title=" " alt="" coords="499,868,629,930,692,947,743,958,767,959,792,955,818,946,847,930,882,901,912,865,936,825,955,782,979,700,991,636,996,637,984,701,960,784,941,827,916,868,886,905,849,935,820,951,793,961,768,964,743,963,690,952,627,935,497,873"/>
+<area shape="poly" id="edge29_Node000015_Node000015" title=" " alt="" coords="429,847,420,837,424,827,442,821,471,819,507,823,517,827,521,833,517,836,514,831,506,828,471,824,443,826,428,831,425,836,433,843"/>
+<area shape="rect" id="Node000016" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="662,747,814,772"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="494,843,553,813,627,782,658,773,659,778,629,787,556,818,496,848"/>
+<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="482,870,503,903,536,947,579,993,629,1032,666,1046,664,1051,627,1036,575,997,532,951,499,906,477,873"/>
+<area shape="rect" id="Node000019" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="628,796,848,821"/>
+<area shape="poly" id="edge24_Node000015_Node000019" title=" " alt="" coords="540,843,655,821,656,827,541,848"/>
+<area shape="poly" id="edge26_Node000015_Node000020" title=" " alt="" coords="487,843,530,807,578,759,591,738,599,719,608,701,626,684,638,677,641,681,630,688,613,705,604,722,596,741,582,762,534,811,491,847"/>
+<area shape="rect" id="Node000021" href="$classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="647,845,829,871"/>
+<area shape="poly" id="edge27_Node000015_Node000021" title=" " alt="" coords="552,855,633,855,633,861,552,861"/>
+<area shape="rect" id="Node000022" href="$classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="663,895,813,920"/>
+<area shape="poly" id="edge28_Node000015_Node000022" title=" " alt="" coords="541,868,656,889,655,895,540,873"/>
+<area shape="rect" id="Node000023" href="$classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="642,697,834,723"/>
+<area shape="poly" id="edge30_Node000015_Node000023" title=" " alt="" coords="483,843,541,790,582,759,627,733,648,724,650,729,629,738,585,763,545,794,486,847"/>
+<area shape="poly" id="edge21_Node000017_Node000007" title=" " alt="" coords="798,1066,936,1094,1099,1133,1179,1158,1178,1163,1098,1138,935,1099,797,1071"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="767,1068,897,1125,941,1140,939,1145,895,1130,765,1073"/>
+<area shape="poly" id="edge23_Node000018_Node000007" title=" " alt="" coords="1058,1163,1145,1172,1144,1177,1057,1168"/>
+<area shape="poly" id="edge36_Node000024_Node000007" title=" " alt="" coords="271,1277,621,1250,858,1229,1098,1203,1145,1197,1145,1203,1099,1209,858,1234,622,1255,271,1282"/>
+<area shape="poly" id="edge39_Node000025_Node000002" title=" " alt="" coords="276,104,355,88,356,94,277,109"/>
+<area shape="poly" id="edge40_Node000025_Node000026" title=" " alt="" coords="314,127,348,130,348,135,313,132"/>
+<area shape="poly" id="edge44_Node000025_Node000029" title=" " alt="" coords="251,130,420,187,418,192,249,135"/>
+<area shape="rect" id="Node000027" href="$classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="641,129,835,169"/>
+<area shape="poly" id="edge41_Node000026_Node000027" title=" " alt="" coords="580,144,628,144,628,150,580,149"/>
+<area shape="rect" id="Node000028" href="$classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="649,55,827,80"/>
+<area shape="poly" id="edge43_Node000026_Node000028" title=" " alt="" coords="506,129,627,90,664,81,665,86,629,95,508,134"/>
+<area shape="poly" id="edge42_Node000027_Node000027" title=" " alt="" coords="690,129,687,119,695,110,712,104,738,102,768,105,784,112,782,117,767,110,738,107,713,109,698,114,692,120,695,127"/>
+<area shape="poly" id="edge45_Node000029_Node000004" title=" " alt="" coords="556,196,666,191,802,191,952,203,1027,214,1099,230,1164,255,1218,285,1215,290,1162,260,1098,235,1026,219,951,208,802,197,666,196,556,201"/>
+<area shape="poly" id="edge51_Node000030_Node000012" title=" " alt="" coords="485,720,544,676,584,653,627,634,705,615,786,605,862,601,926,602,926,608,862,607,786,610,706,620,629,639,587,657,547,681,488,725"/>
+<area shape="poly" id="edge48_Node000030_Node000016" title=" " alt="" coords="555,740,648,749,648,754,554,745"/>
+<area shape="poly" id="edge49_Node000030_Node000017" title=" " alt="" coords="503,746,544,771,565,788,582,809,598,840,604,870,601,927,599,954,601,980,610,1006,630,1032,646,1044,666,1052,664,1057,644,1049,626,1036,605,1008,596,981,594,954,596,927,599,871,593,842,578,811,561,792,541,775,500,750"/>
+<area shape="poly" id="edge50_Node000030_Node000019" title=" " alt="" coords="510,745,629,782,662,790,661,796,627,787,508,751"/>
+<area shape="poly" id="edge52_Node000030_Node000020" title=" " alt="" coords="509,720,627,683,664,674,666,679,629,689,510,725"/>
+<area shape="poly" id="edge53_Node000030_Node000021" title=" " alt="" coords="492,746,563,793,629,832,650,839,648,844,627,836,560,798,489,750"/>
+<area shape="poly" id="edge54_Node000030_Node000022" title=" " alt="" coords="497,746,539,772,582,808,597,829,605,848,613,865,630,881,651,892,648,897,626,885,609,868,600,850,592,831,578,812,536,777,494,750"/>
+<area shape="poly" id="edge55_Node000030_Node000023" title=" " alt="" coords="554,725,628,718,629,723,555,730"/>
+<area shape="rect" id="Node000031" href="$classShip.html#ab23c83b11f4a3aadbbaaeff062975b76" title="Adds a city to the list of visited cities." alt="" coords="661,547,815,572"/>
+<area shape="poly" id="edge47_Node000030_Node000031" title=" " alt="" coords="480,721,538,658,580,621,627,589,661,574,664,579,629,594,583,625,542,662,484,724"/>
+<area shape="rect" id="Node000033" href="$classCity.html#a502e496cee454e5e42f139e2ae3ec124" title="Add a product to the city&#39;s inventory." alt="" coords="406,369,535,395"/>
+<area shape="poly" id="edge58_Node000032_Node000033" title=" " alt="" coords="295,379,392,379,392,385,295,385"/>
+<area shape="poly" id="edge59_Node000033_Node000012" title=" " alt="" coords="536,390,603,403,683,424,768,452,849,488,886,510,921,536,976,585,972,589,918,540,883,515,847,492,766,457,681,429,602,409,535,395"/>
+<area shape="rect" id="Node000034" href="$classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="663,295,813,320"/>
+<area shape="poly" id="edge60_Node000033_Node000034" title=" " alt="" coords="509,367,627,330,664,321,666,326,629,335,510,372"/>
+<area shape="rect" id="Node000036" href="$classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="665,344,811,369"/>
+<area shape="poly" id="edge63_Node000033_Node000036" title=" " alt="" coords="535,373,651,362,651,368,536,379"/>
+<area shape="poly" id="edge61_Node000034_Node000008" title=" " alt="" coords="814,305,899,305,899,310,814,310"/>
+<area shape="rect" id="Node000035" href="$classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="906,245,1089,271"/>
+<area shape="poly" id="edge62_Node000034_Node000035" title=" " alt="" coords="805,292,916,271,917,276,806,297"/>
+<area shape="poly" id="edge64_Node000036_Node000008" title=" " alt="" coords="805,341,916,320,917,325,806,347"/>
+<area shape="rect" id="Node000037" href="$classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="908,344,1087,369"/>
+<area shape="poly" id="edge65_Node000036_Node000037" title=" " alt="" coords="812,354,894,354,894,359,812,359"/>
 </map>

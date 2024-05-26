@@ -62,14 +62,6 @@ const string reset("\033[0m");
  * @pre None
  * @post None
  */
-void PrintCommand(string command)
-{
-#ifdef DEBUG
-    cout << green << "#" + command << reset << '\n';
-#else
-    cout << "#" + command << '\n';
-#endif
-}
 
 
 /**
@@ -96,7 +88,7 @@ int main()
         // cuenca.
         if(command == LEER_RIO || command == LEER_RIO_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             Valley::ReadCitiesFromStream(cin);
         }
 
@@ -111,7 +103,7 @@ int main()
         {
             string city_id;
             cin >> city_id;
-            PrintCommand(command + " " + city_id);
+            cout << '#' << command << ' ' << city_id << '\n';
 
             if(!Valley::HasCity(city_id))
                 cout << ERR_NE_CITY << '\n';
@@ -126,7 +118,7 @@ int main()
         // No necesariamente todas las ciudades del río tendrán inventario.
         else if(command == LEER_INVENTARIOS || command == LEER_INVENTARIOS_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             string city_id;
             while(cin >> city_id && city_id != "#")
                 Valley::GetCity(city_id).ReadFromStream(cin);
@@ -139,7 +131,7 @@ int main()
         // serán no negativas y al menos una de ellas será estrictamente positiva.
         else if(command == MODIFICAR_BARCO || command == MODIFICAR_BARCO_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             Valley::GetShip().ReadFromStream(cin);
         }
         
@@ -148,7 +140,7 @@ int main()
         // viaje solo se ha de escribir la última ciudad visitada de la ruta escogida.
         else if(command == ESCRIBIR_BARCO || command == ESCRIBIR_BARCO_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             auto& ship = Valley::GetShip();
             Product& buying = ship.BuyingProduct();
             Product& selling = ship.SellingProduct();
@@ -161,7 +153,7 @@ int main()
         // Escribe cuantos productos diferentes hay.
         else if(command == CONSULTAR_NUM || command == CONSULTAR_NUM_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             cout << ProductReference::Count() << '\n';
         }
         
@@ -172,7 +164,7 @@ int main()
         {
             int count;
             cin >> count;
-            PrintCommand(command + " " + to_string(count));
+            cout << '#' << command << ' ' << count << '\n';
             ProductReference::AddFromStream(cin, count);
         }
         
@@ -183,7 +175,7 @@ int main()
         {
             string city_id;
             cin >> city_id;
-            PrintCommand(command + " " + city_id);
+            cout << '#' << command << ' ' << city_id << '\n';
 
             if(Valley::HasCity(city_id))
             {
@@ -206,7 +198,7 @@ int main()
         {
             int product_id;
             cin >> product_id;
-            PrintCommand(command + " " + to_string(product_id));
+            cout << '#' << command << ' ' << product_id << '\n';
             if(ProductReference::Contains(product_id))
             {
                 auto& product = ProductReference::Get(product_id);
@@ -228,7 +220,7 @@ int main()
             string city_id;
             int product_id, current, wanted;
             cin >> city_id >> product_id >> current >> wanted;
-            PrintCommand(command + " " + city_id + " " + to_string(product_id));
+            cout << '#' << command << ' ' << city_id << ' ' << product_id << '\n';
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << '\n';
@@ -259,7 +251,7 @@ int main()
             string city_id;
             int product_id, current, wanted;
             cin >> city_id >> product_id >> current >> wanted;
-            PrintCommand(command + " " + city_id + " " + to_string(product_id));
+            cout << '#' << command << ' ' << city_id << ' ' << product_id << '\n';
             
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << '\n';
@@ -289,7 +281,7 @@ int main()
             string city_id;
             int product_id;
             cin >> city_id >> product_id;
-            PrintCommand(command + " " + city_id + " " + to_string(product_id));
+            cout << '#' << command << ' ' << city_id << ' ' << product_id << '\n';
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << '\n';
@@ -318,7 +310,7 @@ int main()
             string city_id;
             int product_id;
             cin >> city_id >> product_id;
-            PrintCommand(command + " " + city_id + " " + to_string(product_id));
+            cout << '#' << command << ' ' << city_id << ' ' << product_id << '\n';
 
             if (!ProductReference::Contains(product_id))
                 cout << ERR_NE_PROD << '\n';
@@ -344,7 +336,7 @@ int main()
         {
             string city1_id, city2_id;
             cin >> city1_id >> city2_id;
-            PrintCommand(command + " " + city1_id + " " + city2_id);
+            cout << '#' << command << ' ' << city1_id << ' ' << city2_id << '\n';
 
             if(!Valley::HasCity(city1_id) || !Valley::HasCity(city2_id))
                 cout << ERR_NE_CITY << '\n';
@@ -363,7 +355,7 @@ int main()
         // y así sucesivamente.
         else if(command == REDISTRIBUIR || command == REDISTRIBUIR_L)
         {
-            PrintCommand(command);
+            cout << '#' << command << '\n';
             Valley::DoTrades();
         }
         
@@ -376,12 +368,8 @@ int main()
         // escribe el total de unidades de productos compradas y vendidas por el barco.
         else if(command == HACER_VIAJE || command == HACER_VIAJE_L)
         {
-            PrintCommand(command);
-            //Valley::river_structure.setOutputFormat(BinTree<string>::VISUALFORMAT);
-            //cout << Valley::river_structure << '\n';
+            cout << '#' << command << '\n';
             auto route = Valley::GetBestRoute();
-            //for(auto item: route)
-            //    cout << (item == Valley::NavStep::Left? "Left, ": "Right, ") << '\n';
             cout << Valley::NavigateRoute(route) << '\n';
         }
         
@@ -392,7 +380,6 @@ int main()
         }
         else
         {
-            Error("Invalid input "  + command);
         }
     }
     flush(cout);

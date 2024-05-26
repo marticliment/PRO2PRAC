@@ -17,7 +17,7 @@ City::City(string id)
     this->id = id;
 }
 
-string City::GetId() const
+const string& City::GetId() const
 {
     return id;
 }
@@ -40,10 +40,11 @@ void City::ReadFromStream(istream& stream)
 
 vector<int> City::GetProductIds() const
 {
-    vector<int> result;
+    vector<int> result(product_list.size());
     auto it = product_list.begin();
+    int i = 0;
     while(it != product_list.end())
-        result.push_back(*(it++));
+        result[i++] = *(it++);
     return result;
 }
 
@@ -52,7 +53,7 @@ bool City::HasProduct(int id) const
     return product_inventory.find(id) != product_inventory.end();
 }
 
-void City::AddProduct(Product new_prod)
+void City::AddProduct(const Product& new_prod)
 {
     product_inventory[new_prod.GetId()] = new_prod;
     product_list.insert(new_prod.GetId());
@@ -69,7 +70,7 @@ void City::RemoveProduct(int id)
     product_list.erase(id);
 }
 
-void City::UpdateProduct(Product new_prod)
+void City::UpdateProduct(const Product& new_prod)
 {
     auto& old_prod = product_inventory.at(new_prod.GetId());
     weight -= old_prod.GetWeight();
