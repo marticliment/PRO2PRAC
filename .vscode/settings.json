@@ -16,6 +16,7 @@
         "xstring": "cpp",
         "optional": "cpp",
         "system_error": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "cassert": "cpp"
     }
 }

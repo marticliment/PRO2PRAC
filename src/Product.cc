@@ -4,7 +4,6 @@
  */
 
 #ifndef NO_DIAGRAM
-#include <cassert>
 #endif
 
 #include "Product.hh"
@@ -55,7 +54,6 @@ int Product::GetMissingAmount() const
 
 void Product::WithdrawAmount(int amount)
 {
-    assert(amount <= current_amount);
     current_amount -= amount;
 }
 

@@ -6,7 +6,6 @@
 #ifndef NO_DIAGRAM
 #include <vector>
 #include <iostream>
-#include <cassert>
 #endif
 
 #include "ProductReference.hh"
@@ -20,13 +19,11 @@ void ProductReference::Add(ProductData new_data)
 
 const ProductData& ProductReference::Get(int id)
 {
-    assert(Contains(id));
     return data[id-1];
 }
 
 bool ProductReference::Contains(int id)
 {
-    assert(id > 0);
     return id <= data.size();
 }
 

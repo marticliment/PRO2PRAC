@@ -166,10 +166,10 @@ Atributs Privats Estàtics</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd>The new_data must be a valid <a class="el" href="classProductData.html" title="Represents the data (weight and volume) for a specific product.">ProductData</a> object. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The new_data is added to the reference. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00016">16</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.push_back(new_data);</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00015">15</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.push_back(new_data);</div>
+<div class="line"><span class="lineno">   18</span>}</div>
 <div class="ttc" id="aclassProductReference_html_a29882c4ee068fd3b9c1707ba624f9a2e"><div class="ttname"><a href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">ProductReference::data</a></div><div class="ttdeci">static vector&lt; ProductData &gt; data</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8hh_source.html#l00027">ProductReference.hh:27</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
@@ -234,17 +234,17 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section pre"><dt>Precondició</dt><dd>The reader must be a valid input stream, and the count must be a positive integer. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>The product data read from the stream is added to the reference. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00033">33</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
-<div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> weight, volume;</div>
-<div class="line"><span class="lineno">   38</span>        stream &gt;&gt; weight &gt;&gt; volume;</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a>(weight, volume));</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="line"><span class="lineno">   41</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00030">30</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> weight, volume;</div>
+<div class="line"><span class="lineno">   35</span>        stream &gt;&gt; weight &gt;&gt; volume;</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a>(<a class="code hl_class" href="classProductData.html">ProductData</a>(weight, volume));</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclassProductData_html"><div class="ttname"><a href="classProductData.html">ProductData</a></div><div class="ttdoc">Represents the data (weight and volume) for a specific product.</div><div class="ttdef"><b>Definition</b> <a href="ProductData_8hh_source.html#l00015">ProductData.hh:16</a></div></div>
-<div class="ttc" id="aclassProductReference_html_af630d539e0634a36b34767a7d2c0ea6a"><div class="ttname"><a href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a></div><div class="ttdeci">static void Add(ProductData new_data)</div><div class="ttdoc">Adds a new product data to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00016">ProductReference.cc:16</a></div></div>
+<div class="ttc" id="aclassProductReference_html_af630d539e0634a36b34767a7d2c0ea6a"><div class="ttname"><a href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a">ProductReference::Add</a></div><div class="ttdeci">static void Add(ProductData new_data)</div><div class="ttdoc">Adds a new product data to the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00015">ProductReference.cc:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
@@ -306,50 +306,24 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>Returns true if the reference contains product data with the specified Id, false otherwise.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>True if the reference contains product data with the specified Id, false otherwise. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00027">27</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
-<div class="line"><span class="lineno">   29</span>    assert(<span class="keywordtype">id</span> &gt; 0);</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt;= <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
-<div class="line"><span class="lineno">   31</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00025">25</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt;= <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
+<div class="line"><span class="lineno">   28</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProductReference_a9b2c978acd5d9989cd10ab93dc358cac_icgraph.png" border="0" usemap="#aclassProductReference_a9b2c978acd5d9989cd10ab93dc358cac_icgraph" alt=""/></div>
 <map name="aclassProductReference_a9b2c978acd5d9989cd10ab93dc358cac_icgraph" id="aclassProductReference_a9b2c978acd5d9989cd10ab93dc358cac_icgraph">
-<area shape="rect" title="Checks if the reference contains product data with the specified Id." alt="" coords="1061,170,1264,195"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="845,170,1013,195"/>
-<area shape="poly" title=" " alt="" coords="1048,185,1013,185,1013,180,1048,180"/>
-<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,145,60,170"/>
-<area shape="poly" title=" " alt="" coords="1130,165,1055,121,949,69,887,45,823,26,756,13,690,8,445,8,347,13,271,28,198,57,109,101,75,123,49,146,45,142,72,119,107,96,196,52,270,23,346,7,445,3,690,3,757,8,824,21,889,40,951,64,1058,116,1133,160"/>
-<area shape="rect" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="361,293,532,318"/>
-<area shape="poly" title=" " alt="" coords="1128,204,1068,235,987,272,895,307,798,333,718,342,637,340,563,332,502,321,503,315,564,326,637,335,717,337,797,328,893,302,985,267,1066,231,1126,200"/>
-<area shape="rect" href="classProduct.html#a68f0c88184e12f91987afe67d389187c" title="Get the data of the product from the ProductRefence Database." alt="" coords="622,43,755,69"/>
-<area shape="poly" title=" " alt="" coords="902,163,854,126,796,90,744,71,746,66,799,86,858,122,905,159"/>
-<area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="613,145,764,170"/>
-<area shape="poly" title=" " alt="" coords="831,175,764,168,765,163,832,170"/>
-<area shape="poly" title=" " alt="" coords="890,167,846,148,797,135,605,104,526,97,453,95,380,98,301,106,109,135,61,149,59,143,107,129,301,100,379,92,453,89,527,91,605,99,798,129,848,143,892,162"/>
-<area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="615,194,762,219"/>
-<area shape="poly" title=" " alt="" coords="832,195,763,202,762,197,831,190"/>
-<area shape="rect" href="classCity.html#a5aa2c8a7d6d7e4f1e4d009c97d5ae390" title="Restock a certain amount of a product in the city." alt="" coords="585,243,792,269"/>
-<area shape="poly" title=" " alt="" coords="885,203,798,233,750,246,749,241,797,228,883,198"/>
-<area shape="rect" href="classCity.html#a5b6931c4e0a1b33fb97e464a43dc30f9" title="Withdraw a certain amount of a product from the city." alt="" coords="580,293,797,318"/>
-<area shape="poly" title=" " alt="" coords="907,207,859,246,798,282,763,295,761,290,796,278,856,241,903,202"/>
-<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="382,145,511,170"/>
-<area shape="poly" title=" " alt="" coords="599,160,511,160,511,155,599,155"/>
-<area shape="rect" href="classCity.html#a5fb23dbbba8f2f799eb1fb60d1e02e0c" title="Update a product in the city&#39;s inventory." alt="" coords="371,194,522,219"/>
-<area shape="poly" title=" " alt="" coords="613,175,510,197,509,191,612,170"/>
-<area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="127,145,295,170"/>
-<area shape="poly" title=" " alt="" coords="368,160,295,160,295,155,368,155"/>
-<area shape="poly" title=" " alt="" coords="113,160,60,160,60,155,113,155"/>
-<area shape="poly" title=" " alt="" coords="612,194,509,173,510,167,613,189"/>
-<area shape="poly" title=" " alt="" coords="601,209,522,209,522,204,601,204"/>
-<area shape="rect" href="classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="387,243,507,269"/>
-<area shape="poly" title=" " alt="" coords="571,259,507,259,507,253,571,253"/>
-<area shape="poly" title=" " alt="" coords="612,293,506,271,507,266,613,287"/>
-<area shape="poly" title=" " alt="" coords="347,307,290,301,228,290,166,272,107,245,84,229,65,209,39,172,43,169,69,205,88,225,109,240,167,267,229,285,291,296,348,301"/>
-<area shape="rect" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,206,313,231"/>
-<area shape="poly" title=" " alt="" coords="386,291,360,283,240,234,242,229,362,277,388,286"/>
-<area shape="poly" title=" " alt="" coords="159,204,59,169,61,164,161,199"/>
+<area shape="rect" title="Checks if the reference contains product data with the specified Id." alt="" coords="580,5,783,31"/>
+<area shape="rect" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,31,60,56"/>
+<area shape="poly" title=" " alt="" coords="566,14,353,10,230,15,108,27,61,38,60,33,108,22,230,10,353,5,566,8"/>
+<area shape="rect" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="361,31,532,56"/>
+<area shape="poly" title=" " alt="" coords="567,33,532,37,532,31,566,28"/>
+<area shape="poly" title=" " alt="" coords="348,46,60,46,60,41,348,41"/>
+<area shape="rect" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,81,313,107"/>
+<area shape="poly" title=" " alt="" coords="374,62,271,84,270,79,373,56"/>
+<area shape="poly" title=" " alt="" coords="151,80,59,53,61,48,153,75"/>
 </map>
 </div>
 
@@ -382,10 +356,10 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>Returns the number of product data in the reference.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The number of product data in the reference. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00043">43</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{</div>
-<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
-<div class="line"><span class="lineno">   46</span>}</div>
+<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00040">40</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>{</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>.size();</div>
+<div class="line"><span class="lineno">   43</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
@@ -434,23 +408,11 @@ Gràfic de crides a aquesta funció:</div>
 <dl class="section post"><dt>Postcondició</dt><dd>The product data with the specified Id is returned.</dd></dl>
 <dl class="section return"><dt>Retorna</dt><dd>The product data with the specified Id. </dd></dl>
 
-<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00021">21</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
-<div class="line"><span class="lineno">   23</span>    assert(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">Contains</a>(<span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>[<span class="keywordtype">id</span>-1];</div>
-<div class="line"><span class="lineno">   25</span>}</div>
-<div class="ttc" id="aclassProductReference_html_a9b2c978acd5d9989cd10ab93dc358cac"><div class="ttname"><a href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a></div><div class="ttdeci">static bool Contains(int id)</div><div class="ttdoc">Checks if the reference contains product data with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00027">ProductReference.cc:27</a></div></div>
+<p class="definition">Definició a la línia <a class="el" href="ProductReference_8cc_source.html#l00020">20</a> del fitxer <a class="el" href="ProductReference_8cc_source.html">ProductReference.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classProductReference.html#a29882c4ee068fd3b9c1707ba624f9a2e">data</a>[<span class="keywordtype">id</span>-1];</div>
+<div class="line"><span class="lineno">   23</span>}</div>
 </div><!-- fragment --><div class="dynheader">
-Gràfic de crides d'aquesta funció:</div>
-<div class="dyncontent">
-<div class="center"><img src="classProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_cgraph.png" border="0" usemap="#aclassProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_cgraph" alt=""/></div>
-<map name="aclassProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_cgraph" id="aclassProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_cgraph">
-<area shape="rect" title="Retrieves the product data with the specified Id from the reference." alt="" coords="5,5,173,31"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="221,5,424,31"/>
-<area shape="poly" title=" " alt="" coords="174,15,208,15,208,21,174,21"/>
-</map>
-</div>
-<div class="dynheader">
 Gràfic de crides a aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_icgraph.png" border="0" usemap="#aclassProductReference_ae6e586d7b4646d28255b0d87ad3a9b80_icgraph" alt=""/></div>

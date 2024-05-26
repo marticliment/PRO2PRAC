@@ -56,13 +56,11 @@ void Valley::InitializeFromStream(istream& stream)
 
 Ship& Valley::GetShip()
 {
-    assert(initialized);
     return ship;
 }
 
 vector<string> Valley::GetCityIds()
 {
-    assert(initialized);
     vector<string> names(cities.size(), "");
     int i = 0;
     auto it = cities.begin();
@@ -74,13 +72,11 @@ vector<string> Valley::GetCityIds()
 
 bool Valley::HasCity(const string& id)
 {
-    assert(initialized);
     return cities.find(id) != cities.end();
 }
 
 City& Valley::GetCity(const string& id)
 {
-    assert(initialized);
     if(!HasCity(id))
         return invalid_city;
 
@@ -89,7 +85,6 @@ City& Valley::GetCity(const string& id)
 
 void Valley::DoTrades(const BinTree<string> &current_position)
 {
-    assert(initialized);
     if(current_position.empty())
         return;
 
@@ -110,7 +105,6 @@ void Valley::DoTrades(const BinTree<string> &current_position)
 
 void Valley::DoTrades()
 {
-    assert(initialized);
     DoTrades(river_structure);
 }
 
