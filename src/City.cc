@@ -1,5 +1,8 @@
+#ifndef NO_DIAGRAM
 #include <vector>
 #include <algorithm>
+#endif
+
 #include "City.hh"
 #include "ProductData.hh"
 #include "ProductReference.hh"

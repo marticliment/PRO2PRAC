@@ -1,5 +1,8 @@
+#ifndef NO_DIAGRAM
 #include <set>
 #include <unordered_map>
+#endif
+
 #include "ProductReference.hh"
 #include "Valley.hh"
 #include "debug.hh"
@@ -130,7 +133,10 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     // Calculate how much product is going to be bought from the city
     if(city.HasProduct(buying_id))
     {   
-        int amount_to_buy = min(city.GetProductExceedingAmount(buying_id), test_ship.BuyingProduct().GetMissingAmount());
+        int amount_to_buy = min(
+            city.GetProductExceedingAmount(buying_id), 
+            test_ship.BuyingProduct().GetMissingAmount()
+        );
         test_ship.BuyingProduct().RestockAmount(amount_to_buy); 
         traded_amount += amount_to_buy;
         bought_amount += amount_to_buy;
@@ -139,7 +145,10 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     // Calculate how much product is going to be sold to the city
     if(city.HasProduct(selling_id))
     {
-        int amount_to_sell = min(city.GetProductMissingAmount(selling_id), test_ship.SellingProduct().GetExceedingAmount());
+        int amount_to_sell = min(
+            city.GetProductMissingAmount(selling_id), 
+            test_ship.SellingProduct().GetExceedingAmount()
+        );
         test_ship.SellingProduct().WithdrawAmount(amount_to_sell);
         traded_amount += amount_to_sell;
         sold_amount += amount_to_sell;
@@ -154,9 +163,10 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     
     // If we have reached the end of the river 
     // or if we have reached the limits of the ship's trading capacity
-    if((current_location.right().empty() && current_location.left().empty())
-        || (test_ship.BuyingProduct().GetMissingAmount() == 0 
-        && test_ship.SellingProduct().GetExceedingAmount() == 0))
+    if(current_location.right().empty() 
+       || current_location.left().empty()
+       || (test_ship.BuyingProduct().GetMissingAmount() == 0 
+           && test_ship.SellingProduct().GetExceedingAmount() == 0))
     {
         while(recently_skipped_cities > 0 && !current_route.empty())
         {
@@ -182,15 +192,18 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     }
     else
     {
+        // Recursive case. Continue calculations
         // Continue testing through the left
         auto left_route = current_route;
         auto left_ship = test_ship.Copy();
         left_route.push_back(Valley::NavStep::Left);
-        TestRouteStep(left_route, current_location.left(), bought_amount, sold_amount, recently_skipped_cities, left_ship, best_route);
+        TestRouteStep(left_route, current_location.left(), bought_amount, 
+            sold_amount, recently_skipped_cities, left_ship, best_route);
         
         // Continue testing through the right
         current_route.push_back(Valley::NavStep::Right);
-        TestRouteStep(current_route, current_location.right(), bought_amount, sold_amount, recently_skipped_cities, test_ship, best_route);
+        TestRouteStep(current_route, current_location.right(), bought_amount, 
+            sold_amount, recently_skipped_cities, test_ship, best_route);
     }
 }
 

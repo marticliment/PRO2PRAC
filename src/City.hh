@@ -1,10 +1,13 @@
 #ifndef CITY_HH
 #define CITY_HH
 
+#ifndef NO_DIAGRAM
 #include <unordered_map>
 #include <map>
 #include <set>
 #include <iostream>
+#endif
+
 #include "Product.hh"
 
 using namespace std;

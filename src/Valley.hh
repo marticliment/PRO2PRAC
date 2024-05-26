@@ -1,10 +1,13 @@
 #ifndef RIVER_ARRAY_HH
 #define RIVER_ARRAY_HH
 
+#ifndef NO_DIAGRAM
 #include <vector>
 #include <unordered_map>
 #include <map>
 #include "BinTree.hh"
+#endif
+
 #include "City.hh"
 #include "Ship.hh"
 #include "ProductData.hh"

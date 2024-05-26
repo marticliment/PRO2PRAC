@@ -1,8 +1,11 @@
 #ifndef SHIP_HH
 #define SHIP_HH
 
+#ifndef NO_DIAGRAM
 #include <vector>
 #include <iostream>
+#endif
+
 #include "Product.hh"
 
 using namespace std;

@@ -1,7 +1,10 @@
 #include "Product.hh"
 #include "ProductReference.hh"
 #include "ProductData.hh"
+
+#ifndef NO_DIAGRAM
 #include <cassert>
+#endif
 
 Product::Product()
 {

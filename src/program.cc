@@ -1,4 +1,7 @@
+#ifndef NO_DIAGRAM
 #include <iostream>
+#endif
+
 #include "Valley.hh"
 #include "debug.hh"
 #include "ProductReference.hh"

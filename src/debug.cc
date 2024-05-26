@@ -2,7 +2,10 @@
 #define DEBUG_HH
 
 #include "debug.hh"
+
+#ifndef NO_DIAGRAM
 #include <iostream>
+#endif
 
 using namespace std;
 

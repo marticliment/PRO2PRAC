@@ -1,8 +1,11 @@
 #ifndef PRODUCTREFERENCE_HH
 #define PRODUCTREFERENCE_HH
 
+#ifndef NO_DIAGRAM
 #include <vector>
 #include <iostream>
+#endif
+
 #include "Product.hh"
 #include "ProductData.hh"
 
