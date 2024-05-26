@@ -1,0 +1,18 @@
+<map id="Valley::InitializeFromStream" name="Valley::InitializeFromStream">
+<area shape="rect" id="Node000001" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="5,101,211,127"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947" title="Adds multiple product data from an input stream to the reference." alt="" coords="267,18,469,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,99,285,59,287,64,153,104"/>
+<area shape="rect" id="Node000004" href="$classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="259,101,477,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,111,245,111,245,117,211,117"/>
+<area shape="rect" id="Node000007" href="$classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="283,165,453,191"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="161,124,303,159,302,165,160,129"/>
+<area shape="rect" id="Node000003" href="$classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a" title="Adds a new product data to the reference." alt="" coords="541,5,712,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="469,28,527,23,528,28,470,33"/>
+<area shape="rect" id="Node000005" href="$classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="530,79,723,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="477,105,516,103,516,108,478,110"/>
+<area shape="rect" id="Node000006" href="$classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="538,144,715,169"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="446,124,536,139,535,144,445,129"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="579,80,576,70,584,60,601,55,627,53,657,56,673,63,671,68,655,61,627,58,602,60,586,65,581,71,584,78"/>
+<area shape="rect" id="Node000008" href="$classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="525,193,728,219"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="454,185,512,191,511,196,453,190"/>
+</map>

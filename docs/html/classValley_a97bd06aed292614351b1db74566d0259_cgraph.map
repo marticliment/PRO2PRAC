@@ -1,0 +1,10 @@
+<map id="Valley::DoTrades" name="Valley::DoTrades">
+<area shape="rect" id="Node000001" title="Will make the city at the given node trade with its children. At their time, the children will trade ..." alt="" coords="5,55,135,80"/>
+<area shape="rect" id="Node000002" href="$classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="183,29,312,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,55,169,51,169,56,135,61"/>
+<area shape="rect" id="Node000003" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="188,79,307,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="135,73,174,79,174,84,135,79"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="219,31,213,21,216,11,228,5,247,3,271,6,281,15,277,19,268,11,247,8,229,10,220,15,218,20,223,28"/>
+<area shape="rect" id="Node000004" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="360,79,480,104"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="307,89,346,89,346,94,307,94"/>
+</map>

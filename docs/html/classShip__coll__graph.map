@@ -1,0 +1,5 @@
+<map id="Ship" name="Ship">
+<area shape="rect" id="Node000001" title="Represents a ship that navigates through a Valley buying and selling products." alt="" coords="15,108,66,133"/>
+<area shape="rect" id="Node000002" href="$classProduct.html" title="Represents a product. A product object has an available amount and a wanted amount of units,..." alt="" coords="5,5,76,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,45,43,108,38,108,38,45"/>
+</map>

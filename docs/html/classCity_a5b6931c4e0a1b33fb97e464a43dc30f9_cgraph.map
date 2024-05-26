@@ -1,0 +1,5 @@
+<map id="City::WithdrawProductAmount" name="City::WithdrawProductAmount">
+<area shape="rect" id="Node000001" title="Withdraw a certain amount of a product from the city." alt="" coords="5,5,223,31"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="271,5,439,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,15,257,15,257,21,223,21"/>
+</map>

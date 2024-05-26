@@ -1,0 +1,11 @@
+<map id="Valley::GetRiverNodeFromStream" name="Valley::GetRiverNodeFromStream">
+<area shape="rect" id="Node000001" title="Reads a river node and its children from an input stream." alt="" coords="628,29,821,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="768,18,753,11,725,8,700,10,685,15,680,21,683,28,678,30,675,20,682,10,699,5,725,3,754,6,770,13"/>
+<area shape="rect" id="Node000002" href="$classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,37,580,62"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="614,52,580,52,580,47,614,47"/>
+<area shape="rect" id="Node000003" href="$classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,11,313,37"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="348,40,313,37,314,31,348,35"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,37,60,62"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="347,52,60,52,60,47,347,47"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="108,41,60,48,60,43,107,36"/>
+</map>

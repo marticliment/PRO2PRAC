@@ -1,0 +1,7 @@
+<map id="Product::GetVolume" name="Product::GetVolume">
+<area shape="rect" id="Node000001" title="Get the volume of the product according to the current available amount of product." alt="" coords="5,31,156,56"/>
+<area shape="rect" id="Node000002" href="$classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="211,5,379,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,32,198,27,198,32,156,37"/>
+<area shape="rect" id="Node000003" href="$classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="204,55,387,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,49,191,53,190,58,156,54"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="Ship::Ship" name="Ship::Ship">
+<area shape="rect" id="Node000001" title="Default constructor for the Ship class." alt="" coords="664,29,751,55"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="730,18,723,11,707,8,693,10,686,15,685,20,689,28,684,30,679,21,682,11,691,5,707,3,726,6,734,14"/>
+<area shape="rect" id="Node000002" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="525,29,616,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="650,45,616,45,616,39,650,39"/>
+<area shape="rect" id="Node000003" href="$classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="108,29,267,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="511,36,477,33,396,30,315,33,267,36,267,31,315,27,396,24,478,27,512,31"/>
+<area shape="rect" id="Node000005" href="$classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="315,67,477,92"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,57,456,69,455,64,511,52"/>
+<area shape="rect" id="Node000004" href="$program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="The entry point of the program." alt="" coords="5,29,60,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,45,60,45,60,39,94,39"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="311,67,258,57,259,52,312,62"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="426,56,418,48,396,45,378,47,368,52,366,58,372,65,367,68,361,58,364,49,376,42,396,40,420,44,430,52"/>
+</map>

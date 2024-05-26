@@ -1,0 +1,5 @@
+<map id="City::GetRawProductIds" name="City::GetRawProductIds">
+<area shape="rect" id="Node000001" title="Get the set of raw product Ids in the city. This method is designed to be able to access the iterator..." alt="" coords="173,5,348,31"/>
+<area shape="rect" id="Node000002" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,21,126,21,126,15,160,15"/>
+</map>

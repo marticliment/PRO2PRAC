@@ -1,0 +1,12 @@
+<map id="src/Ship.hh" name="src/Ship.hh">
+<area shape="rect" id="Node000001" title="Contains the specification of the Ship class." alt="" coords="64,5,157,31"/>
+<area shape="rect" id="Node000002" href="$Ship_8cc.html" title="Contains the implementation of the Ship class." alt="" coords="5,79,96,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,43,62,80,58,77,90,40"/>
+<area shape="rect" id="Node000003" href="$Valley_8hh.html" title="Contains the specification of the Valley static class." alt="" coords="121,79,223,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,40,164,77,160,80,128,43"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="221,75,241,79,250,91,246,100,236,105,207,107,207,101,234,100,242,97,245,92,238,84,220,80"/>
+<area shape="rect" id="Node000004" href="$Valley_8cc.html" title="Contains the implementation of the Valley static class." alt="" coords="53,152,155,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="153,116,117,154,113,150,150,112"/>
+<area shape="rect" id="Node000005" href="$program_8cc.html" title="Contains the entry point of the valley commerce simulator." alt="" coords="179,152,298,177"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="194,113,230,150,226,154,191,116"/>
+</map>

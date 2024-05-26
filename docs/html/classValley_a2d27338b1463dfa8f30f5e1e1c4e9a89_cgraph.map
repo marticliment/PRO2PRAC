@@ -1,0 +1,23 @@
+<map id="Valley::NavigateRoute" name="Valley::NavigateRoute">
+<area shape="rect" id="Node000001" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="5,203,172,228"/>
+<area shape="rect" id="Node000002" href="$classShip.html#ab23c83b11f4a3aadbbaaeff062975b76" title="Adds a city to the list of visited cities." alt="" coords="253,5,407,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,201,110,168,137,124,173,78,219,40,238,30,241,34,221,44,177,82,141,127,115,171,98,204"/>
+<area shape="rect" id="Node000003" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="254,55,406,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,201,145,146,180,115,219,89,240,80,242,85,221,94,183,119,149,150,101,204"/>
+<area shape="rect" id="Node000004" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="271,104,389,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,200,156,169,219,138,256,127,258,132,221,143,159,174,109,205"/>
+<area shape="rect" id="Node000006" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="220,153,440,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="151,200,253,179,254,184,152,205"/>
+<area shape="rect" id="Node000007" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="273,203,387,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="172,213,259,213,259,218,172,218"/>
+<area shape="rect" id="Node000008" href="$classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="229,252,431,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="152,225,254,247,253,252,151,231"/>
+<area shape="rect" id="Node000009" href="$classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="239,301,421,327"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="110,226,159,256,221,286,248,295,246,300,219,291,156,261,107,230"/>
+<area shape="rect" id="Node000010" href="$classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="255,351,405,376"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="102,226,149,280,183,310,221,336,243,345,240,350,219,340,180,314,145,284,98,230"/>
+<area shape="rect" id="Node000011" href="$classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="234,400,426,425"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="98,227,115,259,142,303,178,347,222,385,235,392,232,397,218,390,174,351,137,306,110,262,93,229"/>
+<area shape="rect" id="Node000005" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="488,104,608,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="390,114,474,114,474,119,390,119"/>
+</map>

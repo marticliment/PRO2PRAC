@@ -1,0 +1,8 @@
+<map id="Valley::ReadCitiesFromStream" name="Valley::ReadCitiesFromStream">
+<area shape="rect" id="Node000001" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="5,66,224,91"/>
+<area shape="rect" id="Node000002" href="$classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="272,29,465,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,63,258,59,259,65,224,69"/>
+<area shape="rect" id="Node000003" href="$classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="280,94,457,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="224,88,267,93,266,98,224,93"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="322,30,319,20,326,10,343,5,369,3,398,6,414,13,412,18,397,11,369,8,344,10,329,15,324,21,327,28"/>
+</map>

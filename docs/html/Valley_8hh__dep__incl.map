@@ -1,0 +1,8 @@
+<map id="src/Valley.hh" name="src/Valley.hh">
+<area shape="rect" id="Node000001" title="Contains the specification of the Valley static class." alt="" coords="71,6,174,31"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="172,3,192,7,201,19,197,28,186,33,158,34,158,29,185,28,193,24,195,19,189,11,171,8"/>
+<area shape="rect" id="Node000002" href="$Valley_8cc.html" title="Contains the implementation of the Valley static class." alt="" coords="5,79,107,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,44,69,81,65,78,100,40"/>
+<area shape="rect" id="Node000003" href="$program_8cc.html" title="Contains the entry point of the valley commerce simulator." alt="" coords="131,79,250,105"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="145,40,182,78,178,81,141,43"/>
+</map>

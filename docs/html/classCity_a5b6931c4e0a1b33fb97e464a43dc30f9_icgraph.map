@@ -1,0 +1,5 @@
+<map id="City::WithdrawProductAmount" name="City::WithdrawProductAmount">
+<area shape="rect" id="Node000001" title="Withdraw a certain amount of a product from the city." alt="" coords="173,5,391,31"/>
+<area shape="rect" id="Node000002" href="$classCity.html#ae21b9eba53e1b04d630b69a3f0503f19" title="Trade products with another city. The two cities may or may not have products in common." alt="" coords="5,5,125,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,21,126,21,126,15,159,15"/>
+</map>
