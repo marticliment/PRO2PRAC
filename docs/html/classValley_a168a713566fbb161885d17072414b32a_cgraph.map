@@ -1,32 +1,24 @@
 <map id="Valley::TestRouteStep" name="Valley::TestRouteStep">
-<area shape="rect" id="Node000001" title="Tests a route step and updates the best route if necessary." alt="" coords="5,205,168,231"/>
-<area shape="poly" id="edge15_Node000001_Node000001" title=" " alt="" coords="48,207,40,197,44,187,60,181,87,179,120,183,133,192,129,196,118,187,87,184,61,186,48,191,45,196,52,203"/>
-<area shape="rect" id="Node000002" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="250,5,402,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,204,109,172,136,130,171,86,214,48,243,33,245,38,218,52,175,90,140,133,113,175,96,207"/>
-<area shape="rect" id="Node000003" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="281,107,371,132"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,203,153,172,215,141,267,126,268,131,217,146,155,177,107,207"/>
-<area shape="rect" id="Node000005" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="528,32,643,57"/>
-<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="95,203,141,148,175,117,215,92,291,63,372,47,448,40,514,39,514,44,449,45,373,53,293,69,217,96,179,121,145,152,99,207"/>
-<area shape="rect" id="Node000008" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="267,156,385,181"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="148,203,252,181,254,186,149,208"/>
-<area shape="rect" id="Node000010" href="$classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="216,205,436,231"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="168,215,202,215,202,221,168,221"/>
-<area shape="rect" id="Node000011" href="$classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="225,255,427,280"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="149,228,251,249,250,254,148,233"/>
-<area shape="rect" id="Node000012" href="$classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="235,304,417,329"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="107,229,155,259,217,290,240,298,238,303,215,295,153,264,104,233"/>
-<area shape="rect" id="Node000013" href="$classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="251,353,401,379"/>
-<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="99,229,146,283,179,314,217,340,238,349,236,354,215,344,176,318,142,287,95,233"/>
-<area shape="rect" id="Node000014" href="$classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="230,403,422,428"/>
-<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="96,230,112,263,138,306,174,351,218,389,228,395,225,399,214,394,170,355,134,309,108,265,91,232"/>
-<area shape="rect" id="Node000004" href="$classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="485,81,686,107"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="371,112,471,102,471,108,372,118"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="371,105,435,85,483,66,514,57,515,63,485,71,437,90,372,110"/>
-<area shape="rect" id="Node000006" href="$classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="484,131,687,156"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="372,121,470,130,470,135,371,126"/>
-<area shape="rect" id="Node000007" href="$classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="542,204,629,229"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="372,124,437,141,462,153,485,166,546,196,543,201,483,171,459,157,435,146,371,129"/>
-<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="544,206,534,196,539,186,556,179,585,177,622,181,632,186,636,192,632,195,629,190,620,186,585,183,558,185,543,190,540,195,547,202"/>
-<area shape="rect" id="Node000009" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="525,253,645,279"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="386,173,412,181,437,192,453,204,462,216,471,228,485,240,513,251,511,256,483,244,467,232,458,220,449,207,435,196,410,186,385,179"/>
+<area shape="rect" id="Node000001" title="Tests a route step and updates the best route if necessary." alt="" coords="5,107,168,132"/>
+<area shape="poly" id="edge12_Node000001_Node000001" title=" " alt="" coords="53,108,46,98,49,88,63,82,87,80,115,84,127,93,123,97,113,89,87,85,65,87,53,92,51,98,57,105"/>
+<area shape="rect" id="Node000002" href="$classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="216,5,368,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,104,215,48,246,34,248,38,217,52,112,109"/>
+<area shape="rect" id="Node000003" href="$classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="247,107,337,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,117,233,117,233,122,168,122"/>
+<area shape="rect" id="Node000005" href="$classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="460,32,575,57"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="150,104,216,91,446,53,447,58,216,97,151,109"/>
+<area shape="rect" id="Node000008" href="$classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="233,156,351,181"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="141,129,226,150,225,155,140,135"/>
+<area shape="rect" id="Node000010" href="$classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="217,205,367,231"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="108,130,157,160,217,192,234,198,232,203,215,196,154,165,105,134"/>
+<area shape="rect" id="Node000004" href="$classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="417,81,618,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="338,112,402,104,403,110,338,117"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="322,104,415,66,446,57,447,62,417,71,324,109"/>
+<area shape="rect" id="Node000006" href="$classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="416,131,619,156"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="338,121,403,128,402,134,338,127"/>
+<area shape="rect" id="Node000007" href="$classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="474,204,561,229"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="338,130,369,141,417,166,478,196,475,201,415,171,367,146,336,135"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="481,206,473,196,477,186,492,180,517,177,549,181,561,191,558,195,547,186,517,183,493,185,481,190,478,195,485,202"/>
+<area shape="rect" id="Node000009" href="$classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="457,253,577,279"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="343,179,369,192,385,204,394,217,403,229,417,240,445,251,443,256,415,244,399,232,390,220,381,208,367,196,340,184"/>
 </map>

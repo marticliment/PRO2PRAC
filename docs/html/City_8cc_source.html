@@ -132,8 +132,8 @@ $(document).ready(function(){initNavTree('City_8cc_source.html',''); initResizab
 <div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">City::ReadFromStream</a>(istream&amp; stream)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a>.clear();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a>.clear();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="classCity.html#a9af0c2f9b93c058ade1dfcf465d90296">product_inventory</a> = unordered_map&lt;int, Product&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="classCity.html#a3fa5659e8e49574497226a0c2541f96d">product_list</a> = set&lt;int&gt;();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="classCity.html#a05b42733d4e4846c7a92a71df44493d0">weight</a> = 0;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="classCity.html#a6d98c02a579d8bd68e94850bf785decf">volume</a> = 0;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">int</span> count;</div>

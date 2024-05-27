@@ -38,7 +38,7 @@ BinTree<string> Valley::GetRiverNodeFromStream(istream& stream)
 
 void Valley::ReadCitiesFromStream(istream& stream)
 {
-    cities.clear();
+    cities = unordered_map<string, City>();
     river_structure = GetRiverNodeFromStream(stream);
     ship.ResetVisitedCities();
 }
@@ -115,8 +115,12 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
         Ship& test_ship,
         Valley::RouteEvaluationResult &best_route)
 {
-    int buying_id = test_ship.BuyingProduct().GetId();
-    int selling_id = test_ship.SellingProduct().GetId();
+
+    auto& buying_product = test_ship.BuyingProduct();
+    int buying_id = buying_product.GetId();
+    auto& selling_product = test_ship.SellingProduct();
+    int selling_id = selling_product.GetId();
+    
     
     int traded_amount = 0;
     auto& city = GetCity(current_location.value());
@@ -126,11 +130,14 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     {   
         int amount_to_buy = min(
             city.GetProductExceedingAmount(buying_id), 
-            test_ship.BuyingProduct().GetMissingAmount()
+            buying_product.GetMissingAmount()
         );
-        test_ship.BuyingProduct().RestockAmount(amount_to_buy); 
-        traded_amount += amount_to_buy;
-        bought_amount += amount_to_buy;
+        if(amount_to_buy > 0)
+        {
+            buying_product.RestockAmount(amount_to_buy); 
+            traded_amount += amount_to_buy;
+            bought_amount += amount_to_buy;
+        }
     }
 
     // Calculate how much product is going to be sold to the city
@@ -138,11 +145,14 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     {
         int amount_to_sell = min(
             city.GetProductMissingAmount(selling_id), 
-            test_ship.SellingProduct().GetExceedingAmount()
+            selling_product.GetExceedingAmount()
         );
-        test_ship.SellingProduct().WithdrawAmount(amount_to_sell);
-        traded_amount += amount_to_sell;
-        sold_amount += amount_to_sell;
+        if(amount_to_sell > 0)
+        {
+            selling_product.WithdrawAmount(amount_to_sell);
+            traded_amount += amount_to_sell;
+            sold_amount += amount_to_sell;
+        }
     }
 
     // If the current city has tradable product, reset the skipped cities counter
@@ -156,8 +166,8 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
     // or if we have reached the limits of the ship's trading capacity
     if(current_location.right().empty() 
        || current_location.left().empty()
-       || (test_ship.BuyingProduct().GetMissingAmount() == 0 
-           && test_ship.SellingProduct().GetExceedingAmount() == 0))
+       || (buying_product.GetMissingAmount() == 0 
+           && selling_product.GetExceedingAmount() == 0))
     {
         while(recently_skipped_cities > 0 && !current_route.empty())
         {
@@ -172,7 +182,7 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
 
         if(total_trades > best_route.TotalTrades
             || (total_trades == best_route.TotalTrades 
-            && effective_length < best_route.EffectiveLength))
+                && effective_length < best_route.EffectiveLength))
         {
             best_route.route = current_route;
             best_route.EffectiveLength = effective_length;
@@ -231,9 +241,12 @@ int Valley::NavigateRoute(const vector<Valley::NavStep>& route_)
                 current_buying_product.GetMissingAmount(),
                 city.GetProductExceedingAmount(buying_id)
             );
-            current_buying_product.RestockAmount(amount_to_buy);
-            city.WithdrawProductAmount(buying_id, amount_to_buy);
-            city_traded += amount_to_buy;
+            if(amount_to_buy > 0)
+            {
+                current_buying_product.RestockAmount(amount_to_buy);
+                city.WithdrawProductAmount(buying_id, amount_to_buy);
+                city_traded += amount_to_buy;
+            }
         }
 
         // Calculate how much product is going to be sold to the city
@@ -244,9 +257,12 @@ int Valley::NavigateRoute(const vector<Valley::NavStep>& route_)
                 current_selling_product.GetExceedingAmount(), 
                 city.GetProductMissingAmount(selling_id)
             );
-            current_selling_product.WithdrawAmount(amount_to_sell);
-            city.RestockProductAmount(selling_id, amount_to_sell);
-            city_traded += amount_to_sell;
+            if(amount_to_sell > 0)
+            {
+                current_selling_product.WithdrawAmount(amount_to_sell);
+                city.RestockProductAmount(selling_id, amount_to_sell);
+                city_traded += amount_to_sell;
+            }
         }
 
         total_traded += city_traded;

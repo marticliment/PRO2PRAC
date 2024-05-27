@@ -563,11 +563,11 @@ Variables</h2></td></tr>
 <div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the Id of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00022">Product.cc:22</a></div></div>
 <div class="ttc" id="aclassShip_html_ac76c91ac599c08677f9540a4bf128d55"><div class="ttname"><a href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">Ship::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Reads ship data (buy and sell products) from a stream.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00031">Ship.cc:31</a></div></div>
 <div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdoc">Gets a reference to the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00056">Valley.cc:56</a></div></div>
-<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00210">Valley.cc:210</a></div></div>
+<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00220">Valley.cc:220</a></div></div>
 <div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdoc">Gets the city with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00077">Valley.cc:77</a></div></div>
 <div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdoc">Reads the cities from the input stream, overwriting the old Valley contents, if any....</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00039">Valley.cc:39</a></div></div>
 <div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00105">Valley.cc:105</a></div></div>
-<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00199">Valley.cc:199</a></div></div>
+<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00209">Valley.cc:209</a></div></div>
 <div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdoc">Initializes the Valley from the input stream. This implies reading the products to be added to the Pr...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00046">Valley.cc:46</a></div></div>
 <div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified Id exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
 <div class="ttc" id="aprogram_8cc_html_a01f4ab0be13ca04eb7b96942174313b4"><div class="ttname"><a href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a></div><div class="ttdeci">const string QUITAR_PROD</div><div class="ttdef"><b>Definition</b> <a href="program_8cc_source.html#l00045">program.cc:45</a></div></div>
@@ -613,103 +613,99 @@ Gràfic de crides d'aquesta funció:</div>
 <div class="dyncontent">
 <div class="center"><img src="program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aprogram_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="aprogram_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aprogram_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title="The entry point of the program." alt="" coords="5,450,60,475"/>
-<area shape="rect" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947" title="Adds multiple product data from an input stream to the reference." alt="" coords="369,17,572,57"/>
-<area shape="poly" title=" " alt="" coords="32,450,35,370,47,251,56,190,69,134,85,88,106,58,136,37,169,21,204,11,240,5,312,4,379,12,378,17,312,9,240,11,205,16,170,26,139,41,110,62,90,91,74,135,61,191,52,252,41,370,37,450"/>
-<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="637,223,839,249"/>
-<area shape="poly" title=" " alt="" coords="32,449,35,411,46,359,68,305,85,280,106,260,145,242,199,228,264,220,336,216,487,216,623,224,623,229,487,222,336,221,264,225,200,234,147,247,110,265,89,284,73,307,51,360,40,412,37,450"/>
-<area shape="rect" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60" title="Retrieves the number of product data in the reference." alt="" coords="119,275,302,301"/>
-<area shape="poly" title=" " alt="" coords="34,449,41,420,55,383,76,343,106,310,113,305,116,309,110,314,81,346,60,385,46,422,39,450"/>
-<area shape="rect" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="146,349,275,374"/>
-<area shape="poly" title=" " alt="" coords="43,448,70,419,107,391,140,376,142,381,109,396,73,423,47,451"/>
-<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="913,350,1081,375"/>
-<area shape="poly" title=" " alt="" coords="59,450,107,435,366,378,513,351,628,335,738,328,848,335,923,345,922,350,848,340,738,333,628,340,514,356,367,383,109,440,61,455"/>
-<area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="131,951,290,977"/>
-<area shape="poly" title=" " alt="" coords="37,476,41,566,51,702,61,774,73,840,90,894,110,930,125,943,121,947,106,934,85,896,68,841,56,775,46,703,35,566,32,476"/>
-<area shape="rect" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="897,1150,1098,1175"/>
-<area shape="poly" title=" " alt="" coords="37,475,44,599,59,791,81,975,95,1040,102,1062,110,1074,133,1092,164,1108,244,1134,343,1152,455,1163,571,1169,686,1170,883,1166,883,1171,686,1175,571,1174,454,1168,343,1157,243,1139,162,1113,130,1097,106,1078,98,1064,90,1042,76,976,54,791,39,599,32,476"/>
-<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="940,602,1055,627"/>
-<area shape="poly" title=" " alt="" coords="61,470,109,484,220,501,316,506,401,505,480,500,560,497,644,499,739,511,849,536,914,562,967,592,965,597,911,567,847,541,738,516,644,505,560,502,480,506,401,510,315,511,219,506,107,489,60,475"/>
-<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="679,1001,797,1026"/>
-<area shape="poly" title=" " alt="" coords="38,475,44,516,56,573,78,637,92,668,110,697,137,732,167,764,235,821,310,869,388,908,467,940,541,966,666,998,664,1003,540,971,465,945,386,913,307,873,232,825,164,767,133,735,106,700,88,671,73,639,51,574,38,517,33,476"/>
-<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="937,1101,1057,1126"/>
-<area shape="poly" title=" " alt="" coords="37,475,38,576,46,731,55,812,68,886,86,947,97,970,110,987,135,1008,168,1026,209,1042,256,1056,365,1078,486,1093,611,1103,731,1109,923,1112,923,1117,731,1114,610,1108,485,1098,364,1083,255,1061,207,1047,166,1031,132,1012,106,991,93,973,81,949,63,887,50,813,41,731,32,576,31,475"/>
-<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="637,551,839,577"/>
-<area shape="poly" title=" " alt="" coords="45,474,72,504,89,518,109,530,178,554,250,571,323,581,396,587,532,586,644,576,645,581,532,591,395,592,322,587,249,576,176,559,107,534,86,523,68,507,41,478"/>
-<area shape="rect" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17" title="Gets a reference to the ship." alt="" coords="151,1202,271,1227"/>
-<area shape="poly" title=" " alt="" coords="37,476,44,617,58,843,80,1061,94,1139,102,1165,110,1181,123,1193,139,1201,137,1206,120,1197,106,1184,97,1167,89,1140,75,1062,52,843,38,618,32,476"/>
-<area shape="rect" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,73,313,98"/>
-<area shape="poly" title=" " alt="" coords="32,450,39,381,53,281,75,182,89,143,106,116,123,102,126,106,110,119,94,145,80,183,59,282,45,382,38,450"/>
-<area shape="rect" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,117,580,142"/>
-<area shape="poly" title=" " alt="" coords="33,449,41,390,55,306,77,224,90,193,106,171,137,149,171,132,207,121,245,113,319,108,386,112,386,118,319,114,246,119,209,126,173,137,140,154,110,175,95,195,82,226,60,307,46,391,38,450"/>
-<area shape="rect" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="385,174,556,199"/>
-<area shape="poly" title=" " alt="" coords="31,450,32,405,40,341,49,306,63,273,82,242,106,217,140,195,176,179,215,169,254,163,332,162,400,169,399,174,332,167,255,168,216,174,178,184,142,199,110,221,86,246,68,275,54,308,45,342,37,405,36,450"/>
-<area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="387,726,554,751"/>
-<area shape="poly" title=" " alt="" coords="41,474,66,525,86,555,110,581,144,607,181,631,258,670,335,700,401,720,400,725,333,705,256,675,178,635,141,611,106,585,81,558,61,528,36,477"/>
-<area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="127,450,295,475"/>
-<area shape="poly" title=" " alt="" coords="60,460,113,460,113,465,60,465"/>
-<area shape="rect" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a" title="Adds a new product data to the reference." alt="" coords="653,25,823,50"/>
-<area shape="poly" title=" " alt="" coords="572,35,639,35,639,40,572,40"/>
-<area shape="poly" title=" " alt="" coords="181,350,175,340,178,331,191,324,211,322,235,326,245,334,242,338,233,330,211,327,192,329,182,334,180,340,186,347"/>
-<area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="693,1050,783,1075"/>
-<area shape="poly" title=" " alt="" coords="280,974,679,1049,678,1054,279,979"/>
-<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="389,850,552,875"/>
-<area shape="poly" title=" " alt="" coords="244,949,423,878,425,883,246,954"/>
-<area shape="poly" title=" " alt="" coords="763,1073,823,1104,897,1136,921,1144,920,1149,895,1141,820,1109,761,1078"/>
-<area shape="poly" title=" " alt="" coords="783,1060,816,1053,846,1037,869,1008,891,964,933,850,966,730,988,640,993,642,972,731,938,851,896,966,873,1011,850,1041,818,1058,784,1065"/>
-<area shape="rect" href="classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="896,1050,1099,1075"/>
-<area shape="poly" title=" " alt="" coords="783,1060,882,1060,882,1065,783,1065"/>
-<area shape="rect" href="classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="954,1001,1041,1026"/>
-<area shape="poly" title=" " alt="" coords="783,1052,940,1021,941,1027,784,1057"/>
-<area shape="poly" title=" " alt="" coords="956,1002,946,992,951,982,968,976,997,974,1034,978,1044,983,1048,988,1044,991,1041,987,1032,983,997,979,970,981,955,986,952,992,959,999"/>
-<area shape="poly" title=" " alt="" coords="482,874,503,908,536,952,579,998,629,1036,654,1047,680,1054,678,1059,652,1052,627,1041,575,1002,532,955,499,911,477,877"/>
-<area shape="poly" title=" " alt="" coords="533,873,581,892,596,904,605,916,614,926,629,935,690,957,742,967,766,967,791,962,818,951,846,935,882,906,912,870,936,830,955,787,979,704,991,641,996,642,984,706,960,789,941,832,916,873,886,910,850,940,820,956,793,967,767,972,741,973,689,962,627,940,611,930,601,919,592,908,579,897,531,878"/>
-<area shape="poly" title=" " alt="" coords="429,852,420,842,424,832,442,825,471,823,507,827,517,832,521,838,517,841,514,836,506,832,471,829,443,831,428,836,425,841,433,848"/>
-<area shape="rect" href="classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="662,899,814,925"/>
-<area shape="poly" title=" " alt="" coords="541,873,656,894,655,899,540,878"/>
-<area shape="poly" title=" " alt="" coords="545,873,582,893,600,915,607,937,613,959,630,979,647,990,667,999,665,1004,645,995,626,983,608,961,601,939,595,917,578,897,543,878"/>
-<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="628,702,848,727"/>
-<area shape="poly" title=" " alt="" coords="483,848,541,794,582,764,627,738,648,729,650,734,629,742,585,768,545,798,486,852"/>
-<area shape="poly" title=" " alt="" coords="489,848,533,812,557,789,578,763,594,730,600,701,607,672,626,640,660,606,697,582,700,586,663,611,630,643,612,674,606,702,599,732,582,765,561,792,536,816,492,852"/>
-<area shape="rect" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="647,751,829,777"/>
-<area shape="poly" title=" " alt="" coords="494,847,553,818,627,787,658,778,659,783,629,792,556,822,496,852"/>
-<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="663,801,813,826"/>
-<area shape="poly" title=" " alt="" coords="540,847,655,826,656,831,541,853"/>
-<area shape="rect" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="642,850,834,875"/>
-<area shape="poly" title=" " alt="" coords="552,860,628,860,628,865,552,865"/>
-<area shape="poly" title=" " alt="" coords="798,1018,824,1025,849,1036,865,1049,874,1062,883,1074,897,1086,925,1098,923,1103,895,1090,879,1078,870,1065,861,1052,847,1041,822,1030,797,1023"/>
-<area shape="poly" title=" " alt="" coords="279,70,355,56,356,61,280,75"/>
-<area shape="poly" title=" " alt="" coords="287,95,382,112,381,117,286,101"/>
-<area shape="poly" title=" " alt="" coords="239,96,362,151,411,167,410,173,360,156,236,101"/>
-<area shape="rect" href="classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="641,103,835,143"/>
-<area shape="poly" title=" " alt="" coords="580,124,628,123,628,128,580,129"/>
-<area shape="rect" href="classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="649,167,827,193"/>
-<area shape="poly" title=" " alt="" coords="539,139,657,162,656,167,538,145"/>
-<area shape="poly" title=" " alt="" coords="690,103,687,93,695,84,712,78,738,76,768,79,784,86,782,91,767,84,738,81,713,83,698,88,692,94,695,101"/>
-<area shape="poly" title=" " alt="" coords="541,197,656,218,655,223,540,202"/>
-<area shape="poly" title=" " alt="" coords="485,724,544,680,584,657,627,639,706,620,786,610,862,606,926,607,926,613,862,612,786,615,707,625,629,644,587,662,547,685,488,728"/>
-<area shape="poly" title=" " alt="" coords="496,749,538,776,582,813,597,834,605,852,613,870,630,886,650,897,648,901,626,890,609,873,600,855,592,836,578,816,535,780,494,754"/>
-<area shape="poly" title=" " alt="" coords="500,749,542,775,563,793,582,813,600,846,607,875,613,904,630,936,663,967,699,992,696,996,660,972,626,939,608,906,601,877,595,848,578,816,560,797,538,780,497,754"/>
-<area shape="poly" title=" " alt="" coords="554,729,614,723,615,728,555,734"/>
-<area shape="poly" title=" " alt="" coords="480,724,538,662,580,625,627,594,662,578,664,583,629,598,583,630,542,666,484,728"/>
-<area shape="poly" title=" " alt="" coords="555,744,633,751,633,757,554,749"/>
-<area shape="poly" title=" " alt="" coords="509,749,629,787,662,795,661,800,627,792,507,754"/>
-<area shape="poly" title=" " alt="" coords="489,749,549,792,588,816,629,836,650,844,648,849,627,841,585,821,546,797,486,754"/>
-<area shape="rect" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76" title="Adds a city to the list of visited cities." alt="" coords="661,653,815,678"/>
-<area shape="poly" title=" " alt="" coords="510,723,627,688,665,678,667,684,629,693,512,728"/>
-<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="406,425,535,450"/>
-<area shape="poly" title=" " alt="" coords="295,452,392,442,393,448,295,457"/>
-<area shape="poly" title=" " alt="" coords="535,434,602,438,682,447,767,464,849,492,888,513,923,539,977,590,974,594,920,543,885,518,847,497,766,469,682,452,602,443,535,440"/>
-<area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="663,350,813,375"/>
-<area shape="poly" title=" " alt="" coords="507,422,627,384,661,376,662,381,629,389,509,427"/>
-<area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="665,399,811,425"/>
-<area shape="poly" title=" " alt="" coords="535,429,651,418,651,423,536,434"/>
-<area shape="poly" title=" " alt="" coords="814,360,899,360,899,365,814,365"/>
-<area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="906,301,1089,326"/>
-<area shape="poly" title=" " alt="" coords="805,347,916,326,917,331,806,353"/>
-<area shape="poly" title=" " alt="" coords="805,397,916,375,917,381,806,402"/>
-<area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="908,399,1087,425"/>
-<area shape="poly" title=" " alt="" coords="812,409,894,409,894,415,812,415"/>
+<area shape="rect" title="The entry point of the program." alt="" coords="5,443,60,468"/>
+<area shape="rect" href="classProductReference.html#a9ff086f81c4e1c5d8fafa63ff18bf947" title="Adds multiple product data from an input stream to the reference." alt="" coords="369,10,572,50"/>
+<area shape="poly" title=" " alt="" coords="32,443,36,365,48,250,57,191,70,137,86,92,106,63,133,43,162,27,194,16,226,9,293,3,356,6,356,11,293,8,227,14,195,21,164,32,136,47,110,67,91,95,75,138,63,192,53,251,41,366,37,443"/>
+<area shape="rect" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac" title="Checks if the reference contains product data with the specified Id." alt="" coords="637,216,839,241"/>
+<area shape="poly" title=" " alt="" coords="32,442,35,404,46,351,68,297,85,273,106,253,145,234,199,221,264,213,336,209,487,209,623,216,623,222,487,215,336,214,264,218,200,226,147,239,110,258,89,277,73,300,51,353,40,404,37,443"/>
+<area shape="rect" href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60" title="Retrieves the number of product data in the reference." alt="" coords="119,268,302,293"/>
+<area shape="poly" title=" " alt="" coords="34,442,41,413,55,375,76,336,106,303,113,298,116,302,110,307,81,339,60,378,46,415,39,443"/>
+<area shape="rect" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f" title="Performs trades in the Valley. Trades start recursively from the root node. The city in the root node..." alt="" coords="146,341,275,367"/>
+<area shape="poly" title=" " alt="" coords="43,441,70,412,107,384,140,369,142,374,109,388,73,416,47,444"/>
+<area shape="rect" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80" title="Retrieves the product data with the specified Id from the reference." alt="" coords="913,393,1081,419"/>
+<area shape="poly" title=" " alt="" coords="60,442,107,428,313,387,397,374,475,366,554,363,639,364,848,378,923,388,922,394,848,383,639,370,555,369,476,372,397,379,314,392,109,433,61,447"/>
+<area shape="rect" href="classValley.html#aa61921a453bfcab8a76822fb16553560" title="Gets the best route for the ship. The best route is the shortest route possible where the maximum amo..." alt="" coords="131,696,290,721"/>
+<area shape="poly" title=" " alt="" coords="37,468,41,508,52,564,74,623,90,651,110,675,128,688,125,692,106,679,85,654,69,626,47,565,36,509,32,469"/>
+<area shape="rect" href="classProduct.html#a4b7b9ac3ecf67501fc1c36bddd09027e" title="Get the available amount of the product." alt="" coords="897,493,1098,519"/>
+<area shape="poly" title=" " alt="" coords="61,463,109,477,214,492,322,503,535,514,729,515,883,510,883,516,729,520,535,520,321,509,213,498,107,482,60,469"/>
+<area shape="rect" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893" title="Get the Id of the product." alt="" coords="940,665,1055,691"/>
+<area shape="poly" title=" " alt="" coords="49,466,76,488,109,509,183,542,248,566,306,584,361,596,478,614,628,637,788,659,926,671,926,676,788,664,628,642,478,619,360,601,304,589,246,571,181,547,107,514,73,493,46,471"/>
+<area shape="rect" href="classValley.html#a75ff9182c65289925ff544ac37e6b792" title="Gets the city with the specified Id." alt="" coords="679,796,797,821"/>
+<area shape="poly" title=" " alt="" coords="38,468,46,525,61,606,83,683,96,713,110,732,140,756,173,777,244,808,320,827,397,837,474,840,546,836,665,821,665,827,546,842,474,845,397,842,319,832,242,813,170,781,137,761,106,736,91,716,78,685,56,607,41,526,33,469"/>
+<area shape="rect" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d" title="Checks if a city with the specified Id exists." alt="" coords="937,995,1057,1020"/>
+<area shape="poly" title=" " alt="" coords="36,468,36,583,43,764,51,860,65,949,84,1022,96,1050,110,1071,134,1094,166,1115,204,1134,248,1151,350,1179,462,1199,576,1209,684,1210,777,1200,815,1191,847,1180,871,1166,893,1149,931,1109,961,1067,982,1031,986,1034,965,1070,935,1113,896,1153,874,1171,849,1185,817,1196,778,1205,684,1215,576,1214,461,1204,349,1184,247,1156,202,1139,163,1119,131,1098,106,1075,92,1052,79,1023,60,950,46,861,37,765,31,583,31,468"/>
+<area shape="rect" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a" title="Get the missing amount of the product. This method returns 0 if the product has a positive balance (G..." alt="" coords="637,1144,839,1169"/>
+<area shape="poly" title=" " alt="" coords="37,468,41,558,53,695,62,767,75,833,90,887,110,925,162,978,223,1023,289,1060,359,1089,430,1111,500,1128,623,1147,622,1152,498,1133,429,1116,358,1094,287,1064,220,1028,159,982,106,928,86,889,69,834,57,767,47,696,36,559,32,469"/>
+<area shape="rect" href="classValley.html#a070726f5f925f2a2891aa5226ef58f17" title="Gets a reference to the ship." alt="" coords="151,1245,271,1271"/>
+<area shape="poly" title=" " alt="" coords="37,468,43,618,56,860,66,984,79,1095,93,1179,101,1208,110,1225,123,1236,139,1245,137,1250,120,1241,106,1228,97,1210,88,1180,73,1096,61,985,51,860,37,619,32,468"/>
+<area shape="rect" href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25" title="Initializes the Valley from the input stream. This implies reading the products to be added to the Pr..." alt="" coords="108,116,313,141"/>
+<area shape="poly" title=" " alt="" coords="33,442,57,298,78,215,91,182,106,159,123,146,126,150,110,163,96,184,83,216,62,299,38,443"/>
+<area shape="rect" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362" title="Reads the cities from the input stream, overwriting the old Valley contents, if any...." alt="" coords="361,109,580,135"/>
+<area shape="poly" title=" " alt="" coords="32,443,37,371,49,268,59,214,71,166,87,127,106,102,144,78,186,65,231,60,276,62,320,69,361,79,429,102,427,107,360,84,319,74,275,67,231,66,187,70,146,83,110,105,92,130,77,168,64,216,55,268,42,372,37,443"/>
+<area shape="rect" href="classShip.html#ac76c91ac599c08677f9540a4bf128d55" title="Reads ship data (buy and sell products) from a stream." alt="" coords="385,167,556,192"/>
+<area shape="poly" title=" " alt="" coords="31,443,32,397,40,334,49,299,63,266,82,235,106,209,140,187,176,172,215,161,254,156,332,154,400,162,399,167,332,160,255,161,216,167,178,177,142,192,110,214,86,239,68,268,54,301,45,335,37,398,36,443"/>
+<area shape="rect" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89" title="Navigates the specified route, updating the cities of the valley accordingly." alt="" coords="387,921,554,947"/>
+<area shape="poly" title=" " alt="" coords="38,468,44,540,57,646,79,750,93,791,110,819,137,845,168,866,201,884,236,898,307,917,374,928,373,933,306,923,234,903,199,888,165,870,134,849,106,822,89,794,74,752,52,647,39,541,32,469"/>
+<area shape="rect" href="classCity.html#a5af26263a23635a2bd73a08aa5599faf" title="Read the city product inventory from a stream. The old product inventory will be erased." alt="" coords="127,443,295,468"/>
+<area shape="poly" title=" " alt="" coords="60,453,113,453,113,458,60,458"/>
+<area shape="rect" href="classProductReference.html#af630d539e0634a36b34767a7d2c0ea6a" title="Adds a new product data to the reference." alt="" coords="653,17,823,43"/>
+<area shape="poly" title=" " alt="" coords="572,27,639,27,639,33,572,33"/>
+<area shape="poly" title=" " alt="" coords="181,343,175,333,178,323,191,317,211,315,235,318,245,327,242,331,233,323,211,320,192,322,182,327,180,332,186,340"/>
+<area shape="rect" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835" title="Deep&#45;copies the current ship instance and its attributes." alt="" coords="693,544,783,569"/>
+<area shape="poly" title=" " alt="" coords="255,694,679,571,680,576,257,699"/>
+<area shape="rect" href="classValley.html#a168a713566fbb161885d17072414b32a" title="Tests a route step and updates the best route if necessary." alt="" coords="389,732,552,757"/>
+<area shape="poly" title=" " alt="" coords="291,717,376,729,375,734,290,722"/>
+<area shape="poly" title=" " alt="" coords="783,545,918,519,919,524,784,551"/>
+<area shape="poly" title=" " alt="" coords="784,561,817,570,850,587,866,603,874,621,882,637,898,652,928,666,925,671,894,656,878,640,869,623,862,606,846,591,815,575,783,566"/>
+<area shape="rect" href="classProduct.html#a2d7e6bd6d110b48fafd68deee4d1805f" title="Get the predefined wanted amount of the product. This method returns the initially set wanted amount,..." alt="" coords="896,543,1099,568"/>
+<area shape="poly" title=" " alt="" coords="783,554,882,553,882,559,783,559"/>
+<area shape="rect" href="classShip.html#ab7608fcfc4d27c678aacaf9bfd68a462" title="Default constructor for the Ship class." alt="" coords="954,616,1041,641"/>
+<area shape="poly" title=" " alt="" coords="784,567,941,611,940,616,783,572"/>
+<area shape="poly" title=" " alt="" coords="956,618,946,608,951,598,968,592,997,589,1034,593,1044,598,1048,604,1044,607,1041,602,1032,599,997,595,970,597,955,602,952,607,959,614"/>
+<area shape="poly" title=" " alt="" coords="489,730,706,575,709,580,492,734"/>
+<area shape="poly" title=" " alt="" coords="552,732,926,684,926,690,552,737"/>
+<area shape="poly" title=" " alt="" coords="429,734,420,724,424,714,442,708,471,705,507,709,517,714,521,720,517,723,514,718,506,715,471,711,443,713,428,718,425,723,433,730"/>
+<area shape="rect" href="classShip.html#abfe895d54721c20ddcff465cf37ac308" title="Getter for the buying product." alt="" coords="662,747,814,772"/>
+<area shape="poly" title=" " alt="" coords="552,747,648,752,648,757,552,752"/>
+<area shape="poly" title=" " alt="" coords="520,755,629,782,666,791,665,796,627,787,519,760"/>
+<area shape="rect" href="classShip.html#af97be45c84069be682979f6c9d90880f" title="Getter for the selling product." alt="" coords="663,845,813,871"/>
+<area shape="poly" title=" " alt="" coords="492,756,551,793,629,832,652,839,650,844,627,837,549,798,489,760"/>
+<area shape="poly" title=" " alt="" coords="799,813,825,820,849,832,894,866,932,907,962,947,984,981,980,984,958,950,928,910,890,870,847,836,823,825,797,818"/>
+<area shape="poly" title=" " alt="" coords="244,114,403,53,405,58,246,119"/>
+<area shape="poly" title=" " alt="" coords="313,124,348,123,348,128,313,129"/>
+<area shape="poly" title=" " alt="" coords="277,139,392,162,391,167,276,144"/>
+<area shape="rect" href="classValley.html#a32128482f1832fafabeb95954a489bec" title="Reads a river node and its children from an input stream." alt="" coords="641,95,835,135"/>
+<area shape="poly" title=" " alt="" coords="580,117,628,116,628,121,580,122"/>
+<area shape="rect" href="classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e" title="Resets the list of visited cities." alt="" coords="649,160,827,185"/>
+<area shape="poly" title=" " alt="" coords="539,132,657,155,656,160,538,137"/>
+<area shape="poly" title=" " alt="" coords="690,96,687,86,695,77,712,71,738,69,768,72,784,79,782,84,767,77,738,74,713,76,698,81,692,87,695,94"/>
+<area shape="poly" title=" " alt="" coords="541,190,656,211,655,216,540,195"/>
+<area shape="poly" title=" " alt="" coords="554,928,718,913,795,900,825,891,847,881,872,863,895,842,934,793,964,744,983,703,988,705,968,746,939,796,899,845,875,867,849,886,826,896,796,905,719,918,554,933"/>
+<area shape="poly" title=" " alt="" coords="479,920,536,854,579,815,627,782,648,773,650,778,629,787,582,819,540,858,483,923"/>
+<area shape="poly" title=" " alt="" coords="486,919,546,876,585,852,627,832,665,819,666,824,629,837,588,857,549,881,489,924"/>
+<area shape="poly" title=" " alt="" coords="516,919,678,872,680,877,517,924"/>
+<area shape="poly" title=" " alt="" coords="490,945,534,984,582,1038,596,1065,603,1089,611,1110,630,1131,636,1135,633,1140,626,1135,607,1113,598,1090,592,1067,578,1041,530,988,486,949"/>
+<area shape="rect" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76" title="Adds a city to the list of visited cities." alt="" coords="661,947,815,972"/>
+<area shape="poly" title=" " alt="" coords="555,939,647,948,647,954,554,945"/>
+<area shape="rect" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd" title="Get the exceeding amount of the product. This method returns 0 if the product has a negative balance ..." alt="" coords="628,996,848,1021"/>
+<area shape="poly" title=" " alt="" coords="509,944,629,982,662,991,661,996,627,987,507,950"/>
+<area shape="rect" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2" title="Restock a certain amount of the product. This method will not update the weights and volumes on any c..." alt="" coords="647,1045,829,1071"/>
+<area shape="poly" title=" " alt="" coords="489,945,549,988,588,1011,629,1032,650,1039,648,1044,627,1037,585,1016,546,992,486,949"/>
+<area shape="rect" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890" title="Withdraw a certain amount from the product. This method will not update the weights and volumes on an..." alt="" coords="642,1095,834,1120"/>
+<area shape="poly" title=" " alt="" coords="487,945,629,1081,644,1088,641,1093,627,1086,483,949"/>
+<area shape="rect" href="classCity.html#a7042311bfaf84d3d69cca0b93f4e0cb2" title="Add a product to the city&#39;s inventory." alt="" coords="406,443,535,468"/>
+<area shape="poly" title=" " alt="" coords="295,453,392,453,392,458,295,458"/>
+<area shape="poly" title=" " alt="" coords="486,466,544,520,585,552,629,578,688,603,736,614,786,622,849,637,897,652,928,660,927,665,895,657,847,642,785,628,735,619,686,608,627,583,582,556,541,525,482,470"/>
+<area shape="rect" href="classProduct.html#ac62da93ee21d61c795c40d3fb0c3b602" title="Get the volume of the product according to the current available amount of product." alt="" coords="663,393,813,419"/>
+<area shape="poly" title=" " alt="" coords="535,441,655,419,656,424,536,446"/>
+<area shape="rect" href="classProduct.html#a16d39b4890f1bc051d45b00055cf58e8" title="Get the weight of the product according to the current available amount of product." alt="" coords="665,443,811,468"/>
+<area shape="poly" title=" " alt="" coords="535,453,651,453,651,458,535,458"/>
+<area shape="poly" title=" " alt="" coords="814,403,899,403,899,409,814,409"/>
+<area shape="rect" href="classProductData.html#a0871ddc193b50e477dfbf848613beb63" title="Get the volume of one unit of the product." alt="" coords="906,344,1089,369"/>
+<area shape="poly" title=" " alt="" coords="805,391,916,370,917,375,806,396"/>
+<area shape="poly" title=" " alt="" coords="805,440,916,419,917,424,806,445"/>
+<area shape="rect" href="classProductData.html#ac787c267c0834d82095bca6479fa56d2" title="Get the weight of one unit the product." alt="" coords="908,443,1087,468"/>
+<area shape="poly" title=" " alt="" coords="812,453,894,453,894,458,812,458"/>
 </map>
 </div>
 

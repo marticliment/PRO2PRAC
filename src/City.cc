@@ -28,8 +28,8 @@ const string& City::GetId() const
 
 void City::ReadFromStream(istream& stream)
 {
-    product_inventory.clear();
-    product_list.clear();
+    product_inventory = unordered_map<int, Product>();
+    product_list = set<int>();
     weight = 0;
     volume = 0;
     int count;

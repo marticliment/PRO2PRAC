@@ -61,5 +61,5 @@ const vector<string>& Ship::GetVisitedCities() const
 
 void Ship::ResetVisitedCities()
 {
-    visited_cities.clear();
+    visited_cities = vector<string>();
 }

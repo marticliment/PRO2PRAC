@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('Valley_8cc_source.html',''); initResiz
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a>(istream&amp; stream)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a>.clear();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="classValley.html#a72b588ac6bb53e4777778a4ca8f89725">cities</a> = unordered_map&lt;string, City&gt;();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a> = <a class="code hl_function" href="classValley.html#a32128482f1832fafabeb95954a489bec">GetRiverNodeFromStream</a>(stream);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abb2c0d5a167cbde9bc0e79c6a66a374e">ResetVisitedCities</a>();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
@@ -231,165 +231,181 @@ $(document).ready(function(){initNavTree('Valley_8cc_source.html',''); initResiz
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_class" href="classShip.html">Ship</a>&amp; test_ship,</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> &amp;best_route)</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">int</span> buying_id = test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">int</span> selling_id = test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">int</span> traded_amount = 0;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_location.value());</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span>(city.HasProduct(buying_id))</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {   </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">int</span> amount_to_buy = min(</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            city.GetProductExceedingAmount(buying_id), </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>()</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        );</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy); </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        traded_amount += amount_to_buy;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        bought_amount += amount_to_buy;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span>(city.HasProduct(selling_id))</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordtype">int</span> amount_to_sell = min(</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            city.GetProductMissingAmount(selling_id), </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>()</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        );</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        traded_amount += amount_to_sell;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        sold_amount += amount_to_sell;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// If the current city has tradable product, reset the skipped cities counter</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// Otherwhise, increase it</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span>(traded_amount &gt; 0)</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        recently_skipped_cities = 0;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        recently_skipped_cities++;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// If we have reached the end of the river </span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="comment">// or if we have reached the limits of the ship&#39;s trading capacity</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">if</span>(current_location.right().empty() </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>       || current_location.left().empty()</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>       || (test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>().<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>() == 0 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>           &amp;&amp; test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>().<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>() == 0))</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">while</span>(recently_skipped_cities &gt; 0 &amp;&amp; !current_route.empty())</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="comment">// If the first city has been skipped, since the first city does not </span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="comment">// have an asscoiated NavStep on current_route, attempting to pop_back() would crash</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            current_route.pop_back();</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            recently_skipped_cities--;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordtype">int</span> effective_length = current_route.size() + 1 - recently_skipped_cities;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordtype">int</span> total_trades = bought_amount + sold_amount;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">if</span>(total_trades &gt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            || (total_trades == best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            &amp;&amp; effective_length &lt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a>))</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = current_route;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> = effective_length;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> = total_trades;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="comment">// Recursive case. Continue calculations</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="comment">// Continue testing through the left</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">auto</span> left_route = current_route;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keyword">auto</span> left_ship = test_ship.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        left_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(left_route, current_location.left(), bought_amount, </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            sold_amount, recently_skipped_cities, left_ship, best_route);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="comment">// Continue testing through the right</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        current_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(current_route, current_location.right(), bought_amount, </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            sold_amount, recently_skipped_cities, test_ship, best_route);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
-</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classValley.html#aa61921a453bfcab8a76822fb16553560">  199</a></span>vector&lt;Valley::NavStep&gt; <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a>()</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>{</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> best_route;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    vector&lt;Valley::NavStep&gt; empty_route;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = empty_route;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">auto</span> test_ship = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(empty_route, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, 0, test_ship, best_route);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">return</span> best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">auto</span>&amp; buying_product = test_ship.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">int</span> buying_id = buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">auto</span>&amp; selling_product = test_ship.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">int</span> selling_id = selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">int</span> traded_amount = 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(current_location.value());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span>(city.HasProduct(buying_id))</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {   </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">int</span> amount_to_buy = min(</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            city.GetProductExceedingAmount(buying_id), </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            buying_product.GetMissingAmount()</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        );</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span>(amount_to_buy &gt; 0)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            buying_product.RestockAmount(amount_to_buy); </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            traded_amount += amount_to_buy;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            bought_amount += amount_to_buy;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">if</span>(city.HasProduct(selling_id))</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordtype">int</span> amount_to_sell = min(</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            city.GetProductMissingAmount(selling_id), </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            selling_product.GetExceedingAmount()</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        );</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">if</span>(amount_to_sell &gt; 0)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            selling_product.WithdrawAmount(amount_to_sell);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            traded_amount += amount_to_sell;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            sold_amount += amount_to_sell;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">// If the current city has tradable product, reset the skipped cities counter</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// Otherwhise, increase it</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">if</span>(traded_amount &gt; 0)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        recently_skipped_cities = 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        recently_skipped_cities++;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// If we have reached the end of the river </span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// or if we have reached the limits of the ship&#39;s trading capacity</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">if</span>(current_location.right().empty() </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>       || current_location.left().empty()</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>       || (buying_product.GetMissingAmount() == 0 </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>           &amp;&amp; selling_product.GetExceedingAmount() == 0))</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">while</span>(recently_skipped_cities &gt; 0 &amp;&amp; !current_route.empty())</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="comment">// If the first city has been skipped, since the first city does not </span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="comment">// have an asscoiated NavStep on current_route, attempting to pop_back() would crash</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            current_route.pop_back();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            recently_skipped_cities--;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordtype">int</span> effective_length = current_route.size() + 1 - recently_skipped_cities;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordtype">int</span> total_trades = bought_amount + sold_amount;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span>(total_trades &gt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            || (total_trades == best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                &amp;&amp; effective_length &lt; best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a>))</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = current_route;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a53733398076998454676d8f3f6926777">EffectiveLength</a> = effective_length;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#a1831bb84b781a320c6e200daf0dd4480">TotalTrades</a> = total_trades;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// Recursive case. Continue calculations</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">// Continue testing through the left</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keyword">auto</span> left_route = current_route;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keyword">auto</span> left_ship = test_ship.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        left_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(left_route, current_location.left(), bought_amount, </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            sold_amount, recently_skipped_cities, left_ship, best_route);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="comment">// Continue testing through the right</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        current_route.push_back(<a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(current_route, current_location.right(), bought_amount, </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            sold_amount, recently_skipped_cities, test_ship, best_route);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
 </div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">  210</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(<span class="keyword">const</span> vector&lt;Valley::NavStep&gt;&amp; route_)</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>{</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">auto</span> route = route_;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">int</span> route_position = 0;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">int</span> total_traded = 0;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    BinTree&lt;string&gt; location = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">string</span> last_traded_city = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_buying_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_selling_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">while</span>(route_position &lt;= route.size())</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(location.value());</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordtype">int</span> city_traded = 0;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordtype">int</span> buying_id = current_buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span>(city.HasProduct(buying_id) &amp;&amp; city.GetProductExceedingAmount(buying_id) &gt; 0)</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordtype">int</span> amount_to_buy = min(</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>(),</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                city.GetProductExceedingAmount(buying_id)</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            );</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            current_buying_product.<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            city.WithdrawProductAmount(buying_id, amount_to_buy);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            city_traded += amount_to_buy;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordtype">int</span> selling_id = current_selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">if</span>(city.HasProduct(selling_id) &amp;&amp; city.GetProductMissingAmount(selling_id) &gt; 0)</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <span class="keywordtype">int</span> amount_to_sell = min(</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>(), </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                city.GetProductMissingAmount(selling_id)</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            );</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            current_selling_product.<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            city.RestockProductAmount(selling_id, amount_to_sell);</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            city_traded += amount_to_sell;</div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classValley.html#aa61921a453bfcab8a76822fb16553560">  209</a></span>vector&lt;Valley::NavStep&gt; <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a>()</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>{</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_struct" href="structValley_1_1RouteEvaluationResult.html">Valley::RouteEvaluationResult</a> best_route;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    vector&lt;Valley::NavStep&gt; empty_route;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a> = empty_route;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">auto</span> test_ship = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#aa1d8fa2b53b89088bf55f1a760477835">Copy</a>();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="classValley.html#a168a713566fbb161885d17072414b32a">TestRouteStep</a>(empty_route, <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>, 0, 0, 0, test_ship, best_route);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">return</span> best_route.<a class="code hl_variable" href="structValley_1_1RouteEvaluationResult.html#abe1f6e8cbd027ff9cb234003b26fb247">route</a>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">  220</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(<span class="keyword">const</span> vector&lt;Valley::NavStep&gt;&amp; route_)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>{</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">auto</span> route = route_;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">int</span> route_position = 0;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordtype">int</span> total_traded = 0;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    BinTree&lt;string&gt; location = <a class="code hl_variable" href="classValley.html#a6c77616859a5ac6a822be4a2b6cd537e">river_structure</a>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">string</span> last_traded_city = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_buying_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#abfe895d54721c20ddcff465cf37ac308">BuyingProduct</a>();</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_class" href="classProduct.html">Product</a> current_selling_product = <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#af97be45c84069be682979f6c9d90880f">SellingProduct</a>();</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">while</span>(route_position &lt;= route.size())</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">GetCity</a>(location.value());</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordtype">int</span> city_traded = 0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="comment">// Calculate how much product is going to be bought from the city</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordtype">int</span> buying_id = current_buying_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">if</span>(city.HasProduct(buying_id) &amp;&amp; city.GetProductExceedingAmount(buying_id) &gt; 0)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordtype">int</span> amount_to_buy = min(</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#a0c42f35816a3fa42d9f3f985ca23f90a">GetMissingAmount</a>(),</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                city.GetProductExceedingAmount(buying_id)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            );</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">if</span>(amount_to_buy &gt; 0)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                current_buying_product.<a class="code hl_function" href="classProduct.html#af78eb83686a0703b6818721d31d0e7c2">RestockAmount</a>(amount_to_buy);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                city.WithdrawProductAmount(buying_id, amount_to_buy);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                city_traded += amount_to_buy;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        total_traded += city_traded;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="comment">// Only count a city as traded with when it has actually traded things</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">if</span>(city_traded &gt; 0)</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            last_traded_city = location.value();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="comment">// If this is the last city, do not try to unpack the next position from route</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">if</span>(route_position == route.size())</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            route_position++;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="comment">// Otherwise, navigate to the next position</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[route_position++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            location = location.left();</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            location = location.right();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="comment">// Calculate how much product is going to be sold to the city</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordtype">int</span> selling_id = current_selling_product.<a class="code hl_function" href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">GetId</a>();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">if</span>(city.HasProduct(selling_id) &amp;&amp; city.GetProductMissingAmount(selling_id) &gt; 0)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <span class="keywordtype">int</span> amount_to_sell = min(</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8f4bf3557d4819295e408fbf938e77bd">GetExceedingAmount</a>(), </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                city.GetProductMissingAmount(selling_id)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            );</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">if</span>(amount_to_sell &gt; 0)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                current_selling_product.<a class="code hl_function" href="classProduct.html#a8dbcd165158a8d6f1f6d6fb143674890">WithdrawAmount</a>(amount_to_sell);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                city.RestockProductAmount(selling_id, amount_to_sell);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                city_traded += amount_to_sell;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        }</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">if</span>(total_traded &gt; 0)</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">AddVisitedCity</a>(last_traded_city);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">return</span> total_traded;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        total_traded += city_traded;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="comment">// Only count a city as traded with when it has actually traded things</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">if</span>(city_traded &gt; 0)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            last_traded_city = location.value();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="comment">// If this is the last city, do not try to unpack the next position from route</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keywordflow">if</span>(route_position == route.size())</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            route_position++;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="comment">// Otherwise, navigate to the next position</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(route[route_position++] == <a class="code hl_enumvalue" href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a>)</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            location = location.left();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            location = location.right();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">if</span>(total_traded &gt; 0)</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <a class="code hl_variable" href="classValley.html#a79fb1ecacc49127f34e147ac01d76941">ship</a>.<a class="code hl_function" href="classShip.html#ab23c83b11f4a3aadbbaaeff062975b76">AddVisitedCity</a>(last_traded_city);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">return</span> total_traded;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>}</div>
 </div>
 <div class="ttc" id="aProductReference_8hh_html"><div class="ttname"><a href="ProductReference_8hh.html">ProductReference.hh</a></div><div class="ttdoc">Contains the specification of the ProductReference static class.</div></div>
 <div class="ttc" id="aValley_8hh_html"><div class="ttname"><a href="Valley_8hh.html">Valley.hh</a></div><div class="ttdoc">Contains the specification of the Valley static class.</div></div>
@@ -411,7 +427,7 @@ $(document).ready(function(){initNavTree('Valley_8cc_source.html',''); initResiz
 <div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdoc">Gets a reference to the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00056">Valley.cc:56</a></div></div>
 <div class="ttc" id="aclassValley_html_a150cd1a95764b0b85e8d57aecc73b0c0"><div class="ttname"><a href="classValley.html#a150cd1a95764b0b85e8d57aecc73b0c0">Valley::GetCityIds</a></div><div class="ttdeci">static vector&lt; string &gt; GetCityIds()</div><div class="ttdoc">Gets the list of city Ids in the Valley.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00061">Valley.cc:61</a></div></div>
 <div class="ttc" id="aclassValley_html_a168a713566fbb161885d17072414b32a"><div class="ttname"><a href="classValley.html#a168a713566fbb161885d17072414b32a">Valley::TestRouteStep</a></div><div class="ttdeci">static void TestRouteStep(vector&lt; NavStep &gt; &amp;current_route, const BinTree&lt; string &gt; &amp;current_location, int bought_amount, int sold_amount, int recently_skipped_cities, Ship &amp;test_ship, RouteEvaluationResult &amp;best_route)</div><div class="ttdoc">Tests a route step and updates the best route if necessary.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00110">Valley.cc:110</a></div></div>
-<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00210">Valley.cc:210</a></div></div>
+<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00220">Valley.cc:220</a></div></div>
 <div class="ttc" id="aclassValley_html_a32128482f1832fafabeb95954a489bec"><div class="ttname"><a href="classValley.html#a32128482f1832fafabeb95954a489bec">Valley::GetRiverNodeFromStream</a></div><div class="ttdeci">static BinTree&lt; string &gt; GetRiverNodeFromStream(istream &amp;stream)</div><div class="ttdoc">Reads a river node and its children from an input stream.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00023">Valley.cc:23</a></div></div>
 <div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a92b09c7c48c520c3c55e497875da437c">Valley::NavStep::Right</a></div><div class="ttdeci">@ Right</div></div>
 <div class="ttc" id="aclassValley_html_a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="classValley.html#a3771d0f650af806c24a71e9060093635a945d5e233cf7d6240f6b783b36a374ff">Valley::NavStep::Left</a></div><div class="ttdeci">@ Left</div></div>
@@ -422,7 +438,7 @@ $(document).ready(function(){initNavTree('Valley_8cc_source.html',''); initResiz
 <div class="ttc" id="aclassValley_html_a837c0bfa444e667bb8d93e73d44ed3d4"><div class="ttname"><a href="classValley.html#a837c0bfa444e667bb8d93e73d44ed3d4">Valley::initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00047">Valley.hh:47</a></div></div>
 <div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdoc">Reads the cities from the input stream, overwriting the old Valley contents, if any....</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00039">Valley.cc:39</a></div></div>
 <div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00105">Valley.cc:105</a></div></div>
-<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00199">Valley.cc:199</a></div></div>
+<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00209">Valley.cc:209</a></div></div>
 <div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdoc">Initializes the Valley from the input stream. This implies reading the products to be added to the Pr...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00046">Valley.cc:46</a></div></div>
 <div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified Id exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
 <div class="ttc" id="aclassValley_html_afebc5484b9933c6d53d54e8a43632970"><div class="ttname"><a href="classValley.html#afebc5484b9933c6d53d54e8a43632970">Valley::invalid_city</a></div><div class="ttdeci">static City invalid_city</div><div class="ttdef"><b>Definition</b> <a href="Valley_8hh_source.html#l00048">Valley.hh:48</a></div></div>
