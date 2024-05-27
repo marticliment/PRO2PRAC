@@ -167,18 +167,16 @@ void Valley::TestRouteStep(vector<NavStep>& current_route,
             recently_skipped_cities--;
         }
 
-        Valley::RouteEvaluationResult result;
-        result.route = current_route;
-        // We need to add 1 to take into account the first city, which does not 
-        // have associated any NavStep on current_route
-        result.EffectiveLength = current_route.size() + 1 - recently_skipped_cities;
-        result.TotalTrades = bought_amount + sold_amount;
+        int effective_length = current_route.size() + 1 - recently_skipped_cities;
+        int total_trades = bought_amount + sold_amount;
 
-        if(result.TotalTrades > best_route.TotalTrades
-            || (result.TotalTrades == best_route.TotalTrades 
-            && result.EffectiveLength < best_route.EffectiveLength))
+        if(total_trades > best_route.TotalTrades
+            || (total_trades == best_route.TotalTrades 
+            && effective_length < best_route.EffectiveLength))
         {
-            best_route = result;
+            best_route.route = current_route;
+            best_route.EffectiveLength = effective_length;
+            best_route.TotalTrades = total_trades;
         }
     }
     else

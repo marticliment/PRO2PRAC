@@ -178,10 +178,14 @@ int main()
             if(Valley::HasCity(city_id))
             {
                 auto& city = Valley::GetCity(city_id);
-                for(int id: city.GetProductIds())
+                auto& products = city.GetRawProductIds();
+                auto it = products.begin();
+                while(it != products.end())
                 {
+                    int id = *it;
                     cout << id << ' ' << city.GetProductCurrentAmount(id) << ' ';
                     cout << city.GetProductWantedAmount(id) << '\n';
+                    it++;
                 }
                 cout << city.GetWeight() << ' ' << city.GetVolume() << '\n';
             }

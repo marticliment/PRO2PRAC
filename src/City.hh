@@ -33,6 +33,7 @@ class City
         set<int> product_list; /**< The "list" products the city has */
         int weight = 0; /**< The total weight of the products in the city */
         int volume = 0; /**< The total volume of the products in the city */
+        
 
     public:
         /**

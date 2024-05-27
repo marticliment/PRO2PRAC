@@ -344,210 +344,214 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
 <div class="line"><span class="lineno">  179</span>            {</div>
 <div class="line"><span class="lineno">  180</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
-<div class="line"><span class="lineno">  181</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>: city.GetProductIds())</div>
-<div class="line"><span class="lineno">  182</span>                {</div>
-<div class="line"><span class="lineno">  183</span>                    cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductCurrentAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  184</span>                    cout &lt;&lt; city.GetProductWantedAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  185</span>                }</div>
-<div class="line"><span class="lineno">  186</span>                cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  187</span>            }</div>
-<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  189</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>        <span class="comment">// Se lee el identificador de un producto. Si no existe el producto se escribe </span></div>
-<div class="line"><span class="lineno">  193</span>        <span class="comment">// un mensaje de error. En caso contrario se escribe el peso y volumen</span></div>
-<div class="line"><span class="lineno">  194</span>        <span class="comment">// del producto.</span></div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> || command == <a class="code hl_variable" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a>)</div>
-<div class="line"><span class="lineno">  196</span>        {</div>
-<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">int</span> product_id;</div>
-<div class="line"><span class="lineno">  198</span>            cin &gt;&gt; product_id;</div>
-<div class="line"><span class="lineno">  199</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
-<div class="line"><span class="lineno">  201</span>            {</div>
-<div class="line"><span class="lineno">  202</span>                <span class="keyword">auto</span>&amp; product = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
-<div class="line"><span class="lineno">  203</span>                cout &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  204</span>            }</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  206</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        <span class="comment">// Se leerá el identificador de una ciudad, de un producto y las</span></div>
-<div class="line"><span class="lineno">  210</span>        <span class="comment">// unidades que tiene y que quiere. Si el producto no existe escribe un mensaje de</span></div>
-<div class="line"><span class="lineno">  211</span>        <span class="comment">// error. Si la ciudad no existe, escribe un mensaje de error. Si el producto ya está en</span></div>
-<div class="line"><span class="lineno">  212</span>        <span class="comment">// el inventario de la ciudad, escribe un mensaje de error. Si no hay errores, los datos</span></div>
-<div class="line"><span class="lineno">  213</span>        <span class="comment">// de ese producto se añaden a la ciudad, modificándose el peso y el volumen total si</span></div>
-<div class="line"><span class="lineno">  214</span>        <span class="comment">// hace falta. Se escribe el peso y el volumen total. El número de unidades necesitadas</span></div>
-<div class="line"><span class="lineno">  215</span>        <span class="comment">// siempre ha de ser mayor que 0.</span></div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a>)</div>
-<div class="line"><span class="lineno">  217</span>        {</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordtype">string</span> city_id;</div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
-<div class="line"><span class="lineno">  220</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
-<div class="line"><span class="lineno">  221</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  222</span> </div>
-<div class="line"><span class="lineno">  223</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
-<div class="line"><span class="lineno">  224</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
-<div class="line"><span class="lineno">  226</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  228</span>            {</div>
-<div class="line"><span class="lineno">  229</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
-<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">if</span> (city.HasProduct(product_id))</div>
-<div class="line"><span class="lineno">  231</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  233</span>                {</div>
-<div class="line"><span class="lineno">  234</span>                    city.AddProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
-<div class="line"><span class="lineno">  235</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  236</span>                }</div>
-<div class="line"><span class="lineno">  237</span>            }</div>
-<div class="line"><span class="lineno">  238</span>        }</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span>        <span class="comment">//  Se leerá el identificador de una ciudad, de un producto y las</span></div>
-<div class="line"><span class="lineno">  241</span>        <span class="comment">// unidades que tienen y que quiere. Si el producto no existe escribe un mensaje de</span></div>
-<div class="line"><span class="lineno">  242</span>        <span class="comment">// error. Si la ciudad no existe, escribe un mensaje de error. Si el producto no está en</span></div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">// el inventario de la ciudad, escribe un mensaje de error. Si no hay errores, los datos</span></div>
-<div class="line"><span class="lineno">  244</span>        <span class="comment">// de ese producto sustituyen a los que había en la ciudad, modificándose el peso y</span></div>
-<div class="line"><span class="lineno">  245</span>        <span class="comment">// el volumen total si hace falta. Se escribe el peso y el volumen total. El número de</span></div>
-<div class="line"><span class="lineno">  246</span>        <span class="comment">// unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.</span></div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a>)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            <span class="keywordtype">string</span> city_id;</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
-<div class="line"><span class="lineno">  251</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
-<div class="line"><span class="lineno">  252</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  253</span>            </div>
-<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
-<div class="line"><span class="lineno">  255</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
-<div class="line"><span class="lineno">  257</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">else</span> </div>
-<div class="line"><span class="lineno">  259</span>            {</div>
-<div class="line"><span class="lineno">  260</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
-<div class="line"><span class="lineno">  262</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  263</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  264</span>                {</div>
-<div class="line"><span class="lineno">  265</span>                    city.UpdateProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
-<div class="line"><span class="lineno">  266</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  267</span>                }</div>
-<div class="line"><span class="lineno">  268</span>            }</div>
-<div class="line"><span class="lineno">  269</span>        }</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>        <span class="comment">// Se leerá el identificador de una ciudad y de un producto. Si</span></div>
-<div class="line"><span class="lineno">  272</span>        <span class="comment">// el producto no existe escribe un mensaje de error. Si la ciudad no existe, escribe</span></div>
-<div class="line"><span class="lineno">  273</span>        <span class="comment">// un mensaje de error. Si el producto no está en el inventario de la ciudad, escribe</span></div>
-<div class="line"><span class="lineno">  274</span>        <span class="comment">// un mensaje de error. Si no hay errores, se quitan los datos de este producto en la</span></div>
-<div class="line"><span class="lineno">  275</span>        <span class="comment">// ciudad, modificándose el peso y el volumen total si hace falta. Se escribe el peso y</span></div>
-<div class="line"><span class="lineno">  276</span>        <span class="comment">// el volumen total.</span></div>
-<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a>)</div>
-<div class="line"><span class="lineno">  278</span>        {</div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordtype">string</span> city_id;</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordtype">int</span> product_id;</div>
-<div class="line"><span class="lineno">  281</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
-<div class="line"><span class="lineno">  282</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
-<div class="line"><span class="lineno">  285</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
-<div class="line"><span class="lineno">  287</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">else</span> </div>
-<div class="line"><span class="lineno">  289</span>            {</div>
-<div class="line"><span class="lineno">  290</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
-<div class="line"><span class="lineno">  292</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  293</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  294</span>                {</div>
-<div class="line"><span class="lineno">  295</span>                    city.RemoveProduct(product_id);</div>
-<div class="line"><span class="lineno">  296</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  297</span>                }</div>
-<div class="line"><span class="lineno">  298</span>            }</div>
-<div class="line"><span class="lineno">  299</span>        }</div>
-<div class="line"><span class="lineno">  300</span>        </div>
-<div class="line"><span class="lineno">  301</span>        <span class="comment">// Se leerá el identificador de una ciudad y de un producto. Si</span></div>
-<div class="line"><span class="lineno">  302</span>        <span class="comment">// el producto no existe escribe un mensaje de error. Si la ciudad no existe, escribe un</span></div>
-<div class="line"><span class="lineno">  303</span>        <span class="comment">// mensaje de error. Si el producto no está en el inventario de la ciudad, escribe un</span></div>
-<div class="line"><span class="lineno">  304</span>        <span class="comment">// mensaje de error. Si no hay errores, se escribe cuantas unidades de ese producto</span></div>
-<div class="line"><span class="lineno">  305</span>        <span class="comment">// tiene y quiere la ciudad.</span></div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a>)</div>
-<div class="line"><span class="lineno">  307</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordtype">string</span> city_id;</div>
-<div class="line"><span class="lineno">  309</span>            <span class="keywordtype">int</span> product_id;</div>
-<div class="line"><span class="lineno">  310</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
-<div class="line"><span class="lineno">  311</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
-<div class="line"><span class="lineno">  314</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
-<div class="line"><span class="lineno">  316</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">else</span> </div>
-<div class="line"><span class="lineno">  318</span>            {</div>
-<div class="line"><span class="lineno">  319</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
-<div class="line"><span class="lineno">  320</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
-<div class="line"><span class="lineno">  321</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  322</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  323</span>                {</div>
-<div class="line"><span class="lineno">  324</span>                    cout &lt;&lt; city.GetProductCurrentAmount(product_id) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductWantedAmount(product_id) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                    </div>
-<div class="line"><span class="lineno">  325</span>                }</div>
-<div class="line"><span class="lineno">  326</span>            }</div>
-<div class="line"><span class="lineno">  327</span>        }</div>
-<div class="line"><span class="lineno">  328</span>        </div>
-<div class="line"><span class="lineno">  329</span>        <span class="comment">//  Se leerán los identificadores de dos ciudades. Si no existe alguna</span></div>
-<div class="line"><span class="lineno">  330</span>        <span class="comment">// de las dos (o las dos), se escribe un mensaje de error. Si las ciudades existen y son</span></div>
-<div class="line"><span class="lineno">  331</span>        <span class="comment">// la misma, se escribe un mensaje de error. Si las ciudades existen y son diferentes,</span></div>
-<div class="line"><span class="lineno">  332</span>        <span class="comment">// comercian entre ellas.</span></div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> || command == <a class="code hl_variable" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a>)</div>
-<div class="line"><span class="lineno">  334</span>        {</div>
-<div class="line"><span class="lineno">  335</span>            <span class="keywordtype">string</span> city1_id, city2_id;</div>
-<div class="line"><span class="lineno">  336</span>            cin &gt;&gt; city1_id &gt;&gt; city2_id;</div>
-<div class="line"><span class="lineno">  337</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city1_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city2_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city1_id) || !<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city2_id))</div>
-<div class="line"><span class="lineno">  340</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (city1_id == city2_id)</div>
-<div class="line"><span class="lineno">  342</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  344</span>            {</div>
-<div class="line"><span class="lineno">  345</span>                <span class="keyword">auto</span>&amp; city1 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city1_id);</div>
-<div class="line"><span class="lineno">  346</span>                <span class="keyword">auto</span>&amp; city2 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city2_id);</div>
-<div class="line"><span class="lineno">  347</span>                city1.TradeWith(city2);</div>
-<div class="line"><span class="lineno">  348</span>            }</div>
-<div class="line"><span class="lineno">  349</span>        }</div>
-<div class="line"><span class="lineno">  350</span>        </div>
-<div class="line"><span class="lineno">  351</span>        <span class="comment">// No se leen datos. La ciudad de la desembocadura comercia con su</span></div>
-<div class="line"><span class="lineno">  352</span>        <span class="comment">// ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda,</span></div>
-<div class="line"><span class="lineno">  353</span>        <span class="comment">// y así sucesivamente.</span></div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> || command == <a class="code hl_variable" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a>)</div>
-<div class="line"><span class="lineno">  355</span>        {</div>
-<div class="line"><span class="lineno">  356</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  357</span>            <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a>();</div>
-<div class="line"><span class="lineno">  358</span>        }</div>
-<div class="line"><span class="lineno">  359</span>        </div>
-<div class="line"><span class="lineno">  360</span>        <span class="comment">// No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita</span></div>
-<div class="line"><span class="lineno">  361</span>        <span class="comment">// comprar y vender el mayor número posible de productos.</span></div>
-<div class="line"><span class="lineno">  362</span>        <span class="comment">// En caso que haya más de una ruta que lo cumpla, se queda con la más corta, y en</span></div>
-<div class="line"><span class="lineno">  363</span>        <span class="comment">// caso de que tengan la misma longitud, se queda con la que viene río arriba a mano</span></div>
-<div class="line"><span class="lineno">  364</span>        <span class="comment">// derecha. Una vez encontrada la ruta, se hace el viaje y se compran y venden los</span></div>
-<div class="line"><span class="lineno">  365</span>        <span class="comment">// productos a lo largo de la ruta, modificándose los inventarios de las ciudades. Se</span></div>
-<div class="line"><span class="lineno">  366</span>        <span class="comment">// escribe el total de unidades de productos compradas y vendidas por el barco.</span></div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> || command == <a class="code hl_variable" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a>)</div>
-<div class="line"><span class="lineno">  368</span>        {</div>
-<div class="line"><span class="lineno">  369</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  370</span>            <span class="keyword">auto</span> route = <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a>();</div>
-<div class="line"><span class="lineno">  371</span>            cout &lt;&lt; <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(route) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  372</span>        }</div>
-<div class="line"><span class="lineno">  373</span>        </div>
-<div class="line"><span class="lineno">  374</span>        <span class="comment">// Comment line</span></div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;//&quot;</span>)</div>
-<div class="line"><span class="lineno">  376</span>        {</div>
-<div class="line"><span class="lineno">  377</span>            getline(cin, command); <span class="comment">// Skip current line            </span></div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  181</span>                <span class="keyword">auto</span>&amp; products = city.GetRawProductIds();</div>
+<div class="line"><span class="lineno">  182</span>                <span class="keyword">auto</span> it = products.begin();</div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">while</span>(it != products.end())</div>
+<div class="line"><span class="lineno">  184</span>                {</div>
+<div class="line"><span class="lineno">  185</span>                    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = *it;</div>
+<div class="line"><span class="lineno">  186</span>                    cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductCurrentAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  187</span>                    cout &lt;&lt; city.GetProductWantedAmount(<span class="keywordtype">id</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  188</span>                    it++;</div>
+<div class="line"><span class="lineno">  189</span>                }</div>
+<div class="line"><span class="lineno">  190</span>                cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  193</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>        <span class="comment">// Se lee el identificador de un producto. Si no existe el producto se escribe </span></div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">// un mensaje de error. En caso contrario se escribe el peso y volumen</span></div>
+<div class="line"><span class="lineno">  198</span>        <span class="comment">// del producto.</span></div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a913859da6e8d9bb5e9772dd8205b4f0e">ESCRIBIR_PRODUCTO</a> || command == <a class="code hl_variable" href="program_8cc.html#a4c94d32ed6f087e8937b23974cfd57cf">ESCRIBIR_PRODUCTO_L</a>)</div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  202</span>            cin &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  203</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  205</span>            {</div>
+<div class="line"><span class="lineno">  206</span>                <span class="keyword">auto</span>&amp; product = <a class="code hl_function" href="classProductReference.html#ae6e586d7b4646d28255b0d87ad3a9b80">ProductReference::Get</a>(product_id);</div>
+<div class="line"><span class="lineno">  207</span>                cout &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  208</span>            }</div>
+<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  210</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>        </div>
+<div class="line"><span class="lineno">  213</span>        <span class="comment">// Se leerá el identificador de una ciudad, de un producto y las</span></div>
+<div class="line"><span class="lineno">  214</span>        <span class="comment">// unidades que tiene y que quiere. Si el producto no existe escribe un mensaje de</span></div>
+<div class="line"><span class="lineno">  215</span>        <span class="comment">// error. Si la ciudad no existe, escribe un mensaje de error. Si el producto ya está en</span></div>
+<div class="line"><span class="lineno">  216</span>        <span class="comment">// el inventario de la ciudad, escribe un mensaje de error. Si no hay errores, los datos</span></div>
+<div class="line"><span class="lineno">  217</span>        <span class="comment">// de ese producto se añaden a la ciudad, modificándose el peso y el volumen total si</span></div>
+<div class="line"><span class="lineno">  218</span>        <span class="comment">// hace falta. Se escribe el peso y el volumen total. El número de unidades necesitadas</span></div>
+<div class="line"><span class="lineno">  219</span>        <span class="comment">// siempre ha de ser mayor que 0.</span></div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a7fd44cca981d37ca918ccf31bd006315">PONER_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a9b457db350420d4c74dda0abdb5b3137">PONER_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  223</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
+<div class="line"><span class="lineno">  224</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
+<div class="line"><span class="lineno">  225</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  228</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  230</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">if</span> (city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  235</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a2f073bac06aa6b2a3274bb57105c9a16">ERR_AE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  237</span>                {</div>
+<div class="line"><span class="lineno">  238</span>                    city.AddProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
+<div class="line"><span class="lineno">  239</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  240</span>                }</div>
+<div class="line"><span class="lineno">  241</span>            }</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>        </div>
+<div class="line"><span class="lineno">  244</span>        <span class="comment">//  Se leerá el identificador de una ciudad, de un producto y las</span></div>
+<div class="line"><span class="lineno">  245</span>        <span class="comment">// unidades que tienen y que quiere. Si el producto no existe escribe un mensaje de</span></div>
+<div class="line"><span class="lineno">  246</span>        <span class="comment">// error. Si la ciudad no existe, escribe un mensaje de error. Si el producto no está en</span></div>
+<div class="line"><span class="lineno">  247</span>        <span class="comment">// el inventario de la ciudad, escribe un mensaje de error. Si no hay errores, los datos</span></div>
+<div class="line"><span class="lineno">  248</span>        <span class="comment">// de ese producto sustituyen a los que había en la ciudad, modificándose el peso y</span></div>
+<div class="line"><span class="lineno">  249</span>        <span class="comment">// el volumen total si hace falta. Se escribe el peso y el volumen total. El número de</span></div>
+<div class="line"><span class="lineno">  250</span>        <span class="comment">// unidades necesitadas se puede modificar, pero siempre ha de ser mayor que 0.</span></div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a26a42f6cbe50b539a65f3d04415318c5">MODIFICAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a460d7a5a299b7edf2b90e0c783025ef9">MODIFICAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordtype">int</span> product_id, current, wanted;</div>
+<div class="line"><span class="lineno">  255</span>            cin &gt;&gt; city_id &gt;&gt; product_id &gt;&gt; current &gt;&gt; wanted;</div>
+<div class="line"><span class="lineno">  256</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  257</span>            </div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  259</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  261</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">else</span> </div>
+<div class="line"><span class="lineno">  263</span>            {</div>
+<div class="line"><span class="lineno">  264</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  266</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  268</span>                {</div>
+<div class="line"><span class="lineno">  269</span>                    city.UpdateProduct(<a class="code hl_class" href="classProduct.html">Product</a>(product_id, current, wanted));</div>
+<div class="line"><span class="lineno">  270</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  271</span>                }</div>
+<div class="line"><span class="lineno">  272</span>            }</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>        <span class="comment">// Se leerá el identificador de una ciudad y de un producto. Si</span></div>
+<div class="line"><span class="lineno">  276</span>        <span class="comment">// el producto no existe escribe un mensaje de error. Si la ciudad no existe, escribe</span></div>
+<div class="line"><span class="lineno">  277</span>        <span class="comment">// un mensaje de error. Si el producto no está en el inventario de la ciudad, escribe</span></div>
+<div class="line"><span class="lineno">  278</span>        <span class="comment">// un mensaje de error. Si no hay errores, se quitan los datos de este producto en la</span></div>
+<div class="line"><span class="lineno">  279</span>        <span class="comment">// ciudad, modificándose el peso y el volumen total si hace falta. Se escribe el peso y</span></div>
+<div class="line"><span class="lineno">  280</span>        <span class="comment">// el volumen total.</span></div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a90c66aefa9f04c80862d26cc04ba8867">QUITAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  282</span>        {</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  285</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  286</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  289</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  291</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">else</span> </div>
+<div class="line"><span class="lineno">  293</span>            {</div>
+<div class="line"><span class="lineno">  294</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  295</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  296</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  297</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  298</span>                {</div>
+<div class="line"><span class="lineno">  299</span>                    city.RemoveProduct(product_id);</div>
+<div class="line"><span class="lineno">  300</span>                    cout &lt;&lt; city.GetWeight() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetVolume() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  301</span>                }</div>
+<div class="line"><span class="lineno">  302</span>            }</div>
+<div class="line"><span class="lineno">  303</span>        }</div>
+<div class="line"><span class="lineno">  304</span>        </div>
+<div class="line"><span class="lineno">  305</span>        <span class="comment">// Se leerá el identificador de una ciudad y de un producto. Si</span></div>
+<div class="line"><span class="lineno">  306</span>        <span class="comment">// el producto no existe escribe un mensaje de error. Si la ciudad no existe, escribe un</span></div>
+<div class="line"><span class="lineno">  307</span>        <span class="comment">// mensaje de error. Si el producto no está en el inventario de la ciudad, escribe un</span></div>
+<div class="line"><span class="lineno">  308</span>        <span class="comment">// mensaje de error. Si no hay errores, se escribe cuantas unidades de ese producto</span></div>
+<div class="line"><span class="lineno">  309</span>        <span class="comment">// tiene y quiere la ciudad.</span></div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#a9e8573e6041ff11d0b3f21eeac517405">CONSULTAR_PROD</a> || command == <a class="code hl_variable" href="program_8cc.html#a04ace247992056591435dd56893550f9">CONSULTAR_PROD_L</a>)</div>
+<div class="line"><span class="lineno">  311</span>        {</div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordtype">string</span> city_id;</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordtype">int</span> product_id;</div>
+<div class="line"><span class="lineno">  314</span>            cin &gt;&gt; city_id &gt;&gt; product_id;</div>
+<div class="line"><span class="lineno">  315</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; product_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a>(product_id))</div>
+<div class="line"><span class="lineno">  318</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a98913dae63b89fa36b977bc1961f1768">ERR_NE_PROD</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city_id))</div>
+<div class="line"><span class="lineno">  320</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">else</span> </div>
+<div class="line"><span class="lineno">  322</span>            {</div>
+<div class="line"><span class="lineno">  323</span>                <span class="keyword">auto</span>&amp; city = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city_id);</div>
+<div class="line"><span class="lineno">  324</span>                <span class="keywordflow">if</span>(!city.HasProduct(product_id))</div>
+<div class="line"><span class="lineno">  325</span>                    cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#afb62dcfb3be35d0f6e4d53cb576e0c17">ERR_NE_PROD_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  326</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  327</span>                {</div>
+<div class="line"><span class="lineno">  328</span>                    cout &lt;&lt; city.GetProductCurrentAmount(product_id) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city.GetProductWantedAmount(product_id) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                    </div>
+<div class="line"><span class="lineno">  329</span>                }</div>
+<div class="line"><span class="lineno">  330</span>            }</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span>        </div>
+<div class="line"><span class="lineno">  333</span>        <span class="comment">//  Se leerán los identificadores de dos ciudades. Si no existe alguna</span></div>
+<div class="line"><span class="lineno">  334</span>        <span class="comment">// de las dos (o las dos), se escribe un mensaje de error. Si las ciudades existen y son</span></div>
+<div class="line"><span class="lineno">  335</span>        <span class="comment">// la misma, se escribe un mensaje de error. Si las ciudades existen y son diferentes,</span></div>
+<div class="line"><span class="lineno">  336</span>        <span class="comment">// comercian entre ellas.</span></div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af4108382a33f2cf5e52c294afab6ed54">COMERCIAR</a> || command == <a class="code hl_variable" href="program_8cc.html#a3487eb6db10628177d3a8d957bbccd40">COMERCIAR_L</a>)</div>
+<div class="line"><span class="lineno">  338</span>        {</div>
+<div class="line"><span class="lineno">  339</span>            <span class="keywordtype">string</span> city1_id, city2_id;</div>
+<div class="line"><span class="lineno">  340</span>            cin &gt;&gt; city1_id &gt;&gt; city2_id;</div>
+<div class="line"><span class="lineno">  341</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city1_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; city2_id &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city1_id) || !<a class="code hl_function" href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a>(city2_id))</div>
+<div class="line"><span class="lineno">  344</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a3a26bf6ba1028d552fc2cdf95a42c1b5">ERR_NE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (city1_id == city2_id)</div>
+<div class="line"><span class="lineno">  346</span>                cout &lt;&lt; <a class="code hl_variable" href="program_8cc.html#a5832cb057daf12055a17eb750b6ae318">ERR_RE_CITY</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  348</span>            {</div>
+<div class="line"><span class="lineno">  349</span>                <span class="keyword">auto</span>&amp; city1 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city1_id);</div>
+<div class="line"><span class="lineno">  350</span>                <span class="keyword">auto</span>&amp; city2 = <a class="code hl_function" href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a>(city2_id);</div>
+<div class="line"><span class="lineno">  351</span>                city1.TradeWith(city2);</div>
+<div class="line"><span class="lineno">  352</span>            }</div>
+<div class="line"><span class="lineno">  353</span>        }</div>
+<div class="line"><span class="lineno">  354</span>        </div>
+<div class="line"><span class="lineno">  355</span>        <span class="comment">// No se leen datos. La ciudad de la desembocadura comercia con su</span></div>
+<div class="line"><span class="lineno">  356</span>        <span class="comment">// ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda,</span></div>
+<div class="line"><span class="lineno">  357</span>        <span class="comment">// y así sucesivamente.</span></div>
+<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#ac3b609b89b03d3a312cfa8a86271782a">REDISTRIBUIR</a> || command == <a class="code hl_variable" href="program_8cc.html#a61cd38a85990300c67d4b3a1fc65662d">REDISTRIBUIR_L</a>)</div>
+<div class="line"><span class="lineno">  359</span>        {</div>
+<div class="line"><span class="lineno">  360</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  361</span>            <a class="code hl_function" href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a>();</div>
+<div class="line"><span class="lineno">  362</span>        }</div>
+<div class="line"><span class="lineno">  363</span>        </div>
+<div class="line"><span class="lineno">  364</span>        <span class="comment">// No se leen datos. El barco busca la ruta a partir de la desembocadura que le permita</span></div>
+<div class="line"><span class="lineno">  365</span>        <span class="comment">// comprar y vender el mayor número posible de productos.</span></div>
+<div class="line"><span class="lineno">  366</span>        <span class="comment">// En caso que haya más de una ruta que lo cumpla, se queda con la más corta, y en</span></div>
+<div class="line"><span class="lineno">  367</span>        <span class="comment">// caso de que tengan la misma longitud, se queda con la que viene río arriba a mano</span></div>
+<div class="line"><span class="lineno">  368</span>        <span class="comment">// derecha. Una vez encontrada la ruta, se hace el viaje y se compran y venden los</span></div>
+<div class="line"><span class="lineno">  369</span>        <span class="comment">// productos a lo largo de la ruta, modificándose los inventarios de las ciudades. Se</span></div>
+<div class="line"><span class="lineno">  370</span>        <span class="comment">// escribe el total de unidades de productos compradas y vendidas por el barco.</span></div>
+<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(command == <a class="code hl_variable" href="program_8cc.html#af860a4819c1f8312a6b8cb415d155ca1">HACER_VIAJE</a> || command == <a class="code hl_variable" href="program_8cc.html#a0fd495f6035ee67eec43adace714cb4e">HACER_VIAJE_L</a>)</div>
+<div class="line"><span class="lineno">  372</span>        {</div>
+<div class="line"><span class="lineno">  373</span>            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; command &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keyword">auto</span> route = <a class="code hl_function" href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a>();</div>
+<div class="line"><span class="lineno">  375</span>            cout &lt;&lt; <a class="code hl_function" href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a>(route) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  376</span>        }</div>
+<div class="line"><span class="lineno">  377</span>        </div>
+<div class="line"><span class="lineno">  378</span>        <span class="comment">// Comment line</span></div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;//&quot;</span>)</div>
 <div class="line"><span class="lineno">  380</span>        {</div>
-<div class="line"><span class="lineno">  381</span>        }</div>
-<div class="line"><span class="lineno">  382</span>    }</div>
-<div class="line"><span class="lineno">  383</span>    flush(cout);</div>
-<div class="line"><span class="lineno">  384</span>}</div>
+<div class="line"><span class="lineno">  381</span>            getline(cin, command); <span class="comment">// Skip current line            </span></div>
+<div class="line"><span class="lineno">  382</span>        }</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  384</span>        {</div>
+<div class="line"><span class="lineno">  385</span>        }</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
+<div class="line"><span class="lineno">  387</span>    flush(cout);</div>
+<div class="line"><span class="lineno">  388</span>}</div>
 <div class="ttc" id="aclassCity_html_a5af26263a23635a2bd73a08aa5599faf"><div class="ttname"><a href="classCity.html#a5af26263a23635a2bd73a08aa5599faf">City::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Read the city product inventory from a stream. The old product inventory will be erased.</div><div class="ttdef"><b>Definition</b> <a href="City_8cc_source.html#l00029">City.cc:29</a></div></div>
 <div class="ttc" id="aclassProductReference_html_a1deb913d31efb6e9f2fbef4962304b60"><div class="ttname"><a href="classProductReference.html#a1deb913d31efb6e9f2fbef4962304b60">ProductReference::Count</a></div><div class="ttdeci">static int Count()</div><div class="ttdoc">Retrieves the number of product data in the reference.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00040">ProductReference.cc:40</a></div></div>
 <div class="ttc" id="aclassProductReference_html_a9b2c978acd5d9989cd10ab93dc358cac"><div class="ttname"><a href="classProductReference.html#a9b2c978acd5d9989cd10ab93dc358cac">ProductReference::Contains</a></div><div class="ttdeci">static bool Contains(int id)</div><div class="ttdoc">Checks if the reference contains product data with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="ProductReference_8cc_source.html#l00025">ProductReference.cc:25</a></div></div>
@@ -559,11 +563,11 @@ Variables</h2></td></tr>
 <div class="ttc" id="aclassProduct_html_adae0bac61207aedcba747c07bbd0b893"><div class="ttname"><a href="classProduct.html#adae0bac61207aedcba747c07bbd0b893">Product::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Get the Id of the product.</div><div class="ttdef"><b>Definition</b> <a href="Product_8cc_source.html#l00022">Product.cc:22</a></div></div>
 <div class="ttc" id="aclassShip_html_ac76c91ac599c08677f9540a4bf128d55"><div class="ttname"><a href="classShip.html#ac76c91ac599c08677f9540a4bf128d55">Ship::ReadFromStream</a></div><div class="ttdeci">void ReadFromStream(istream &amp;stream)</div><div class="ttdoc">Reads ship data (buy and sell products) from a stream.</div><div class="ttdef"><b>Definition</b> <a href="Ship_8cc_source.html#l00031">Ship.cc:31</a></div></div>
 <div class="ttc" id="aclassValley_html_a070726f5f925f2a2891aa5226ef58f17"><div class="ttname"><a href="classValley.html#a070726f5f925f2a2891aa5226ef58f17">Valley::GetShip</a></div><div class="ttdeci">static Ship &amp; GetShip()</div><div class="ttdoc">Gets a reference to the ship.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00056">Valley.cc:56</a></div></div>
-<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00212">Valley.cc:212</a></div></div>
+<div class="ttc" id="aclassValley_html_a2d27338b1463dfa8f30f5e1e1c4e9a89"><div class="ttname"><a href="classValley.html#a2d27338b1463dfa8f30f5e1e1c4e9a89">Valley::NavigateRoute</a></div><div class="ttdeci">static int NavigateRoute(const vector&lt; NavStep &gt; &amp;route)</div><div class="ttdoc">Navigates the specified route, updating the cities of the valley accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00210">Valley.cc:210</a></div></div>
 <div class="ttc" id="aclassValley_html_a75ff9182c65289925ff544ac37e6b792"><div class="ttname"><a href="classValley.html#a75ff9182c65289925ff544ac37e6b792">Valley::GetCity</a></div><div class="ttdeci">static City &amp; GetCity(const string &amp;id)</div><div class="ttdoc">Gets the city with the specified Id.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00077">Valley.cc:77</a></div></div>
 <div class="ttc" id="aclassValley_html_a8bdfffd571d76986c7aaa277d2150362"><div class="ttname"><a href="classValley.html#a8bdfffd571d76986c7aaa277d2150362">Valley::ReadCitiesFromStream</a></div><div class="ttdeci">static void ReadCitiesFromStream(istream &amp;stream)</div><div class="ttdoc">Reads the cities from the input stream, overwriting the old Valley contents, if any....</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00039">Valley.cc:39</a></div></div>
 <div class="ttc" id="aclassValley_html_aa5308f01b1b609a63508404fa8b7a46f"><div class="ttname"><a href="classValley.html#aa5308f01b1b609a63508404fa8b7a46f">Valley::DoTrades</a></div><div class="ttdeci">static void DoTrades()</div><div class="ttdoc">Performs trades in the Valley. Trades start recursively from the root node. The city in the root node...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00105">Valley.cc:105</a></div></div>
-<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00201">Valley.cc:201</a></div></div>
+<div class="ttc" id="aclassValley_html_aa61921a453bfcab8a76822fb16553560"><div class="ttname"><a href="classValley.html#aa61921a453bfcab8a76822fb16553560">Valley::GetBestRoute</a></div><div class="ttdeci">static vector&lt; NavStep &gt; GetBestRoute()</div><div class="ttdoc">Gets the best route for the ship. The best route is the shortest route possible where the maximum amo...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00199">Valley.cc:199</a></div></div>
 <div class="ttc" id="aclassValley_html_aab63536d9205e6bbfede92c0c5d66d25"><div class="ttname"><a href="classValley.html#aab63536d9205e6bbfede92c0c5d66d25">Valley::InitializeFromStream</a></div><div class="ttdeci">static void InitializeFromStream(istream &amp;stream)</div><div class="ttdoc">Initializes the Valley from the input stream. This implies reading the products to be added to the Pr...</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00046">Valley.cc:46</a></div></div>
 <div class="ttc" id="aclassValley_html_ab9ae654d0a8f51b5c80ec9e88447fe7d"><div class="ttname"><a href="classValley.html#ab9ae654d0a8f51b5c80ec9e88447fe7d">Valley::HasCity</a></div><div class="ttdeci">static bool HasCity(const string &amp;id)</div><div class="ttdoc">Checks if a city with the specified Id exists.</div><div class="ttdef"><b>Definition</b> <a href="Valley_8cc_source.html#l00072">Valley.cc:72</a></div></div>
 <div class="ttc" id="aprogram_8cc_html_a01f4ab0be13ca04eb7b96942174313b4"><div class="ttname"><a href="program_8cc.html#a01f4ab0be13ca04eb7b96942174313b4">QUITAR_PROD</a></div><div class="ttdeci">const string QUITAR_PROD</div><div class="ttdef"><b>Definition</b> <a href="program_8cc_source.html#l00045">program.cc:45</a></div></div>
