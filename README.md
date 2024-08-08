@@ -1,3 +1,3 @@
 # Pràctica de PRO2
 
-La pràctica de PRO2 el Q2 23-24
+La pràctica de PRO2 del Q2 2024
